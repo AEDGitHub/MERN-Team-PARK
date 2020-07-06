@@ -4,9 +4,9 @@ const users = require("./routes/api/users");
 const bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
-app.use("/api/users", users);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use("/api/users", users);
 
 app.get("/", (req, res) => res.send("Hello World"));
 
