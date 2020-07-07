@@ -20,6 +20,7 @@ const UserSchema = new Schema(
     password: {
       type: String,
       required: true,
+      select: false,
     },
     groups: [{ type: Schema.Types.ObjectId, ref: "Group" }],
   },
