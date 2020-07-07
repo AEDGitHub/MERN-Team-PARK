@@ -40,4 +40,41 @@ router.get("/", (req, res) => {
     .catch((err) => res.status(404).json({ nogroupsfound: "No groups found" }));
 });
 
+//Joining Group by Slug
+router.post(
+  "/:slug/join",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    console.log("here");
+    console.log(req);
+    const group = await Group.findOne({ slug: req.params.slug });
+    const user = await User.findOne({ _id: req.user.id });
+
+    group.users.push(user);
+    user.groups.push(group);
+
+    group
+      .save()
+      .then((group) =>
+        user
+          .save()
+          .then((user) => res.json({ user: user, group: group }))
+          .catch((err) =>
+            res.status(422).json({ error: "User could not join group" })
+          )
+      )
+      .catch((err) => {
+        console.log(err);
+        return res.status(422).json({ error: "Group could not join group" });
+      });
+    // group.save(function (err) {
+    //   if (err) return err;
+    //   user.save(function (err) {
+    //     if (err) return err;
+    //     return res.json({ user: user, group: group });
+    //   });
+    // });
+  }
+);
+
 module.exports = router;
