@@ -18,12 +18,12 @@ router.post(
     }
 
     const newGroup = new Group({
-      owner: req.user.id,
       name: req.body.name,
       slug: generateSlug(req.body.name),
     });
 
-    // TODO: add user to group (group creator should automatically be a member of the group)
+    newGroup.owner = req.user;
+    newGroup.users.push(req.user);
 
     newGroup
       .save()
@@ -34,6 +34,7 @@ router.post(
 
 router.get("/", (req, res) => {
   Group.find()
+    .populate("users")
     .sort({ date: -1 })
     .then((groups) => res.json(groups))
     .catch((err) => res.status(404).json({ nogroupsfound: "No groups found" }));
