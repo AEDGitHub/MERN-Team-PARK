@@ -3,12 +3,13 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const User = require("../../models/User");
+const Group = require("../../models/Group");
 const keys = require("../../config/keys");
 const passport = require("passport");
 
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
-
+const validateUserUpdateInput = require("../../validation/user-update");
 module.exports = router;
 
 router.post("/register", (req, res) => {
@@ -97,15 +98,40 @@ router.post("/login", (req, res) => {
   });
 });
 
+// { name: 'Tim', groups: ['1627583172635', '7816253812736', '918729189236']}
+// { name: 'Tim', groups: [{name: 'App Academy', _id: '1627583172635'}]}
+
 router.get(
   "/current",
   passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    res.json({
-      id: req.user.id,
-      firstName: req.user.firstName,
-      lastName: req.user.lastName,
-      email: req.user.email,
-    });
+  async (req, res) => {
+    const user = await User.findOne({ _id: req.user.id }).populate("groups");
+    res.json(user);
+  }
+);
+
+router.patch(
+  "/profile",
+  passport.authenticate("jwt", { session: false }),
+  async function (req, res, next) {
+    const { errors, isValid } = validateUserUpdateInput(req.body);
+
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
+
+    const user = await User.findOne({ _id: req.user.id });
+
+    const { firstName, lastName, email, groupId } = req.body;
+    if (firstName) user.firstName = firstName;
+    if (lastName) user.lastName = lastName;
+    if (email) user.email = email;
+    if (groupId) {
+      const group = await Group.findOne({ _id: groupId });
+      user.groups.push(group);
+    }
+    //may change lines 129-132
+    user.save();
+    return res.json(user);
   }
 );
