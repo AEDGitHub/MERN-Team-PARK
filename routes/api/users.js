@@ -98,6 +98,9 @@ router.post("/login", (req, res) => {
   });
 });
 
+// { name: 'Tim', groups: ['1627583172635', '7816253812736', '918729189236']}
+// { name: 'Tim', groups: [{name: 'App Academy', _id: '1627583172635'}]}
+
 router.get(
   "/current",
   passport.authenticate("jwt", { session: false }),
@@ -127,7 +130,7 @@ router.patch(
       const group = await Group.findOne({ _id: groupId });
       user.groups.push(group);
     }
-
+    //may change lines 129-132
     user.save();
     return res.json(user);
   }

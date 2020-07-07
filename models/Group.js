@@ -12,7 +12,7 @@ const GroupSchema = new Schema(
     },
     owner: {
       type: Schema.Types.ObjectId,
-      ref: "users",
+      ref: "User",
       required: true,
     },
     slug: {
@@ -21,6 +21,12 @@ const GroupSchema = new Schema(
       unique: true,
       index: true,
     },
+    users: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   {
     timestamps: true,
