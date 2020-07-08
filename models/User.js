@@ -23,6 +23,7 @@ const UserSchema = new Schema(
       select: false,
     },
     groups: [{ type: Schema.Types.ObjectId, ref: "Group" }],
+    interests: [{ type: Schema.Types.ObjectId, ref: "Interest" }],
   },
   {
     timestamps: true,
