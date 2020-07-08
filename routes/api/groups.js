@@ -45,8 +45,6 @@ router.post(
   "/:slug/join",
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    console.log("here");
-    console.log(req);
     const group = await Group.findOne({ slug: req.params.slug });
     const user = await User.findOne({ _id: req.user.id });
 
@@ -65,7 +63,7 @@ router.post(
       )
       .catch((err) => {
         console.log(err);
-        return res.status(422).json({ error: "Group could not join group" });
+        return res.status(422).json({ error: "Error in joining group" });
       });
     // group.save(function (err) {
     //   if (err) return err;
