@@ -11,10 +11,6 @@ const receiveCurrentUser = currentUser => ({
     currentUser
 });
 
-const receiveUserSignIn = () => ({
-    type: RECEIVE_USER_SIGN_IN
-})
-
 const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
@@ -24,10 +20,15 @@ const logoutUser = () => ({
     type: RECEIVE_USER_LOGOUT
 });
 
-
 export const signup = user => dispatch => {
     return APIUtil.signup(user)
-        .then(() => dispatch(receiveUserSignIn()))
+        .then(res => {
+            const { token } = res.data;
+            localStorage.setItem('jwtToken', token);
+            APIUtil.setAuthToken(token);
+            const decoded = jwt_decode(token);
+            dispatch(receiveCurrentUser(decoded));
+        })
         .catch(err => dispatch(receiveErrors(err.response.data)))
 }
 
