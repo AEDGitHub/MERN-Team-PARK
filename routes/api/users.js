@@ -12,11 +12,15 @@ const validateLoginInput = require("../../validation/login");
 const validateUserUpdateInput = require("../../validation/user-update");
 module.exports = router;
 
-router.post("/register", (req, res) => {
+router.post("/register", async (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
 
   if (!isValid) {
     return res.status(400).json(errors);
+  }
+  let group = null; // make sure we dont find a group with a null slug
+  if (req.body.slug) {
+    group = await Group.findOne({ slug: req.body.slug });
   }
 
   User.findOne({ email: req.body.email }).then((user) => {
@@ -31,30 +35,65 @@ router.post("/register", (req, res) => {
         password: req.body.password,
       });
 
-      bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newUser.password, salt, (err, hash) => {
-          if (err) throw err;
-          newUser.password = hash;
-          newUser
-            .save()
-            .then((user) => {
-              const payload = { id: user.id, email: user.email };
+      if (group) {
+        group.users.push(newUser);
+        newUser.groups.push(group);
 
-              jwt.sign(
-                payload,
-                keys.secretOrKey,
-                { expiresIn: 3600 },
-                (err, token) => {
-                  res.json({
-                    success: true,
-                    token: "Bearer " + token,
+        bcrypt.genSalt(10, (err, salt) => {
+          bcrypt.hash(newUser.password, salt, (err, hash) => {
+            if (err) throw err;
+            newUser.password = hash;
+            newUser
+              .save()
+              .then((user) => {
+                group
+                  .save()
+                  .then(() => {
+                    const payload = { id: user.id, email: user.email };
+                    jwt.sign(
+                      payload,
+                      keys.secretOrKey,
+                      { expiresIn: 3600 },
+                      (err, token) => {
+                        res.json({
+                          success: true,
+                          token: "Bearer " + token,
+                        });
+                      }
+                    );
+                  })
+                  .catch((err) => {
+                    throw err;
                   });
-                }
-              );
-            })
-            .catch((err) => console.log(err));
+              })
+              .catch((err) => console.log(err));
+          });
         });
-      });
+      } else {
+        bcrypt.genSalt(10, (err, salt) => {
+          bcrypt.hash(newUser.password, salt, (err, hash) => {
+            if (err) throw err;
+            newUser.password = hash;
+            newUser
+              .save()
+              .then((user) => {
+                const payload = { id: user.id, email: user.email };
+                jwt.sign(
+                  payload,
+                  keys.secretOrKey,
+                  { expiresIn: 3600 },
+                  (err, token) => {
+                    res.json({
+                      success: true,
+                      token: "Bearer " + token,
+                    });
+                  }
+                );
+              })
+              .catch((err) => console.log(err));
+          });
+        });
+      }
     }
   });
 });
@@ -69,33 +108,35 @@ router.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
-  User.findOne({ email }).then((user) => {
-    if (!user) {
-      errors.email = "This user does not exist";
-      return res.status(400).json(errors);
-    }
-
-    bcrypt.compare(password, user.password).then((isMatch) => {
-      if (isMatch) {
-        const payload = { id: user.id, email: user.email };
-
-        jwt.sign(
-          payload,
-          keys.secretOrKey,
-          { expiresIn: 3600 },
-          (err, token) => {
-            res.json({
-              success: true,
-              token: "Bearer " + token,
-            });
-          }
-        );
-      } else {
-        errors.password = "Incorrect password";
+  User.findOne({ email })
+    .select("password")
+    .then((user) => {
+      if (!user) {
+        errors.email = "This user does not exist";
         return res.status(400).json(errors);
       }
+
+      bcrypt.compare(password, user.password).then((isMatch) => {
+        if (isMatch) {
+          const payload = { id: user.id, email: user.email };
+
+          jwt.sign(
+            payload,
+            keys.secretOrKey,
+            { expiresIn: 3600 },
+            (err, token) => {
+              res.json({
+                success: true,
+                token: "Bearer " + token,
+              });
+            }
+          );
+        } else {
+          errors.password = "Incorrect password";
+          return res.status(400).json(errors);
+        }
+      });
     });
-  });
 });
 
 // { name: 'Tim', groups: ['1627583172635', '7816253812736', '918729189236']}

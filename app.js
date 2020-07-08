@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const users = require("./routes/api/users");
 const groups = require("./routes/api/groups");
+const interests = require("./routes/api/interests");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const passport = require("passport");
@@ -15,6 +16,7 @@ app.use("/api/users", users);
 
 app.use("/api/users", users);
 app.use("/api/groups", groups);
+app.use("/api/interests", interests);
 
 app.get("/", (req, res) => res.send("Hello World"));
 
