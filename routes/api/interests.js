@@ -18,7 +18,7 @@ router.get(
   }
 );
 
-//create user interest
+//Create user interest
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
@@ -57,7 +57,7 @@ router.post(
   }
 );
 
-//follow another user's interest
+//Follow another user's interest
 router.post(
   "/:id/follow",
   passport.authenticate("jwt", { session: false }),
@@ -85,7 +85,7 @@ router.post(
   }
 );
 
-//update your interest
+//Update your interest
 router.patch(
   "/:id",
   passport.authenticate("jwt", { session: false }),
