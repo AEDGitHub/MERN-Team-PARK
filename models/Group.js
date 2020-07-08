@@ -27,7 +27,7 @@ const GroupSchema = new Schema(
         ref: "User",
       },
     ],
-    interests: [{ type: Schema.Types.ObjectId, ref: "Interest" }],
+    // interests: [{ type: Schema.Types.ObjectId, ref: "Interest" }],
   },
   {
     timestamps: true,
