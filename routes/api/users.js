@@ -142,11 +142,26 @@ router.post("/login", (req, res) => {
 // { name: 'Tim', groups: ['1627583172635', '7816253812736', '918729189236']}
 // { name: 'Tim', groups: [{name: 'App Academy', _id: '1627583172635'}]}
 
+//Getting the current user
 router.get(
   "/current",
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    const user = await User.findOne({ _id: req.user.id }).populate("groups");
+    const user = await User.findOne({ _id: req.user.id })
+      .populate("groups")
+      .populate("interests");
+    res.json(user);
+  }
+);
+
+//Getting any user
+router.get(
+  "/:id",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const user = await User.findOne({ _id: req.params.id })
+      .populate("groups")
+      .populate("interests");
     res.json(user);
   }
 );
