@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
 const Interest = require("../../models/Interest");
+const validateInterestInput = require("../../validation/interest-input");
 
 router.get(
   "/",
@@ -17,14 +18,15 @@ router.get(
   }
 );
 
+//create user interest
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    // TODO: const { errors, isValid } = validateInterestInput(req.body);
-    // if (!isValid) {
-    //   return res.status(400).json(errors);
-    // }
+    const { errors, isValid } = validateInterestInput(req.body);
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
     const user = await User.findOne({ _id: req.user.id });
     const newInterest = new Interest({
       name: req.body.name,
@@ -55,6 +57,7 @@ router.post(
   }
 );
 
+//follow another user's interest
 router.post(
   "/:id/follow",
   passport.authenticate("jwt", { session: false }),
@@ -79,6 +82,31 @@ router.post(
         console.log(err);
         return res.status(422).json({ error: "Error in joining interest" });
       });
+  }
+);
+
+//update your interest
+router.patch(
+  "/:id",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const { errors, isValid } = validateInterestInput(req.body);
+
+    if (!isValid) {
+      return res.status(400).json(errors);
+    }
+
+    const interest = await Interest.findOne({ _id: req.params.id });
+    if (interest.owner.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ error: "Unauthorized to edit interest" });
+    }
+
+    const { name, description, category } = req.body;
+    if (name) interest.name = name;
+    if (description) interest.description = description;
+    if (category) interest.category = category;
+
+    interest.save().then((interest) => res.json(interest));
   }
 );
 
