@@ -69,7 +69,7 @@ router.post("/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
-  User.findOne({ email }).then((user) => {
+  User.findOne({ email }).select('password').then((user) => {
     if (!user) {
       errors.email = "This user does not exist";
       return res.status(400).json(errors);
@@ -94,7 +94,10 @@ router.post("/login", (req, res) => {
         errors.password = "Incorrect password";
         return res.status(400).json(errors);
       }
-    });
+    })
+    // .catch(err => {
+    //   res.status(500).send('Internal Server Error');
+    // });
   });
 });
 
