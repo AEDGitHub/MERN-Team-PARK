@@ -12,16 +12,20 @@ class SignupForm extends React.Component {
             password2: '',
             errors: {}
         };
+
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.clearedErrors = false;
+        // this.clearedErrors = false;
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.signedIn === true) {
-            this.props.history.push('/login');
-        }
+    componentDidMount() {
+        const searchParams = new URLSearchParams(this.props.location.search);
+        this.groupSlug = searchParams.get("group"); 
+    }
 
-        this.setState({ errors: nextProps.errors });
+    componentDidUpdate(prevProps) {
+        if (this.props.errors !== prevProps.errors) {
+            this.setState({ errors: this.props.errors })
+        }
     }
 
     update(field) {
@@ -37,9 +41,10 @@ class SignupForm extends React.Component {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             password: this.state.password,
-            password2: this.state.password2
+            password2: this.state.password2,
+            groupSlug: this.groupSlug
         };
-
+        
         this.props.signup(user, this.props.history)
     }
 
