@@ -6,7 +6,7 @@ class InterestCreateForm extends React.Component {
         this.state = {
             name: '',
             description: '',
-            category: ''
+            category: 'Choose a category'
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -47,11 +47,13 @@ class InterestCreateForm extends React.Component {
                             placeholder="Description"
                         />
                         <br />
-                        <select value={this.state.category}
-                            onChange={this.update('category')}>
-                            <option value="audi">Audi</option>
-                            <option value="ford">Ford</option>
-                        </select>
+                        <div>
+                            <select value={this.state.category}
+                                onChange={this.update('category')}>
+                                <option value="audi">Audi</option>
+                                <option value="ford">Ford</option>
+                            </select>
+                        </div>
                         <br />
                         <input type="submit" value="Create Interest"/>
                     </div>
