@@ -1,5 +1,6 @@
 import {
-    RECEIVE_GROUP
+    RECEIVE_GROUP,
+    RECEIVE_GROUPS
 } from "../actions/group_actions";
 
 const groupsReducer = (oldState = {}, action) => {
@@ -11,6 +12,8 @@ const groupsReducer = (oldState = {}, action) => {
             nextState[action.group.data._id] = action.group.data
             // nextState.new = action.group.data
             return nextState
+        case RECEIVE_GROUPS:
+            return Object.assign(nextState, action.groups.data)
         default:
             return oldState
     }
