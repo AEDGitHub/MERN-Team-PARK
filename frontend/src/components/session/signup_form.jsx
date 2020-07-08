@@ -14,6 +14,7 @@ class SignupForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
         // this.clearedErrors = false;
     }
 
@@ -48,6 +49,17 @@ class SignupForm extends React.Component {
         this.props.signup(user, this.props.history)
     }
 
+    handleDemoLogin(e) {
+        e.preventDefault()
+
+        let demoUser = {
+            email: "demo@rebond.com",
+            password: "demouser2020"
+        }
+
+        this.props.login(demoUser);
+    }
+
     renderErrors() {
         return (
             <ul>
@@ -78,12 +90,14 @@ class SignupForm extends React.Component {
                             value={this.state.firstName}
                             onChange={this.update('firstName')}
                             placeholder="First Name"
+                            required
                         />
                         <br />
                         <input type="text"
                             value={this.state.lastName}
                             onChange={this.update('lastName')}
                             placeholder="Last Name"
+                            required
                         />
                         <br />
                         <input
@@ -91,6 +105,9 @@ class SignupForm extends React.Component {
                             value={this.state.password}
                             onChange={this.update("password")}
                             placeholder="Password"
+                            required
+                            minLength="6"
+                            maxLength="30"
                         />
                         <br />
                         <input
@@ -98,9 +115,13 @@ class SignupForm extends React.Component {
                             value={this.state.password2}
                             onChange={this.update("password2")}
                             placeholder="Confirm Password"
+                            required
+                            minLength="6"
+                            maxLength="30"
                         />
                         <br />
                         <input type="submit" value="Submit" />
+                        <button onClick={this.handleDemoLogin}>Demo Login</button>
                         {this.renderErrors()}
                     </div>
                 </form>
