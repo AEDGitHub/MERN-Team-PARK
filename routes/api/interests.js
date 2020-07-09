@@ -34,6 +34,7 @@ router.post(
       category: req.body.category,
       owner: user,
     });
+
     user.interests.push(newInterest);
     newInterest.users.push(user);
 
@@ -42,7 +43,9 @@ router.post(
       .then((interest) => {
         user
           .save()
-          .then((user) => res.json(interest))
+          .then((savedUser) => {
+            savedUser.populate("interests", () => res.json(savedUser));
+          })
           .catch((err) => {
             throw err;
           });
