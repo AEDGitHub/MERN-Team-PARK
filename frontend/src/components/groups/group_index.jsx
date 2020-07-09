@@ -1,6 +1,6 @@
 import React from "react";
 import CreateGroupContainer from "./create_group_form_container";
-import GroupIndexItem from "./group_index_item";
+import { M } from "materialize-css";
 
 class GroupIndex extends React.Component {
     componentDidMount() {
@@ -8,15 +8,24 @@ class GroupIndex extends React.Component {
     }
 
     render() {
-        if (Object.values(this.props.groups).length === 0) return null;
+        const { groups } = this.props;
+
+        const groupsList = (groups.length !== 0 ? (
+            <ul className="collapsible">
+                {groups.map(group => (
+                    <li key={group._id}>
+                        <div className="collapsible-header"><h3>{group.name}</h3></div>
+                        <div className="collapsible-body">
+                            <p>This is the Group Show Component</p>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        ) : null)
 
         return (
             <section>
-                <ul>
-                    {this.props.groups.map(group => (
-                        <GroupIndexItem group={group} key={group.id}/>
-                    ))}
-                </ul>
+                {groupsList}
                 <CreateGroupContainer />
             </section>
         )
