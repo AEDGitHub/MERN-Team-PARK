@@ -4,12 +4,10 @@ export const RECEIVE_USER = "RECEIVE_USER";
 
 
 const receiveUser = user => {
-    // debugger
     return {
         type: RECEIVE_USER,
         user
     }
-
 };
 
 // export const fetchUser = userId => dispatch => {

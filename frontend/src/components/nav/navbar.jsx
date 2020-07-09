@@ -32,8 +32,8 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <div>
-                I am a header
+            <div style={{ backgroundColor: "lightgreen" }}>
+                NAVBAR
                 {this.getLinks()}
             </div>
         );
