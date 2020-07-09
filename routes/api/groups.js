@@ -6,11 +6,12 @@ const Group = require("../../models/Group");
 
 const validateGroupInput = require("../../validation/groups");
 const generateSlug = require("../../util/group_util");
+const User = require("../../models/User");
 
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
-  (req, res) => {
+  async (req, res) => {
     const { errors, isValid } = validateGroupInput(req.body);
 
     if (!isValid) {
@@ -22,12 +23,16 @@ router.post(
       slug: generateSlug(req.body.name),
     });
 
+    const user = await User.findOne({ _id: req.user.id });
     newGroup.owner = req.user;
     newGroup.users.push(req.user);
-
     newGroup
       .save()
-      .then((group) => res.json(group))
+      .then((group) => {
+        console.log(user);
+        user.groups.push(group);
+        user.save().then(() => res.json(group));
+      })
       .catch((err) => res.status(422).json({ error: "Group name is taken" }));
   }
 );
