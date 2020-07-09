@@ -27,6 +27,12 @@ const GroupSchema = new Schema(
         ref: "User",
       },
     ],
+    events: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Event",
+      },
+    ],
     // interests: [{ type: Schema.Types.ObjectId, ref: "Interest" }],
   },
   {

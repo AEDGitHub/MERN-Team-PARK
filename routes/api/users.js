@@ -146,7 +146,8 @@ router.get(
   async (req, res) => {
     const user = await User.findOne({ _id: req.user.id })
       .populate("groups")
-      .populate("interests");
+      .populate("interests")
+      .populate("events");
     res.json(user);
   }
 );
@@ -158,7 +159,8 @@ router.get(
   async (req, res) => {
     const user = await User.findOne({ _id: req.params.id })
       .populate("groups")
-      .populate("interests");
+      .populate("interests")
+      .populate("events");
     res.json(user);
   }
 );
@@ -176,6 +178,30 @@ router.get(
   }
 );
 
+//Get a user's created events
+router.get(
+  "/:id/owned_events",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const user = await User.findOne({ _id: req.params.id }).populate(
+      "ownedEvents"
+    );
+    res.json(user.ownedEvents);
+  }
+);
+//Get a user's events (attending)
+router.get(
+  "/:id/events",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const user = await User.findOne({ _id: req.params.id }).populate("events");
+    res.json(user.events);
+  }
+);
+
+// Get all events associated to a user
+
+//Edit user
 router.patch(
   "/profile",
   passport.authenticate("jwt", { session: false }),
@@ -192,11 +218,7 @@ router.patch(
     if (firstName) user.firstName = firstName;
     if (lastName) user.lastName = lastName;
     if (email) user.email = email;
-    if (groupId) {
-      const group = await Group.findOne({ _id: groupId });
-      user.groups.push(group);
-    }
-    //may change lines 129-132
+
     user.save();
     return res.json(user);
   }
