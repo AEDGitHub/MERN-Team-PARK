@@ -18,6 +18,10 @@ const groupsReducer = (oldState = {}, action) => {
                 nextState[group._id] = group
             ));
             return nextState;
+        case RECEIVE_GROUP_JOIN:
+            let { group } = action.payload.data;
+            nextState[group._id] = group;
+            return nextState;
         default:
             return oldState
     }

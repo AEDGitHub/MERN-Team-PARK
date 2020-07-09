@@ -1,6 +1,6 @@
 import React from "react";
 import CreateGroupContainer from "./create_group_form_container";
-import { M } from "materialize-css";
+import JoinGroupFormContainer from "./join_group_form_container";
 
 class GroupIndex extends React.Component {
     componentDidMount() {
@@ -9,7 +9,6 @@ class GroupIndex extends React.Component {
 
     render() {
         const { groups } = this.props;
-
         const groupsList = (groups.length !== 0 ? (
             <ul className="collapsible">
                 {groups.map(group => (
@@ -27,6 +26,7 @@ class GroupIndex extends React.Component {
             <section>
                 {groupsList}
                 <CreateGroupContainer />
+                <JoinGroupFormContainer />
             </section>
         )
     }

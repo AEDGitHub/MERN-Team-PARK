@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import GroupIndex from "./group_index";
-import { fetchGroups} from "../../actions/group_actions";
+import { fetchGroups } from "../../actions/group_actions";
+import { usersGroups } from "../../reducers/selectors";
 
 const mapStateToProps = state => {
     return {
-        groups: Object.values(state.entities.groups),
+        groups: usersGroups(state, state.session.user.id),
         currentUserId: state.session.user.id
     }
 }
