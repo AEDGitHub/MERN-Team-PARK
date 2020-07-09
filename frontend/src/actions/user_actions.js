@@ -19,3 +19,8 @@ export const fetchUser = () => dispatch => {
     return APIUtil.fetchUser()
         .then((user) => dispatch(receiveUser(user)))
 }
+
+export const createInterest = data => dispatch => {
+    return APIUtil.createInterest(data)
+        .then((user) => dispatch(receiveUser(user)))
+};

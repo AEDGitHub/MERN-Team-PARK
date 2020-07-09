@@ -4,25 +4,16 @@ import InterestFeedItem from './interest_feed_item';
 
 class InterestFeed extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
-        this.state = {
-            interests: []
-        };
-    }
-
-    componentWillMount() {
-        this.props.fetchInterests();
-    }
-
-    componentWillReceiveProps(newState) {
-        this.setState({ interests: newState.interests });
+        // this.state = {
+        //     interests: this.props.interests
+        // };
     }
 
     render() {
-
-        if (this.state.interests.length === 0) {
+        if (this.props.interests.length === 0) {
             return <div>There are no interests choosen</div>
         };
 
