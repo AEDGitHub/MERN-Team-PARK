@@ -5,7 +5,7 @@ import { createInterest } from '../../actions/interest_actions';
 
 const mapStateToProps = state => {
     return {
-
+        currentUser: state.entities.users[state.session.user.id]
     }
 }
 
