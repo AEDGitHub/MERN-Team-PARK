@@ -28,6 +28,6 @@ export const fetchInterests = () => dispatch => {
 };
 
 export const createInterest = data => dispatch => {
-    return APIUtil.fetchInterest(data)
+    return APIUtil.createInterest(data)
         .then((interest) => dispatch(receiveInterest(interest)))
 };
