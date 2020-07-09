@@ -10,7 +10,7 @@ class Main extends React.Component {
     render() {
         return (
             <div style={{ backgroundColor: "pink" }}>
-                I am the main component
+                MAIN
                 <UserProfileContainer />
                 <GroupIndexContainer />
             </div>
