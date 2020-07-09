@@ -31,25 +31,35 @@ class InterestCreateForm extends React.Component {
 
     render() {
         return (
-            <div style={{ backgroundColor: "lightblue" }}>
-                <div>INTEREST CREATE FORM</div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input 
-                            type="text" 
-                            value={this.state.name}
-                            onChange={this.update('name')}
-                            placeholder="Name"
-                        />
-                        <br/>
-                        <input
-                            type="text"
-                            value={this.state.description}
-                            onChange={this.update('description')}
-                            placeholder="Description"
-                        />
-                        <br />
-                        <div>
+            <div className="row">
+                <form className="col s12" onSubmit={this.handleSubmit}>
+
+                    <h4 className="center">Create an Interest</h4>
+
+                    <div className="row">
+                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
+                            <input
+                                type="text"
+                                value={this.state.name}
+                                onChange={this.update('name')}
+                                placeholder="Name"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
+                            <input
+                                type="text"
+                                value={this.state.description}
+                                onChange={this.update('description')}
+                                placeholder="Description"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
                             <select style={{ display: "block" }} defaultValue="Choose a Category"
                                 onChange={this.update('category')}>
                                 <option disabled="disabled">Choose a Category</option>
@@ -59,12 +69,14 @@ class InterestCreateForm extends React.Component {
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                        
-                        
-                        
-                        <br />
-                        <input type="submit" value="Create Interest"/>
                     </div>
+
+                    <div className="row">
+                        <div className="col s8 m6 l4 offset-l4 offset-m3 offset-s2">
+                            <input type="submit" value="Create Interest" className="btn col"/>
+                        </div>
+                    </div>
+
                 </form>
             </div>
         )

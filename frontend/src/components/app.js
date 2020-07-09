@@ -16,7 +16,7 @@ const App = () => (
                 <NavBarContainer />
             </header>
             <div className="custom-main">
-                <main className="row">
+                <main >
                     <Switch>
 
                         <ProtectedRoute exact path="/main" component={MainContainer} />
