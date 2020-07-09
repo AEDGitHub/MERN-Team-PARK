@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+
+import InterestCreateFormContainer from "./interest_create_form_container";
+import InterestFeedContainer from "./interest_feed_container";
 
 class UserProfile extends React.Component {
     constructor(props) {
@@ -6,25 +9,26 @@ class UserProfile extends React.Component {
     }
 
     componentWillMount() {
-        // debugger
         this.props.fetchUser();
-        // debugger
     }
 
     render() {
         const { currentUser } = this.props
         if (!currentUser) return null
-        // debugger
 
         return (
-            <div>
-                I am the user profile component
+            <div style={{ backgroundColor: "lightyellow" }}>
+                USER PROFILE
                 <br/>
                 {currentUser.firstName}
                 <br/>
                 {currentUser.lastName}
                 <br/>
                 {currentUser.email}
+                <br/>
+                <InterestFeedContainer/>
+                <br/>
+                <InterestCreateFormContainer />
             </div>
         )
     }
