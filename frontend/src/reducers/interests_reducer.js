@@ -11,7 +11,7 @@ const interestsReducer = (oldState = {}, action) => {
             nextState[action.interest.data._id] = action.interest.data
             return nextState
         case RECEIVE_INTERESTS:
-            return action.interests
+            return action.interests.data
         default:
             return oldState
     }
