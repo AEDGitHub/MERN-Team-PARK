@@ -38,7 +38,7 @@ class InterestFeed extends React.Component {
         })
 
         return (
-            <div style={{ backgroundColor: "purple" }}>
+            <div style={{ backgroundColor: "lightpurple" }}>
                 INTEREST FEED
                 {interests}
             </div>
