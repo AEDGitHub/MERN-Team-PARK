@@ -75,55 +75,90 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <br />
-                        <input
-                            type="email"
-                            value={this.state.email}
-                            onChange={this.update("email")}
-                            placeholder="Email"
-                            required
-                        />
-                        <br />
-                        <input type="text"
-                            value={this.state.firstName}
-                            onChange={this.update('firstName')}
-                            placeholder="First Name"
-                            required
-                        />
-                        <br />
-                        <input type="text"
-                            value={this.state.lastName}
-                            onChange={this.update('lastName')}
-                            placeholder="Last Name"
-                            required
-                        />
-                        <br />
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.update("password")}
-                            placeholder="Password"
-                            required
-                            minLength="6"
-                            maxLength="30"
-                        />
-                        <br />
-                        <input
-                            type="password"
-                            value={this.state.password2}
-                            onChange={this.update("password2")}
-                            placeholder="Confirm Password"
-                            required
-                            minLength="6"
-                            maxLength="30"
-                        />
-                        <br />
-                        <input type="submit" value="Submit" />
-                        <button onClick={this.handleDemoLogin}>Demo Login</button>
+                <form className="col s12" onSubmit={this.handleSubmit}>
+
+                    <h2 className="center">Sign Up</h2>
+
+                        <div className="row">
+                            <div className="input-field col s8 m6 l4 offset-l4 offset-m3 offset-s2">
+                                <input
+                                    type="email"
+                                    value={this.state.email}
+                                    onChange={this.update("email")}
+                                    placeholder="Email"
+                                    required
+                                className="validate"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="input-field col s8 m6 l4 offset-l4 offset-m3 offset-s2">
+                                <input type="text"
+                                    value={this.state.firstName}
+                                    onChange={this.update('firstName')}
+                                    placeholder="First Name"
+                                    required
+                                    className="validate"
+                                />
+                            </div>
+                        </div>  
+
+                        <div className="row">
+                            <div className="input-field col s8 m6 l4 offset-l4 offset-m3 offset-s2">
+                                <input type="text"
+                                    value={this.state.lastName}
+                                    onChange={this.update('lastName')}
+                                    placeholder="Last Name"
+                                    required
+                                    className="validate"
+                                />
+                            </div>
+                        </div>  
+
+                        <div className="row">
+                            <div className="input-field col s8 m6 l4 offset-l4 offset-m3 offset-s2">
+                                <input
+                                    type="password"
+                                    value={this.state.password}
+                                    onChange={this.update("password")}
+                                    placeholder="Password"
+                                    required
+                                    minLength="6"
+                                    maxLength="30"
+                                    className="validate"
+                                />
+                            </div>
+                        </div>  
+
+                        <div className="row">
+                            <div className="input-field col s8 m6 l4 offset-l4 offset-m3 offset-s2">
+                                <input
+                                    type="password"
+                                    value={this.state.password2}
+                                    onChange={this.update("password2")}
+                                    placeholder="Confirm Password"
+                                    required
+                                    minLength="6"
+                                    maxLength="30"
+                                    className="validate"
+                                />
+                            </div>
+                        </div> 
+
+                        <div className="row">
+                            <div className="input-field col s8 m6 l4 offset-l4 offset-m3 offset-s2">
+                                <div className="left">
+                                    <input type="submit" value="Submit" className="btn col" />
+                                </div>
+                                <div className="right">
+                                    <button className="btn col" onClick={this.handleDemoLogin}>Demo Login</button>
+                                </div>
+                            </div>
+                        </div>        
+
                         {this.renderErrors()}
-                    </div>
+                    
                 </form>
             </div>
         );
