@@ -9,22 +9,30 @@ import SignupFormContainer from "./session/signup_form_container";
 import CreateGroupContainer from "./groups/create_group_form_container";
 
 const App = () => (
-    <div>
-        <header>
-            <NavBarContainer />
-        </header>    
-        <Switch>
+    <div className="custom-body">
+        
+        <div className="wrapper">
+            <header>
+                <NavBarContainer />
+            </header>
+            <div className="custom-main">
+                <main className="row">
+                    <Switch>
 
-            <ProtectedRoute exact path="/main" component={MainContainer} />
-            <ProtectedRoute exact path="/groups/new" component={CreateGroupContainer} />
-            
+                        <ProtectedRoute exact path="/main" component={MainContainer} />
+                        <ProtectedRoute exact path="/groups/new" component={CreateGroupContainer} />
 
-            <AuthRoute exact path="/login" component={LoginFormContainer} />
-            <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
-            <Redirect to='/main' />
-            <Route path='/' component={MainContainer} />
-        </Switch>
+                        <AuthRoute exact path="/login" component={LoginFormContainer} />
+                        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+
+                        <Redirect to='/main' />
+                        <Route path='/' component={MainContainer} />
+                    </Switch>
+                </main>
+            </div>
+                
+        </div>
     </div>
 );
 

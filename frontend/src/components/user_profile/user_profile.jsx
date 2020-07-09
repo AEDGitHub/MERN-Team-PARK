@@ -17,7 +17,7 @@ class UserProfile extends React.Component {
         if (!currentUser) return null
 
         return (
-            <div style={{ backgroundColor: "lightyellow" }}>
+            <div className="col s12 l6">
                 USER PROFILE
                 <br/>
                 {currentUser.firstName}

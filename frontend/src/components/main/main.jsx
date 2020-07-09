@@ -9,7 +9,7 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div style={{ backgroundColor: "pink" }}>
+            <div className="row">
                 MAIN
                 <UserProfileContainer />
                 <GroupIndexContainer />
