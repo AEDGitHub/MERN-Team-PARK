@@ -145,7 +145,6 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     const user = await User.findOne({ _id: req.user.id })
-      .populate("groups")
       .populate("interests")
       .populate("events");
     res.json(user);
@@ -158,7 +157,6 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     const user = await User.findOne({ _id: req.params.id })
-      .populate("groups")
       .populate("interests")
       .populate("events");
     res.json(user);
