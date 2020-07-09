@@ -29,7 +29,6 @@ router.post(
     newGroup
       .save()
       .then((group) => {
-        console.log(user);
         user.groups.push(group);
         user.save().then(() => res.json(group));
       })
@@ -51,10 +50,12 @@ router.get(
   "/:id",
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    const group = await Group.findOne({ _id: req.params.id })
-      .populate("users")
-      .populate("interests");
-    res.json(group);
+    const group = await Group.findOne({ _id: req.params.id });
+    const users = await User.find({ groups: { $in: [group._id] } }).populate(
+      "interests"
+    );
+
+    res.json({ group, users });
   }
 );
 
@@ -65,9 +66,12 @@ router.post(
   async (req, res) => {
     const group = await Group.findOne({ slug: req.params.slug });
     const user = await User.findOne({ _id: req.user.id });
+    if (group.users.includes(req.user.id)) {
+      return res.status(422).json({ error: "User already in group" });
+    }
 
-    group.users.push(user);
-    user.groups.push(group);
+    group.users.push(user._id);
+    user.groups.push(group._id);
 
     group
       .save()
@@ -83,13 +87,6 @@ router.post(
         console.log(err);
         return res.status(422).json({ error: "Error in joining group" });
       });
-    // group.save(function (err) {
-    //   if (err) return err;
-    //   user.save(function (err) {
-    //     if (err) return err;
-    //     return res.json({ user: user, group: group });
-    //   });
-    // });
   }
 );
 
