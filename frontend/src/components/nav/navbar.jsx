@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 class NavBar extends React.Component {
@@ -16,26 +16,33 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
             return (
-                <div>
-                    <button onClick={this.logoutUser}>Logout</button>
-                </div>
+                <ul className="right">
+                    <li><button className="btn small" onClick={this.logoutUser}>Logout</button></li>
+                </ul>
             );
         } else {
             return (
-                <div>
-                    <Link to={'/signup'}>Signup</Link>
-                    <Link to={'/login'}>Login</Link>
-                </div>
+                <ul className="right">
+                    <li><Link to={'/signup'}>Signup</Link></li>
+                    <li><Link to={'/login'}>Login</Link></li>
+                </ul>
             );
         }
     }
 
     render() {
         return (
-            <div style={{ backgroundColor: "lightgreen" }}>
-                NAVBAR
-                {this.getLinks()}
-            </div>
+            <nav>
+                <div className="nav-wrapper">
+                    <div className="col s12">
+                        <a className="brand-logo" href="/">
+                            Rebond
+                        </a>
+                
+                        {this.getLinks()}
+                    </div>
+                </div>
+            </nav>
         );
     }
 }

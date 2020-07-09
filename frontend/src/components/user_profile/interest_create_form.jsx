@@ -20,7 +20,7 @@ class InterestCreateForm extends React.Component {
             category: this.state.category,
             user: this.props.currentUser
         }
-        this.props.createInterest(interest)
+        this.props.createInterest(interest);
     }
 
     update(field) {

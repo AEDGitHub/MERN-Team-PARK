@@ -23,11 +23,13 @@ class GroupIndex extends React.Component {
         ) : null)
 
         return (
-            <section>
-                {groupsList}
-                <CreateGroupContainer />
-                <JoinGroupFormContainer />
-            </section>
+            <div className="col s12 l6">
+                <section>
+                    {groupsList}
+                    <CreateGroupContainer />
+                    <JoinGroupFormContainer />
+                </section>
+            </div>
         )
     }
 }
