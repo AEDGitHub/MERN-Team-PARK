@@ -18,13 +18,9 @@ class UserProfile extends React.Component {
 
         return (
             <div className="col s12 l6">
-                USER PROFILE
-                <br/>
-                {currentUser.firstName}
-                <br/>
-                {currentUser.lastName}
-                <br/>
-                {currentUser.email}
+                
+                <h4 className="center">{currentUser.firstName} {currentUser.lastName}</h4>
+                <h5 className="center">{currentUser.email}</h5>
                 <br/>
                 <InterestFeedContainer/>
                 <br/>

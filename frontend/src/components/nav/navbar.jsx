@@ -16,7 +16,7 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
             return (
-                <ul className="right">
+                <ul className="right" style={{ paddingRight: "30px" }}>
                     <li><button className="btn small" onClick={this.logoutUser}>Logout</button></li>
                 </ul>
             );
@@ -35,7 +35,7 @@ class NavBar extends React.Component {
             <nav>
                 <div className="nav-wrapper">
                     <div className="col s12">
-                        <a className="brand-logo" href="/">
+                        <a className="brand-logo" href="/" style={{ padding: "0 30px" }}>
                             Rebond
                         </a>
                 

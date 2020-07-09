@@ -46,18 +46,29 @@ class CreateGroupForm extends React.Component {
 
     render() {
         return (
-            <div>             
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input
-                            type="text"
-                            value={this.state.name}
-                            onChange={this.update("name")}
-                        />
-                        <br/>
-                        <input type="submit" value="Create Group" />
-                        {this.renderErrors()}
+            <div className="row">             
+                <form className="col s12" onSubmit={this.handleSubmit}>
+
+                    <h4 className="center">Create a Group</h4>
+
+                    <div className="row">
+                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
+                            <input
+                                type="text"
+                                value={this.state.name}
+                                onChange={this.update("name")}
+                            />
+                        </div>
                     </div>
+
+                    <div className="row">
+                        <div className="col s8 m6 l8 offset-l2 offset-m3 offset-s2">
+                            <input type="submit" value="Create Group" className="btn col"/>
+                        </div>
+                    </div>
+
+                    {this.renderErrors()}
+
                 </form>
             </div>
         )
