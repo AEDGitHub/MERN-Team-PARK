@@ -5,7 +5,6 @@ import axios from 'axios';
 // };
 
 export const fetchUser = () => {
-    // debugger
     return axios.get(`/api/users/current`)
 };
 

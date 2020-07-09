@@ -8,8 +8,8 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div>
-                I am the main component
+            <div style={{ backgroundColor: "pink" }}>
+                MAIN
                 <UserProfileContainer />
             </div>
         )
