@@ -32,7 +32,7 @@ class InterestCreateForm extends React.Component {
     render() {
         return (
             <div style={{ backgroundColor: "lightblue" }}>
-                <div>I am the interest create form</div>
+                <div>INTEREST CREATE FORM</div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <input 
