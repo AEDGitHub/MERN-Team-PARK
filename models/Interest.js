@@ -27,6 +27,12 @@ const InterestSchema = new Schema(
         ref: "User",
       },
     ],
+    events: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Event",
+      },
+    ],
   },
   {
     timestamps: true,
