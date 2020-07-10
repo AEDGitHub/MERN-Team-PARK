@@ -36,16 +36,21 @@ router.post(
       location: req.body.location,
       details: req.body.details,
       group: req.body.groupId,
+      maxCapcity: req.body.maxCapacity,
       attendees: [req.user.id],
+      interest: req.body.interestId,
     });
 
     const user = await User.findOne({ _id: req.user.id });
     const group = await Group.findOne({ _id: req.body.groupId });
+    // add everyone following interest to invitees
+
     newEvent
       .save()
       .then((event) => {
         user.ownedEvents.push(event);
-        user.events.push(event);
+        user.confirmedEvents.push(event);
+        user.invitedEvents.push(event);
         user
           .save()
           .then((user) => {
@@ -63,7 +68,10 @@ router.post(
             res.status(422).json({ error: "Could not save user to event" })
           );
       })
-      .catch((err) => res.status(422).json({ error: "Could not save event" }));
+      .catch((err) => {
+        console.log(err);
+        return res.status(422).json({ error: "Could not save event" });
+      });
   }
 );
 

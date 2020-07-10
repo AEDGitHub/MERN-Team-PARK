@@ -30,7 +30,7 @@ router.post(
       .save()
       .then((group) => {
         user.groups.push(group);
-        user.save().then(() => res.json(group));
+        user.save().then(() => res.json({ group: group, user: user }));
       })
       .catch((err) => res.status(422).json({ error: "Group name is taken" }));
   }
