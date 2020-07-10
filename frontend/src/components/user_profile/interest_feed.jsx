@@ -6,7 +6,7 @@ class InterestFeed extends React.Component {
 
     render() {
         if (this.props.interests.length === 0) {
-            return <div>There are no interests choosen</div>
+            return <div>You haven't added any interests yet!</div>
         };
 
         const interests = this.props.interests.map(interest => {
