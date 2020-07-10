@@ -33,7 +33,7 @@ class NavBar extends React.Component {
     render() {
         return (
             <nav>
-                <div className="nav-wrapper">
+                <div className="nav-wrapper teal">
                     <div className="col s12">
                         <a className="brand-logo" href="/" style={{ padding: "0 30px" }}>
                             Rebond
