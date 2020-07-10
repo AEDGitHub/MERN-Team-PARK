@@ -62,13 +62,14 @@ class CreateGroupForm extends React.Component {
                                 type="text"
                                 value={this.state.name}
                                 onChange={this.update("name")}
+                                required
                             />
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col s8 m6 l8 offset-l2 offset-m3 offset-s2">
-                            <input type="submit" value="Create Group" className="btn col"/>
+                            <input type="submit" value="Create" className="btn col"/>
                         </div>
                     </div>
 
