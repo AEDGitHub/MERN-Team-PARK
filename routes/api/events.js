@@ -41,8 +41,6 @@ router.post(
 
     const user = await User.findOne({ _id: req.user.id });
     const group = await Group.findOne({ _id: req.body.groupId });
-    newEvent.owner = req.user;
-    newEvent.users.push(req.user);
     newEvent
       .save()
       .then((event) => {

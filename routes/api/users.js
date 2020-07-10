@@ -187,17 +187,33 @@ router.get(
     res.json(user.ownedEvents);
   }
 );
-//Get a user's events (attending)
+
+//Get a user's "confirmed" events (which includes events that user has created)
+router.get(
+  "/:id/confirmed_events",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const user = await User.findOne({ _id: req.params.id }).populate(
+      "confirmedEvents"
+    );
+    res.json(user.confirmedEvents);
+  }
+);
+
+// Get ALL events associated to a user
 router.get(
   "/:id/events",
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
-    const user = await User.findOne({ _id: req.params.id }).populate("events");
-    res.json(user.events);
+    const user = await User.findOne({ _id: req.params.id })
+      .populate("confirmedEvents")
+      .populate("invitedEvents")
+      .populate("ownedEvents");
+
+    const { confirmedEvents, invitedEvents, ownedEvents } = user;
+    res.json({ confirmedEvents, invitedEvents, ownedEvents });
   }
 );
-
-// Get all events associated to a user
 
 //Edit user
 router.patch(

@@ -24,8 +24,9 @@ const UserSchema = new Schema(
     },
     groups: [{ type: Schema.Types.ObjectId, ref: "Group" }],
     interests: [{ type: Schema.Types.ObjectId, ref: "Interest" }],
-    events: [{ type: Schema.Types.ObjectId, ref: "Event" }],
+    confirmedEvents: [{ type: Schema.Types.ObjectId, ref: "Event" }],
     ownedEvents: [{ type: Schema.Types.ObjectId, ref: "Event" }],
+    invitedEvents: [{ type: Schema.Types.ObjectId, ref: "Event" }],
   },
   {
     timestamps: true,

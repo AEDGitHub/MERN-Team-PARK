@@ -14,6 +14,11 @@ const EventSchema = new Schema(
       ref: "User",
       required: true,
     },
+    interest: {
+      type: Schema.Types.ObjectId,
+      ref: "Interest",
+      required: true,
+    },
     date: {
       type: Date,
       required: true,
@@ -26,6 +31,9 @@ const EventSchema = new Schema(
     details: {
       type: String,
     },
+    maxCapacity: {
+      type: Number,
+    },
     group: {
       type: Schema.Types.ObjectId,
       ref: "Group",
@@ -37,10 +45,16 @@ const EventSchema = new Schema(
         ref: "User",
       },
     ],
+    invitees: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   {
     timestamps: true,
   }
 );
-// add interest, invitees, max number(optional)
+
 module.exports = Event = mongoose.model("Event", EventSchema);
