@@ -19,7 +19,9 @@ class Splash extends Component {
                     </div>
 
                     <div className="flow-text splash-under-message">
-                        Something
+                        "There are no brakes on the MERN train"
+                        <br/>
+                         Eric Arndt
                     </div>
                     
                 </div>
