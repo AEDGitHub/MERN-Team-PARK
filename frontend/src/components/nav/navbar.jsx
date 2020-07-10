@@ -22,8 +22,8 @@ class NavBar extends React.Component {
             );
         } else {
             return (
-                <ul className="right">
-                    <li><Link to={'/signup'}>Signup</Link></li>
+                <ul className="right" style={{ padding: "0 30px" }}>
+                    <li><Link to={'/signup'}>Sign Up</Link></li>
                     <li><Link to={'/login'}>Login</Link></li>
                 </ul>
             );

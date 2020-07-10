@@ -6,8 +6,10 @@ class Splash extends Component {
     render() {
         return (
             <div>
-                Splash
-                <Link to="/signup">Sign up</Link>
+                <div style={{ textAlign: "center", padding: "200px 0", fontSize: "50px" }}>
+                    PLEASE HELP ME TO FIGURE OUT WHAT TO PUT HERE :D
+                </div>
+                
             </div>
         )
     }
