@@ -16,18 +16,18 @@ class InterestFeed extends React.Component {
     componentDidMount() {
         // Code snippet from https://reactize.herokuapp.com/
         const options1 = {
-            onOpenStart: () => {
-                console.log("onOpenStart");
-            },
-            onOpenEnd: () => {
-                console.log("onOpenEnd");
-            },
-            onCloseStart: () => {
-                console.log("onCloseStart");
-            },
-            onCloseEnd: () => {
-                console.log("onCloseEnd");
-            },
+            // onOpenStart: () => {
+            //     console.log("onOpenStart");
+            // },
+            // onOpenEnd: () => {
+            //     console.log("onOpenEnd");
+            // },
+            // onCloseStart: () => {
+            //     console.log("onCloseStart");
+            // },
+            // onCloseEnd: () => {
+            //     console.log("onCloseEnd");
+            // },
             inDuration: 300,
             outDuration: 200
         };

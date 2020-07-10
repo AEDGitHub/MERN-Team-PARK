@@ -41,7 +41,7 @@ class JoinGroupForm extends React.Component {
 
                     <div className="row">
                         <div className="col s8 m6 l8 offset-l2 offset-m3 offset-s2">
-                            <button className="btn col">Join Group</button>
+                            <button className="btn col">Join</button>
                         </div>
                     </div>
 
