@@ -1,14 +1,10 @@
 import React from 'react';
-
 import InterestCreateFormContainer from "./interest_create_form_container";
-import InterestFeedContainer from "./interest_feed_container";
+import InterestFeed from "./interest_feed";
 
 class UserProfile extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchUser();
     }
 
@@ -22,9 +18,9 @@ class UserProfile extends React.Component {
                 <h4 className="center">{currentUser.firstName} {currentUser.lastName}</h4>
                 <h5 className="center">{currentUser.email}</h5>
                 <br/>
-                <InterestFeedContainer/>
-                <br/>
-                <InterestCreateFormContainer />
+                <InterestFeed currentUserId={currentUser._id} interests={currentUser.interests}/>
+                <br />
+                {currentUser.interests.length < 3 ? <InterestCreateFormContainer /> : null}
             </div>
         )
     }

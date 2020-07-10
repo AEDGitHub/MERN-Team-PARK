@@ -20,7 +20,7 @@ class SignupForm extends React.Component {
 
     componentDidMount() {
         const searchParams = new URLSearchParams(this.props.location.search);
-        this.groupSlug = searchParams.get("group"); 
+        this.slug = searchParams.get("group"); 
     }
 
     componentDidUpdate(prevProps) {
@@ -43,7 +43,7 @@ class SignupForm extends React.Component {
             lastName: this.state.lastName,
             password: this.state.password,
             password2: this.state.password2,
-            groupSlug: this.groupSlug
+            slug: this.slug
         };
         
         this.props.signup(user, this.props.history)
