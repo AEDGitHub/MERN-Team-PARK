@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const Event = require("../../models/Event");
 const validateEventInput = require("../../validation/event-input");
+const Interest = require("../../models/Interest");
 
 //Get all events
 router.get(
@@ -39,12 +40,16 @@ router.post(
       maxCapcity: req.body.maxCapacity,
       attendees: [req.user.id],
       interest: req.body.interestId,
+      invitees: [req.user.id],
+      //invitees: [req.user.id] && user.invitedEvents.push(event) add
+      //event creator to the invited list + invitees
     });
 
     const user = await User.findOne({ _id: req.user.id });
     const group = await Group.findOne({ _id: req.body.groupId });
-    // add everyone following interest to invitees
+    const interest = await Interest.findOne({ _id: req.body.interestId });
 
+    newEvent.invitees.push(interest.users);
     newEvent
       .save()
       .then((event) => {
@@ -69,7 +74,6 @@ router.post(
           );
       })
       .catch((err) => {
-        console.log(err);
         return res.status(422).json({ error: "Could not save event" });
       });
   }
