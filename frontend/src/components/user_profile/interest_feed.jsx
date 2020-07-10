@@ -29,10 +29,9 @@ class InterestFeed extends React.Component {
         })
 
         return (
-            <div style={{ backgroundColor: "lightpurple" }}>
-                INTEREST FEED
+            <ul className="collapsible">
                 {interests}
-            </div>
+            </ul>
         )
     }
 
