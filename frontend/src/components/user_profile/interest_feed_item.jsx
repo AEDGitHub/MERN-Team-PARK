@@ -3,16 +3,18 @@ import React from 'react';
 class InterestFeedItem extends React.Component {
     render() {
         return (
-            <li>
-                <div className="collapsible-header">{this.props.name}</div>
-                <div className="collapsible-body">
-                    <span>{this.props.description}</span>
-                    <br/>
-                    <br/>
-                    <span>category: {this.props.category}</span>
+          <li className="row">
+              <div className="col s12 m8">
+                <div className="card blue-grey darken-1">
+                  <div className="card-content white-text">
+                    <span className="card-title">{this.props.name}</span>
+                    <p>{this.props.category}</p>
+                    <p>{this.props.description}</p>
+                  </div>
                 </div>
-            </li>
-        )
+              </div>
+          </li>
+        );
     }
 }
 

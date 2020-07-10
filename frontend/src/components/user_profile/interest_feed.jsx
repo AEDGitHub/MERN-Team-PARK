@@ -13,27 +13,6 @@ class InterestFeed extends React.Component {
         // };
     }
 
-    componentDidMount() {
-        // Code snippet from https://reactize.herokuapp.com/
-        const options1 = {
-            // onOpenStart: () => {
-            //     console.log("onOpenStart");
-            // },
-            // onOpenEnd: () => {
-            //     console.log("onOpenEnd");
-            // },
-            // onCloseStart: () => {
-            //     console.log("onCloseStart");
-            // },
-            // onCloseEnd: () => {
-            //     console.log("onCloseEnd");
-            // },
-            inDuration: 300,
-            outDuration: 200
-        };
-        M.Collapsible.init(this.Collapsible1, options1);
-    }
-
     render() {
         if (this.props.interests.length === 0) {
             return <div className="center">You haven't added any interests yet!</div>
@@ -49,8 +28,7 @@ class InterestFeed extends React.Component {
         })
 
         return (
-            <ul ref={Collapsible => {this.Collapsible1 = Collapsible;}} 
-                className="collapsible col s8 m6 l8 offset-l2 offset-m3 offset-s2">
+            <ul>
                 {interests}
             </ul>
         )
