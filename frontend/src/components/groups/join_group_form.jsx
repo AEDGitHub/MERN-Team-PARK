@@ -19,6 +19,7 @@ class JoinGroupForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.joinGroup(this.state.slug)
+        this.setState({ slug: "" });
     }
 
     render() {

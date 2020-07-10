@@ -18,6 +18,11 @@ class CreateGroupForm extends React.Component {
         };
 
         this.props.createGroup(group);
+
+        this.setState({
+          name: "",
+          errors: {},
+        });
     }
 
     update(field) {
