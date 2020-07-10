@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import InterestCreateForm from './interest_create_form';
 import { createInterest } from '../../actions/user_actions';
 
