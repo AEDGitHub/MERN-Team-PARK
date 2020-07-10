@@ -22,6 +22,13 @@ class InterestCreateForm extends React.Component {
             user: this.props.currentUser
         }
         this.props.createInterest(interest);
+
+        this.setState({
+          name: "",
+          description: "",
+          category: "Choose a category",
+          user: "",
+        });
     }
 
     update(field) {
@@ -35,7 +42,7 @@ class InterestCreateForm extends React.Component {
             <div className="row">
                 <form className="col s12" onSubmit={this.handleSubmit}>
 
-                    <h4 className="center">Create an Interest</h4>
+                    <h4 className="center">Add an Interest</h4>
 
                     <div className="row">
                         <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
@@ -44,6 +51,7 @@ class InterestCreateForm extends React.Component {
                                 value={this.state.name}
                                 onChange={this.update('name')}
                                 placeholder="Name"
+                                required
                             />
                         </div>
                     </div>
@@ -55,15 +63,16 @@ class InterestCreateForm extends React.Component {
                                 value={this.state.description}
                                 onChange={this.update('description')}
                                 placeholder="Description"
+                                required
                             />
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
-                            <select style={{ display: "block" }} defaultValue="Choose a Category"
+                            <select style={{ display: "block" }} required
                                 onChange={this.update('category')}>
-                                <option disabled="disabled">Choose a Category</option>
+                                <option value="">Choose a Category</option>
                                 <option value="Outdoors & Adventure">Outdoors & Adventure</option>
                                 <option value="Food & Drink">Food & Drink</option>
                                 <option value="Hobbies & Crafts">Hobbies & Crafts</option>
@@ -74,7 +83,7 @@ class InterestCreateForm extends React.Component {
 
                     <div className="row">
                         <div className="col s8 m6 l4 offset-l4 offset-m3 offset-s2">
-                            <input type="submit" value="Create Interest" className="btn col"/>
+                            <input type="submit" value="Add Interest" className="btn col"/>
                         </div>
                     </div>
 
