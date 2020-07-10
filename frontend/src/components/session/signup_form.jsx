@@ -74,7 +74,7 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="row">
                 <form className="col s12" onSubmit={this.handleSubmit}>
 
                     <h2 className="center">Sign Up</h2>
