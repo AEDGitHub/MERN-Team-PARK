@@ -10,7 +10,7 @@ const groupsReducer = (oldState = {}, action) => {
     switch(action.type) {
         case RECEIVE_GROUP:
             // nextState[action.group._id] = action.group
-            nextState[action.group.data._id] = action.group.data
+            nextState[action.payload.data.group._id] = action.payload.data.group;
             // nextState.new = action.group.data
             return nextState
         case RECEIVE_GROUPS:
