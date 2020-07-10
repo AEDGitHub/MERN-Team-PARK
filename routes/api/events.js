@@ -41,8 +41,7 @@ router.post(
       attendees: [req.user.id],
       interest: req.body.interestId,
       invitees: [req.user.id],
-      //invitees: [req.user.id] && user.invitedEvents.push(event) add
-      //event creator to the invited list + invitees
+      //invitees: [req.user.id] && user.invitedEvents.push(event) add event creator to the invited list + invitees
     });
 
     const user = await User.findOne({ _id: req.user.id });
@@ -79,6 +78,50 @@ router.post(
   }
 );
 
+//Join event (current user)
+router.post(
+  "/:id/join",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const event = await Event.findOne({ _id: req.params.id });
+    const user = await User.findOne({ _id: req.user.id });
+
+    if (event.attendees.includes(req.user.id)) {
+      return res
+        .status(422)
+        .json({ error: "User is already confirmed for this event" });
+    }
+
+    if (event.attendees.length >= event.maxCapacity) {
+      return res.status(422).json({ error: "Event is at max capacity" });
+    }
+
+    if (!user.groups.includes(event.group)) {
+      return res
+        .status(422)
+        .json({ error: "User must be part of group to join event" });
+    }
+
+    event.attendees.push(req.user.id);
+    event
+      .save()
+      .then((event) => {
+        user.confirmedEvents.push(event);
+        user
+          .save()
+          .then((user) => {
+            res.json({ event, user });
+          })
+          .catch((err) =>
+            res.status(422).json({
+              error: "Could not save event to user's confirmed events",
+            })
+          );
+      })
+      .catch((err) => res.status(422).json({ error: "Could not join event" }));
+  }
+);
+
 //Edit event
 router.patch(
   "/:id",
@@ -95,11 +138,12 @@ router.patch(
       return res.status(403).json({ error: "Unauthorized to edit event" });
     }
 
-    const { name, date, location, details } = req.body;
+    const { name, date, location, details, maxCapacity } = req.body;
     if (name) event.name = name;
     if (date) event.date = date;
     if (location) event.location = location;
     if (details) event.details = details;
+    if (maxCapacity) event.maxCapacity = maxCapacity;
 
     event.save().then((event) => res.json(event));
   }
