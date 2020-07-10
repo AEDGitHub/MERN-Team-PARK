@@ -2,6 +2,7 @@ import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
+import Splash from "./splash/splash"
 import NavBarContainer from "./nav/navbar_container";
 import MainContainer from "./main/main_container";
 import LoginFormContainer from "./session/login_form_container";
@@ -22,7 +23,7 @@ const App = () => (
                         <ProtectedRoute exact path="/main" component={MainContainer} />
                         <ProtectedRoute exact path="/groups/new" component={CreateGroupContainer} />
 
-
+                        <AuthRoute exact path="/" component={Splash} />
                         <AuthRoute exact path="/login" component={LoginFormContainer} />
                         <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
@@ -31,7 +32,9 @@ const App = () => (
                     </Switch>
                 </main>
             </div>
+            <footer className="page-footer teal" style={{ bottom: "0", position: "fixed", width: "100%", height: "50px" }}>
                 
+            </footer>
         </div>
     </div>
 );
