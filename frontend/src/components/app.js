@@ -32,7 +32,7 @@ const App = () => (
                     </Switch>
                 </main>
             </div>
-            <footer className="page-footer teal" style={{ bottom: "0", position: "fixed", width: "100%", height: "50px" }}>
+            <footer className="page-footer teal lighten-2" style={{ bottom: "0", position: "fixed", width: "100%", height: "50px" }}>
                 
             </footer>
         </div>

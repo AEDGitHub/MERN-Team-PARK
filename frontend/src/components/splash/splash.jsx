@@ -6,9 +6,24 @@ class Splash extends Component {
     render() {
         return (
             <div>
-                <div style={{ textAlign: "center", padding: "200px 0", fontSize: "50px" }}>
-                    PLEASE HELP ME TO FIGURE OUT WHAT TO PUT HERE :D
+                <div id="splash-background" 
+                    style={{ backgroundImage: "url(" + "../../../splash_background.jpeg" + ")", 
+                    height: "100vw", 
+                    backgroundSize: "100%", 
+                    backgroundRepeat: "no-repeat",
+                    position: "relative" 
+                    }}
+                >
+                    <div className="flow-text welcome-message">
+                        Expand your network and attend events for things you love.
+                    </div>
+
+                    <div className="flow-text splash-under-message">
+                        Something
+                    </div>
+                    
                 </div>
+                
                 
             </div>
         )
