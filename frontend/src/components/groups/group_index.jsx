@@ -1,6 +1,7 @@
 import React from "react";
 import CreateGroupContainer from "./create_group_form_container";
 import JoinGroupFormContainer from "./join_group_form_container";
+import GroupShowContainer from "./group_show_container";
 
 class GroupIndex extends React.Component {
     componentDidMount() {
@@ -15,7 +16,7 @@ class GroupIndex extends React.Component {
                     <li key={group._id}>
                         <div className="collapsible-header"><h3>{group.name}</h3></div>
                         <div className="collapsible-body">
-                            <p>This is the Group Show Component</p>
+                            <GroupShowContainer groupId={group._id}/>
                         </div>
                     </li>
                 ))}

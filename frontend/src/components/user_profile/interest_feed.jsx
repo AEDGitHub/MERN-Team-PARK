@@ -6,10 +6,6 @@ class InterestFeed extends React.Component {
 
     constructor(props) {
         super(props);
-
-        // this.state = {
-        //     interests: this.props.interests
-        // };
     }
 
     render() {
