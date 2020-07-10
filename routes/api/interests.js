@@ -51,7 +51,6 @@ router.post(
           });
       })
       .catch((err) => {
-        console.log(err);
         return res.status(422).json({
           error:
             "An error occured while creating the interest. Please try again.",
@@ -82,7 +81,6 @@ router.post(
           )
       )
       .catch((err) => {
-        console.log(err);
         return res.status(422).json({ error: "Error in joining interest" });
       });
   }

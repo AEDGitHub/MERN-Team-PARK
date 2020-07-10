@@ -84,7 +84,6 @@ router.post(
           )
       )
       .catch((err) => {
-        console.log(err);
         return res.status(422).json({ error: "Error in joining group" });
       });
   }
