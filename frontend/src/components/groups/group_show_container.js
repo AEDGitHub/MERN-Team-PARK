@@ -6,7 +6,8 @@ import GroupShow from "./group_show";
 const mapStateToProps = (state, ownProps) => {
     return {
         group: state.entities.groups[ownProps.groupId],
-        interests: groupInterests(state, ownProps.groupId)
+        interests: groupInterests(state, ownProps.groupId),
+        currentUserId: state.session.user.id
     }
 }
 
