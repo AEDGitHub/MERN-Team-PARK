@@ -40,54 +40,45 @@ class InterestCreateForm extends React.Component {
     render() {
         return (
             <div className="row">
-                <form className="col s12" onSubmit={this.handleSubmit}>
+                <div className="col s12 m8">
+                    <form className="card blue-grey darken-1" onSubmit={this.handleSubmit}>
+                        <div className="card-content white-text">
+                            <span className="card-title">Add an Interest</span>
 
-                    <h4 className="center">Add an Interest</h4>
+                            <div className="input-field">
+                                <input
+                                    type="text"
+                                    value={this.state.name}
+                                    onChange={this.update('name')}
+                                    placeholder="Name"
+                                    required
+                                />
+                            </div>
 
-                    <div className="row">
-                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
-                            <input
-                                type="text"
-                                value={this.state.name}
-                                onChange={this.update('name')}
-                                placeholder="Name"
-                                required
-                            />
+                            <div className="input-field">
+                                <input
+                                    type="text"
+                                    value={this.state.description}
+                                    onChange={this.update('description')}
+                                    placeholder="Description"
+                                    required
+                                />
+                            </div>
+
+                            <div className="input-field">
+                                <select style={{ display: "block" }} required
+                                    onChange={this.update('category')}>
+                                    <option value="">Choose a Category</option>
+                                    <option value="Outdoors & Adventure">Outdoors & Adventure</option>
+                                    <option value="Food & Drink">Food & Drink</option>
+                                    <option value="Hobbies & Crafts">Hobbies & Crafts</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="Add Interest" className="btn"/>
                         </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
-                            <input
-                                type="text"
-                                value={this.state.description}
-                                onChange={this.update('description')}
-                                placeholder="Description"
-                                required
-                            />
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
-                            <select style={{ display: "block" }} required
-                                onChange={this.update('category')}>
-                                <option value="">Choose a Category</option>
-                                <option value="Outdoors & Adventure">Outdoors & Adventure</option>
-                                <option value="Food & Drink">Food & Drink</option>
-                                <option value="Hobbies & Crafts">Hobbies & Crafts</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col s8 m6 l4 offset-l4 offset-m3 offset-s2">
-                            <input type="submit" value="Add Interest" className="btn col"/>
-                        </div>
-                    </div>
-
-                </form>
+                    </form>
+                </div>
             </div>
         )
     }
