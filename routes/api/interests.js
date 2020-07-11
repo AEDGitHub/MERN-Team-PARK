@@ -65,17 +65,19 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     const interest = await Interest.findOne({ _id: req.params.id });
-    const user = await User.findOne({ _id: req.user.id });
+    const interestCreator = await User.findOne({ _id: interest.owner });
+    const follower = await User.findOne({ _id: req.user.id });
 
-    interest.users.push(user);
-    user.interests.push(interest);
+    interest.users.push(follower);
 
     interest
       .save()
       .then((interest) =>
-        user
+        interestCreator
           .save()
-          .then((user) => res.json({ user, interest }))
+          .then((savedUser) => {
+            savedUser.populate("interests", () => res.json(savedUser));
+          })
           .catch((err) =>
             res.status(422).json({ error: "User could not follow interest" })
           )

@@ -8,8 +8,8 @@ const usersReducer = (oldState = {}, action) => {
     let nextState = Object.assign({}, oldState);
     switch (action.type) {
         case RECEIVE_USER:
-            nextState[action.user.data._id] = action.user.data
-            // nextState[action.user.id] = action.user
+            let receivedUser = action.user.data || action.user;
+            nextState[receivedUser._id] = receivedUser;
             return nextState
         case RECEIVE_GROUP_JOIN:
             let { user } = action.payload.data;

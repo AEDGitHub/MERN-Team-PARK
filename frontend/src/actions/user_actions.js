@@ -10,11 +10,6 @@ const receiveUser = user => {
     }
 };
 
-// export const fetchUser = userId => dispatch => {
-//     return APIUtil.fetchUser(userId)
-//         .then((user) => dispatch(receiveUser(user)))
-// }
-
 export const fetchUser = () => dispatch => {
     return APIUtil.fetchUser()
         .then((user) => dispatch(receiveUser(user)))
@@ -24,3 +19,8 @@ export const createInterest = data => dispatch => {
     return APIUtil.createInterest(data)
         .then((user) => dispatch(receiveUser(user)))
 };
+
+export const followInterest = interestId => dispatch => {
+    return APIUtil.followInterest(interestId)
+        .then(payload => dispatch(receiveUser(payload.data)))
+}

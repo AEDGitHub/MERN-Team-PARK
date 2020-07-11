@@ -1,5 +1,5 @@
 import React from "react";
-import InterestFeed from "../user_profile/interest_feed";
+import InterestFeedContainer from "../user_profile/interest_feed_container";
 
 class GroupShow extends React.Component {
     componentDidMount() {
@@ -19,7 +19,7 @@ class GroupShow extends React.Component {
         return (
             <div>
                 {sharingLink}
-                <InterestFeed interests={this.props.interests} />
+                <InterestFeedContainer interests={this.props.interests} />
             </div>
         )
     }
