@@ -20,10 +20,10 @@ class InterestFeed extends React.Component {
 
         const interests = this.props.interests.map(interest => {
                 return <InterestFeedItem 
-                            key={interest._id} 
-                            name={interest.name}
-                            description={interest.description}
-                            category={interest.category}  
+                    key={interest._id}
+                    interest={interest}
+                    currentUserId={this.props.currentUserId}
+                    followInterest={this.props.followInterest}
                         />
         })
 
