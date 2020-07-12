@@ -5,6 +5,8 @@ const passport = require("passport");
 const Event = require("../../models/Event");
 const validateEventInput = require("../../validation/event-input");
 const Interest = require("../../models/Interest");
+const User = require("../../models/User");
+const Group = require("../../models/Group");
 
 //Get all events
 router.get(
