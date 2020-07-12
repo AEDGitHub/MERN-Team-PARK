@@ -65,15 +65,19 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     const interest = await Interest.findOne({ _id: req.params.id });
-    const interestCreator = await User.findOne({ _id: interest.owner });
     const follower = await User.findOne({ _id: req.user.id });
 
+    if (!interest) {
+      return res.status(404).json({ error: "Interest does not exist" });
+    }
+
     interest.users.push(follower);
+    follower.interests.push(interest);
 
     interest
       .save()
       .then((interest) =>
-        interestCreator
+        follower
           .save()
           .then((savedUser) => {
             savedUser.populate("interests", () => res.json(savedUser));
@@ -85,6 +89,54 @@ router.post(
       .catch((err) => {
         return res.status(422).json({ error: "Error in joining interest" });
       });
+  }
+);
+
+//Unfollow another user's interest
+router.post(
+  "/:id/unfollow",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const interest = await Interest.findOne({ _id: req.params.id });
+    const user = await User.findOne({ _id: req.user.id });
+
+    interest.users.pull(user);
+    user.interests.pull(interest);
+
+    interest
+      .save()
+      .then((interest) =>
+        user
+          .save()
+          .then((user) => res.json({ user, interest }))
+          .catch((err) =>
+            res.status(422).json({ error: "User could not unfollow interest" })
+          )
+      )
+      .catch((err) => {
+        return res.status(422).json({ error: "Error in unfollowing interest" });
+      });
+  }
+);
+
+router.delete(
+  "/:id",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const interest = await Interest.findOne({ _id: req.params.id }).populate(
+      "users"
+    );
+    const users = interest.users;
+    users.forEach((user) => {
+      user.interests.pull(interest);
+      user.save();
+    });
+    interest
+      .deleteOne()
+      .then(() => {
+        res.json({ success: true });
+      })
+      .catch((err) => res.json(err));
   }
 );
 
