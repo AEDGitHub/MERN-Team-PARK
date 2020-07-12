@@ -1,0 +1,17 @@
+.navbar-wrapper {
+    @extend .nav-wrapper;
+    padding: 0 30px;
+}
+
+.navbar-session-button-holder {
+    @extend .right;
+}
+
+.navbar-session-button {
+    @extend .btn, .small;
+}
+
+.navbar-brand-logo {
+    @extend .brand-logo;
+}
+
