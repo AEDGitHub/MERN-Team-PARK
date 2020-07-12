@@ -24,13 +24,13 @@ class JoinGroupForm extends React.Component {
 
     render() {
         return (
-            <div className="row">
-                <form className="col s12" onSubmit={this.handleSubmit}>
+            <div>
+                <form onSubmit={this.handleSubmit}>
 
-                    <h4 className="center">Join a Group</h4>
+                    <h4 className="group-session-title">Join a Group</h4>
 
                     <div className="row">
-                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
+                        <div className="group-session-input-holder">
                             <input
                                 type="text"
                                 onChange={this.handleInput}
@@ -40,8 +40,8 @@ class JoinGroupForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="col s8 m6 l8 offset-l2 offset-m3 offset-s2">
-                            <button className="btn col">Join</button>
+                        <div>
+                            <button className="group-session-button">Join</button>
                         </div>
                     </div>
 

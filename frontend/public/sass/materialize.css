@@ -46,7 +46,7 @@
   color: #ea454b !important;
 }
 
-.materialize-red.darken-1 {
+.materialize-red.darken-1, .materialize-red.interest-holder, .materialize-red.interest-create-container {
   background-color: #d0181e !important;
 }
 
@@ -126,7 +126,7 @@
   color: #EF5350 !important;
 }
 
-.red.darken-1 {
+.red.darken-1, .red.interest-holder, .red.interest-create-container {
   background-color: #E53935 !important;
 }
 
@@ -238,7 +238,7 @@
   color: #ec407a !important;
 }
 
-.pink.darken-1 {
+.pink.darken-1, .pink.interest-holder, .pink.interest-create-container {
   background-color: #d81b60 !important;
 }
 
@@ -350,7 +350,7 @@
   color: #ab47bc !important;
 }
 
-.purple.darken-1 {
+.purple.darken-1, .purple.interest-holder, .purple.interest-create-container {
   background-color: #8e24aa !important;
 }
 
@@ -462,7 +462,7 @@
   color: #7e57c2 !important;
 }
 
-.deep-purple.darken-1 {
+.deep-purple.darken-1, .deep-purple.interest-holder, .deep-purple.interest-create-container {
   background-color: #5e35b1 !important;
 }
 
@@ -574,7 +574,7 @@
   color: #5c6bc0 !important;
 }
 
-.indigo.darken-1 {
+.indigo.darken-1, .indigo.interest-holder, .indigo.interest-create-container {
   background-color: #3949ab !important;
 }
 
@@ -686,7 +686,7 @@
   color: #42A5F5 !important;
 }
 
-.blue.darken-1 {
+.blue.darken-1, .blue.interest-holder, .blue.interest-create-container {
   background-color: #1E88E5 !important;
 }
 
@@ -798,7 +798,7 @@
   color: #29b6f6 !important;
 }
 
-.light-blue.darken-1 {
+.light-blue.darken-1, .light-blue.interest-holder, .light-blue.interest-create-container {
   background-color: #039be5 !important;
 }
 
@@ -910,7 +910,7 @@
   color: #26c6da !important;
 }
 
-.cyan.darken-1 {
+.cyan.darken-1, .cyan.interest-holder, .cyan.interest-create-container {
   background-color: #00acc1 !important;
 }
 
@@ -1022,7 +1022,7 @@
   color: #26a69a !important;
 }
 
-.teal.darken-1 {
+.teal.darken-1, .teal.interest-holder, .teal.interest-create-container {
   background-color: #00897b !important;
 }
 
@@ -1134,7 +1134,7 @@
   color: #66BB6A !important;
 }
 
-.green.darken-1 {
+.green.darken-1, .green.interest-holder, .green.interest-create-container {
   background-color: #43A047 !important;
 }
 
@@ -1246,7 +1246,7 @@
   color: #9ccc65 !important;
 }
 
-.light-green.darken-1 {
+.light-green.darken-1, .light-green.interest-holder, .light-green.interest-create-container {
   background-color: #7cb342 !important;
 }
 
@@ -1358,7 +1358,7 @@
   color: #d4e157 !important;
 }
 
-.lime.darken-1 {
+.lime.darken-1, .lime.interest-holder, .lime.interest-create-container {
   background-color: #c0ca33 !important;
 }
 
@@ -1470,7 +1470,7 @@
   color: #ffee58 !important;
 }
 
-.yellow.darken-1 {
+.yellow.darken-1, .yellow.interest-holder, .yellow.interest-create-container {
   background-color: #fdd835 !important;
 }
 
@@ -1582,7 +1582,7 @@
   color: #ffca28 !important;
 }
 
-.amber.darken-1 {
+.amber.darken-1, .amber.interest-holder, .amber.interest-create-container {
   background-color: #ffb300 !important;
 }
 
@@ -1694,7 +1694,7 @@
   color: #ffa726 !important;
 }
 
-.orange.darken-1 {
+.orange.darken-1, .orange.interest-holder, .orange.interest-create-container {
   background-color: #fb8c00 !important;
 }
 
@@ -1806,7 +1806,7 @@
   color: #ff7043 !important;
 }
 
-.deep-orange.darken-1 {
+.deep-orange.darken-1, .deep-orange.interest-holder, .deep-orange.interest-create-container {
   background-color: #f4511e !important;
 }
 
@@ -1918,7 +1918,7 @@
   color: #8d6e63 !important;
 }
 
-.brown.darken-1 {
+.brown.darken-1, .brown.interest-holder, .brown.interest-create-container {
   background-color: #6d4c41 !important;
 }
 
@@ -1950,7 +1950,7 @@
   color: #3e2723 !important;
 }
 
-.blue-grey {
+.blue-grey, .interest-holder, .interest-create-container {
   background-color: #607d8b !important;
 }
 
@@ -1958,7 +1958,7 @@
   color: #607d8b !important;
 }
 
-.blue-grey.lighten-5 {
+.blue-grey.lighten-5, .lighten-5.interest-holder, .lighten-5.interest-create-container {
   background-color: #eceff1 !important;
 }
 
@@ -1966,7 +1966,7 @@
   color: #eceff1 !important;
 }
 
-.blue-grey.lighten-4 {
+.blue-grey.lighten-4, .lighten-4.interest-holder, .lighten-4.interest-create-container {
   background-color: #cfd8dc !important;
 }
 
@@ -1974,7 +1974,7 @@
   color: #cfd8dc !important;
 }
 
-.blue-grey.lighten-3 {
+.blue-grey.lighten-3, .lighten-3.interest-holder, .lighten-3.interest-create-container {
   background-color: #b0bec5 !important;
 }
 
@@ -1982,7 +1982,7 @@
   color: #b0bec5 !important;
 }
 
-.blue-grey.lighten-2 {
+.blue-grey.lighten-2, .lighten-2.interest-holder, .lighten-2.interest-create-container {
   background-color: #90a4ae !important;
 }
 
@@ -1990,7 +1990,7 @@
   color: #90a4ae !important;
 }
 
-.blue-grey.lighten-1 {
+.blue-grey.lighten-1, .lighten-1.interest-holder, .lighten-1.interest-create-container {
   background-color: #78909c !important;
 }
 
@@ -1998,7 +1998,7 @@
   color: #78909c !important;
 }
 
-.blue-grey.darken-1 {
+.blue-grey.darken-1, .interest-holder, .interest-create-container {
   background-color: #546e7a !important;
 }
 
@@ -2006,7 +2006,7 @@
   color: #546e7a !important;
 }
 
-.blue-grey.darken-2 {
+.blue-grey.darken-2, .darken-2.interest-holder, .darken-2.interest-create-container {
   background-color: #455a64 !important;
 }
 
@@ -2014,7 +2014,7 @@
   color: #455a64 !important;
 }
 
-.blue-grey.darken-3 {
+.blue-grey.darken-3, .darken-3.interest-holder, .darken-3.interest-create-container {
   background-color: #37474f !important;
 }
 
@@ -2022,7 +2022,7 @@
   color: #37474f !important;
 }
 
-.blue-grey.darken-4 {
+.blue-grey.darken-4, .darken-4.interest-holder, .darken-4.interest-create-container {
   background-color: #263238 !important;
 }
 
@@ -2078,7 +2078,7 @@
   color: #bdbdbd !important;
 }
 
-.grey.darken-1 {
+.grey.darken-1, .grey.interest-holder, .grey.interest-create-container {
   background-color: #757575 !important;
 }
 
@@ -2122,7 +2122,7 @@
   background-color: #FFFFFF !important;
 }
 
-.white-text {
+.white-text, .interest-content, .interest-create-content {
   color: #FFFFFF !important;
 }
 
@@ -2624,12 +2624,12 @@ a {
 }
 
 /* 2dp elevation modified*/
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+.z-depth-1, nav, .card-panel, .card, .interest-holder, .interest-create-container, .toast, .btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .interest-create-button, .group-session-button, .btn-floating, .dropdown-content, .collapsible, .group-list, .sidenav {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-small:hover, .navbar-session-button:hover, .session-form-button:hover, .btn-floating:hover {
+.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-small:hover, .navbar-session-button:hover, .session-form-button:hover, .interest-create-button:hover, .group-session-button:hover, .btn-floating:hover {
   -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
@@ -3165,7 +3165,7 @@ td, th {
   color: #26a69a;
 }
 
-.collapsible .collection {
+.collapsible .collection, .group-list .collection {
   margin: 0;
   border: none;
 }
@@ -3311,7 +3311,7 @@ td, th {
   text-align: right;
 }
 
-.center, .session-form-title, .center-align {
+.center, .session-form-title, .group-session-title, .center-align {
   text-align: center;
 }
 
@@ -3395,7 +3395,7 @@ nav ul a span.badge {
   margin-top: calc(0.75rem - 11px);
 }
 
-.collapsible span.badge {
+.collapsible span.badge, .group-list span.badge {
   margin-left: auto;
 }
 
@@ -3434,7 +3434,7 @@ table span.badge {
   }
 }
 
-.col .row, .session-form-input-holder .row, .session-form-buttons-holder .row {
+.col .row, .session-form-input-holder .row, .session-form-buttons-holder .row, .main-left-container .row, .main-right-container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
 }
@@ -3468,7 +3468,7 @@ table span.badge {
   clear: both;
 }
 
-.row .col, .row .session-form-input-holder, .row .session-form-buttons-holder {
+.row .col, .row .session-form-input-holder, .row .session-form-buttons-holder, .row .main-left-container, .row .main-right-container {
   float: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3476,783 +3476,783 @@ table span.badge {
   min-height: 1px;
 }
 
-.row .col[class*="push-"], .row .session-form-input-holder[class*="push-"], .row .session-form-buttons-holder[class*="push-"], .row .col[class*="pull-"], .row .session-form-input-holder[class*="pull-"], .row .session-form-buttons-holder[class*="pull-"] {
+.row .col[class*="push-"], .row .session-form-input-holder[class*="push-"], .row .session-form-buttons-holder[class*="push-"], .row .main-left-container[class*="push-"], .row .main-right-container[class*="push-"], .row .col[class*="pull-"], .row .session-form-input-holder[class*="pull-"], .row .session-form-buttons-holder[class*="pull-"], .row .main-left-container[class*="pull-"], .row .main-right-container[class*="pull-"] {
   position: relative;
 }
 
-.row .col.s1, .row .s1.session-form-input-holder, .row .s1.session-form-buttons-holder {
+.row .col.s1, .row .s1.session-form-input-holder, .row .s1.session-form-buttons-holder, .row .s1.main-left-container, .row .s1.main-right-container {
   width: 8.33333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s2, .row .s2.session-form-input-holder, .row .s2.session-form-buttons-holder {
+.row .col.s2, .row .s2.session-form-input-holder, .row .s2.session-form-buttons-holder, .row .s2.main-left-container, .row .s2.main-right-container {
   width: 16.66667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s3, .row .s3.session-form-input-holder, .row .s3.session-form-buttons-holder {
+.row .col.s3, .row .s3.session-form-input-holder, .row .s3.session-form-buttons-holder, .row .s3.main-left-container, .row .s3.main-right-container {
   width: 25%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s4, .row .s4.session-form-input-holder, .row .s4.session-form-buttons-holder {
+.row .col.s4, .row .s4.session-form-input-holder, .row .s4.session-form-buttons-holder, .row .s4.main-left-container, .row .s4.main-right-container {
   width: 33.33333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s5, .row .s5.session-form-input-holder, .row .s5.session-form-buttons-holder {
+.row .col.s5, .row .s5.session-form-input-holder, .row .s5.session-form-buttons-holder, .row .s5.main-left-container, .row .s5.main-right-container {
   width: 41.66667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s6, .row .s6.session-form-input-holder, .row .s6.session-form-buttons-holder {
+.row .col.s6, .row .s6.session-form-input-holder, .row .s6.session-form-buttons-holder, .row .s6.main-left-container, .row .s6.main-right-container {
   width: 50%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s7, .row .s7.session-form-input-holder, .row .s7.session-form-buttons-holder {
+.row .col.s7, .row .s7.session-form-input-holder, .row .s7.session-form-buttons-holder, .row .s7.main-left-container, .row .s7.main-right-container {
   width: 58.33333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s8, .row .session-form-input-holder, .row .session-form-buttons-holder {
+.row .col.s8, .row .session-form-input-holder, .row .session-form-buttons-holder, .row .s8.main-left-container, .row .main-left-container.session-form-input-holder, .row .main-left-container.session-form-buttons-holder, .row .s8.main-right-container, .row .main-right-container.session-form-input-holder, .row .main-right-container.session-form-buttons-holder {
   width: 66.66667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s9, .row .s9.session-form-input-holder, .row .s9.session-form-buttons-holder {
+.row .col.s9, .row .s9.session-form-input-holder, .row .s9.session-form-buttons-holder, .row .s9.main-left-container, .row .s9.main-right-container {
   width: 75%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s10, .row .s10.session-form-input-holder, .row .s10.session-form-buttons-holder {
+.row .col.s10, .row .s10.session-form-input-holder, .row .s10.session-form-buttons-holder, .row .s10.main-left-container, .row .s10.main-right-container {
   width: 83.33333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s11, .row .s11.session-form-input-holder, .row .s11.session-form-buttons-holder {
+.row .col.s11, .row .s11.session-form-input-holder, .row .s11.session-form-buttons-holder, .row .s11.main-left-container, .row .s11.main-right-container {
   width: 91.66667%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.s12, .row .s12.session-form-input-holder, .row .s12.session-form-buttons-holder {
+.row .col.s12, .row .s12.session-form-input-holder, .row .session-form-input-holder.main-left-container, .row .session-form-input-holder.main-right-container, .row .s12.session-form-buttons-holder, .row .session-form-buttons-holder.main-left-container, .row .session-form-buttons-holder.main-right-container, .row .main-left-container, .row .main-right-container {
   width: 100%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 
-.row .col.offset-s1, .row .offset-s1.session-form-input-holder, .row .offset-s1.session-form-buttons-holder {
+.row .col.offset-s1, .row .offset-s1.session-form-input-holder, .row .offset-s1.session-form-buttons-holder, .row .offset-s1.main-left-container, .row .offset-s1.main-right-container {
   margin-left: 8.33333%;
 }
 
-.row .col.pull-s1, .row .pull-s1.session-form-input-holder, .row .pull-s1.session-form-buttons-holder {
+.row .col.pull-s1, .row .pull-s1.session-form-input-holder, .row .pull-s1.session-form-buttons-holder, .row .pull-s1.main-left-container, .row .pull-s1.main-right-container {
   right: 8.33333%;
 }
 
-.row .col.push-s1, .row .push-s1.session-form-input-holder, .row .push-s1.session-form-buttons-holder {
+.row .col.push-s1, .row .push-s1.session-form-input-holder, .row .push-s1.session-form-buttons-holder, .row .push-s1.main-left-container, .row .push-s1.main-right-container {
   left: 8.33333%;
 }
 
-.row .col.offset-s2, .row .session-form-input-holder, .row .session-form-buttons-holder {
+.row .col.offset-s2, .row .session-form-input-holder, .row .session-form-buttons-holder, .row .offset-s2.main-left-container, .row .main-left-container.session-form-input-holder, .row .main-left-container.session-form-buttons-holder, .row .offset-s2.main-right-container, .row .main-right-container.session-form-input-holder, .row .main-right-container.session-form-buttons-holder {
   margin-left: 16.66667%;
 }
 
-.row .col.pull-s2, .row .pull-s2.session-form-input-holder, .row .pull-s2.session-form-buttons-holder {
+.row .col.pull-s2, .row .pull-s2.session-form-input-holder, .row .pull-s2.session-form-buttons-holder, .row .pull-s2.main-left-container, .row .pull-s2.main-right-container {
   right: 16.66667%;
 }
 
-.row .col.push-s2, .row .push-s2.session-form-input-holder, .row .push-s2.session-form-buttons-holder {
+.row .col.push-s2, .row .push-s2.session-form-input-holder, .row .push-s2.session-form-buttons-holder, .row .push-s2.main-left-container, .row .push-s2.main-right-container {
   left: 16.66667%;
 }
 
-.row .col.offset-s3, .row .offset-s3.session-form-input-holder, .row .offset-s3.session-form-buttons-holder {
+.row .col.offset-s3, .row .offset-s3.session-form-input-holder, .row .offset-s3.session-form-buttons-holder, .row .offset-s3.main-left-container, .row .offset-s3.main-right-container {
   margin-left: 25%;
 }
 
-.row .col.pull-s3, .row .pull-s3.session-form-input-holder, .row .pull-s3.session-form-buttons-holder {
+.row .col.pull-s3, .row .pull-s3.session-form-input-holder, .row .pull-s3.session-form-buttons-holder, .row .pull-s3.main-left-container, .row .pull-s3.main-right-container {
   right: 25%;
 }
 
-.row .col.push-s3, .row .push-s3.session-form-input-holder, .row .push-s3.session-form-buttons-holder {
+.row .col.push-s3, .row .push-s3.session-form-input-holder, .row .push-s3.session-form-buttons-holder, .row .push-s3.main-left-container, .row .push-s3.main-right-container {
   left: 25%;
 }
 
-.row .col.offset-s4, .row .offset-s4.session-form-input-holder, .row .offset-s4.session-form-buttons-holder {
+.row .col.offset-s4, .row .offset-s4.session-form-input-holder, .row .offset-s4.session-form-buttons-holder, .row .offset-s4.main-left-container, .row .offset-s4.main-right-container {
   margin-left: 33.33333%;
 }
 
-.row .col.pull-s4, .row .pull-s4.session-form-input-holder, .row .pull-s4.session-form-buttons-holder {
+.row .col.pull-s4, .row .pull-s4.session-form-input-holder, .row .pull-s4.session-form-buttons-holder, .row .pull-s4.main-left-container, .row .pull-s4.main-right-container {
   right: 33.33333%;
 }
 
-.row .col.push-s4, .row .push-s4.session-form-input-holder, .row .push-s4.session-form-buttons-holder {
+.row .col.push-s4, .row .push-s4.session-form-input-holder, .row .push-s4.session-form-buttons-holder, .row .push-s4.main-left-container, .row .push-s4.main-right-container {
   left: 33.33333%;
 }
 
-.row .col.offset-s5, .row .offset-s5.session-form-input-holder, .row .offset-s5.session-form-buttons-holder {
+.row .col.offset-s5, .row .offset-s5.session-form-input-holder, .row .offset-s5.session-form-buttons-holder, .row .offset-s5.main-left-container, .row .offset-s5.main-right-container {
   margin-left: 41.66667%;
 }
 
-.row .col.pull-s5, .row .pull-s5.session-form-input-holder, .row .pull-s5.session-form-buttons-holder {
+.row .col.pull-s5, .row .pull-s5.session-form-input-holder, .row .pull-s5.session-form-buttons-holder, .row .pull-s5.main-left-container, .row .pull-s5.main-right-container {
   right: 41.66667%;
 }
 
-.row .col.push-s5, .row .push-s5.session-form-input-holder, .row .push-s5.session-form-buttons-holder {
+.row .col.push-s5, .row .push-s5.session-form-input-holder, .row .push-s5.session-form-buttons-holder, .row .push-s5.main-left-container, .row .push-s5.main-right-container {
   left: 41.66667%;
 }
 
-.row .col.offset-s6, .row .offset-s6.session-form-input-holder, .row .offset-s6.session-form-buttons-holder {
+.row .col.offset-s6, .row .offset-s6.session-form-input-holder, .row .offset-s6.session-form-buttons-holder, .row .offset-s6.main-left-container, .row .offset-s6.main-right-container {
   margin-left: 50%;
 }
 
-.row .col.pull-s6, .row .pull-s6.session-form-input-holder, .row .pull-s6.session-form-buttons-holder {
+.row .col.pull-s6, .row .pull-s6.session-form-input-holder, .row .pull-s6.session-form-buttons-holder, .row .pull-s6.main-left-container, .row .pull-s6.main-right-container {
   right: 50%;
 }
 
-.row .col.push-s6, .row .push-s6.session-form-input-holder, .row .push-s6.session-form-buttons-holder {
+.row .col.push-s6, .row .push-s6.session-form-input-holder, .row .push-s6.session-form-buttons-holder, .row .push-s6.main-left-container, .row .push-s6.main-right-container {
   left: 50%;
 }
 
-.row .col.offset-s7, .row .offset-s7.session-form-input-holder, .row .offset-s7.session-form-buttons-holder {
+.row .col.offset-s7, .row .offset-s7.session-form-input-holder, .row .offset-s7.session-form-buttons-holder, .row .offset-s7.main-left-container, .row .offset-s7.main-right-container {
   margin-left: 58.33333%;
 }
 
-.row .col.pull-s7, .row .pull-s7.session-form-input-holder, .row .pull-s7.session-form-buttons-holder {
+.row .col.pull-s7, .row .pull-s7.session-form-input-holder, .row .pull-s7.session-form-buttons-holder, .row .pull-s7.main-left-container, .row .pull-s7.main-right-container {
   right: 58.33333%;
 }
 
-.row .col.push-s7, .row .push-s7.session-form-input-holder, .row .push-s7.session-form-buttons-holder {
+.row .col.push-s7, .row .push-s7.session-form-input-holder, .row .push-s7.session-form-buttons-holder, .row .push-s7.main-left-container, .row .push-s7.main-right-container {
   left: 58.33333%;
 }
 
-.row .col.offset-s8, .row .offset-s8.session-form-input-holder, .row .offset-s8.session-form-buttons-holder {
+.row .col.offset-s8, .row .offset-s8.session-form-input-holder, .row .offset-s8.session-form-buttons-holder, .row .offset-s8.main-left-container, .row .offset-s8.main-right-container {
   margin-left: 66.66667%;
 }
 
-.row .col.pull-s8, .row .pull-s8.session-form-input-holder, .row .pull-s8.session-form-buttons-holder {
+.row .col.pull-s8, .row .pull-s8.session-form-input-holder, .row .pull-s8.session-form-buttons-holder, .row .pull-s8.main-left-container, .row .pull-s8.main-right-container {
   right: 66.66667%;
 }
 
-.row .col.push-s8, .row .push-s8.session-form-input-holder, .row .push-s8.session-form-buttons-holder {
+.row .col.push-s8, .row .push-s8.session-form-input-holder, .row .push-s8.session-form-buttons-holder, .row .push-s8.main-left-container, .row .push-s8.main-right-container {
   left: 66.66667%;
 }
 
-.row .col.offset-s9, .row .offset-s9.session-form-input-holder, .row .offset-s9.session-form-buttons-holder {
+.row .col.offset-s9, .row .offset-s9.session-form-input-holder, .row .offset-s9.session-form-buttons-holder, .row .offset-s9.main-left-container, .row .offset-s9.main-right-container {
   margin-left: 75%;
 }
 
-.row .col.pull-s9, .row .pull-s9.session-form-input-holder, .row .pull-s9.session-form-buttons-holder {
+.row .col.pull-s9, .row .pull-s9.session-form-input-holder, .row .pull-s9.session-form-buttons-holder, .row .pull-s9.main-left-container, .row .pull-s9.main-right-container {
   right: 75%;
 }
 
-.row .col.push-s9, .row .push-s9.session-form-input-holder, .row .push-s9.session-form-buttons-holder {
+.row .col.push-s9, .row .push-s9.session-form-input-holder, .row .push-s9.session-form-buttons-holder, .row .push-s9.main-left-container, .row .push-s9.main-right-container {
   left: 75%;
 }
 
-.row .col.offset-s10, .row .offset-s10.session-form-input-holder, .row .offset-s10.session-form-buttons-holder {
+.row .col.offset-s10, .row .offset-s10.session-form-input-holder, .row .offset-s10.session-form-buttons-holder, .row .offset-s10.main-left-container, .row .offset-s10.main-right-container {
   margin-left: 83.33333%;
 }
 
-.row .col.pull-s10, .row .pull-s10.session-form-input-holder, .row .pull-s10.session-form-buttons-holder {
+.row .col.pull-s10, .row .pull-s10.session-form-input-holder, .row .pull-s10.session-form-buttons-holder, .row .pull-s10.main-left-container, .row .pull-s10.main-right-container {
   right: 83.33333%;
 }
 
-.row .col.push-s10, .row .push-s10.session-form-input-holder, .row .push-s10.session-form-buttons-holder {
+.row .col.push-s10, .row .push-s10.session-form-input-holder, .row .push-s10.session-form-buttons-holder, .row .push-s10.main-left-container, .row .push-s10.main-right-container {
   left: 83.33333%;
 }
 
-.row .col.offset-s11, .row .offset-s11.session-form-input-holder, .row .offset-s11.session-form-buttons-holder {
+.row .col.offset-s11, .row .offset-s11.session-form-input-holder, .row .offset-s11.session-form-buttons-holder, .row .offset-s11.main-left-container, .row .offset-s11.main-right-container {
   margin-left: 91.66667%;
 }
 
-.row .col.pull-s11, .row .pull-s11.session-form-input-holder, .row .pull-s11.session-form-buttons-holder {
+.row .col.pull-s11, .row .pull-s11.session-form-input-holder, .row .pull-s11.session-form-buttons-holder, .row .pull-s11.main-left-container, .row .pull-s11.main-right-container {
   right: 91.66667%;
 }
 
-.row .col.push-s11, .row .push-s11.session-form-input-holder, .row .push-s11.session-form-buttons-holder {
+.row .col.push-s11, .row .push-s11.session-form-input-holder, .row .push-s11.session-form-buttons-holder, .row .push-s11.main-left-container, .row .push-s11.main-right-container {
   left: 91.66667%;
 }
 
-.row .col.offset-s12, .row .offset-s12.session-form-input-holder, .row .offset-s12.session-form-buttons-holder {
+.row .col.offset-s12, .row .offset-s12.session-form-input-holder, .row .offset-s12.session-form-buttons-holder, .row .offset-s12.main-left-container, .row .offset-s12.main-right-container {
   margin-left: 100%;
 }
 
-.row .col.pull-s12, .row .pull-s12.session-form-input-holder, .row .pull-s12.session-form-buttons-holder {
+.row .col.pull-s12, .row .pull-s12.session-form-input-holder, .row .pull-s12.session-form-buttons-holder, .row .pull-s12.main-left-container, .row .pull-s12.main-right-container {
   right: 100%;
 }
 
-.row .col.push-s12, .row .push-s12.session-form-input-holder, .row .push-s12.session-form-buttons-holder {
+.row .col.push-s12, .row .push-s12.session-form-input-holder, .row .push-s12.session-form-buttons-holder, .row .push-s12.main-left-container, .row .push-s12.main-right-container {
   left: 100%;
 }
 
 @media only screen and (min-width: 601px) {
-  .row .col.m1, .row .m1.session-form-input-holder, .row .m1.session-form-buttons-holder {
+  .row .col.m1, .row .m1.session-form-input-holder, .row .m1.session-form-buttons-holder, .row .m1.main-left-container, .row .m1.main-right-container {
     width: 8.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m2, .row .m2.session-form-input-holder, .row .m2.session-form-buttons-holder {
+  .row .col.m2, .row .m2.session-form-input-holder, .row .m2.session-form-buttons-holder, .row .m2.main-left-container, .row .m2.main-right-container {
     width: 16.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m3, .row .m3.session-form-input-holder, .row .m3.session-form-buttons-holder {
+  .row .col.m3, .row .m3.session-form-input-holder, .row .m3.session-form-buttons-holder, .row .m3.main-left-container, .row .m3.main-right-container {
     width: 25%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m4, .row .m4.session-form-input-holder, .row .m4.session-form-buttons-holder {
+  .row .col.m4, .row .m4.session-form-input-holder, .row .m4.session-form-buttons-holder, .row .m4.main-left-container, .row .m4.main-right-container {
     width: 33.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m5, .row .m5.session-form-input-holder, .row .m5.session-form-buttons-holder {
+  .row .col.m5, .row .m5.session-form-input-holder, .row .m5.session-form-buttons-holder, .row .m5.main-left-container, .row .m5.main-right-container {
     width: 41.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m6, .row .session-form-input-holder, .row .session-form-buttons-holder {
+  .row .col.m6, .row .session-form-input-holder, .row .session-form-buttons-holder, .row .m6.main-left-container, .row .main-left-container.session-form-input-holder, .row .main-left-container.session-form-buttons-holder, .row .m6.main-right-container, .row .main-right-container.session-form-input-holder, .row .main-right-container.session-form-buttons-holder {
     width: 50%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m7, .row .m7.session-form-input-holder, .row .m7.session-form-buttons-holder {
+  .row .col.m7, .row .m7.session-form-input-holder, .row .m7.session-form-buttons-holder, .row .m7.main-left-container, .row .m7.main-right-container {
     width: 58.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m8, .row .m8.session-form-input-holder, .row .m8.session-form-buttons-holder {
+  .row .col.m8, .row .m8.session-form-input-holder, .row .m8.session-form-buttons-holder, .row .m8.main-left-container, .row .m8.main-right-container {
     width: 66.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m9, .row .m9.session-form-input-holder, .row .m9.session-form-buttons-holder {
+  .row .col.m9, .row .m9.session-form-input-holder, .row .m9.session-form-buttons-holder, .row .m9.main-left-container, .row .m9.main-right-container {
     width: 75%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m10, .row .m10.session-form-input-holder, .row .m10.session-form-buttons-holder {
+  .row .col.m10, .row .m10.session-form-input-holder, .row .m10.session-form-buttons-holder, .row .m10.main-left-container, .row .m10.main-right-container {
     width: 83.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m11, .row .m11.session-form-input-holder, .row .m11.session-form-buttons-holder {
+  .row .col.m11, .row .m11.session-form-input-holder, .row .m11.session-form-buttons-holder, .row .m11.main-left-container, .row .m11.main-right-container {
     width: 91.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.m12, .row .m12.session-form-input-holder, .row .m12.session-form-buttons-holder {
+  .row .col.m12, .row .m12.session-form-input-holder, .row .m12.session-form-buttons-holder, .row .m12.main-left-container, .row .m12.main-right-container {
     width: 100%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.offset-m1, .row .offset-m1.session-form-input-holder, .row .offset-m1.session-form-buttons-holder {
+  .row .col.offset-m1, .row .offset-m1.session-form-input-holder, .row .offset-m1.session-form-buttons-holder, .row .offset-m1.main-left-container, .row .offset-m1.main-right-container {
     margin-left: 8.33333%;
   }
-  .row .col.pull-m1, .row .pull-m1.session-form-input-holder, .row .pull-m1.session-form-buttons-holder {
+  .row .col.pull-m1, .row .pull-m1.session-form-input-holder, .row .pull-m1.session-form-buttons-holder, .row .pull-m1.main-left-container, .row .pull-m1.main-right-container {
     right: 8.33333%;
   }
-  .row .col.push-m1, .row .push-m1.session-form-input-holder, .row .push-m1.session-form-buttons-holder {
+  .row .col.push-m1, .row .push-m1.session-form-input-holder, .row .push-m1.session-form-buttons-holder, .row .push-m1.main-left-container, .row .push-m1.main-right-container {
     left: 8.33333%;
   }
-  .row .col.offset-m2, .row .offset-m2.session-form-input-holder, .row .offset-m2.session-form-buttons-holder {
+  .row .col.offset-m2, .row .offset-m2.session-form-input-holder, .row .offset-m2.session-form-buttons-holder, .row .offset-m2.main-left-container, .row .offset-m2.main-right-container {
     margin-left: 16.66667%;
   }
-  .row .col.pull-m2, .row .pull-m2.session-form-input-holder, .row .pull-m2.session-form-buttons-holder {
+  .row .col.pull-m2, .row .pull-m2.session-form-input-holder, .row .pull-m2.session-form-buttons-holder, .row .pull-m2.main-left-container, .row .pull-m2.main-right-container {
     right: 16.66667%;
   }
-  .row .col.push-m2, .row .push-m2.session-form-input-holder, .row .push-m2.session-form-buttons-holder {
+  .row .col.push-m2, .row .push-m2.session-form-input-holder, .row .push-m2.session-form-buttons-holder, .row .push-m2.main-left-container, .row .push-m2.main-right-container {
     left: 16.66667%;
   }
-  .row .col.offset-m3, .row .session-form-input-holder, .row .session-form-buttons-holder {
+  .row .col.offset-m3, .row .session-form-input-holder, .row .session-form-buttons-holder, .row .offset-m3.main-left-container, .row .main-left-container.session-form-input-holder, .row .main-left-container.session-form-buttons-holder, .row .offset-m3.main-right-container, .row .main-right-container.session-form-input-holder, .row .main-right-container.session-form-buttons-holder {
     margin-left: 25%;
   }
-  .row .col.pull-m3, .row .pull-m3.session-form-input-holder, .row .pull-m3.session-form-buttons-holder {
+  .row .col.pull-m3, .row .pull-m3.session-form-input-holder, .row .pull-m3.session-form-buttons-holder, .row .pull-m3.main-left-container, .row .pull-m3.main-right-container {
     right: 25%;
   }
-  .row .col.push-m3, .row .push-m3.session-form-input-holder, .row .push-m3.session-form-buttons-holder {
+  .row .col.push-m3, .row .push-m3.session-form-input-holder, .row .push-m3.session-form-buttons-holder, .row .push-m3.main-left-container, .row .push-m3.main-right-container {
     left: 25%;
   }
-  .row .col.offset-m4, .row .offset-m4.session-form-input-holder, .row .offset-m4.session-form-buttons-holder {
+  .row .col.offset-m4, .row .offset-m4.session-form-input-holder, .row .offset-m4.session-form-buttons-holder, .row .offset-m4.main-left-container, .row .offset-m4.main-right-container {
     margin-left: 33.33333%;
   }
-  .row .col.pull-m4, .row .pull-m4.session-form-input-holder, .row .pull-m4.session-form-buttons-holder {
+  .row .col.pull-m4, .row .pull-m4.session-form-input-holder, .row .pull-m4.session-form-buttons-holder, .row .pull-m4.main-left-container, .row .pull-m4.main-right-container {
     right: 33.33333%;
   }
-  .row .col.push-m4, .row .push-m4.session-form-input-holder, .row .push-m4.session-form-buttons-holder {
+  .row .col.push-m4, .row .push-m4.session-form-input-holder, .row .push-m4.session-form-buttons-holder, .row .push-m4.main-left-container, .row .push-m4.main-right-container {
     left: 33.33333%;
   }
-  .row .col.offset-m5, .row .offset-m5.session-form-input-holder, .row .offset-m5.session-form-buttons-holder {
+  .row .col.offset-m5, .row .offset-m5.session-form-input-holder, .row .offset-m5.session-form-buttons-holder, .row .offset-m5.main-left-container, .row .offset-m5.main-right-container {
     margin-left: 41.66667%;
   }
-  .row .col.pull-m5, .row .pull-m5.session-form-input-holder, .row .pull-m5.session-form-buttons-holder {
+  .row .col.pull-m5, .row .pull-m5.session-form-input-holder, .row .pull-m5.session-form-buttons-holder, .row .pull-m5.main-left-container, .row .pull-m5.main-right-container {
     right: 41.66667%;
   }
-  .row .col.push-m5, .row .push-m5.session-form-input-holder, .row .push-m5.session-form-buttons-holder {
+  .row .col.push-m5, .row .push-m5.session-form-input-holder, .row .push-m5.session-form-buttons-holder, .row .push-m5.main-left-container, .row .push-m5.main-right-container {
     left: 41.66667%;
   }
-  .row .col.offset-m6, .row .offset-m6.session-form-input-holder, .row .offset-m6.session-form-buttons-holder {
+  .row .col.offset-m6, .row .offset-m6.session-form-input-holder, .row .offset-m6.session-form-buttons-holder, .row .offset-m6.main-left-container, .row .offset-m6.main-right-container {
     margin-left: 50%;
   }
-  .row .col.pull-m6, .row .pull-m6.session-form-input-holder, .row .pull-m6.session-form-buttons-holder {
+  .row .col.pull-m6, .row .pull-m6.session-form-input-holder, .row .pull-m6.session-form-buttons-holder, .row .pull-m6.main-left-container, .row .pull-m6.main-right-container {
     right: 50%;
   }
-  .row .col.push-m6, .row .push-m6.session-form-input-holder, .row .push-m6.session-form-buttons-holder {
+  .row .col.push-m6, .row .push-m6.session-form-input-holder, .row .push-m6.session-form-buttons-holder, .row .push-m6.main-left-container, .row .push-m6.main-right-container {
     left: 50%;
   }
-  .row .col.offset-m7, .row .offset-m7.session-form-input-holder, .row .offset-m7.session-form-buttons-holder {
+  .row .col.offset-m7, .row .offset-m7.session-form-input-holder, .row .offset-m7.session-form-buttons-holder, .row .offset-m7.main-left-container, .row .offset-m7.main-right-container {
     margin-left: 58.33333%;
   }
-  .row .col.pull-m7, .row .pull-m7.session-form-input-holder, .row .pull-m7.session-form-buttons-holder {
+  .row .col.pull-m7, .row .pull-m7.session-form-input-holder, .row .pull-m7.session-form-buttons-holder, .row .pull-m7.main-left-container, .row .pull-m7.main-right-container {
     right: 58.33333%;
   }
-  .row .col.push-m7, .row .push-m7.session-form-input-holder, .row .push-m7.session-form-buttons-holder {
+  .row .col.push-m7, .row .push-m7.session-form-input-holder, .row .push-m7.session-form-buttons-holder, .row .push-m7.main-left-container, .row .push-m7.main-right-container {
     left: 58.33333%;
   }
-  .row .col.offset-m8, .row .offset-m8.session-form-input-holder, .row .offset-m8.session-form-buttons-holder {
+  .row .col.offset-m8, .row .offset-m8.session-form-input-holder, .row .offset-m8.session-form-buttons-holder, .row .offset-m8.main-left-container, .row .offset-m8.main-right-container {
     margin-left: 66.66667%;
   }
-  .row .col.pull-m8, .row .pull-m8.session-form-input-holder, .row .pull-m8.session-form-buttons-holder {
+  .row .col.pull-m8, .row .pull-m8.session-form-input-holder, .row .pull-m8.session-form-buttons-holder, .row .pull-m8.main-left-container, .row .pull-m8.main-right-container {
     right: 66.66667%;
   }
-  .row .col.push-m8, .row .push-m8.session-form-input-holder, .row .push-m8.session-form-buttons-holder {
+  .row .col.push-m8, .row .push-m8.session-form-input-holder, .row .push-m8.session-form-buttons-holder, .row .push-m8.main-left-container, .row .push-m8.main-right-container {
     left: 66.66667%;
   }
-  .row .col.offset-m9, .row .offset-m9.session-form-input-holder, .row .offset-m9.session-form-buttons-holder {
+  .row .col.offset-m9, .row .offset-m9.session-form-input-holder, .row .offset-m9.session-form-buttons-holder, .row .offset-m9.main-left-container, .row .offset-m9.main-right-container {
     margin-left: 75%;
   }
-  .row .col.pull-m9, .row .pull-m9.session-form-input-holder, .row .pull-m9.session-form-buttons-holder {
+  .row .col.pull-m9, .row .pull-m9.session-form-input-holder, .row .pull-m9.session-form-buttons-holder, .row .pull-m9.main-left-container, .row .pull-m9.main-right-container {
     right: 75%;
   }
-  .row .col.push-m9, .row .push-m9.session-form-input-holder, .row .push-m9.session-form-buttons-holder {
+  .row .col.push-m9, .row .push-m9.session-form-input-holder, .row .push-m9.session-form-buttons-holder, .row .push-m9.main-left-container, .row .push-m9.main-right-container {
     left: 75%;
   }
-  .row .col.offset-m10, .row .offset-m10.session-form-input-holder, .row .offset-m10.session-form-buttons-holder {
+  .row .col.offset-m10, .row .offset-m10.session-form-input-holder, .row .offset-m10.session-form-buttons-holder, .row .offset-m10.main-left-container, .row .offset-m10.main-right-container {
     margin-left: 83.33333%;
   }
-  .row .col.pull-m10, .row .pull-m10.session-form-input-holder, .row .pull-m10.session-form-buttons-holder {
+  .row .col.pull-m10, .row .pull-m10.session-form-input-holder, .row .pull-m10.session-form-buttons-holder, .row .pull-m10.main-left-container, .row .pull-m10.main-right-container {
     right: 83.33333%;
   }
-  .row .col.push-m10, .row .push-m10.session-form-input-holder, .row .push-m10.session-form-buttons-holder {
+  .row .col.push-m10, .row .push-m10.session-form-input-holder, .row .push-m10.session-form-buttons-holder, .row .push-m10.main-left-container, .row .push-m10.main-right-container {
     left: 83.33333%;
   }
-  .row .col.offset-m11, .row .offset-m11.session-form-input-holder, .row .offset-m11.session-form-buttons-holder {
+  .row .col.offset-m11, .row .offset-m11.session-form-input-holder, .row .offset-m11.session-form-buttons-holder, .row .offset-m11.main-left-container, .row .offset-m11.main-right-container {
     margin-left: 91.66667%;
   }
-  .row .col.pull-m11, .row .pull-m11.session-form-input-holder, .row .pull-m11.session-form-buttons-holder {
+  .row .col.pull-m11, .row .pull-m11.session-form-input-holder, .row .pull-m11.session-form-buttons-holder, .row .pull-m11.main-left-container, .row .pull-m11.main-right-container {
     right: 91.66667%;
   }
-  .row .col.push-m11, .row .push-m11.session-form-input-holder, .row .push-m11.session-form-buttons-holder {
+  .row .col.push-m11, .row .push-m11.session-form-input-holder, .row .push-m11.session-form-buttons-holder, .row .push-m11.main-left-container, .row .push-m11.main-right-container {
     left: 91.66667%;
   }
-  .row .col.offset-m12, .row .offset-m12.session-form-input-holder, .row .offset-m12.session-form-buttons-holder {
+  .row .col.offset-m12, .row .offset-m12.session-form-input-holder, .row .offset-m12.session-form-buttons-holder, .row .offset-m12.main-left-container, .row .offset-m12.main-right-container {
     margin-left: 100%;
   }
-  .row .col.pull-m12, .row .pull-m12.session-form-input-holder, .row .pull-m12.session-form-buttons-holder {
+  .row .col.pull-m12, .row .pull-m12.session-form-input-holder, .row .pull-m12.session-form-buttons-holder, .row .pull-m12.main-left-container, .row .pull-m12.main-right-container {
     right: 100%;
   }
-  .row .col.push-m12, .row .push-m12.session-form-input-holder, .row .push-m12.session-form-buttons-holder {
+  .row .col.push-m12, .row .push-m12.session-form-input-holder, .row .push-m12.session-form-buttons-holder, .row .push-m12.main-left-container, .row .push-m12.main-right-container {
     left: 100%;
   }
 }
 
 @media only screen and (min-width: 993px) {
-  .row .col.l1, .row .l1.session-form-input-holder, .row .l1.session-form-buttons-holder {
+  .row .col.l1, .row .l1.session-form-input-holder, .row .l1.session-form-buttons-holder, .row .l1.main-left-container, .row .l1.main-right-container {
     width: 8.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l2, .row .l2.session-form-input-holder, .row .l2.session-form-buttons-holder {
+  .row .col.l2, .row .l2.session-form-input-holder, .row .l2.session-form-buttons-holder, .row .l2.main-left-container, .row .l2.main-right-container {
     width: 16.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l3, .row .l3.session-form-input-holder, .row .l3.session-form-buttons-holder {
+  .row .col.l3, .row .l3.session-form-input-holder, .row .l3.session-form-buttons-holder, .row .l3.main-left-container, .row .l3.main-right-container {
     width: 25%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l4, .row .session-form-input-holder, .row .session-form-buttons-holder {
+  .row .col.l4, .row .session-form-input-holder, .row .session-form-buttons-holder, .row .l4.main-left-container, .row .main-left-container.session-form-input-holder, .row .main-left-container.session-form-buttons-holder, .row .l4.main-right-container, .row .main-right-container.session-form-input-holder, .row .main-right-container.session-form-buttons-holder {
     width: 33.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l5, .row .l5.session-form-input-holder, .row .l5.session-form-buttons-holder {
+  .row .col.l5, .row .l5.session-form-input-holder, .row .l5.session-form-buttons-holder, .row .l5.main-left-container, .row .l5.main-right-container {
     width: 41.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l6, .row .l6.session-form-input-holder, .row .l6.session-form-buttons-holder {
+  .row .col.l6, .row .l6.session-form-input-holder, .row .session-form-input-holder.main-left-container, .row .session-form-input-holder.main-right-container, .row .l6.session-form-buttons-holder, .row .session-form-buttons-holder.main-left-container, .row .session-form-buttons-holder.main-right-container, .row .main-left-container, .row .main-right-container {
     width: 50%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l7, .row .l7.session-form-input-holder, .row .l7.session-form-buttons-holder {
+  .row .col.l7, .row .l7.session-form-input-holder, .row .l7.session-form-buttons-holder, .row .l7.main-left-container, .row .l7.main-right-container {
     width: 58.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l8, .row .l8.session-form-input-holder, .row .l8.session-form-buttons-holder {
+  .row .col.l8, .row .l8.session-form-input-holder, .row .l8.session-form-buttons-holder, .row .l8.main-left-container, .row .l8.main-right-container {
     width: 66.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l9, .row .l9.session-form-input-holder, .row .l9.session-form-buttons-holder {
+  .row .col.l9, .row .l9.session-form-input-holder, .row .l9.session-form-buttons-holder, .row .l9.main-left-container, .row .l9.main-right-container {
     width: 75%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l10, .row .l10.session-form-input-holder, .row .l10.session-form-buttons-holder {
+  .row .col.l10, .row .l10.session-form-input-holder, .row .l10.session-form-buttons-holder, .row .l10.main-left-container, .row .l10.main-right-container {
     width: 83.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l11, .row .l11.session-form-input-holder, .row .l11.session-form-buttons-holder {
+  .row .col.l11, .row .l11.session-form-input-holder, .row .l11.session-form-buttons-holder, .row .l11.main-left-container, .row .l11.main-right-container {
     width: 91.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.l12, .row .l12.session-form-input-holder, .row .l12.session-form-buttons-holder {
+  .row .col.l12, .row .l12.session-form-input-holder, .row .l12.session-form-buttons-holder, .row .l12.main-left-container, .row .l12.main-right-container {
     width: 100%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.offset-l1, .row .offset-l1.session-form-input-holder, .row .offset-l1.session-form-buttons-holder {
+  .row .col.offset-l1, .row .offset-l1.session-form-input-holder, .row .offset-l1.session-form-buttons-holder, .row .offset-l1.main-left-container, .row .offset-l1.main-right-container {
     margin-left: 8.33333%;
   }
-  .row .col.pull-l1, .row .pull-l1.session-form-input-holder, .row .pull-l1.session-form-buttons-holder {
+  .row .col.pull-l1, .row .pull-l1.session-form-input-holder, .row .pull-l1.session-form-buttons-holder, .row .pull-l1.main-left-container, .row .pull-l1.main-right-container {
     right: 8.33333%;
   }
-  .row .col.push-l1, .row .push-l1.session-form-input-holder, .row .push-l1.session-form-buttons-holder {
+  .row .col.push-l1, .row .push-l1.session-form-input-holder, .row .push-l1.session-form-buttons-holder, .row .push-l1.main-left-container, .row .push-l1.main-right-container {
     left: 8.33333%;
   }
-  .row .col.offset-l2, .row .offset-l2.session-form-input-holder, .row .offset-l2.session-form-buttons-holder {
+  .row .col.offset-l2, .row .offset-l2.session-form-input-holder, .row .offset-l2.session-form-buttons-holder, .row .offset-l2.main-left-container, .row .offset-l2.main-right-container {
     margin-left: 16.66667%;
   }
-  .row .col.pull-l2, .row .pull-l2.session-form-input-holder, .row .pull-l2.session-form-buttons-holder {
+  .row .col.pull-l2, .row .pull-l2.session-form-input-holder, .row .pull-l2.session-form-buttons-holder, .row .pull-l2.main-left-container, .row .pull-l2.main-right-container {
     right: 16.66667%;
   }
-  .row .col.push-l2, .row .push-l2.session-form-input-holder, .row .push-l2.session-form-buttons-holder {
+  .row .col.push-l2, .row .push-l2.session-form-input-holder, .row .push-l2.session-form-buttons-holder, .row .push-l2.main-left-container, .row .push-l2.main-right-container {
     left: 16.66667%;
   }
-  .row .col.offset-l3, .row .offset-l3.session-form-input-holder, .row .offset-l3.session-form-buttons-holder {
+  .row .col.offset-l3, .row .offset-l3.session-form-input-holder, .row .offset-l3.session-form-buttons-holder, .row .offset-l3.main-left-container, .row .offset-l3.main-right-container {
     margin-left: 25%;
   }
-  .row .col.pull-l3, .row .pull-l3.session-form-input-holder, .row .pull-l3.session-form-buttons-holder {
+  .row .col.pull-l3, .row .pull-l3.session-form-input-holder, .row .pull-l3.session-form-buttons-holder, .row .pull-l3.main-left-container, .row .pull-l3.main-right-container {
     right: 25%;
   }
-  .row .col.push-l3, .row .push-l3.session-form-input-holder, .row .push-l3.session-form-buttons-holder {
+  .row .col.push-l3, .row .push-l3.session-form-input-holder, .row .push-l3.session-form-buttons-holder, .row .push-l3.main-left-container, .row .push-l3.main-right-container {
     left: 25%;
   }
-  .row .col.offset-l4, .row .session-form-input-holder, .row .session-form-buttons-holder {
+  .row .col.offset-l4, .row .session-form-input-holder, .row .session-form-buttons-holder, .row .offset-l4.main-left-container, .row .main-left-container.session-form-input-holder, .row .main-left-container.session-form-buttons-holder, .row .offset-l4.main-right-container, .row .main-right-container.session-form-input-holder, .row .main-right-container.session-form-buttons-holder {
     margin-left: 33.33333%;
   }
-  .row .col.pull-l4, .row .pull-l4.session-form-input-holder, .row .pull-l4.session-form-buttons-holder {
+  .row .col.pull-l4, .row .pull-l4.session-form-input-holder, .row .pull-l4.session-form-buttons-holder, .row .pull-l4.main-left-container, .row .pull-l4.main-right-container {
     right: 33.33333%;
   }
-  .row .col.push-l4, .row .push-l4.session-form-input-holder, .row .push-l4.session-form-buttons-holder {
+  .row .col.push-l4, .row .push-l4.session-form-input-holder, .row .push-l4.session-form-buttons-holder, .row .push-l4.main-left-container, .row .push-l4.main-right-container {
     left: 33.33333%;
   }
-  .row .col.offset-l5, .row .offset-l5.session-form-input-holder, .row .offset-l5.session-form-buttons-holder {
+  .row .col.offset-l5, .row .offset-l5.session-form-input-holder, .row .offset-l5.session-form-buttons-holder, .row .offset-l5.main-left-container, .row .offset-l5.main-right-container {
     margin-left: 41.66667%;
   }
-  .row .col.pull-l5, .row .pull-l5.session-form-input-holder, .row .pull-l5.session-form-buttons-holder {
+  .row .col.pull-l5, .row .pull-l5.session-form-input-holder, .row .pull-l5.session-form-buttons-holder, .row .pull-l5.main-left-container, .row .pull-l5.main-right-container {
     right: 41.66667%;
   }
-  .row .col.push-l5, .row .push-l5.session-form-input-holder, .row .push-l5.session-form-buttons-holder {
+  .row .col.push-l5, .row .push-l5.session-form-input-holder, .row .push-l5.session-form-buttons-holder, .row .push-l5.main-left-container, .row .push-l5.main-right-container {
     left: 41.66667%;
   }
-  .row .col.offset-l6, .row .offset-l6.session-form-input-holder, .row .offset-l6.session-form-buttons-holder {
+  .row .col.offset-l6, .row .offset-l6.session-form-input-holder, .row .offset-l6.session-form-buttons-holder, .row .offset-l6.main-left-container, .row .offset-l6.main-right-container {
     margin-left: 50%;
   }
-  .row .col.pull-l6, .row .pull-l6.session-form-input-holder, .row .pull-l6.session-form-buttons-holder {
+  .row .col.pull-l6, .row .pull-l6.session-form-input-holder, .row .pull-l6.session-form-buttons-holder, .row .pull-l6.main-left-container, .row .pull-l6.main-right-container {
     right: 50%;
   }
-  .row .col.push-l6, .row .push-l6.session-form-input-holder, .row .push-l6.session-form-buttons-holder {
+  .row .col.push-l6, .row .push-l6.session-form-input-holder, .row .push-l6.session-form-buttons-holder, .row .push-l6.main-left-container, .row .push-l6.main-right-container {
     left: 50%;
   }
-  .row .col.offset-l7, .row .offset-l7.session-form-input-holder, .row .offset-l7.session-form-buttons-holder {
+  .row .col.offset-l7, .row .offset-l7.session-form-input-holder, .row .offset-l7.session-form-buttons-holder, .row .offset-l7.main-left-container, .row .offset-l7.main-right-container {
     margin-left: 58.33333%;
   }
-  .row .col.pull-l7, .row .pull-l7.session-form-input-holder, .row .pull-l7.session-form-buttons-holder {
+  .row .col.pull-l7, .row .pull-l7.session-form-input-holder, .row .pull-l7.session-form-buttons-holder, .row .pull-l7.main-left-container, .row .pull-l7.main-right-container {
     right: 58.33333%;
   }
-  .row .col.push-l7, .row .push-l7.session-form-input-holder, .row .push-l7.session-form-buttons-holder {
+  .row .col.push-l7, .row .push-l7.session-form-input-holder, .row .push-l7.session-form-buttons-holder, .row .push-l7.main-left-container, .row .push-l7.main-right-container {
     left: 58.33333%;
   }
-  .row .col.offset-l8, .row .offset-l8.session-form-input-holder, .row .offset-l8.session-form-buttons-holder {
+  .row .col.offset-l8, .row .offset-l8.session-form-input-holder, .row .offset-l8.session-form-buttons-holder, .row .offset-l8.main-left-container, .row .offset-l8.main-right-container {
     margin-left: 66.66667%;
   }
-  .row .col.pull-l8, .row .pull-l8.session-form-input-holder, .row .pull-l8.session-form-buttons-holder {
+  .row .col.pull-l8, .row .pull-l8.session-form-input-holder, .row .pull-l8.session-form-buttons-holder, .row .pull-l8.main-left-container, .row .pull-l8.main-right-container {
     right: 66.66667%;
   }
-  .row .col.push-l8, .row .push-l8.session-form-input-holder, .row .push-l8.session-form-buttons-holder {
+  .row .col.push-l8, .row .push-l8.session-form-input-holder, .row .push-l8.session-form-buttons-holder, .row .push-l8.main-left-container, .row .push-l8.main-right-container {
     left: 66.66667%;
   }
-  .row .col.offset-l9, .row .offset-l9.session-form-input-holder, .row .offset-l9.session-form-buttons-holder {
+  .row .col.offset-l9, .row .offset-l9.session-form-input-holder, .row .offset-l9.session-form-buttons-holder, .row .offset-l9.main-left-container, .row .offset-l9.main-right-container {
     margin-left: 75%;
   }
-  .row .col.pull-l9, .row .pull-l9.session-form-input-holder, .row .pull-l9.session-form-buttons-holder {
+  .row .col.pull-l9, .row .pull-l9.session-form-input-holder, .row .pull-l9.session-form-buttons-holder, .row .pull-l9.main-left-container, .row .pull-l9.main-right-container {
     right: 75%;
   }
-  .row .col.push-l9, .row .push-l9.session-form-input-holder, .row .push-l9.session-form-buttons-holder {
+  .row .col.push-l9, .row .push-l9.session-form-input-holder, .row .push-l9.session-form-buttons-holder, .row .push-l9.main-left-container, .row .push-l9.main-right-container {
     left: 75%;
   }
-  .row .col.offset-l10, .row .offset-l10.session-form-input-holder, .row .offset-l10.session-form-buttons-holder {
+  .row .col.offset-l10, .row .offset-l10.session-form-input-holder, .row .offset-l10.session-form-buttons-holder, .row .offset-l10.main-left-container, .row .offset-l10.main-right-container {
     margin-left: 83.33333%;
   }
-  .row .col.pull-l10, .row .pull-l10.session-form-input-holder, .row .pull-l10.session-form-buttons-holder {
+  .row .col.pull-l10, .row .pull-l10.session-form-input-holder, .row .pull-l10.session-form-buttons-holder, .row .pull-l10.main-left-container, .row .pull-l10.main-right-container {
     right: 83.33333%;
   }
-  .row .col.push-l10, .row .push-l10.session-form-input-holder, .row .push-l10.session-form-buttons-holder {
+  .row .col.push-l10, .row .push-l10.session-form-input-holder, .row .push-l10.session-form-buttons-holder, .row .push-l10.main-left-container, .row .push-l10.main-right-container {
     left: 83.33333%;
   }
-  .row .col.offset-l11, .row .offset-l11.session-form-input-holder, .row .offset-l11.session-form-buttons-holder {
+  .row .col.offset-l11, .row .offset-l11.session-form-input-holder, .row .offset-l11.session-form-buttons-holder, .row .offset-l11.main-left-container, .row .offset-l11.main-right-container {
     margin-left: 91.66667%;
   }
-  .row .col.pull-l11, .row .pull-l11.session-form-input-holder, .row .pull-l11.session-form-buttons-holder {
+  .row .col.pull-l11, .row .pull-l11.session-form-input-holder, .row .pull-l11.session-form-buttons-holder, .row .pull-l11.main-left-container, .row .pull-l11.main-right-container {
     right: 91.66667%;
   }
-  .row .col.push-l11, .row .push-l11.session-form-input-holder, .row .push-l11.session-form-buttons-holder {
+  .row .col.push-l11, .row .push-l11.session-form-input-holder, .row .push-l11.session-form-buttons-holder, .row .push-l11.main-left-container, .row .push-l11.main-right-container {
     left: 91.66667%;
   }
-  .row .col.offset-l12, .row .offset-l12.session-form-input-holder, .row .offset-l12.session-form-buttons-holder {
+  .row .col.offset-l12, .row .offset-l12.session-form-input-holder, .row .offset-l12.session-form-buttons-holder, .row .offset-l12.main-left-container, .row .offset-l12.main-right-container {
     margin-left: 100%;
   }
-  .row .col.pull-l12, .row .pull-l12.session-form-input-holder, .row .pull-l12.session-form-buttons-holder {
+  .row .col.pull-l12, .row .pull-l12.session-form-input-holder, .row .pull-l12.session-form-buttons-holder, .row .pull-l12.main-left-container, .row .pull-l12.main-right-container {
     right: 100%;
   }
-  .row .col.push-l12, .row .push-l12.session-form-input-holder, .row .push-l12.session-form-buttons-holder {
+  .row .col.push-l12, .row .push-l12.session-form-input-holder, .row .push-l12.session-form-buttons-holder, .row .push-l12.main-left-container, .row .push-l12.main-right-container {
     left: 100%;
   }
 }
 
 @media only screen and (min-width: 1201px) {
-  .row .col.xl1, .row .xl1.session-form-input-holder, .row .xl1.session-form-buttons-holder {
+  .row .col.xl1, .row .xl1.session-form-input-holder, .row .xl1.session-form-buttons-holder, .row .xl1.main-left-container, .row .xl1.main-right-container {
     width: 8.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl2, .row .xl2.session-form-input-holder, .row .xl2.session-form-buttons-holder {
+  .row .col.xl2, .row .xl2.session-form-input-holder, .row .xl2.session-form-buttons-holder, .row .xl2.main-left-container, .row .xl2.main-right-container {
     width: 16.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl3, .row .xl3.session-form-input-holder, .row .xl3.session-form-buttons-holder {
+  .row .col.xl3, .row .xl3.session-form-input-holder, .row .xl3.session-form-buttons-holder, .row .xl3.main-left-container, .row .xl3.main-right-container {
     width: 25%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl4, .row .xl4.session-form-input-holder, .row .xl4.session-form-buttons-holder {
+  .row .col.xl4, .row .xl4.session-form-input-holder, .row .xl4.session-form-buttons-holder, .row .xl4.main-left-container, .row .xl4.main-right-container {
     width: 33.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl5, .row .xl5.session-form-input-holder, .row .xl5.session-form-buttons-holder {
+  .row .col.xl5, .row .xl5.session-form-input-holder, .row .xl5.session-form-buttons-holder, .row .xl5.main-left-container, .row .xl5.main-right-container {
     width: 41.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl6, .row .xl6.session-form-input-holder, .row .xl6.session-form-buttons-holder {
+  .row .col.xl6, .row .xl6.session-form-input-holder, .row .xl6.session-form-buttons-holder, .row .xl6.main-left-container, .row .xl6.main-right-container {
     width: 50%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl7, .row .xl7.session-form-input-holder, .row .xl7.session-form-buttons-holder {
+  .row .col.xl7, .row .xl7.session-form-input-holder, .row .xl7.session-form-buttons-holder, .row .xl7.main-left-container, .row .xl7.main-right-container {
     width: 58.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl8, .row .xl8.session-form-input-holder, .row .xl8.session-form-buttons-holder {
+  .row .col.xl8, .row .xl8.session-form-input-holder, .row .xl8.session-form-buttons-holder, .row .xl8.main-left-container, .row .xl8.main-right-container {
     width: 66.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl9, .row .xl9.session-form-input-holder, .row .xl9.session-form-buttons-holder {
+  .row .col.xl9, .row .xl9.session-form-input-holder, .row .xl9.session-form-buttons-holder, .row .xl9.main-left-container, .row .xl9.main-right-container {
     width: 75%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl10, .row .xl10.session-form-input-holder, .row .xl10.session-form-buttons-holder {
+  .row .col.xl10, .row .xl10.session-form-input-holder, .row .xl10.session-form-buttons-holder, .row .xl10.main-left-container, .row .xl10.main-right-container {
     width: 83.33333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl11, .row .xl11.session-form-input-holder, .row .xl11.session-form-buttons-holder {
+  .row .col.xl11, .row .xl11.session-form-input-holder, .row .xl11.session-form-buttons-holder, .row .xl11.main-left-container, .row .xl11.main-right-container {
     width: 91.66667%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.xl12, .row .xl12.session-form-input-holder, .row .xl12.session-form-buttons-holder {
+  .row .col.xl12, .row .xl12.session-form-input-holder, .row .xl12.session-form-buttons-holder, .row .xl12.main-left-container, .row .xl12.main-right-container {
     width: 100%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
-  .row .col.offset-xl1, .row .offset-xl1.session-form-input-holder, .row .offset-xl1.session-form-buttons-holder {
+  .row .col.offset-xl1, .row .offset-xl1.session-form-input-holder, .row .offset-xl1.session-form-buttons-holder, .row .offset-xl1.main-left-container, .row .offset-xl1.main-right-container {
     margin-left: 8.33333%;
   }
-  .row .col.pull-xl1, .row .pull-xl1.session-form-input-holder, .row .pull-xl1.session-form-buttons-holder {
+  .row .col.pull-xl1, .row .pull-xl1.session-form-input-holder, .row .pull-xl1.session-form-buttons-holder, .row .pull-xl1.main-left-container, .row .pull-xl1.main-right-container {
     right: 8.33333%;
   }
-  .row .col.push-xl1, .row .push-xl1.session-form-input-holder, .row .push-xl1.session-form-buttons-holder {
+  .row .col.push-xl1, .row .push-xl1.session-form-input-holder, .row .push-xl1.session-form-buttons-holder, .row .push-xl1.main-left-container, .row .push-xl1.main-right-container {
     left: 8.33333%;
   }
-  .row .col.offset-xl2, .row .offset-xl2.session-form-input-holder, .row .offset-xl2.session-form-buttons-holder {
+  .row .col.offset-xl2, .row .offset-xl2.session-form-input-holder, .row .offset-xl2.session-form-buttons-holder, .row .offset-xl2.main-left-container, .row .offset-xl2.main-right-container {
     margin-left: 16.66667%;
   }
-  .row .col.pull-xl2, .row .pull-xl2.session-form-input-holder, .row .pull-xl2.session-form-buttons-holder {
+  .row .col.pull-xl2, .row .pull-xl2.session-form-input-holder, .row .pull-xl2.session-form-buttons-holder, .row .pull-xl2.main-left-container, .row .pull-xl2.main-right-container {
     right: 16.66667%;
   }
-  .row .col.push-xl2, .row .push-xl2.session-form-input-holder, .row .push-xl2.session-form-buttons-holder {
+  .row .col.push-xl2, .row .push-xl2.session-form-input-holder, .row .push-xl2.session-form-buttons-holder, .row .push-xl2.main-left-container, .row .push-xl2.main-right-container {
     left: 16.66667%;
   }
-  .row .col.offset-xl3, .row .offset-xl3.session-form-input-holder, .row .offset-xl3.session-form-buttons-holder {
+  .row .col.offset-xl3, .row .offset-xl3.session-form-input-holder, .row .offset-xl3.session-form-buttons-holder, .row .offset-xl3.main-left-container, .row .offset-xl3.main-right-container {
     margin-left: 25%;
   }
-  .row .col.pull-xl3, .row .pull-xl3.session-form-input-holder, .row .pull-xl3.session-form-buttons-holder {
+  .row .col.pull-xl3, .row .pull-xl3.session-form-input-holder, .row .pull-xl3.session-form-buttons-holder, .row .pull-xl3.main-left-container, .row .pull-xl3.main-right-container {
     right: 25%;
   }
-  .row .col.push-xl3, .row .push-xl3.session-form-input-holder, .row .push-xl3.session-form-buttons-holder {
+  .row .col.push-xl3, .row .push-xl3.session-form-input-holder, .row .push-xl3.session-form-buttons-holder, .row .push-xl3.main-left-container, .row .push-xl3.main-right-container {
     left: 25%;
   }
-  .row .col.offset-xl4, .row .offset-xl4.session-form-input-holder, .row .offset-xl4.session-form-buttons-holder {
+  .row .col.offset-xl4, .row .offset-xl4.session-form-input-holder, .row .offset-xl4.session-form-buttons-holder, .row .offset-xl4.main-left-container, .row .offset-xl4.main-right-container {
     margin-left: 33.33333%;
   }
-  .row .col.pull-xl4, .row .pull-xl4.session-form-input-holder, .row .pull-xl4.session-form-buttons-holder {
+  .row .col.pull-xl4, .row .pull-xl4.session-form-input-holder, .row .pull-xl4.session-form-buttons-holder, .row .pull-xl4.main-left-container, .row .pull-xl4.main-right-container {
     right: 33.33333%;
   }
-  .row .col.push-xl4, .row .push-xl4.session-form-input-holder, .row .push-xl4.session-form-buttons-holder {
+  .row .col.push-xl4, .row .push-xl4.session-form-input-holder, .row .push-xl4.session-form-buttons-holder, .row .push-xl4.main-left-container, .row .push-xl4.main-right-container {
     left: 33.33333%;
   }
-  .row .col.offset-xl5, .row .offset-xl5.session-form-input-holder, .row .offset-xl5.session-form-buttons-holder {
+  .row .col.offset-xl5, .row .offset-xl5.session-form-input-holder, .row .offset-xl5.session-form-buttons-holder, .row .offset-xl5.main-left-container, .row .offset-xl5.main-right-container {
     margin-left: 41.66667%;
   }
-  .row .col.pull-xl5, .row .pull-xl5.session-form-input-holder, .row .pull-xl5.session-form-buttons-holder {
+  .row .col.pull-xl5, .row .pull-xl5.session-form-input-holder, .row .pull-xl5.session-form-buttons-holder, .row .pull-xl5.main-left-container, .row .pull-xl5.main-right-container {
     right: 41.66667%;
   }
-  .row .col.push-xl5, .row .push-xl5.session-form-input-holder, .row .push-xl5.session-form-buttons-holder {
+  .row .col.push-xl5, .row .push-xl5.session-form-input-holder, .row .push-xl5.session-form-buttons-holder, .row .push-xl5.main-left-container, .row .push-xl5.main-right-container {
     left: 41.66667%;
   }
-  .row .col.offset-xl6, .row .offset-xl6.session-form-input-holder, .row .offset-xl6.session-form-buttons-holder {
+  .row .col.offset-xl6, .row .offset-xl6.session-form-input-holder, .row .offset-xl6.session-form-buttons-holder, .row .offset-xl6.main-left-container, .row .offset-xl6.main-right-container {
     margin-left: 50%;
   }
-  .row .col.pull-xl6, .row .pull-xl6.session-form-input-holder, .row .pull-xl6.session-form-buttons-holder {
+  .row .col.pull-xl6, .row .pull-xl6.session-form-input-holder, .row .pull-xl6.session-form-buttons-holder, .row .pull-xl6.main-left-container, .row .pull-xl6.main-right-container {
     right: 50%;
   }
-  .row .col.push-xl6, .row .push-xl6.session-form-input-holder, .row .push-xl6.session-form-buttons-holder {
+  .row .col.push-xl6, .row .push-xl6.session-form-input-holder, .row .push-xl6.session-form-buttons-holder, .row .push-xl6.main-left-container, .row .push-xl6.main-right-container {
     left: 50%;
   }
-  .row .col.offset-xl7, .row .offset-xl7.session-form-input-holder, .row .offset-xl7.session-form-buttons-holder {
+  .row .col.offset-xl7, .row .offset-xl7.session-form-input-holder, .row .offset-xl7.session-form-buttons-holder, .row .offset-xl7.main-left-container, .row .offset-xl7.main-right-container {
     margin-left: 58.33333%;
   }
-  .row .col.pull-xl7, .row .pull-xl7.session-form-input-holder, .row .pull-xl7.session-form-buttons-holder {
+  .row .col.pull-xl7, .row .pull-xl7.session-form-input-holder, .row .pull-xl7.session-form-buttons-holder, .row .pull-xl7.main-left-container, .row .pull-xl7.main-right-container {
     right: 58.33333%;
   }
-  .row .col.push-xl7, .row .push-xl7.session-form-input-holder, .row .push-xl7.session-form-buttons-holder {
+  .row .col.push-xl7, .row .push-xl7.session-form-input-holder, .row .push-xl7.session-form-buttons-holder, .row .push-xl7.main-left-container, .row .push-xl7.main-right-container {
     left: 58.33333%;
   }
-  .row .col.offset-xl8, .row .offset-xl8.session-form-input-holder, .row .offset-xl8.session-form-buttons-holder {
+  .row .col.offset-xl8, .row .offset-xl8.session-form-input-holder, .row .offset-xl8.session-form-buttons-holder, .row .offset-xl8.main-left-container, .row .offset-xl8.main-right-container {
     margin-left: 66.66667%;
   }
-  .row .col.pull-xl8, .row .pull-xl8.session-form-input-holder, .row .pull-xl8.session-form-buttons-holder {
+  .row .col.pull-xl8, .row .pull-xl8.session-form-input-holder, .row .pull-xl8.session-form-buttons-holder, .row .pull-xl8.main-left-container, .row .pull-xl8.main-right-container {
     right: 66.66667%;
   }
-  .row .col.push-xl8, .row .push-xl8.session-form-input-holder, .row .push-xl8.session-form-buttons-holder {
+  .row .col.push-xl8, .row .push-xl8.session-form-input-holder, .row .push-xl8.session-form-buttons-holder, .row .push-xl8.main-left-container, .row .push-xl8.main-right-container {
     left: 66.66667%;
   }
-  .row .col.offset-xl9, .row .offset-xl9.session-form-input-holder, .row .offset-xl9.session-form-buttons-holder {
+  .row .col.offset-xl9, .row .offset-xl9.session-form-input-holder, .row .offset-xl9.session-form-buttons-holder, .row .offset-xl9.main-left-container, .row .offset-xl9.main-right-container {
     margin-left: 75%;
   }
-  .row .col.pull-xl9, .row .pull-xl9.session-form-input-holder, .row .pull-xl9.session-form-buttons-holder {
+  .row .col.pull-xl9, .row .pull-xl9.session-form-input-holder, .row .pull-xl9.session-form-buttons-holder, .row .pull-xl9.main-left-container, .row .pull-xl9.main-right-container {
     right: 75%;
   }
-  .row .col.push-xl9, .row .push-xl9.session-form-input-holder, .row .push-xl9.session-form-buttons-holder {
+  .row .col.push-xl9, .row .push-xl9.session-form-input-holder, .row .push-xl9.session-form-buttons-holder, .row .push-xl9.main-left-container, .row .push-xl9.main-right-container {
     left: 75%;
   }
-  .row .col.offset-xl10, .row .offset-xl10.session-form-input-holder, .row .offset-xl10.session-form-buttons-holder {
+  .row .col.offset-xl10, .row .offset-xl10.session-form-input-holder, .row .offset-xl10.session-form-buttons-holder, .row .offset-xl10.main-left-container, .row .offset-xl10.main-right-container {
     margin-left: 83.33333%;
   }
-  .row .col.pull-xl10, .row .pull-xl10.session-form-input-holder, .row .pull-xl10.session-form-buttons-holder {
+  .row .col.pull-xl10, .row .pull-xl10.session-form-input-holder, .row .pull-xl10.session-form-buttons-holder, .row .pull-xl10.main-left-container, .row .pull-xl10.main-right-container {
     right: 83.33333%;
   }
-  .row .col.push-xl10, .row .push-xl10.session-form-input-holder, .row .push-xl10.session-form-buttons-holder {
+  .row .col.push-xl10, .row .push-xl10.session-form-input-holder, .row .push-xl10.session-form-buttons-holder, .row .push-xl10.main-left-container, .row .push-xl10.main-right-container {
     left: 83.33333%;
   }
-  .row .col.offset-xl11, .row .offset-xl11.session-form-input-holder, .row .offset-xl11.session-form-buttons-holder {
+  .row .col.offset-xl11, .row .offset-xl11.session-form-input-holder, .row .offset-xl11.session-form-buttons-holder, .row .offset-xl11.main-left-container, .row .offset-xl11.main-right-container {
     margin-left: 91.66667%;
   }
-  .row .col.pull-xl11, .row .pull-xl11.session-form-input-holder, .row .pull-xl11.session-form-buttons-holder {
+  .row .col.pull-xl11, .row .pull-xl11.session-form-input-holder, .row .pull-xl11.session-form-buttons-holder, .row .pull-xl11.main-left-container, .row .pull-xl11.main-right-container {
     right: 91.66667%;
   }
-  .row .col.push-xl11, .row .push-xl11.session-form-input-holder, .row .push-xl11.session-form-buttons-holder {
+  .row .col.push-xl11, .row .push-xl11.session-form-input-holder, .row .push-xl11.session-form-buttons-holder, .row .push-xl11.main-left-container, .row .push-xl11.main-right-container {
     left: 91.66667%;
   }
-  .row .col.offset-xl12, .row .offset-xl12.session-form-input-holder, .row .offset-xl12.session-form-buttons-holder {
+  .row .col.offset-xl12, .row .offset-xl12.session-form-input-holder, .row .offset-xl12.session-form-buttons-holder, .row .offset-xl12.main-left-container, .row .offset-xl12.main-right-container {
     margin-left: 100%;
   }
-  .row .col.pull-xl12, .row .pull-xl12.session-form-input-holder, .row .pull-xl12.session-form-buttons-holder {
+  .row .col.pull-xl12, .row .pull-xl12.session-form-input-holder, .row .pull-xl12.session-form-buttons-holder, .row .pull-xl12.main-left-container, .row .pull-xl12.main-right-container {
     right: 100%;
   }
-  .row .col.push-xl12, .row .push-xl12.session-form-input-holder, .row .push-xl12.session-form-buttons-holder {
+  .row .col.push-xl12, .row .push-xl12.session-form-input-holder, .row .push-xl12.session-form-buttons-holder, .row .push-xl12.main-left-container, .row .push-xl12.main-right-container {
     left: 100%;
   }
 }
@@ -4324,7 +4324,7 @@ nav .brand-logo, nav .navbar-brand-logo {
   padding: 0;
 }
 
-nav .brand-logo.center, nav .center.navbar-brand-logo, nav .navbar-brand-logo.session-form-title, nav .brand-logo.session-form-title {
+nav .brand-logo.center, nav .center.navbar-brand-logo, nav .navbar-brand-logo.session-form-title, nav .navbar-brand-logo.group-session-title, nav .brand-logo.session-form-title, nav .brand-logo.group-session-title {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -4395,13 +4395,13 @@ nav ul a {
   cursor: pointer;
 }
 
-nav ul a.btn, nav ul a.btn-large, nav ul a.btn-small, nav ul a.navbar-session-button, nav ul a.session-form-button, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+nav ul a.btn, nav ul a.btn-large, nav ul a.btn-small, nav ul a.navbar-session-button, nav ul a.session-form-button, nav ul a.interest-create-button, nav ul a.group-session-button, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
   margin-top: -2px;
   margin-left: 15px;
   margin-right: 15px;
 }
 
-nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-small > .material-icons, nav ul a.navbar-session-button > .material-icons, nav ul a.session-form-button > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-flat > .material-icons, nav ul a.btn-floating > .material-icons {
+nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-small > .material-icons, nav ul a.navbar-session-button > .material-icons, nav ul a.session-form-button > .material-icons, nav ul a.interest-create-button > .material-icons, nav ul a.group-session-button > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-flat > .material-icons, nav ul a.btn-floating > .material-icons {
   height: inherit;
   line-height: inherit;
 }
@@ -4418,36 +4418,36 @@ nav form {
   height: 100%;
 }
 
-nav .input-field, nav .session-form-input-holder, nav .session-form-buttons-holder {
+nav .input-field, nav .session-form-input-holder, nav .session-form-buttons-holder, nav .interest-create-input-holder {
   margin: 0;
   height: 100%;
 }
 
-nav .input-field input, nav .session-form-input-holder input, nav .session-form-buttons-holder input {
+nav .input-field input, nav .session-form-input-holder input, nav .session-form-buttons-holder input, nav .interest-create-input-holder input {
   height: 100%;
   font-size: 1.2rem;
   border: none;
   padding-left: 2rem;
 }
 
-nav .input-field input:focus, nav .session-form-input-holder input:focus, nav .session-form-buttons-holder input:focus, nav .input-field input[type=text]:valid, nav .session-form-input-holder input[type=text]:valid, nav .session-form-buttons-holder input[type=text]:valid, nav .input-field input[type=password]:valid, nav .session-form-input-holder input[type=password]:valid, nav .session-form-buttons-holder input[type=password]:valid, nav .input-field input[type=email]:valid, nav .session-form-input-holder input[type=email]:valid, nav .session-form-buttons-holder input[type=email]:valid, nav .input-field input[type=url]:valid, nav .session-form-input-holder input[type=url]:valid, nav .session-form-buttons-holder input[type=url]:valid, nav .input-field input[type=date]:valid, nav .session-form-input-holder input[type=date]:valid, nav .session-form-buttons-holder input[type=date]:valid {
+nav .input-field input:focus, nav .session-form-input-holder input:focus, nav .session-form-buttons-holder input:focus, nav .interest-create-input-holder input:focus, nav .input-field input[type=text]:valid, nav .session-form-input-holder input[type=text]:valid, nav .session-form-buttons-holder input[type=text]:valid, nav .interest-create-input-holder input[type=text]:valid, nav .input-field input[type=password]:valid, nav .session-form-input-holder input[type=password]:valid, nav .session-form-buttons-holder input[type=password]:valid, nav .interest-create-input-holder input[type=password]:valid, nav .input-field input[type=email]:valid, nav .session-form-input-holder input[type=email]:valid, nav .session-form-buttons-holder input[type=email]:valid, nav .interest-create-input-holder input[type=email]:valid, nav .input-field input[type=url]:valid, nav .session-form-input-holder input[type=url]:valid, nav .session-form-buttons-holder input[type=url]:valid, nav .interest-create-input-holder input[type=url]:valid, nav .input-field input[type=date]:valid, nav .session-form-input-holder input[type=date]:valid, nav .session-form-buttons-holder input[type=date]:valid, nav .interest-create-input-holder input[type=date]:valid {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-nav .input-field label, nav .session-form-input-holder label, nav .session-form-buttons-holder label {
+nav .input-field label, nav .session-form-input-holder label, nav .session-form-buttons-holder label, nav .interest-create-input-holder label {
   top: 0;
   left: 0;
 }
 
-nav .input-field label i, nav .session-form-input-holder label i, nav .session-form-buttons-holder label i {
+nav .input-field label i, nav .session-form-input-holder label i, nav .session-form-buttons-holder label i, nav .interest-create-input-holder label i {
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: color .3s;
   transition: color .3s;
 }
 
-nav .input-field label.active i, nav .session-form-input-holder label.active i, nav .session-form-buttons-holder label.active i {
+nav .input-field label.active i, nav .session-form-input-holder label.active i, nav .session-form-buttons-holder label.active i, nav .interest-create-input-holder label.active i {
   color: #fff;
 }
 
@@ -4732,7 +4732,7 @@ small {
   background-color: #fff;
 }
 
-.card {
+.card, .interest-holder, .interest-create-container {
   position: relative;
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
@@ -4743,79 +4743,79 @@ small {
   border-radius: 2px;
 }
 
-.card .card-title {
+.card .card-title, .interest-holder .card-title, .interest-create-container .card-title, .card .interest-title, .interest-holder .interest-title, .interest-create-container .interest-title, .card .interest-create-title, .interest-holder .interest-create-title, .interest-create-container .interest-create-title {
   font-size: 24px;
   font-weight: 300;
 }
 
-.card .card-title.activator {
+.card .card-title.activator, .interest-holder .card-title.activator, .interest-create-container .card-title.activator, .card .activator.interest-title, .interest-holder .activator.interest-title, .interest-create-container .activator.interest-title, .card .activator.interest-create-title, .interest-holder .activator.interest-create-title, .interest-create-container .activator.interest-create-title {
   cursor: pointer;
 }
 
-.card.small, .card.navbar-session-button, .card.medium, .card.large {
+.card.small, .card.navbar-session-button, .navbar-session-button.interest-holder, .navbar-session-button.interest-create-container, .small.interest-holder, .small.interest-create-container, .card.medium, .medium.interest-holder, .medium.interest-create-container, .card.large, .large.interest-holder, .large.interest-create-container {
   position: relative;
 }
 
-.card.small .card-image, .card.navbar-session-button .card-image, .card.medium .card-image, .card.large .card-image {
+.card.small .card-image, .card.navbar-session-button .card-image, .navbar-session-button.interest-holder .card-image, .navbar-session-button.interest-create-container .card-image, .small.interest-holder .card-image, .small.interest-create-container .card-image, .card.medium .card-image, .medium.interest-holder .card-image, .medium.interest-create-container .card-image, .card.large .card-image, .large.interest-holder .card-image, .large.interest-create-container .card-image {
   max-height: 60%;
   overflow: hidden;
 }
 
-.card.small .card-image + .card-content, .card.navbar-session-button .card-image + .card-content, .card.medium .card-image + .card-content, .card.large .card-image + .card-content {
+.card.small .card-image + .card-content, .card.navbar-session-button .card-image + .card-content, .navbar-session-button.interest-holder .card-image + .card-content, .navbar-session-button.interest-create-container .card-image + .card-content, .small.interest-holder .card-image + .card-content, .small.interest-create-container .card-image + .card-content, .card.small .card-image + .interest-content, .card.navbar-session-button .card-image + .interest-content, .navbar-session-button.interest-holder .card-image + .interest-content, .navbar-session-button.interest-create-container .card-image + .interest-content, .small.interest-holder .card-image + .interest-content, .small.interest-create-container .card-image + .interest-content, .card.small .card-image + .interest-create-content, .card.navbar-session-button .card-image + .interest-create-content, .navbar-session-button.interest-holder .card-image + .interest-create-content, .navbar-session-button.interest-create-container .card-image + .interest-create-content, .small.interest-holder .card-image + .interest-create-content, .small.interest-create-container .card-image + .interest-create-content, .card.medium .card-image + .card-content, .medium.interest-holder .card-image + .card-content, .medium.interest-create-container .card-image + .card-content, .card.medium .card-image + .interest-content, .medium.interest-holder .card-image + .interest-content, .medium.interest-create-container .card-image + .interest-content, .card.medium .card-image + .interest-create-content, .medium.interest-holder .card-image + .interest-create-content, .medium.interest-create-container .card-image + .interest-create-content, .card.large .card-image + .card-content, .large.interest-holder .card-image + .card-content, .large.interest-create-container .card-image + .card-content, .card.large .card-image + .interest-content, .large.interest-holder .card-image + .interest-content, .large.interest-create-container .card-image + .interest-content, .card.large .card-image + .interest-create-content, .large.interest-holder .card-image + .interest-create-content, .large.interest-create-container .card-image + .interest-create-content {
   max-height: 40%;
 }
 
-.card.small .card-content, .card.navbar-session-button .card-content, .card.medium .card-content, .card.large .card-content {
+.card.small .card-content, .card.navbar-session-button .card-content, .navbar-session-button.interest-holder .card-content, .navbar-session-button.interest-create-container .card-content, .small.interest-holder .card-content, .small.interest-create-container .card-content, .card.small .interest-content, .card.navbar-session-button .interest-content, .navbar-session-button.interest-holder .interest-content, .navbar-session-button.interest-create-container .interest-content, .small.interest-holder .interest-content, .small.interest-create-container .interest-content, .card.small .interest-create-content, .card.navbar-session-button .interest-create-content, .navbar-session-button.interest-holder .interest-create-content, .navbar-session-button.interest-create-container .interest-create-content, .small.interest-holder .interest-create-content, .small.interest-create-container .interest-create-content, .card.medium .card-content, .medium.interest-holder .card-content, .medium.interest-create-container .card-content, .card.medium .interest-content, .medium.interest-holder .interest-content, .medium.interest-create-container .interest-content, .card.medium .interest-create-content, .medium.interest-holder .interest-create-content, .medium.interest-create-container .interest-create-content, .card.large .card-content, .large.interest-holder .card-content, .large.interest-create-container .card-content, .card.large .interest-content, .large.interest-holder .interest-content, .large.interest-create-container .interest-content, .card.large .interest-create-content, .large.interest-holder .interest-create-content, .large.interest-create-container .interest-create-content {
   max-height: 100%;
   overflow: hidden;
 }
 
-.card.small .card-action, .card.navbar-session-button .card-action, .card.medium .card-action, .card.large .card-action {
+.card.small .card-action, .card.navbar-session-button .card-action, .navbar-session-button.interest-holder .card-action, .navbar-session-button.interest-create-container .card-action, .small.interest-holder .card-action, .small.interest-create-container .card-action, .card.medium .card-action, .medium.interest-holder .card-action, .medium.interest-create-container .card-action, .card.large .card-action, .large.interest-holder .card-action, .large.interest-create-container .card-action {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-.card.small, .card.navbar-session-button {
+.card.small, .card.navbar-session-button, .navbar-session-button.interest-holder, .navbar-session-button.interest-create-container, .small.interest-holder, .small.interest-create-container {
   height: 300px;
 }
 
-.card.medium {
+.card.medium, .medium.interest-holder, .medium.interest-create-container {
   height: 400px;
 }
 
-.card.large {
+.card.large, .large.interest-holder, .large.interest-create-container {
   height: 500px;
 }
 
-.card.horizontal {
+.card.horizontal, .horizontal.interest-holder, .horizontal.interest-create-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.card.horizontal.small .card-image, .card.horizontal.navbar-session-button .card-image, .card.horizontal.medium .card-image, .card.horizontal.large .card-image {
+.card.horizontal.small .card-image, .card.horizontal.navbar-session-button .card-image, .horizontal.navbar-session-button.interest-holder .card-image, .horizontal.navbar-session-button.interest-create-container .card-image, .horizontal.small.interest-holder .card-image, .horizontal.small.interest-create-container .card-image, .card.horizontal.medium .card-image, .horizontal.medium.interest-holder .card-image, .horizontal.medium.interest-create-container .card-image, .card.horizontal.large .card-image, .horizontal.large.interest-holder .card-image, .horizontal.large.interest-create-container .card-image {
   height: 100%;
   max-height: none;
   overflow: visible;
 }
 
-.card.horizontal.small .card-image img, .card.horizontal.navbar-session-button .card-image img, .card.horizontal.medium .card-image img, .card.horizontal.large .card-image img {
+.card.horizontal.small .card-image img, .card.horizontal.navbar-session-button .card-image img, .horizontal.navbar-session-button.interest-holder .card-image img, .horizontal.navbar-session-button.interest-create-container .card-image img, .horizontal.small.interest-holder .card-image img, .horizontal.small.interest-create-container .card-image img, .card.horizontal.medium .card-image img, .horizontal.medium.interest-holder .card-image img, .horizontal.medium.interest-create-container .card-image img, .card.horizontal.large .card-image img, .horizontal.large.interest-holder .card-image img, .horizontal.large.interest-create-container .card-image img {
   height: 100%;
 }
 
-.card.horizontal .card-image {
+.card.horizontal .card-image, .horizontal.interest-holder .card-image, .horizontal.interest-create-container .card-image {
   max-width: 50%;
 }
 
-.card.horizontal .card-image img {
+.card.horizontal .card-image img, .horizontal.interest-holder .card-image img, .horizontal.interest-create-container .card-image img {
   border-radius: 2px 0 0 2px;
   max-width: 100%;
   width: auto;
 }
 
-.card.horizontal .card-stacked {
+.card.horizontal .card-stacked, .horizontal.interest-holder .card-stacked, .horizontal.interest-create-container .card-stacked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4829,26 +4829,26 @@ small {
   position: relative;
 }
 
-.card.horizontal .card-stacked .card-content {
+.card.horizontal .card-stacked .card-content, .horizontal.interest-holder .card-stacked .card-content, .horizontal.interest-create-container .card-stacked .card-content, .card.horizontal .card-stacked .interest-content, .horizontal.interest-holder .card-stacked .interest-content, .horizontal.interest-create-container .card-stacked .interest-content, .card.horizontal .card-stacked .interest-create-content, .horizontal.interest-holder .card-stacked .interest-create-content, .horizontal.interest-create-container .card-stacked .interest-create-content {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.card.sticky-action .card-action {
+.card.sticky-action .card-action, .sticky-action.interest-holder .card-action, .sticky-action.interest-create-container .card-action {
   z-index: 2;
 }
 
-.card.sticky-action .card-reveal {
+.card.sticky-action .card-reveal, .sticky-action.interest-holder .card-reveal, .sticky-action.interest-create-container .card-reveal {
   z-index: 1;
   padding-bottom: 64px;
 }
 
-.card .card-image {
+.card .card-image, .interest-holder .card-image, .interest-create-container .card-image {
   position: relative;
 }
 
-.card .card-image img {
+.card .card-image img, .interest-holder .card-image img, .interest-create-container .card-image img {
   display: block;
   border-radius: 2px 2px 0 0;
   position: relative;
@@ -4859,7 +4859,7 @@ small {
   width: 100%;
 }
 
-.card .card-image .card-title {
+.card .card-image .card-title, .interest-holder .card-image .card-title, .interest-create-container .card-image .card-title, .card .card-image .interest-title, .interest-holder .card-image .interest-title, .interest-create-container .card-image .interest-title, .card .card-image .interest-create-title, .interest-holder .card-image .interest-create-title, .interest-create-container .card-image .interest-create-title {
   color: #fff;
   position: absolute;
   bottom: 0;
@@ -4868,37 +4868,37 @@ small {
   padding: 24px;
 }
 
-.card .card-content {
+.card .card-content, .interest-holder .card-content, .interest-create-container .card-content, .card .interest-content, .interest-holder .interest-content, .interest-create-container .interest-content, .card .interest-create-content, .interest-holder .interest-create-content, .interest-create-container .interest-create-content {
   padding: 24px;
   border-radius: 0 0 2px 2px;
 }
 
-.card .card-content p {
+.card .card-content p, .interest-holder .card-content p, .interest-create-container .card-content p, .card .interest-content p, .interest-holder .interest-content p, .interest-create-container .interest-content p, .card .interest-create-content p, .interest-holder .interest-create-content p, .interest-create-container .interest-create-content p {
   margin: 0;
 }
 
-.card .card-content .card-title {
+.card .card-content .card-title, .interest-holder .card-content .card-title, .interest-create-container .card-content .card-title, .card .interest-content .card-title, .interest-holder .interest-content .card-title, .interest-create-container .interest-content .card-title, .card .interest-create-content .card-title, .interest-holder .interest-create-content .card-title, .interest-create-container .interest-create-content .card-title, .card .card-content .interest-title, .interest-holder .card-content .interest-title, .interest-create-container .card-content .interest-title, .card .interest-content .interest-title, .interest-holder .interest-content .interest-title, .interest-create-container .interest-content .interest-title, .card .interest-create-content .interest-title, .interest-holder .interest-create-content .interest-title, .interest-create-container .interest-create-content .interest-title, .card .card-content .interest-create-title, .interest-holder .card-content .interest-create-title, .interest-create-container .card-content .interest-create-title, .card .interest-content .interest-create-title, .interest-holder .interest-content .interest-create-title, .interest-create-container .interest-content .interest-create-title, .card .interest-create-content .interest-create-title, .interest-holder .interest-create-content .interest-create-title, .interest-create-container .interest-create-content .interest-create-title {
   display: block;
   line-height: 32px;
   margin-bottom: 8px;
 }
 
-.card .card-content .card-title i {
+.card .card-content .card-title i, .interest-holder .card-content .card-title i, .interest-create-container .card-content .card-title i, .card .interest-content .card-title i, .interest-holder .interest-content .card-title i, .interest-create-container .interest-content .card-title i, .card .interest-create-content .card-title i, .interest-holder .interest-create-content .card-title i, .interest-create-container .interest-create-content .card-title i, .card .card-content .interest-title i, .interest-holder .card-content .interest-title i, .interest-create-container .card-content .interest-title i, .card .interest-content .interest-title i, .interest-holder .interest-content .interest-title i, .interest-create-container .interest-content .interest-title i, .card .interest-create-content .interest-title i, .interest-holder .interest-create-content .interest-title i, .interest-create-container .interest-create-content .interest-title i, .card .card-content .interest-create-title i, .interest-holder .card-content .interest-create-title i, .interest-create-container .card-content .interest-create-title i, .card .interest-content .interest-create-title i, .interest-holder .interest-content .interest-create-title i, .interest-create-container .interest-content .interest-create-title i, .card .interest-create-content .interest-create-title i, .interest-holder .interest-create-content .interest-create-title i, .interest-create-container .interest-create-content .interest-create-title i {
   line-height: 32px;
 }
 
-.card .card-action {
+.card .card-action, .interest-holder .card-action, .interest-create-container .card-action {
   background-color: inherit;
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   position: relative;
   padding: 16px 24px;
 }
 
-.card .card-action:last-child {
+.card .card-action:last-child, .interest-holder .card-action:last-child, .interest-create-container .card-action:last-child {
   border-radius: 0 0 2px 2px;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.btn-large):not(.btn-floating) {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating), .interest-holder .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating), .interest-create-container .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating) {
   color: #ffab40;
   margin-right: 24px;
   -webkit-transition: color .3s ease;
@@ -4906,11 +4906,11 @@ small {
   text-transform: uppercase;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.btn-large):not(.btn-floating):hover {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):hover, .interest-holder .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):hover, .interest-create-container .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):hover {
   color: #ffd8a6;
 }
 
-.card .card-reveal {
+.card .card-reveal, .interest-holder .card-reveal, .interest-create-container .card-reveal {
   padding: 24px;
   position: absolute;
   background-color: #fff;
@@ -4923,7 +4923,7 @@ small {
   display: none;
 }
 
-.card .card-reveal .card-title {
+.card .card-reveal .card-title, .interest-holder .card-reveal .card-title, .interest-create-container .card-reveal .card-title, .card .card-reveal .interest-title, .interest-holder .card-reveal .interest-title, .interest-create-container .card-reveal .interest-title, .card .card-reveal .interest-create-title, .interest-holder .card-reveal .interest-create-title, .interest-create-container .card-reveal .interest-create-title {
   cursor: pointer;
   display: block;
 }
@@ -5141,7 +5141,7 @@ small {
   visibility: hidden;
 }
 
-.btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button,
+.btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .interest-create-button, .group-session-button,
 .btn-flat {
   border: none;
   border-radius: 2px;
@@ -5154,7 +5154,7 @@ small {
   -webkit-tap-highlight-color: transparent;
 }
 
-.btn.disabled, .disabled.btn-large, .disabled.btn-small, .disabled.navbar-session-button, .disabled.session-form-button,
+.btn.disabled, .disabled.btn-large, .disabled.btn-small, .disabled.navbar-session-button, .disabled.session-form-button, .disabled.interest-create-button, .disabled.group-session-button,
 .btn-floating.disabled,
 .btn-large.disabled,
 .btn-small.disabled,
@@ -5164,6 +5164,8 @@ small {
 .btn-small:disabled,
 .navbar-session-button:disabled,
 .session-form-button:disabled,
+.interest-create-button:disabled,
+.group-session-button:disabled,
 .btn-floating:disabled,
 .btn-large:disabled,
 .btn-small:disabled,
@@ -5173,6 +5175,8 @@ small {
 .btn-small[disabled],
 .navbar-session-button[disabled],
 .session-form-button[disabled],
+.interest-create-button[disabled],
+.group-session-button[disabled],
 .btn-floating[disabled],
 .btn-large[disabled],
 .btn-small[disabled],
@@ -5185,7 +5189,7 @@ small {
   cursor: default;
 }
 
-.btn.disabled:hover, .disabled.btn-large:hover, .disabled.btn-small:hover, .disabled.navbar-session-button:hover, .disabled.session-form-button:hover,
+.btn.disabled:hover, .disabled.btn-large:hover, .disabled.btn-small:hover, .disabled.navbar-session-button:hover, .disabled.session-form-button:hover, .disabled.interest-create-button:hover, .disabled.group-session-button:hover,
 .btn-floating.disabled:hover,
 .btn-large.disabled:hover,
 .btn-small.disabled:hover,
@@ -5195,6 +5199,8 @@ small {
 .btn-small:disabled:hover,
 .navbar-session-button:disabled:hover,
 .session-form-button:disabled:hover,
+.interest-create-button:disabled:hover,
+.group-session-button:disabled:hover,
 .btn-floating:disabled:hover,
 .btn-large:disabled:hover,
 .btn-small:disabled:hover,
@@ -5204,6 +5210,8 @@ small {
 .btn-small[disabled]:hover,
 .navbar-session-button[disabled]:hover,
 .session-form-button[disabled]:hover,
+.interest-create-button[disabled]:hover,
+.group-session-button[disabled]:hover,
 .btn-floating[disabled]:hover,
 .btn-large[disabled]:hover,
 .btn-small[disabled]:hover,
@@ -5212,7 +5220,7 @@ small {
   color: #9F9F9F !important;
 }
 
-.btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button,
+.btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .interest-create-button, .group-session-button,
 .btn-floating,
 .btn-large,
 .btn-small,
@@ -5221,7 +5229,7 @@ small {
   outline: 0;
 }
 
-.btn i, .btn-large i, .btn-small i, .navbar-session-button i, .session-form-button i,
+.btn i, .btn-large i, .btn-small i, .navbar-session-button i, .session-form-button i, .interest-create-button i, .group-session-button i,
 .btn-floating i,
 .btn-large i,
 .btn-small i,
@@ -5230,12 +5238,12 @@ small {
   line-height: inherit;
 }
 
-.btn:focus, .btn-large:focus, .btn-small:focus, .navbar-session-button:focus, .session-form-button:focus,
+.btn:focus, .btn-large:focus, .btn-small:focus, .navbar-session-button:focus, .session-form-button:focus, .interest-create-button:focus, .group-session-button:focus,
 .btn-floating:focus {
   background-color: #1d7d74;
 }
 
-.btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button {
+.btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .interest-create-button, .group-session-button {
   text-decoration: none;
   color: #fff;
   background-color: #26a69a;
@@ -5246,7 +5254,7 @@ small {
   cursor: pointer;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover, .navbar-session-button:hover, .session-form-button:hover {
+.btn:hover, .btn-large:hover, .btn-small:hover, .navbar-session-button:hover, .session-form-button:hover, .interest-create-button:hover, .group-session-button:hover {
   background-color: #2bbbad;
 }
 
@@ -5592,7 +5600,7 @@ body.keyboard-focused .dropdown-content li:focus {
   background-color: #dadada;
 }
 
-.input-field.col .dropdown-content [type="checkbox"] + label, .session-form-input-holder .dropdown-content [type="checkbox"] + label, .session-form-buttons-holder .dropdown-content [type="checkbox"] + label {
+.input-field.col .dropdown-content [type="checkbox"] + label, .session-form-input-holder .dropdown-content [type="checkbox"] + label, .session-form-buttons-holder .dropdown-content [type="checkbox"] + label, .input-field.main-left-container .dropdown-content [type="checkbox"] + label, .main-left-container.session-form-input-holder .dropdown-content [type="checkbox"] + label, .main-left-container.session-form-buttons-holder .dropdown-content [type="checkbox"] + label, .main-left-container.interest-create-input-holder .dropdown-content [type="checkbox"] + label, .input-field.main-right-container .dropdown-content [type="checkbox"] + label, .main-right-container.session-form-input-holder .dropdown-content [type="checkbox"] + label, .main-right-container.session-form-buttons-holder .dropdown-content [type="checkbox"] + label, .main-right-container.interest-create-input-holder .dropdown-content [type="checkbox"] + label, .col.interest-create-input-holder .dropdown-content [type="checkbox"] + label, .interest-create-input-holder.session-form-input-holder .dropdown-content [type="checkbox"] + label, .interest-create-input-holder.session-form-buttons-holder .dropdown-content [type="checkbox"] + label {
   top: 1px;
   left: 0;
   height: 18px;
@@ -5776,7 +5784,7 @@ body.keyboard-focused .dropdown-content li:focus {
   text-align: right;
 }
 
-.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .navbar-session-button, .modal .modal-footer .session-form-button, .modal .modal-footer .btn-flat {
+.modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .navbar-session-button, .modal .modal-footer .session-form-button, .modal .modal-footer .interest-create-button, .modal .modal-footer .group-session-button, .modal .modal-footer .btn-flat {
   margin: 6px 0;
 }
 
@@ -5823,14 +5831,14 @@ body.keyboard-focused .dropdown-content li:focus {
   will-change: bottom, opacity;
 }
 
-.collapsible {
+.collapsible, .group-list {
   border-top: 1px solid #ddd;
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
   margin: 0.5rem 0 1rem 0;
 }
 
-.collapsible-header {
+.collapsible-header, .group-list-element-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5842,11 +5850,11 @@ body.keyboard-focused .dropdown-content li:focus {
   border-bottom: 1px solid #ddd;
 }
 
-.collapsible-header:focus {
+.collapsible-header:focus, .group-list-element-title:focus {
   outline: 0;
 }
 
-.collapsible-header i {
+.collapsible-header i, .group-list-element-title i {
   width: 2rem;
   font-size: 1.6rem;
   display: inline-block;
@@ -5854,11 +5862,11 @@ body.keyboard-focused .dropdown-content li:focus {
   margin-right: 1rem;
 }
 
-.keyboard-focused .collapsible-header:focus {
+.keyboard-focused .collapsible-header:focus, .keyboard-focused .group-list-element-title:focus {
   background-color: #eee;
 }
 
-.collapsible-body {
+.collapsible-body, .group-list-element-body {
   display: none;
   border-bottom: 1px solid #ddd;
   -webkit-box-sizing: border-box;
@@ -5866,20 +5874,23 @@ body.keyboard-focused .dropdown-content li:focus {
   padding: 2rem;
 }
 
-.sidenav .collapsible,
-.sidenav.fixed .collapsible {
+.sidenav .collapsible, .sidenav .group-list,
+.sidenav.fixed .collapsible,
+.sidenav.fixed .group-list {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.sidenav .collapsible li,
-.sidenav.fixed .collapsible li {
+.sidenav .collapsible li, .sidenav .group-list li,
+.sidenav.fixed .collapsible li,
+.sidenav.fixed .group-list li {
   padding: 0;
 }
 
-.sidenav .collapsible-header,
-.sidenav.fixed .collapsible-header {
+.sidenav .collapsible-header, .sidenav .group-list-element-title,
+.sidenav.fixed .collapsible-header,
+.sidenav.fixed .group-list-element-title {
   background-color: transparent;
   border: none;
   line-height: inherit;
@@ -5887,34 +5898,38 @@ body.keyboard-focused .dropdown-content li:focus {
   padding: 0 16px;
 }
 
-.sidenav .collapsible-header:hover,
-.sidenav.fixed .collapsible-header:hover {
+.sidenav .collapsible-header:hover, .sidenav .group-list-element-title:hover,
+.sidenav.fixed .collapsible-header:hover,
+.sidenav.fixed .group-list-element-title:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.sidenav .collapsible-header i,
-.sidenav.fixed .collapsible-header i {
+.sidenav .collapsible-header i, .sidenav .group-list-element-title i,
+.sidenav.fixed .collapsible-header i,
+.sidenav.fixed .group-list-element-title i {
   line-height: inherit;
 }
 
-.sidenav .collapsible-body,
-.sidenav.fixed .collapsible-body {
+.sidenav .collapsible-body, .sidenav .group-list-element-body,
+.sidenav.fixed .collapsible-body,
+.sidenav.fixed .group-list-element-body {
   border: 0;
   background-color: #fff;
 }
 
-.sidenav .collapsible-body li a,
-.sidenav.fixed .collapsible-body li a {
+.sidenav .collapsible-body li a, .sidenav .group-list-element-body li a,
+.sidenav.fixed .collapsible-body li a,
+.sidenav.fixed .group-list-element-body li a {
   padding: 0 23.5px 0 31px;
 }
 
-.collapsible.popout {
+.collapsible.popout, .popout.group-list {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.collapsible.popout > li {
+.collapsible.popout > li, .popout.group-list > li {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin: 0 24px;
@@ -5922,7 +5937,7 @@ body.keyboard-focused .dropdown-content li:focus {
   transition: margin 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.collapsible.popout > li.active {
+.collapsible.popout > li.active, .popout.group-list > li.active {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   margin: 16px 0;
@@ -6478,37 +6493,49 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   transition: .2s opacity ease-out, .2s color ease-out;
 }
 
-.input-field, .session-form-input-holder, .session-form-buttons-holder {
+.input-field, .session-form-input-holder, .session-form-buttons-holder, .interest-create-input-holder {
   position: relative;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.input-field.inline, .inline.session-form-input-holder, .inline.session-form-buttons-holder {
+.input-field.inline, .inline.session-form-input-holder, .inline.session-form-buttons-holder, .inline.interest-create-input-holder {
   display: inline-block;
   vertical-align: middle;
   margin-left: 5px;
 }
 
-.input-field.inline input, .inline.session-form-input-holder input, .inline.session-form-buttons-holder input,
+.input-field.inline input, .inline.session-form-input-holder input, .inline.session-form-buttons-holder input, .inline.interest-create-input-holder input,
 .input-field.inline .select-dropdown,
 .inline.session-form-input-holder .select-dropdown,
-.inline.session-form-buttons-holder .select-dropdown {
+.inline.session-form-buttons-holder .select-dropdown,
+.inline.interest-create-input-holder .select-dropdown {
   margin-bottom: 1rem;
 }
 
-.input-field.col label, .session-form-input-holder label, .session-form-buttons-holder label {
+.input-field.col label, .session-form-input-holder label, .session-form-buttons-holder label, .input-field.main-left-container label, .main-left-container.session-form-input-holder label, .main-left-container.session-form-buttons-holder label, .main-left-container.interest-create-input-holder label, .input-field.main-right-container label, .main-right-container.session-form-input-holder label, .main-right-container.session-form-buttons-holder label, .main-right-container.interest-create-input-holder label, .col.interest-create-input-holder label, .interest-create-input-holder.session-form-input-holder label, .interest-create-input-holder.session-form-buttons-holder label {
   left: 0.75rem;
 }
 
-.input-field.col .prefix ~ label, .session-form-input-holder .prefix ~ label, .session-form-buttons-holder .prefix ~ label,
+.input-field.col .prefix ~ label, .session-form-input-holder .prefix ~ label, .session-form-buttons-holder .prefix ~ label, .input-field.main-left-container .prefix ~ label, .main-left-container.session-form-input-holder .prefix ~ label, .main-left-container.session-form-buttons-holder .prefix ~ label, .main-left-container.interest-create-input-holder .prefix ~ label, .input-field.main-right-container .prefix ~ label, .main-right-container.session-form-input-holder .prefix ~ label, .main-right-container.session-form-buttons-holder .prefix ~ label, .main-right-container.interest-create-input-holder .prefix ~ label, .col.interest-create-input-holder .prefix ~ label, .interest-create-input-holder.session-form-input-holder .prefix ~ label, .interest-create-input-holder.session-form-buttons-holder .prefix ~ label,
 .input-field.col .prefix ~ .validate ~ label,
 .session-form-input-holder .prefix ~ .validate ~ label,
-.session-form-buttons-holder .prefix ~ .validate ~ label {
+.session-form-buttons-holder .prefix ~ .validate ~ label,
+.input-field.main-left-container .prefix ~ .validate ~ label,
+.main-left-container.session-form-input-holder .prefix ~ .validate ~ label,
+.main-left-container.session-form-buttons-holder .prefix ~ .validate ~ label,
+.main-left-container.interest-create-input-holder .prefix ~ .validate ~ label,
+.input-field.main-right-container .prefix ~ .validate ~ label,
+.main-right-container.session-form-input-holder .prefix ~ .validate ~ label,
+.main-right-container.session-form-buttons-holder .prefix ~ .validate ~ label,
+.main-right-container.interest-create-input-holder .prefix ~ .validate ~ label,
+.col.interest-create-input-holder .prefix ~ .validate ~ label,
+.interest-create-input-holder.session-form-input-holder .prefix ~ .validate ~ label,
+.interest-create-input-holder.session-form-buttons-holder .prefix ~ .validate ~ label {
   width: calc(100% - 3rem - 1.5rem);
 }
 
-.input-field > label, .session-form-input-holder > label, .session-form-buttons-holder > label {
+.input-field > label, .session-form-input-holder > label, .session-form-buttons-holder > label, .interest-create-input-holder > label {
   color: #9e9e9e;
   position: absolute;
   top: 0;
@@ -6526,27 +6553,29 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
           transform: translateY(12px);
 }
 
-.input-field > label:not(.label-icon).active, .session-form-input-holder > label:not(.label-icon).active, .session-form-buttons-holder > label:not(.label-icon).active {
+.input-field > label:not(.label-icon).active, .session-form-input-holder > label:not(.label-icon).active, .session-form-buttons-holder > label:not(.label-icon).active, .interest-create-input-holder > label:not(.label-icon).active {
   -webkit-transform: translateY(-14px) scale(0.8);
           transform: translateY(-14px) scale(0.8);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 
-.input-field > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label, .session-form-input-holder > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label, .session-form-buttons-holder > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label,
+.input-field > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label, .session-form-input-holder > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label, .session-form-buttons-holder > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label, .interest-create-input-holder > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label,
 .input-field > input[type=date]:not(.browser-default) + label,
 .session-form-input-holder > input[type=date]:not(.browser-default) + label,
 .session-form-buttons-holder > input[type=date]:not(.browser-default) + label,
+.interest-create-input-holder > input[type=date]:not(.browser-default) + label,
 .input-field > input[type=time]:not(.browser-default) + label,
 .session-form-input-holder > input[type=time]:not(.browser-default) + label,
-.session-form-buttons-holder > input[type=time]:not(.browser-default) + label {
+.session-form-buttons-holder > input[type=time]:not(.browser-default) + label,
+.interest-create-input-holder > input[type=time]:not(.browser-default) + label {
   -webkit-transform: translateY(-14px) scale(0.8);
           transform: translateY(-14px) scale(0.8);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
 }
 
-.input-field .helper-text, .session-form-input-holder .helper-text, .session-form-buttons-holder .helper-text {
+.input-field .helper-text, .session-form-input-holder .helper-text, .session-form-buttons-holder .helper-text, .interest-create-input-holder .helper-text {
   position: relative;
   min-height: 18px;
   display: block;
@@ -6554,14 +6583,14 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   color: rgba(0, 0, 0, 0.54);
 }
 
-.input-field .helper-text::after, .session-form-input-holder .helper-text::after, .session-form-buttons-holder .helper-text::after {
+.input-field .helper-text::after, .session-form-input-holder .helper-text::after, .session-form-buttons-holder .helper-text::after, .interest-create-input-holder .helper-text::after {
   opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.input-field .prefix, .session-form-input-holder .prefix, .session-form-buttons-holder .prefix {
+.input-field .prefix, .session-form-input-holder .prefix, .session-form-buttons-holder .prefix, .interest-create-input-holder .prefix {
   position: absolute;
   width: 3rem;
   font-size: 2rem;
@@ -6570,26 +6599,31 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   top: 0.5rem;
 }
 
-.input-field .prefix.active, .session-form-input-holder .prefix.active, .session-form-buttons-holder .prefix.active {
+.input-field .prefix.active, .session-form-input-holder .prefix.active, .session-form-buttons-holder .prefix.active, .interest-create-input-holder .prefix.active {
   color: #26a69a;
 }
 
-.input-field .prefix ~ input, .session-form-input-holder .prefix ~ input, .session-form-buttons-holder .prefix ~ input,
+.input-field .prefix ~ input, .session-form-input-holder .prefix ~ input, .session-form-buttons-holder .prefix ~ input, .interest-create-input-holder .prefix ~ input,
 .input-field .prefix ~ textarea,
 .session-form-input-holder .prefix ~ textarea,
 .session-form-buttons-holder .prefix ~ textarea,
+.interest-create-input-holder .prefix ~ textarea,
 .input-field .prefix ~ label,
 .session-form-input-holder .prefix ~ label,
 .session-form-buttons-holder .prefix ~ label,
+.interest-create-input-holder .prefix ~ label,
 .input-field .prefix ~ .validate ~ label,
 .session-form-input-holder .prefix ~ .validate ~ label,
 .session-form-buttons-holder .prefix ~ .validate ~ label,
+.interest-create-input-holder .prefix ~ .validate ~ label,
 .input-field .prefix ~ .helper-text,
 .session-form-input-holder .prefix ~ .helper-text,
 .session-form-buttons-holder .prefix ~ .helper-text,
+.interest-create-input-holder .prefix ~ .helper-text,
 .input-field .prefix ~ .autocomplete-content,
 .session-form-input-holder .prefix ~ .autocomplete-content,
-.session-form-buttons-holder .prefix ~ .autocomplete-content {
+.session-form-buttons-holder .prefix ~ .autocomplete-content,
+.interest-create-input-holder .prefix ~ .autocomplete-content {
   margin-left: 3rem;
   width: 92%;
   width: calc(100% - 3rem);
@@ -6598,33 +6632,34 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 
 .input-field .prefix ~ label,
 .session-form-input-holder .prefix ~ label,
-.session-form-buttons-holder .prefix ~ label {
+.session-form-buttons-holder .prefix ~ label,
+.interest-create-input-holder .prefix ~ label {
   margin-left: 3rem;
 }
 
 @media only screen and (max-width: 992px) {
-  .input-field .prefix ~ input, .session-form-input-holder .prefix ~ input, .session-form-buttons-holder .prefix ~ input {
+  .input-field .prefix ~ input, .session-form-input-holder .prefix ~ input, .session-form-buttons-holder .prefix ~ input, .interest-create-input-holder .prefix ~ input {
     width: 86%;
     width: calc(100% - 3rem);
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .input-field .prefix ~ input, .session-form-input-holder .prefix ~ input, .session-form-buttons-holder .prefix ~ input {
+  .input-field .prefix ~ input, .session-form-input-holder .prefix ~ input, .session-form-buttons-holder .prefix ~ input, .interest-create-input-holder .prefix ~ input {
     width: 80%;
     width: calc(100% - 3rem);
   }
 }
 
 /* Search Field */
-.input-field input[type=search], .session-form-input-holder input[type=search], .session-form-buttons-holder input[type=search] {
+.input-field input[type=search], .session-form-input-holder input[type=search], .session-form-buttons-holder input[type=search], .interest-create-input-holder input[type=search] {
   display: block;
   line-height: inherit;
   -webkit-transition: .3s background-color;
   transition: .3s background-color;
 }
 
-.nav-wrapper .input-field input[type=search], .navbar-wrapper .input-field input[type=search], .nav-wrapper .session-form-input-holder input[type=search], .navbar-wrapper .session-form-input-holder input[type=search], .nav-wrapper .session-form-buttons-holder input[type=search], .navbar-wrapper .session-form-buttons-holder input[type=search] {
+.nav-wrapper .input-field input[type=search], .navbar-wrapper .input-field input[type=search], .nav-wrapper .session-form-input-holder input[type=search], .navbar-wrapper .session-form-input-holder input[type=search], .nav-wrapper .session-form-buttons-holder input[type=search], .navbar-wrapper .session-form-buttons-holder input[type=search], .nav-wrapper .interest-create-input-holder input[type=search], .navbar-wrapper .interest-create-input-holder input[type=search] {
   height: inherit;
   padding-left: 4rem;
   width: calc(100% - 4rem);
@@ -6633,7 +6668,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
           box-shadow: none;
 }
 
-.input-field input[type=search]:focus:not(.browser-default), .session-form-input-holder input[type=search]:focus:not(.browser-default), .session-form-buttons-holder input[type=search]:focus:not(.browser-default) {
+.input-field input[type=search]:focus:not(.browser-default), .session-form-input-holder input[type=search]:focus:not(.browser-default), .session-form-buttons-holder input[type=search]:focus:not(.browser-default), .interest-create-input-holder input[type=search]:focus:not(.browser-default) {
   background-color: #fff;
   border: 0;
   -webkit-box-shadow: none;
@@ -6641,26 +6676,29 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   color: #444;
 }
 
-.input-field input[type=search]:focus:not(.browser-default) + label i, .session-form-input-holder input[type=search]:focus:not(.browser-default) + label i, .session-form-buttons-holder input[type=search]:focus:not(.browser-default) + label i,
+.input-field input[type=search]:focus:not(.browser-default) + label i, .session-form-input-holder input[type=search]:focus:not(.browser-default) + label i, .session-form-buttons-holder input[type=search]:focus:not(.browser-default) + label i, .interest-create-input-holder input[type=search]:focus:not(.browser-default) + label i,
 .input-field input[type=search]:focus:not(.browser-default) ~ .mdi-navigation-close,
 .session-form-input-holder input[type=search]:focus:not(.browser-default) ~ .mdi-navigation-close,
 .session-form-buttons-holder input[type=search]:focus:not(.browser-default) ~ .mdi-navigation-close,
+.interest-create-input-holder input[type=search]:focus:not(.browser-default) ~ .mdi-navigation-close,
 .input-field input[type=search]:focus:not(.browser-default) ~ .material-icons,
 .session-form-input-holder input[type=search]:focus:not(.browser-default) ~ .material-icons,
-.session-form-buttons-holder input[type=search]:focus:not(.browser-default) ~ .material-icons {
+.session-form-buttons-holder input[type=search]:focus:not(.browser-default) ~ .material-icons,
+.interest-create-input-holder input[type=search]:focus:not(.browser-default) ~ .material-icons {
   color: #444;
 }
 
-.input-field input[type=search] + .label-icon, .session-form-input-holder input[type=search] + .label-icon, .session-form-buttons-holder input[type=search] + .label-icon {
+.input-field input[type=search] + .label-icon, .session-form-input-holder input[type=search] + .label-icon, .session-form-buttons-holder input[type=search] + .label-icon, .interest-create-input-holder input[type=search] + .label-icon {
   -webkit-transform: none;
           transform: none;
   left: 1rem;
 }
 
-.input-field input[type=search] ~ .mdi-navigation-close, .session-form-input-holder input[type=search] ~ .mdi-navigation-close, .session-form-buttons-holder input[type=search] ~ .mdi-navigation-close,
+.input-field input[type=search] ~ .mdi-navigation-close, .session-form-input-holder input[type=search] ~ .mdi-navigation-close, .session-form-buttons-holder input[type=search] ~ .mdi-navigation-close, .interest-create-input-holder input[type=search] ~ .mdi-navigation-close,
 .input-field input[type=search] ~ .material-icons,
 .session-form-input-holder input[type=search] ~ .material-icons,
-.session-form-buttons-holder input[type=search] ~ .material-icons {
+.session-form-buttons-holder input[type=search] ~ .material-icons,
+.interest-create-input-holder input[type=search] ~ .material-icons {
   position: absolute;
   top: 0;
   right: 1rem;
@@ -7306,7 +7344,7 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
   width: 100%;
 }
 
-.file-field .btn, .file-field .btn-large, .file-field .btn-small, .file-field .navbar-session-button, .file-field .session-form-button {
+.file-field .btn, .file-field .btn-large, .file-field .btn-small, .file-field .navbar-session-button, .file-field .session-form-button, .file-field .interest-create-button, .file-field .group-session-button {
   float: left;
   height: 3rem;
   line-height: 3rem;
@@ -7565,7 +7603,7 @@ input[type=range]::-ms-thumb {
           transform: translateX(100%);
 }
 
-.sidenav .collapsible {
+.sidenav .collapsible, .sidenav .group-list {
   margin: 0;
 }
 
@@ -7592,11 +7630,11 @@ input[type=range]::-ms-thumb {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-small, .sidenav li > a.navbar-session-button, .sidenav li > a.session-form-button, .sidenav li > a.btn-large, .sidenav li > a.btn-flat, .sidenav li > a.btn-floating {
+.sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-small, .sidenav li > a.navbar-session-button, .sidenav li > a.session-form-button, .sidenav li > a.interest-create-button, .sidenav li > a.group-session-button, .sidenav li > a.btn-large, .sidenav li > a.btn-flat, .sidenav li > a.btn-floating {
   margin: 10px 15px;
 }
 
-.sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-small, .sidenav li > a.navbar-session-button, .sidenav li > a.session-form-button, .sidenav li > a.btn-large, .sidenav li > a.btn-floating {
+.sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-small, .sidenav li > a.navbar-session-button, .sidenav li > a.session-form-button, .sidenav li > a.interest-create-button, .sidenav li > a.group-session-button, .sidenav li > a.btn-large, .sidenav li > a.btn-floating {
   color: #fff;
 }
 
@@ -7604,7 +7642,7 @@ input[type=range]::-ms-thumb {
   color: #343434;
 }
 
-.sidenav li > a.btn:hover, .sidenav li > a.btn-large:hover, .sidenav li > a.btn-small:hover, .sidenav li > a.navbar-session-button:hover, .sidenav li > a.session-form-button:hover, .sidenav li > a.btn-large:hover {
+.sidenav li > a.btn:hover, .sidenav li > a.btn-large:hover, .sidenav li > a.btn-small:hover, .sidenav li > a.navbar-session-button:hover, .sidenav li > a.session-form-button:hover, .sidenav li > a.interest-create-button:hover, .sidenav li > a.group-session-button:hover, .sidenav li > a.btn-large:hover {
   background-color: #2bbbad;
 }
 
@@ -7731,17 +7769,19 @@ input[type=range]::-ms-thumb {
   }
 }
 
-.sidenav .collapsible-body > ul:not(.collapsible) > li.active,
-.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
+.sidenav .collapsible-body > ul:not(.collapsible):not(.group-list) > li.active, .sidenav .group-list-element-body > ul:not(.collapsible):not(.group-list) > li.active,
+.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible):not(.group-list) > li.active,
+.sidenav.sidenav-fixed .group-list-element-body > ul:not(.collapsible):not(.group-list) > li.active {
   background-color: #ee6e73;
 }
 
-.sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
-.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a {
+.sidenav .collapsible-body > ul:not(.collapsible):not(.group-list) > li.active a, .sidenav .group-list-element-body > ul:not(.collapsible):not(.group-list) > li.active a,
+.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible):not(.group-list) > li.active a,
+.sidenav.sidenav-fixed .group-list-element-body > ul:not(.collapsible):not(.group-list) > li.active a {
   color: #fff;
 }
 
-.sidenav .collapsible-body {
+.sidenav .collapsible-body, .sidenav .group-list-element-body {
   padding: 0;
 }
 
@@ -8563,7 +8603,7 @@ input[type=range]::-ms-thumb {
   position: absolute !important;
 }
 
-.tap-target-origin:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button), .tap-target-origin:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):hover {
+.tap-target-origin:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button), .tap-target-origin:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):hover {
   background: none;
 }
 
@@ -9079,6 +9119,14 @@ input[type=range]::-ms-thumb {
 }
 
 .session-form-buttons-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.group-session-button-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

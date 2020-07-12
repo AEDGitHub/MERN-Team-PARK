@@ -31,11 +31,11 @@ class GroupIndex extends React.Component {
     render() {
         const { groups } = this.props;
         const groupsList = (groups.length !== 0 ? (
-            <ul className="collapsible">
+          <ul className="group-list">
                 {groups.map(group => (
                     <li key={group._id}>
-                        <div className="collapsible-header"><h3>{group.name}</h3></div>
-                        <div className="collapsible-body">
+                        <div className="group-list-element-title"><h3>{group.name}</h3></div>
+                        <div className="group-list-element-body">
                             <GroupShowContainer groupId={group._id}/>
                         </div>
                     </li>
@@ -44,19 +44,27 @@ class GroupIndex extends React.Component {
         ) : null)
 
         return (
-          <div className="col s12 l6">
+          <div >
             <section>
+
               {groupsList}
+
               {this.state.toggleCreate ? <CreateGroupContainer /> : null}
+
               {this.state.toggleJoin ? <JoinGroupFormContainer /> : null}
-              <div>
-                <button className="btn" onClick={this.toggleCreate}>
+
+              <div className="group-session-button-holder">
+
+                <button className="group-session-button" onClick={this.toggleCreate}>
                   Create Group
                 </button>
-                <button className="btn" onClick={this.toggleJoin}>
+
+                <button className="group-session-button" onClick={this.toggleJoin}>
                   Join Group
                 </button>
+
               </div>
+
             </section>
           </div>
         );
