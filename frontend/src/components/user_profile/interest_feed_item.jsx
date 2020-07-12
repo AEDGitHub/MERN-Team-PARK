@@ -9,11 +9,11 @@ class InterestFeedItem extends React.Component {
           ) : null;
 
         return (
-          <li className="row">
-              <div className="col s12 m8">
-                <div className="card blue-grey darken-1">
-                  <div className="card-content white-text">
-                    <span className="card-title">{interest.name}</span>
+          <li>
+              <div className="interest-container">
+                <div className="interest-holder">
+                  <div className="interest-content">
+                    <span className="interest-title">{interest.name}</span>
                     <p>{interest.category}</p>
                     <p>{interest.description}</p>
                     {followButton}

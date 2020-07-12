@@ -51,13 +51,13 @@ class CreateGroupForm extends React.Component {
 
     render() {
         return (
-            <div className="row">             
-                <form className="col s12" onSubmit={this.handleSubmit}>
+            <div >             
+                <form onSubmit={this.handleSubmit}>
 
-                    <h4 className="center">Create a Group</h4>
+                    <h4 className="group-session-title">Create a Group</h4>
 
                     <div className="row">
-                        <div className="input-field col s8 m6 l8 offset-l2 offset-m3 offset-s2">
+                        <div className="group-session-input-holder">
                             <input
                                 type="text"
                                 value={this.state.name}
@@ -68,9 +68,11 @@ class CreateGroupForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="col s8 m6 l8 offset-l2 offset-m3 offset-s2">
-                            <input type="submit" value="Create" className="btn col"/>
-                        </div>
+                        <input 
+                            type="submit" 
+                            value="Create" 
+                            className="group-session-button"
+                        />
                     </div>
 
                     {this.renderErrors()}

@@ -13,14 +13,22 @@ class UserProfile extends React.Component {
         if (!currentUser) return null
 
         return (
-            <div className="col s12 l6">
+            <div >
+
+                <div className="user-profile-holder">
+
+                    <h4 className="center">
+                        {currentUser.firstName} {currentUser.lastName}
+                    </h4>
+
+                    <h5 className="center">{currentUser.email}</h5>
+                    
+                </div>
                 
-                <h4 className="center">{currentUser.firstName} {currentUser.lastName}</h4>
-                <h5 className="center">{currentUser.email}</h5>
-                <br/>
                 <InterestFeedContainer interests={currentUser.interests}/>
-                <br />
+ 
                 {currentUser.interests.length < 3 ? <InterestCreateFormContainer /> : null}
+
             </div>
         )
     }

@@ -7,8 +7,15 @@ class Main extends React.Component {
     render() {
         return (
             <div className="row">
-                <UserProfileContainer />
-                <GroupIndexContainer />
+
+                <div className="main-left-container">
+                    <UserProfileContainer />
+                </div>
+
+                <div className="main-right-container">
+                    <GroupIndexContainer />
+                </div>
+                    
             </div>
         )
     }

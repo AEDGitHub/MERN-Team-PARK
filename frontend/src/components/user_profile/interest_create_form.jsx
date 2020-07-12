@@ -39,13 +39,14 @@ class InterestCreateForm extends React.Component {
 
     render() {
         return (
-            <div className="row">
-                <div className="col s12 m8">
-                    <form className="card blue-grey darken-1" onSubmit={this.handleSubmit}>
-                        <div className="card-content white-text">
-                            <span className="card-title">Add an Interest</span>
+            <div>
+                <div >
+                    <form className="interest-create-container" onSubmit={this.handleSubmit}>
+                        <div className="interest-create-content">
 
-                            <div className="input-field">
+                            <span className="interest-create-title">Add an Interest</span>
+
+                            <div className="interest-create-input-holder">
                                 <input
                                     type="text"
                                     value={this.state.name}
@@ -55,7 +56,7 @@ class InterestCreateForm extends React.Component {
                                 />
                             </div>
 
-                            <div className="input-field">
+                            <div className="interest-create-input-holder">
                                 <input
                                     type="text"
                                     value={this.state.description}
@@ -65,7 +66,7 @@ class InterestCreateForm extends React.Component {
                                 />
                             </div>
 
-                            <div className="input-field">
+                            <div className="interest-create-input-holder">
                                 <select style={{ display: "block" }} required
                                     onChange={this.update('category')}>
                                     <option value="">Choose a Category</option>
@@ -75,7 +76,7 @@ class InterestCreateForm extends React.Component {
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
-                            <input type="submit" value="Add Interest" className="btn"/>
+                            <input type="submit" value="Add Interest" className="interest-create-button"/>
                         </div>
                     </form>
                 </div>
