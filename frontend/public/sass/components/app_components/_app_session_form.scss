@@ -1,0 +1,17 @@
+.session-form-title {
+    @extend .center;
+}
+
+.session-form-input-holder {
+    @extend .input-field, .col, .s8, .m6, .l4, .offset-l4, .offset-m3, .offset-s2
+}
+
+.session-form-buttons-holder {
+    @extend .input-field, .col, .s8, .m6, .l4, .offset-l4, .offset-m3, .offset-s2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.session-form-button {
+    @extend .btn
+}
