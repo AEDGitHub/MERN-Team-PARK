@@ -41,16 +41,27 @@ Other libraries, APIs, and digital praxis were also used or are planned for impl
 
 The entire webapp was built with a fully responsive layout using Materialize CSS, enabling functional user action via both mobile and full-screen devices:
 
-(picture goes here)
+![mobile view][app_mobile_view] ![desktop_view][app_desktop_view]
 
 HTML5 form validations were used on all form fields to reduce the number of database calls made with erroneously-entered user data: 
 
-(HTML5 form validations picture here)
+![html5_form_validation][html5_validation]
 
-Users who have created a group are given a slug they may send to friends they care to invite. The slug may be used at user sign up to automatically
-assign new users to the aforementioned group:
-
-(picture goes here)
+Users who have created a group are given a slug they may send to friends they care to invite. On group creation, we assign a slug to the group using the helper function below, and then ensure that this slug is unique using a Model constraint. 
+```js
+module.exports = function generateSlug(name) {
+  const slug = name.toLowerCase().split(" ").join("-");
+  return slug;
+};
+```
+The creator of the group will be provided with a url in the following format that can then be shared: https://www.rebond-herokuapp.com/signup?group=demo-group
+When a user navigates to this link, we capture the group's unique slug from the URL parameters, and pass this through to our backend when the signup request is processed:
+```js
+componentDidMount() {
+    const searchParams = new URLSearchParams(this.props.location.search);
+    this.slug = searchParams.get("group"); 
+}
+```
 
 ## Future Features and Planned Project Upgrades
 * Full implementation of events
@@ -80,3 +91,7 @@ As the Deputy Ops, Mr. Rose is responsible for coordinating data flows unhindere
 **Primary Domain of Operations:** *Terminals* (MongoDB, routes) ..., (entrypoint, CSS)
 
 As the Project Director, Mr. Arndt is responsible for the overall management and support of the team, to include prioritizing tasks for execution in task management software, allocating human resources to blockers as they arise, reviewing submitted pull requests and finalizing code commits to the project master branch. The Project Director will also liaise with a/A authority overseeing the student project and manage daily team standups in order to align the team's vision and ensure a successful project launch.
+
+[app_mobile_view]: /demo/app_mobile_view.png
+[app_desktop_view]: /demo/app_desktop_view.png
+[html5_validation]: /demo/html5_validation.png
