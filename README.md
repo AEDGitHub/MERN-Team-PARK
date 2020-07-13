@@ -52,7 +52,14 @@ assign new users to the aforementioned group:
 
 (picture goes here)
 
-## Team Members
+## Future Features and Planned Project Upgrades
+* Full implementation of events
+* Full integration of SendGrid API
+* Revamped splash page and signin/login forms
+* Full adherence to JS/CSS styleguide (styleguide TBD)
+* About page
+
+## The Team
 
 ### Gabor Kurucz: *Frontend Lead*
 **Primary Domain of Operations:** *Front* (frontend/{utils, actions, reducers, store, components}, entrypoint, CSS)
