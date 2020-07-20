@@ -1,4 +1,5 @@
 const express = require("express");
+
 const app = express();
 const users = require("./routes/api/users");
 const groups = require("./routes/api/groups");
@@ -13,7 +14,6 @@ require("./config/passport")(passport);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use("/api/users", users);
 
 app.use("/api/users", users);
 app.use("/api/groups", groups);

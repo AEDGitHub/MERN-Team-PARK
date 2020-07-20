@@ -1,5 +1,7 @@
 const jwt = require("jsonwebtoken");
 const express = require("express");
+const multer = require("multer");
+const fs = require("fs");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const User = require("../../models/User");
@@ -214,14 +216,29 @@ router.get(
     res.json({ confirmedEvents, invitedEvents, ownedEvents });
   }
 );
-
+// app.use(
+//   multer({
+//     dest: "./uploads/",
+//     rename: function (fieldname, filename) {
+//       return filename;
+//     },
+//   }).any()
+// );
+// .single("photo");
+const upload = multer({
+  dest: "./uploads/",
+  rename: function (fieldname, filename) {
+    return filename;
+  },
+});
 //Edit user
 router.patch(
   "/profile",
+  upload.single("img"),
   passport.authenticate("jwt", { session: false }),
   async function (req, res, next) {
     const { errors, isValid } = validateUserUpdateInput(req.body);
-
+    console.log(req.file);
     if (!isValid) {
       return res.status(400).json(errors);
     }
@@ -232,7 +249,10 @@ router.patch(
     if (firstName) user.firstName = firstName;
     if (lastName) user.lastName = lastName;
     if (email) user.email = email;
-
+    if (req.file.path) {
+      user.img.data = fs.readFileSync(req.file.path);
+      user.img.contentType = "image/png";
+    }
     user.save();
     return res.json(user);
   }
