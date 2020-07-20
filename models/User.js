@@ -22,6 +22,10 @@ const UserSchema = new Schema(
       required: true,
       select: false,
     },
+    img: {
+      data: Buffer,
+      contentType: String,
+    },
     groups: [{ type: Schema.Types.ObjectId, ref: "Group" }],
     interests: [{ type: Schema.Types.ObjectId, ref: "Interest" }],
     confirmedEvents: [{ type: Schema.Types.ObjectId, ref: "Event" }],
