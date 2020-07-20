@@ -24,6 +24,22 @@
     @extend .card-title;
 }
 
+.interest-action {
+    @extend .btn-floating, .halfway-fab, .waves-effect, .waves-light, .teal
+}
+
+.default-interest-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 200px;
+}
+
+.default-interest-icon > i {
+    font-size: 60px;
+}
+
 // interest create
 
 .interest-create-input-holder {
