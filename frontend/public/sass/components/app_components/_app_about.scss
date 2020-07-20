@@ -13,7 +13,7 @@
 // meet the team
 
 .about-team-title {
-    
+
 }
 
 .about-team-container {
@@ -41,4 +41,14 @@
 
 .about-engineer-intro p {
     padding: 10px 30px;
+}
+
+.about-engineer-icons {
+    @extend .row
+}
+
+.about-engineer-icons img {
+    height: 50px;
+    width: 50px;
+    margin: 0px 20px;
 }

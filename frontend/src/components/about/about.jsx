@@ -57,8 +57,10 @@ class About extends React.Component {
                                 sint occaecat cupidatat non proident, sunt in culpa qui
                                 officia deserunt mollit anim id est laborum.
                             </p>
-                            <div>
-                                
+                            <div className="about-engineer-icons">
+                                <img src="../../../images/icons/linkedin-icon.png" />
+                                <img src="../../../images/icons/github-icon.png" />
+                                <img src="../../../images/icons/angellist-icon.png" />
                             </div>
                         </div>
                         <div className="about-engineer-intro">
