@@ -11,8 +11,7 @@ class GroupShow extends React.Component {
           this.props.currentUserId === this.props.group.owner ? (
             <div>
               <p>
-                Invite other people to this group using the following link: 
-                {`https://rebond.herokuapp.com/#/signup?group=${this.props.group.slug}`}
+                Invite other people to this group using the following link: {`https://rebond.herokuapp.com/#/signup?group=${this.props.group.slug}`}
               </p>
             </div>
           ) : null;
