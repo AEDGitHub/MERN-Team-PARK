@@ -2,6 +2,7 @@ import React from "react";
 import CreateGroupContainer from "./create_group_form_container";
 import JoinGroupFormContainer from "./join_group_form_container";
 import GroupShowContainer from "./group_show_container";
+import M from "materialize-css";
 
 class GroupIndex extends React.Component {
     constructor(props) {
@@ -17,7 +18,15 @@ class GroupIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchGroups(this.props.currentUserId)
+      this.props.fetchGroups(this.props.currentUserId)
+        .then(() => {
+          const options1 = {
+            inDuration: 300,
+            outDuration: 200
+          };  
+
+          M.Collapsible.init(this.Collapsible1, options1);
+        })
     }
 
     toggleCreate() {
@@ -31,23 +40,25 @@ class GroupIndex extends React.Component {
     render() {
         const { groups } = this.props;
         const groupsList = (groups.length !== 0 ? (
-          <ul className="group-list">
-                {groups.map(group => (
-                    <li key={group._id}>
-                        <div className="group-list-element-title"><h3>{group.name}</h3></div>
-                        <div className="group-list-element-body">
-                            <GroupShowContainer groupId={group._id}/>
-                        </div>
-                    </li>
-                ))}
-            </ul>
+          <>
+            {groups.map(group => (
+                <li key={group._id}>
+                    <div className="collapsible-header"><h3>{group.name}</h3></div>
+                    <div className="collapsible-body">
+                        <GroupShowContainer groupId={group._id}/>
+                    </div>
+                </li>
+            ))}
+          </>
         ) : null)
 
         return (
           <div >
             <section>
 
-              {groupsList}
+              <ul ref={Collapsible => { this.Collapsible1 = Collapsible;}} className="collapsible">
+                {groupsList}
+              </ul>
 
               {this.state.toggleCreate ? <CreateGroupContainer /> : null}
 
