@@ -1,3 +1,12 @@
 .custom-footer {
-    background-color: seagreen;
+    @extend .page-footer, .row;
+    // background-color: seagreen;
+}
+
+.custom-footer-copyright {
+
+}
+
+.custom-footer-links {
+
 }
