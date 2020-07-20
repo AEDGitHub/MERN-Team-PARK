@@ -2,7 +2,8 @@ import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import Splash from "./splash/splash"
+import Splash from "./splash/splash";
+import About from "./about/about";
 import NavBarContainer from "./nav/navbar_container";
 import MainContainer from "./main/main_container";
 import LoginFormContainer from "./session/login_form_container";
@@ -24,6 +25,7 @@ const App = () => (
                         <ProtectedRoute exact path="/groups/new" component={CreateGroupContainer} />
 
                         <AuthRoute exact path="/" component={Splash} />
+                        <AuthRoute exact path="/about" component={About} />
                         <AuthRoute exact path="/login" component={LoginFormContainer} />
                         <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
