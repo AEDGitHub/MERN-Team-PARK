@@ -9138,27 +9138,28 @@ input[type=range]::-ms-thumb {
       justify-content: space-around;
 }
 
-.about-general-container {
-  background-color: royalblue;
-  padding: 20px 30px;
+.about-general-title {
+  font-weight: bolder;
+  padding: 20px 0px;
 }
 
-.about-team-container {
-  background-color: #8b2e75;
+.about-general-container {
+  padding: 30px 50px;
+}
+
+.about-team-title {
+  font-weight: bolder;
+  padding: 20px 0px;
 }
 
 .about-engineer-row {
-  background-color: green;
-}
-
-.about-engineer-intro {
-  background-color: red;
+  padding: 0px 20px;
 }
 
 .about-engineer-intro img {
   width: 200px;
   height: 200px;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .about-engineer-intro p {
@@ -9169,5 +9170,9 @@ input[type=range]::-ms-thumb {
   height: 50px;
   width: 50px;
   margin: 0px 20px;
+}
+
+.custom-footer {
+  background-color: seagreen;
 }
 /*# sourceMappingURL=materialize.css.map */

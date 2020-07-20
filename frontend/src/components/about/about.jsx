@@ -58,9 +58,15 @@ class About extends React.Component {
                                 officia deserunt mollit anim id est laborum.
                             </p>
                             <div className="about-engineer-icons">
-                                <img src="../../../images/icons/linkedin-icon.png" />
-                                <img src="../../../images/icons/github-icon.png" />
-                                <img src="../../../images/icons/angellist-icon.png" />
+                                <a href="#">
+                                    <img src="../../../images/icons/linkedin-icon.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="../../../images/icons/github-icon.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="../../../images/icons/angellist-icon.png" />
+                                </a>                                                                
                             </div>
                         </div>
                         <div className="about-engineer-intro">
@@ -76,7 +82,18 @@ class About extends React.Component {
                                 esse cillum dolore eu fugiat nulla pariatur. Excepteur
                                 sint occaecat cupidatat non proident, sunt in culpa qui
                                 officia deserunt mollit anim id est laborum.
-                        </p>
+                            </p>
+                            <div className="about-engineer-icons">
+                                <a href="#">
+                                    <img src="../../../images/icons/linkedin-icon.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="../../../images/icons/github-icon.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="../../../images/icons/angellist-icon.png" />
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -94,7 +111,18 @@ class About extends React.Component {
                                 esse cillum dolore eu fugiat nulla pariatur. Excepteur
                                 sint occaecat cupidatat non proident, sunt in culpa qui
                                 officia deserunt mollit anim id est laborum.
-                        </p>
+                            </p>
+                            <div className="about-engineer-icons">
+                                <a href="#">
+                                    <img src="../../../images/icons/linkedin-icon.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="../../../images/icons/github-icon.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="../../../images/icons/angellist-icon.png" />
+                                </a>
+                            </div>
                         </div>
                         <div className="about-engineer-intro">
                             <img src="../../../images/user.png" />
@@ -109,7 +137,18 @@ class About extends React.Component {
                                 esse cillum dolore eu fugiat nulla pariatur. Excepteur
                                 sint occaecat cupidatat non proident, sunt in culpa qui
                                 officia deserunt mollit anim id est laborum.
-                        </p>
+                            </p>
+                            <div className="about-engineer-icons">
+                                <a href="#">
+                                    <img src="../../../images/icons/linkedin-icon.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="../../../images/icons/github-icon.png" />
+                                </a>
+                                <a href="#">
+                                    <img src="../../../images/icons/angellist-icon.png" />
+                                </a>
+                            </div>
                         </div>
                     </div>
                     
