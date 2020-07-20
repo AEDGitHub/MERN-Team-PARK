@@ -5,6 +5,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Splash from "./splash/splash";
 import About from "./about/about";
 import NavBarContainer from "./nav/navbar_container";
+import FooterContainer from "./footer/footer_container";
 import MainContainer from "./main/main_container";
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
@@ -34,16 +35,9 @@ const App = () => (
                     </Switch>
                 </main>
             </div>
-            {/* <footer className="page-footer teal lighten-2"
-                style={{
-                    bottom: "0",
-                    position: "fixed",
-                    width: "100%",
-                    height: "50px"
-                }}
-            >
-
-            </footer> */}
+            <footer>
+                <FooterContainer />
+            </footer>
         </div>
     </div>
 );
