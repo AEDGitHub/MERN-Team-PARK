@@ -18,7 +18,7 @@ class GroupShow extends React.Component {
         return (
             <div>
                 {sharingLink}
-                <InterestFeedContainer interests={this.props.interests} />
+            <InterestFeedContainer interests={this.props.interests} parentContainer="group"/>
             </div>
         )
     }

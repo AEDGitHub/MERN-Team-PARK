@@ -40,7 +40,7 @@ class GroupIndex extends React.Component {
     render() {
         const { groups } = this.props;
         const groupsList = (groups.length !== 0 ? (
-          <>
+          <ul ref={Collapsible => { this.Collapsible1 = Collapsible; }} className="collapsible">
             {groups.map(group => (
                 <li key={group._id}>
                     <div className="collapsible-header"><h3>{group.name}</h3></div>
@@ -49,16 +49,14 @@ class GroupIndex extends React.Component {
                     </div>
                 </li>
             ))}
-          </>
+          </ul>
         ) : null)
 
         return (
           <div >
             <section>
 
-              <ul ref={Collapsible => { this.Collapsible1 = Collapsible;}} className="collapsible">
-                {groupsList}
-              </ul>
+              {groupsList}
 
               {this.state.toggleCreate ? <CreateGroupContainer /> : null}
 

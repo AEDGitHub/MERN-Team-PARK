@@ -24,11 +24,12 @@ class InterestFeed extends React.Component {
                     interest={interest}
                     currentUserId={this.props.currentUserId}
                     followInterest={this.props.followInterest}
+                    parentContainer={this.props.parentContainer}
                         />
         })
 
         return (
-            <ul>
+            <ul className="row">
                 {interests}
             </ul>
         )

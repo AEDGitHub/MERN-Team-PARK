@@ -974,7 +974,7 @@
   color: #00b8d4 !important;
 }
 
-.teal {
+.teal, .interest-action {
   background-color: #009688 !important;
 }
 
@@ -982,7 +982,7 @@
   color: #009688 !important;
 }
 
-.teal.lighten-5 {
+.teal.lighten-5, .lighten-5.interest-action {
   background-color: #e0f2f1 !important;
 }
 
@@ -990,7 +990,7 @@
   color: #e0f2f1 !important;
 }
 
-.teal.lighten-4 {
+.teal.lighten-4, .lighten-4.interest-action {
   background-color: #b2dfdb !important;
 }
 
@@ -998,7 +998,7 @@
   color: #b2dfdb !important;
 }
 
-.teal.lighten-3 {
+.teal.lighten-3, .lighten-3.interest-action {
   background-color: #80cbc4 !important;
 }
 
@@ -1006,7 +1006,7 @@
   color: #80cbc4 !important;
 }
 
-.teal.lighten-2 {
+.teal.lighten-2, .lighten-2.interest-action {
   background-color: #4db6ac !important;
 }
 
@@ -1014,7 +1014,7 @@
   color: #4db6ac !important;
 }
 
-.teal.lighten-1 {
+.teal.lighten-1, .lighten-1.interest-action {
   background-color: #26a69a !important;
 }
 
@@ -1022,7 +1022,7 @@
   color: #26a69a !important;
 }
 
-.teal.darken-1, .teal.interest-holder, .teal.interest-create-container {
+.teal.darken-1, .teal.interest-holder, .interest-holder.interest-action, .darken-1.interest-action, .interest-action.interest-create-container, .teal.interest-create-container {
   background-color: #00897b !important;
 }
 
@@ -1030,7 +1030,7 @@
   color: #00897b !important;
 }
 
-.teal.darken-2 {
+.teal.darken-2, .darken-2.interest-action {
   background-color: #00796b !important;
 }
 
@@ -1038,7 +1038,7 @@
   color: #00796b !important;
 }
 
-.teal.darken-3 {
+.teal.darken-3, .darken-3.interest-action {
   background-color: #00695c !important;
 }
 
@@ -1046,7 +1046,7 @@
   color: #00695c !important;
 }
 
-.teal.darken-4 {
+.teal.darken-4, .darken-4.interest-action {
   background-color: #004d40 !important;
 }
 
@@ -1054,7 +1054,7 @@
   color: #004d40 !important;
 }
 
-.teal.accent-1 {
+.teal.accent-1, .accent-1.interest-action {
   background-color: #a7ffeb !important;
 }
 
@@ -1062,7 +1062,7 @@
   color: #a7ffeb !important;
 }
 
-.teal.accent-2 {
+.teal.accent-2, .accent-2.interest-action {
   background-color: #64ffda !important;
 }
 
@@ -1070,7 +1070,7 @@
   color: #64ffda !important;
 }
 
-.teal.accent-3 {
+.teal.accent-3, .accent-3.interest-action {
   background-color: #1de9b6 !important;
 }
 
@@ -1078,7 +1078,7 @@
   color: #1de9b6 !important;
 }
 
-.teal.accent-4 {
+.teal.accent-4, .accent-4.interest-action {
   background-color: #00bfa5 !important;
 }
 
@@ -2624,12 +2624,12 @@ a {
 }
 
 /* 2dp elevation modified*/
-.z-depth-1, nav, .card-panel, .card, .interest-holder, .interest-create-container, .toast, .btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .interest-create-button, .group-session-button, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+.z-depth-1, nav, .card-panel, .card, .interest-holder, .interest-create-container, .toast, .btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .interest-create-button, .group-session-button, .btn-floating, .interest-action, .dropdown-content, .collapsible, .sidenav {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-small:hover, .navbar-session-button:hover, .session-form-button:hover, .interest-create-button:hover, .group-session-button:hover, .btn-floating:hover {
+.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-small:hover, .navbar-session-button:hover, .session-form-button:hover, .interest-create-button:hover, .group-session-button:hover, .btn-floating:hover, .interest-action:hover {
   -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
@@ -4395,13 +4395,13 @@ nav ul a {
   cursor: pointer;
 }
 
-nav ul a.btn, nav ul a.btn-large, nav ul a.btn-small, nav ul a.navbar-session-button, nav ul a.session-form-button, nav ul a.interest-create-button, nav ul a.group-session-button, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+nav ul a.btn, nav ul a.btn-large, nav ul a.btn-small, nav ul a.navbar-session-button, nav ul a.session-form-button, nav ul a.interest-create-button, nav ul a.group-session-button, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating, nav ul a.interest-action {
   margin-top: -2px;
   margin-left: 15px;
   margin-right: 15px;
 }
 
-nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-small > .material-icons, nav ul a.navbar-session-button > .material-icons, nav ul a.session-form-button > .material-icons, nav ul a.interest-create-button > .material-icons, nav ul a.group-session-button > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-flat > .material-icons, nav ul a.btn-floating > .material-icons {
+nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-small > .material-icons, nav ul a.navbar-session-button > .material-icons, nav ul a.session-form-button > .material-icons, nav ul a.interest-create-button > .material-icons, nav ul a.group-session-button > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-flat > .material-icons, nav ul a.btn-floating > .material-icons, nav ul a.interest-action > .material-icons {
   height: inherit;
   line-height: inherit;
 }
@@ -4898,7 +4898,7 @@ small {
   border-radius: 0 0 2px 2px;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating), .interest-holder .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating), .interest-create-container .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating) {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):not(.interest-action), .interest-holder .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):not(.interest-action), .interest-create-container .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):not(.interest-action) {
   color: #ffab40;
   margin-right: 24px;
   -webkit-transition: color .3s ease;
@@ -4906,7 +4906,7 @@ small {
   text-transform: uppercase;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):hover, .interest-holder .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):hover, .interest-create-container .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):hover {
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):not(.interest-action):hover, .interest-holder .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):not(.interest-action):hover, .interest-create-container .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.navbar-session-button):not(.session-form-button):not(.interest-create-button):not(.group-session-button):not(.btn-large):not(.btn-floating):not(.interest-action):hover {
   color: #ffd8a6;
 }
 
@@ -5156,6 +5156,7 @@ small {
 
 .btn.disabled, .disabled.btn-large, .disabled.btn-small, .disabled.navbar-session-button, .disabled.session-form-button, .disabled.interest-create-button, .disabled.group-session-button,
 .btn-floating.disabled,
+.disabled.interest-action,
 .btn-large.disabled,
 .btn-small.disabled,
 .btn-flat.disabled,
@@ -5167,6 +5168,7 @@ small {
 .interest-create-button:disabled,
 .group-session-button:disabled,
 .btn-floating:disabled,
+.interest-action:disabled,
 .btn-large:disabled,
 .btn-small:disabled,
 .btn-flat:disabled,
@@ -5178,6 +5180,7 @@ small {
 .interest-create-button[disabled],
 .group-session-button[disabled],
 .btn-floating[disabled],
+.interest-action[disabled],
 .btn-large[disabled],
 .btn-small[disabled],
 .btn-flat[disabled] {
@@ -5191,6 +5194,7 @@ small {
 
 .btn.disabled:hover, .disabled.btn-large:hover, .disabled.btn-small:hover, .disabled.navbar-session-button:hover, .disabled.session-form-button:hover, .disabled.interest-create-button:hover, .disabled.group-session-button:hover,
 .btn-floating.disabled:hover,
+.disabled.interest-action:hover,
 .btn-large.disabled:hover,
 .btn-small.disabled:hover,
 .btn-flat.disabled:hover,
@@ -5202,6 +5206,7 @@ small {
 .interest-create-button:disabled:hover,
 .group-session-button:disabled:hover,
 .btn-floating:disabled:hover,
+.interest-action:disabled:hover,
 .btn-large:disabled:hover,
 .btn-small:disabled:hover,
 .btn-flat:disabled:hover,
@@ -5213,6 +5218,7 @@ small {
 .interest-create-button[disabled]:hover,
 .group-session-button[disabled]:hover,
 .btn-floating[disabled]:hover,
+.interest-action[disabled]:hover,
 .btn-large[disabled]:hover,
 .btn-small[disabled]:hover,
 .btn-flat[disabled]:hover {
@@ -5220,8 +5226,7 @@ small {
   color: #9F9F9F !important;
 }
 
-.btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .interest-create-button, .group-session-button,
-.btn-floating,
+.btn, .btn-large, .btn-small, .navbar-session-button, .session-form-button, .interest-create-button, .group-session-button, .btn-floating, .interest-action,
 .btn-large,
 .btn-small,
 .btn-flat {
@@ -5231,6 +5236,7 @@ small {
 
 .btn i, .btn-large i, .btn-small i, .navbar-session-button i, .session-form-button i, .interest-create-button i, .group-session-button i,
 .btn-floating i,
+.interest-action i,
 .btn-large i,
 .btn-small i,
 .btn-flat i {
@@ -5239,7 +5245,8 @@ small {
 }
 
 .btn:focus, .btn-large:focus, .btn-small:focus, .navbar-session-button:focus, .session-form-button:focus, .interest-create-button:focus, .group-session-button:focus,
-.btn-floating:focus {
+.btn-floating:focus,
+.interest-action:focus {
   background-color: #1d7d74;
 }
 
@@ -5258,7 +5265,7 @@ small {
   background-color: #2bbbad;
 }
 
-.btn-floating {
+.btn-floating, .interest-action {
   display: inline-block;
   color: #fff;
   position: relative;
@@ -5276,53 +5283,55 @@ small {
   vertical-align: middle;
 }
 
-.btn-floating:hover {
+.btn-floating:hover, .interest-action:hover {
   background-color: #26a69a;
 }
 
-.btn-floating:before {
+.btn-floating:before, .interest-action:before {
   border-radius: 0;
 }
 
-.btn-floating.btn-large {
+.btn-floating.btn-large, .btn-large.interest-action {
   width: 56px;
   height: 56px;
   padding: 0;
 }
 
-.btn-floating.btn-large.halfway-fab {
+.btn-floating.btn-large.halfway-fab, .btn-large.interest-action {
   bottom: -28px;
 }
 
-.btn-floating.btn-large i {
+.btn-floating.btn-large i, .btn-large.interest-action i {
   line-height: 56px;
 }
 
-.btn-floating.btn-small {
+.btn-floating.btn-small, .btn-small.interest-action {
   width: 32.4px;
   height: 32.4px;
 }
 
-.btn-floating.btn-small.halfway-fab {
+.btn-floating.btn-small.halfway-fab, .btn-small.interest-action {
   bottom: -16.2px;
 }
 
-.btn-floating.btn-small i {
+.btn-floating.btn-small i, .btn-small.interest-action i {
   line-height: 32.4px;
 }
 
-.btn-floating.halfway-fab {
+.btn-floating.halfway-fab, .interest-action {
   position: absolute;
   right: 24px;
   bottom: -20px;
 }
 
-.btn-floating.halfway-fab.left {
+.btn-floating.halfway-fab.left, .left.interest-action {
   right: auto;
   left: 24px;
 }
 
-.btn-floating i {
+
+.btn-floating i,
+.interest-action i {
   width: inherit;
   display: inline-block;
   text-align: center;
@@ -5331,7 +5340,7 @@ small {
   line-height: 40px;
 }
 
-button.btn-floating {
+button.btn-floating, button.interest-action {
   border: none;
 }
 
@@ -5465,7 +5474,7 @@ button.btn-floating {
   margin-bottom: 15px;
 }
 
-.fixed-action-btn ul a.btn-floating {
+.fixed-action-btn ul a.btn-floating, .fixed-action-btn ul a.interest-action {
   opacity: 0;
 }
 
@@ -5620,7 +5629,7 @@ body.keyboard-focused .dropdown-content li:focus {
  * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE
  */
-.waves-effect {
+.waves-effect, .interest-action {
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -5636,7 +5645,7 @@ body.keyboard-focused .dropdown-content li:focus {
   transition: .3s ease-out;
 }
 
-.waves-effect .waves-ripple {
+.waves-effect .waves-ripple, .interest-action .waves-ripple {
   position: absolute;
   border-radius: 50%;
   width: 20px;
@@ -5656,35 +5665,35 @@ body.keyboard-focused .dropdown-content li:focus {
   pointer-events: none;
 }
 
-.waves-effect.waves-light .waves-ripple {
+.waves-effect.waves-light .waves-ripple, .interest-action .waves-ripple {
   background-color: rgba(255, 255, 255, 0.45);
 }
 
-.waves-effect.waves-red .waves-ripple {
+.waves-effect.waves-red .waves-ripple, .waves-red.interest-action .waves-ripple {
   background-color: rgba(244, 67, 54, 0.7);
 }
 
-.waves-effect.waves-yellow .waves-ripple {
+.waves-effect.waves-yellow .waves-ripple, .waves-yellow.interest-action .waves-ripple {
   background-color: rgba(255, 235, 59, 0.7);
 }
 
-.waves-effect.waves-orange .waves-ripple {
+.waves-effect.waves-orange .waves-ripple, .waves-orange.interest-action .waves-ripple {
   background-color: rgba(255, 152, 0, 0.7);
 }
 
-.waves-effect.waves-purple .waves-ripple {
+.waves-effect.waves-purple .waves-ripple, .waves-purple.interest-action .waves-ripple {
   background-color: rgba(156, 39, 176, 0.7);
 }
 
-.waves-effect.waves-green .waves-ripple {
+.waves-effect.waves-green .waves-ripple, .waves-green.interest-action .waves-ripple {
   background-color: rgba(76, 175, 80, 0.7);
 }
 
-.waves-effect.waves-teal .waves-ripple {
+.waves-effect.waves-teal .waves-ripple, .waves-teal.interest-action .waves-ripple {
   background-color: rgba(0, 150, 136, 0.7);
 }
 
-.waves-effect input[type="button"], .waves-effect input[type="reset"], .waves-effect input[type="submit"] {
+.waves-effect input[type="button"], .interest-action input[type="button"], .waves-effect input[type="reset"], .interest-action input[type="reset"], .waves-effect input[type="submit"], .interest-action input[type="submit"] {
   border: 0;
   font-style: normal;
   font-size: inherit;
@@ -5692,7 +5701,7 @@ body.keyboard-focused .dropdown-content li:focus {
   background: none;
 }
 
-.waves-effect img {
+.waves-effect img, .interest-action img {
   position: relative;
   z-index: -1;
 }
@@ -5734,7 +5743,7 @@ body.keyboard-focused .dropdown-content li:focus {
 }
 
 /* Firefox Bug: link not triggered */
-.waves-effect .waves-ripple {
+.waves-effect .waves-ripple, .interest-action .waves-ripple {
   z-index: -1;
 }
 
@@ -7623,11 +7632,11 @@ input[type=range]::-ms-thumb {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-small, .sidenav li > a.navbar-session-button, .sidenav li > a.session-form-button, .sidenav li > a.interest-create-button, .sidenav li > a.group-session-button, .sidenav li > a.btn-large, .sidenav li > a.btn-flat, .sidenav li > a.btn-floating {
+.sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-small, .sidenav li > a.navbar-session-button, .sidenav li > a.session-form-button, .sidenav li > a.interest-create-button, .sidenav li > a.group-session-button, .sidenav li > a.btn-large, .sidenav li > a.btn-flat, .sidenav li > a.btn-floating, .sidenav li > a.interest-action {
   margin: 10px 15px;
 }
 
-.sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-small, .sidenav li > a.navbar-session-button, .sidenav li > a.session-form-button, .sidenav li > a.interest-create-button, .sidenav li > a.group-session-button, .sidenav li > a.btn-large, .sidenav li > a.btn-floating {
+.sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-small, .sidenav li > a.navbar-session-button, .sidenav li > a.session-form-button, .sidenav li > a.interest-create-button, .sidenav li > a.group-session-button, .sidenav li > a.btn-large, .sidenav li > a.btn-floating, .sidenav li > a.interest-action {
   color: #fff;
 }
 
@@ -7639,7 +7648,7 @@ input[type=range]::-ms-thumb {
   background-color: #2bbbad;
 }
 
-.sidenav li > a.btn-floating:hover {
+.sidenav li > a.btn-floating:hover, .sidenav li > a.interest-action:hover {
   background-color: #26a69a;
 }
 
@@ -9115,6 +9124,24 @@ input[type=range]::-ms-thumb {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.default-interest-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  height: 200px;
+}
+
+.default-interest-icon > i {
+  font-size: 60px;
 }
 
 .group-session-button-holder {
