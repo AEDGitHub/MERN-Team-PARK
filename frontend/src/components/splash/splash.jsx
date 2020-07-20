@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Splash extends Component {
+class Splash extends React.Component {
 
     render() {
         return (
             <div
                 style={{
-                    backgroundImage: "url(" + "../../../splash_background.jpeg" + ")",
+                    backgroundImage: "url(" + "../../../images/splash_background.jpeg" + ")",
                     height: "100vw",
                     backgroundSize: "100%",
                     backgroundRepeat: "no-repeat",

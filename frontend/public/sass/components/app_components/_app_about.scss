@@ -1,0 +1,44 @@
+// what is rebond 
+
+.about-general-title {
+
+}
+
+.about-general-container {
+    @extend .center;
+    background-color: royalblue;
+    padding: 20px 30px;
+};
+
+// meet the team
+
+.about-team-title {
+    
+}
+
+.about-team-container {
+    @extend .center;
+    background-color: rgb(139, 46, 117);
+};
+
+.about-engineer-row {
+    @extend .row, .center;
+    background-color: green;
+};
+
+.about-engineer-intro {
+    @extend .col, .center, .l6, .m6;
+    background-color: red;
+    // padding: 10px 20px;
+};
+
+.about-engineer-intro img {
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
+    
+}
+
+.about-engineer-intro p {
+    padding: 10px 30px;
+}
