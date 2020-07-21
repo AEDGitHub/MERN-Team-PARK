@@ -24,6 +24,7 @@ class InterestFeed extends React.Component {
                     interest={interest}
                     currentUserId={this.props.currentUserId}
                     followInterest={this.props.followInterest}
+                    unfollowInterest={this.props.unfollowInterest}
                     parentContainer={this.props.parentContainer}
                         />
         })

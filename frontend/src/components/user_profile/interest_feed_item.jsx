@@ -2,21 +2,33 @@ import React from 'react';
 
 class InterestFeedItem extends React.Component {
     render() {
-      const { interest, currentUserId, followInterest, parentContainer } = this.props;
+      const {
+        interest,
+        currentUserId,
+        followInterest,
+        unfollowInterest,
+        parentContainer } = this.props;
 
-      const followButton = currentUserId !== interest.owner ? (
+      const followButton = interest.users.includes(currentUserId) ? (
+          <button
+            className="interest-action"
+            onClick={() => unfollowInterest(interest._id)}
+          >
+            <i className="fa fa-heart"></i>
+          </button>
+      ) : (
           <button
             className="interest-action"
             onClick={() => followInterest(interest._id)}
           >
-            {interest.users.includes(currentUserId) ? <i className="fa fa-heart"></i> : <i className="fa fa-heart-o"></i>}
+            <i className="fa fa-heart-o"></i>
           </button>
-        ) : null;
+        );
     
       const cardImageElements = (parentContainer ? (
         <>
           <span className="interest-title">{interest.name}</span>
-          {followButton}
+          {currentUserId !== interest.owner ? followButton : null}
         </>
       ) : null)
 

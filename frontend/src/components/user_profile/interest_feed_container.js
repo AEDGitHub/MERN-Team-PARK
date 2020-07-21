@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import InterestFeed from "./interest_feed";
-import { followInterest } from "../../actions/user_actions";
+import { followInterest, unfollowInterest } from "../../actions/user_actions";
 
 const mapStateToProps = state => {
     return {
@@ -10,7 +10,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        followInterest: interestId => dispatch(followInterest(interestId))
+        followInterest: interestId => dispatch(followInterest(interestId)),
+        unfollowInterest: interestId => dispatch(unfollowInterest(interestId))
     }
 }
 
