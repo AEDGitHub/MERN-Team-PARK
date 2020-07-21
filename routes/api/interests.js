@@ -66,18 +66,18 @@ router.post(
   async (req, res) => {
     const interest = await Interest.findOne({ _id: req.params.id });
     const follower = await User.findOne({ _id: req.user.id });
+    const user = await User.findOne({ _id: interest.owner });
 
     if (!interest) {
       return res.status(404).json({ error: "Interest does not exist" });
     }
 
     interest.users.push(follower);
-    follower.interests.push(interest);
 
     interest
       .save()
       .then((interest) =>
-        follower
+        user
           .save()
           .then((savedUser) => {
             savedUser.populate("interests", () => res.json(savedUser));
@@ -98,17 +98,19 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     const interest = await Interest.findOne({ _id: req.params.id });
-    const user = await User.findOne({ _id: req.user.id });
+    const follower = await User.findOne({ _id: req.user.id });
+    const user = await User.findOne({ _id: interest.owner });
 
-    interest.users.pull(user);
-    user.interests.pull(interest);
+    interest.users.pull(follower);
 
     interest
       .save()
       .then((interest) =>
         user
           .save()
-          .then((user) => res.json({ user, interest }))
+          .then(savedUser => {
+            savedUser.populate("interests", () => res.json(savedUser))
+          })
           .catch((err) =>
             res.status(422).json({ error: "User could not unfollow interest" })
           )
