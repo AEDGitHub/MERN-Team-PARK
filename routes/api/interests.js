@@ -128,6 +128,8 @@ router.delete(
     const interest = await Interest.findOne({ _id: req.params.id }).populate(
       "users"
     );
+    const owner = await User.findOne({ _id: interest.owner })
+
     const users = interest.users;
     users.forEach((user) => {
       user.interests.pull(interest);
@@ -135,9 +137,13 @@ router.delete(
     });
     interest
       .deleteOne()
-      .then(() => {
-        res.json({ success: true });
-      })
+      .then(() => 
+        owner
+          .save()
+          .then(savedUser => {
+            savedUser.populate("interests", () => res.json(savedUser))
+          })
+      )
       .catch((err) => res.json(err));
   }
 );

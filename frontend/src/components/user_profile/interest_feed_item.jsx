@@ -7,6 +7,7 @@ class InterestFeedItem extends React.Component {
         currentUserId,
         followInterest,
         unfollowInterest,
+        deleteInterest,
         parentContainer } = this.props;
 
       const followButton = interest.users.includes(currentUserId) ? (
@@ -26,7 +27,7 @@ class InterestFeedItem extends React.Component {
         );
       
       const usersInterestButtons = parentContainer ? null : (
-        <button className="interest-owner-action">
+        <button className="interest-owner-action" onClick={() => deleteInterest(interest._id)}>
           <i className="fa fa-trash"></i>
         </button>
       )

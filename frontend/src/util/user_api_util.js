@@ -15,3 +15,7 @@ export const followInterest = interestId => {
 export const unfollowInterest = interestId => {
     return axios.post(`/api/interests/${interestId}/unfollow`);
 }
+
+export const deleteInterest = interestId => {
+    return axios.delete(`/api/interests/${interestId}`);
+}
