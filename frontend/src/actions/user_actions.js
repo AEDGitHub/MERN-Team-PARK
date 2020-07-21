@@ -29,3 +29,8 @@ export const unfollowInterest = interestId => dispatch => {
     return APIUtil.unfollowInterest(interestId)
         .then(payload => dispatch(receiveUser(payload.data)))
 }
+
+export const deleteInterest = interestId => dispatch => {
+    return APIUtil.deleteInterest(interestId)
+        .then(payload => dispatch(receiveUser(payload.data)))
+}
