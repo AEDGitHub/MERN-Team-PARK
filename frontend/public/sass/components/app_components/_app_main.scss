@@ -16,8 +16,8 @@
 
 // interest feed
 
-.interest-container {
-
+.interest-container.two-column .interest-content {
+    height: 150px;
 }
 
 .interest-holder {
@@ -48,6 +48,24 @@
 .default-interest-icon > i {
     font-size: 60px;
     padding: 75px;
+}
+
+.interest-action-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.interest-owner-action {
+    @extend .btn;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // interest create

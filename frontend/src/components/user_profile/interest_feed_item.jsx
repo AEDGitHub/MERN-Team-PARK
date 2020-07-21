@@ -24,6 +24,12 @@ class InterestFeedItem extends React.Component {
             <i className="fa fa-heart-o"></i>
           </button>
         );
+      
+      const usersInterestButtons = parentContainer ? null : (
+        <button className="interest-owner-action">
+          <i className="fa fa-trash"></i>
+        </button>
+      )
     
       const cardImageElements = (parentContainer ? (
         <>
@@ -45,6 +51,9 @@ class InterestFeedItem extends React.Component {
               {parentContainer ? null : <span className="interest-title">{interest.name}</span>}
               <p>{interest.category}</p>
               <p>{interest.description}</p>
+            </div>
+            <div className="interest-action-buttons">
+              {usersInterestButtons}
             </div>
           </div>
         </li>
