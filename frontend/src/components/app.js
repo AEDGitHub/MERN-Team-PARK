@@ -14,7 +14,7 @@ import CreateGroupContainer from "./groups/create_group_form_container";
 const App = () => (
     <div className="custom-body">
         
-        <div className="wrapper">
+        {/* <div className="wrapper"> */}
             <header>
                 <NavBarContainer />
             </header>
@@ -35,10 +35,10 @@ const App = () => (
                     </Switch>
                 </main>
             </div>
-            <footer>
+            <footer >
                 <FooterContainer />
             </footer>
-        </div>
+        {/* </div> */}
     </div>
 );
 

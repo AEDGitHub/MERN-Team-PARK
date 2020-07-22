@@ -1,3 +1,17 @@
+// These are needed to keep the footer down
+
+.custom-body {
+    position: relative;
+    min-height: 100vh;
+}
+
+.custom-main {
+    padding-bottom: 2.5rem;
+}
+
+//
+
+
 .main-left-container {
     @extend .col, .l6, .s12;
 }
