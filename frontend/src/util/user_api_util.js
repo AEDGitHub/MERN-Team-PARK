@@ -4,6 +4,10 @@ export const fetchUser = () => {
     return axios.get(`/api/users/current`);
 };
 
+export const updateUser = (userData) => {
+    return axios.patch(`/api/users/profile`, userData);
+}
+
 export const createInterest = data => {
     return axios.post('/api/interests/', data);
 };

@@ -30,7 +30,10 @@ class UserProfile extends React.Component {
                     </h4>
 
                     <h5 className="center">{currentUser.email}</h5>
-                    
+                    <button className="btn-flat modal-trigger" data-target="#user-edit">Edit my account details</button>
+                </div>
+                <div className="modal" id="user-edit">
+
                 </div>
                 
                 <InterestFeedContainer interests={currentUser.interests}/>

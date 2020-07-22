@@ -108,5 +108,5 @@ dist
 
 #Materialize.css files
 /frontend/public/sass/materialize.css
-/frontend/public/sass/materialize.map.css
+/frontend/public/sass/materialize.css.map
 
