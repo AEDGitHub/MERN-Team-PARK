@@ -1,0 +1,17 @@
+.profile-picture {
+    @extend .center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    padding: 50px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 2px solid rgb(53, 53, 53);
+}
+
+.profile-picture > i {
+    font-size: 176px;
+    color: teal;
+}
