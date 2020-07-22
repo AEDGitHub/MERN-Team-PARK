@@ -62,9 +62,9 @@ class SignupForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="session-error-list">
                 {Object.keys(this.state.errors).map((error, idx) => (
-                    <li key={`error-${idx}`}>
+                    <li className="session-error-item" key={`error-${idx}`}>
                         {this.state.errors[error]}
                     </li>
                 ))}
@@ -77,6 +77,10 @@ class SignupForm extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
 
+                    <div className="session-error-holder">
+                        {this.renderErrors()}
+                    </div>
+                    
                     <h2 className="session-form-title">Sign Up</h2>
 
                     <div className="row">
@@ -169,8 +173,6 @@ class SignupForm extends React.Component {
 
                         </div>
                     </div>        
-
-                    {this.renderErrors()}
                     
                 </form>
             </div>

@@ -47,7 +47,8 @@
         "components/app_components/_app_session_form.scss",
         "components/app_components/_app_main.scss",
         "components/app_components/_app_about.scss",
-        "components/app_components/_app_footer.scss"
+        "components/app_components/_app_footer.scss",
+        "components/app_components/_app_errors.scss"
     ],
     "names": [],
     "file": "materialize.css"
