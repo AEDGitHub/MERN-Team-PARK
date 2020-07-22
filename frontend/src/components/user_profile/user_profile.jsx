@@ -12,11 +12,19 @@ class UserProfile extends React.Component {
         const { currentUser } = this.props
         if (!currentUser) return null
 
+        const profilePicture = (currentUser.img ? null : (
+            <div className="profile-picture">
+                {/* <i className="fa fa-user"></i> */}
+                <i className="material-icons">account_circle</i>
+            </div>
+        ))
+
         return (
             <div >
 
                 <div className="user-profile-holder">
-
+                    {profilePicture}
+                    
                     <h4 className="center">
                         {currentUser.firstName} {currentUser.lastName}
                     </h4>
