@@ -1,6 +1,7 @@
 import React from 'react';
 import InterestCreateFormContainer from "./interest_create_form_container";
 import InterestFeedContainer from "./interest_feed_container";
+import EditUserFormContainer from "./edit_user_form_container";
 
 class UserProfile extends React.Component {
 
@@ -33,7 +34,7 @@ class UserProfile extends React.Component {
                     <button className="btn-flat modal-trigger" data-target="#user-edit">Edit my account details</button>
                 </div>
                 <div className="modal" id="user-edit">
-
+                    <EditUserFormContainer currentUser={currentUser}/>
                 </div>
                 
                 <InterestFeedContainer interests={currentUser.interests}/>
