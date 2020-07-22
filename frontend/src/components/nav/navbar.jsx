@@ -29,6 +29,7 @@ class NavBar extends React.Component {
         } else {
             return (
                 <ul className="navbar-session-button-holder">
+                    <li><Link to={'./about'}>About</Link></li>
                     <li><Link to={'/signup'}>Sign Up</Link></li>
                     <li><Link to={'/login'}>Login</Link></li>
                 </ul>

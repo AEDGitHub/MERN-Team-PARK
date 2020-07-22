@@ -5,12 +5,11 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="custom-footer">
-                <div className="custom-footer-copyright">
-                    © ReBond
+
+                <div className="custom-footer-content">
+                    © 2020 ReBond
                 </div>
-                <div className="custom-footer-links">
-                    <Link to={'./about'}>About</Link>
-                </div>
+
             </div>
         )
     }
