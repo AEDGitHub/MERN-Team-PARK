@@ -9,8 +9,8 @@ class GroupIndex extends React.Component {
         super(props);
 
         this.state = {
-            toggleCreate: false,
-            toggleJoin: false
+          toggleCreate: false,
+          toggleJoin: false,
         };
 
         this.toggleCreate = this.toggleCreate.bind(this);
@@ -21,6 +21,9 @@ class GroupIndex extends React.Component {
       this.props.fetchGroups(this.props.currentUserId)
         .then(() => {
           const options1 = {
+            onOpenStart: (elem) => {
+              this.props.fetchGroup(elem.dataset.id);
+            },
             inDuration: 300,
             outDuration: 200
           };  
@@ -42,7 +45,7 @@ class GroupIndex extends React.Component {
         const groupsList = (groups.length !== 0 ? (
           <ul ref={Collapsible => { this.Collapsible1 = Collapsible; }} className="collapsible">
             {groups.map(group => (
-                <li key={group._id}>
+                <li key={group._id} data-id={group._id}>
                     <div className="collapsible-header"><h3>{group.name}</h3></div>
                     <div className="collapsible-body">
                         <GroupShowContainer groupId={group._id}/>

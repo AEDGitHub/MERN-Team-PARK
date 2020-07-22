@@ -2,10 +2,6 @@ import React from "react";
 import InterestFeedContainer from "../user_profile/interest_feed_container";
 
 class GroupShow extends React.Component {
-    componentDidMount() {
-        this.props.fetchGroup(this.props.groupId)
-    }
-
     render() {
         const sharingLink =
           this.props.currentUserId === this.props.group.owner ? (

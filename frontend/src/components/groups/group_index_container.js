@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import GroupIndex from "./group_index";
-import { fetchGroups } from "../../actions/group_actions";
+import { fetchGroups, fetchGroup } from "../../actions/group_actions";
 import { usersGroups } from "../../reducers/selectors";
 
 const mapStateToProps = state => {
@@ -12,7 +12,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchGroups: userId => dispatch(fetchGroups(userId))
+        fetchGroups: userId => dispatch(fetchGroups(userId)),
+        fetchGroup: groupID => dispatch(fetchGroup(groupID))
     }
 }
 

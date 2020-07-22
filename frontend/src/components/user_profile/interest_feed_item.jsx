@@ -18,7 +18,6 @@ class InterestFeedItem extends React.Component {
       currentUserId,
       followInterest,
       unfollowInterest,
-      deleteInterest,
       parentContainer } = this.props;
 
     const followButton = interest.users.includes(currentUserId) ? (

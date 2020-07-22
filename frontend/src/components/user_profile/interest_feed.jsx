@@ -5,7 +5,7 @@ import InterestFeedItem from './interest_feed_item';
 class InterestFeed extends React.Component {
 
     render() {
-        if (this.props.interests.length === 0) {
+        if (this.props.interests.length === 0 && !this.props.parentContainer) {
             return <div className="center">You haven't added any interests yet!</div>
         };
 
