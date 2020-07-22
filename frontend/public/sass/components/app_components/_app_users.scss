@@ -1,5 +1,14 @@
+.user-profile-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-profile-holder button {
+    width: 50%;
+}
+
 .profile-picture {
-    @extend .center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,5 +22,5 @@
 
 .profile-picture > i {
     font-size: 176px;
-    color: teal;
+    color: #4FA79A;
 }
