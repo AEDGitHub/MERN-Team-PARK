@@ -2,9 +2,17 @@ import { connect } from "react-redux";
 import { updateUser } from "../../actions/user_actions";
 import SignupForm from "../session/signup_form";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, { currentUser }) => {
     return {
-        errors: state.errors.session
+        errors: state.errors.session,
+        initialState: {
+            email: currentUser.email,
+            firstName: currentUser.firstName,
+            lastName: currentUser.lastName,
+            img: '',
+            errors: {}
+        },
+        formTitle: "Edit Profile",
     }
 }
 
