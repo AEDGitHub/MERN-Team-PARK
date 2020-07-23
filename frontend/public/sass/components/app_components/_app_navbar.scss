@@ -12,6 +12,8 @@
 }
 
 .navbar-brand-logo {
-    @extend .brand-logo;
+    @extend .brand-logo, .left;
+    left: 0%;
+    margin-left: 20px;
 }
 

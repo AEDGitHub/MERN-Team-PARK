@@ -10,5 +10,18 @@
 .custom-footer-content {
     @extend .container;
     margin: 0 20px;
+    width: auto;
+    max-width: none;
+}
+
+.custom-footer-logo {
+    @extend .right;
+    position: relative;
+    bottom: 13px
+}
+
+.custom-footer-logo img {
+    height: 40px;
+    width: 40px;
 }
 
