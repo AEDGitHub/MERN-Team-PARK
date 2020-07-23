@@ -6,8 +6,9 @@
 }
 
 .about-general-container {
-    @extend .center;
-    padding: 30px 50px;
+    @extend .center, .container;
+    // padding: 30px 50px;
+    // max-width: 50%;
 };
 
 // meet the team
@@ -18,7 +19,7 @@
 }
 
 .about-team-container {
-    @extend .center;
+    @extend .center, .container;
 };
 
 .about-engineer-row {
@@ -27,7 +28,7 @@
 };
 
 .about-engineer-intro {
-    @extend .col, .center, .l6, .m6;
+    @extend .col, .center, .l6, .m12;
 };
 
 .about-engineer-intro img {
