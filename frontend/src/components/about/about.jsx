@@ -8,7 +8,7 @@ class About extends React.Component {
 
                 <div className="about-general-container">
                     <h3 className="about-general-title">What is ReBond?</h3>
-                    <p>
+                    <p className="about-general-part">
                         In the shadow of COVID-19's influence, more groups of 
                         individuals are forming on a strictly virtual basis than 
                         ever before. Acting under the assumption that the virus 
@@ -20,7 +20,7 @@ class About extends React.Component {
                         does one ask to 'hang out' with a person they've known 
                         for months, but only through a screen? Is that weird?
                     </p>
-                    <p>
+                    <p className="about-general-part">
                         Team PARK seeks to solve this initial hesitance, by 
                         developing a lightweight app to reduce the psychological 
                         friction of such meetings occurring (once the virus subsides, 
@@ -29,30 +29,6 @@ class About extends React.Component {
                         a time of nonstandard human interaction: it's a meet-up app 
                         for people who already know each other well, yet have never 
                         breathed the same air.
-                    </p>
-                    <p>
-                        The app works as follows: upon signing up for a new account, 
-                        a user may create a new group or join an existing one. In so 
-                        doing, they will receive a key that can be sent to their 
-                        digital compatriots in whatever fashion they choose (email, 
-                        work-management app, social media &c.) Members of the group, 
-                        whether originator or invitee, may select up to three activities 
-                        from a few broad categories that they would like to share with 
-                        other members of the group, which will populate the group's 
-                        interest index column, allowing other group members to subscribe 
-                        to a potential future event.
-                    </p>
-                    <p>
-                        As a particular user prefers, they may indicate that they 
-                        would like to host an event based on one of their interests, 
-                        and select a time, place and maximum number of attendees. Other 
-                        users in the group who have indicated interest in such an 
-                        activity will receive an email that the event is occurring, 
-                        and may respond in kind in order to reserve a spot at the event.
-                    </p>
-                    <p>
-                        And then, everyone will meet, have fun, and maybe deepen 
-                        their friendships, just like in real life. Remember that?
                     </p>
                 </div>
 
