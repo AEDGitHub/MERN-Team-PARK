@@ -20,16 +20,26 @@ class GroupIndex extends React.Component {
     componentDidMount() {
       this.props.fetchGroups(this.props.currentUserId)
         .then(() => {
-          const options1 = {
-            onOpenStart: (elem) => {
-              this.props.fetchGroup(elem.dataset.id);
-            },
-            inDuration: 300,
-            outDuration: 200
-          };  
-
-          M.Collapsible.init(this.Collapsible1, options1);
+          this.attachCollapsibleHandles();
         })
+    }
+  
+    componentDidUpdate(prevProps) {
+      if (prevProps.groups !== this.props.groups) {
+        this.attachCollapsibleHandles();
+      }
+    }
+  
+    attachCollapsibleHandles() {
+      const options1 = {
+        onOpenStart: (elem) => {
+          this.props.fetchGroup(elem.dataset.id);
+        },
+        inDuration: 300,
+        outDuration: 200
+      };
+
+      M.Collapsible.init(this.Collapsible1, options1);
     }
 
     toggleCreate() {
