@@ -17,6 +17,7 @@ class NavBar extends React.Component {
         if (this.props.loggedIn) {
             return (
                 <ul className="navbar-session-button-holder">
+                    <li><Link to={'./about'}>About</Link></li>
                     <li>
                         <button 
                             className="navbar-session-button" 

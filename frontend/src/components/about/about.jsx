@@ -64,7 +64,7 @@ class About extends React.Component {
                             <h5>Elisha (Park) Kutnick</h5>
                             <h6>Backend Lead</h6>
                             <p>
-                                As the Backend Lead, Ms. Park is responsible for 
+                                As the Backend Lead, Elisha is responsible for 
                                 the overall functioning of the project and design 
                                 of its schema, routes, models and controllers, 
                                 ensuring sensible processing of and access to data 
@@ -92,7 +92,7 @@ class About extends React.Component {
                             <h5>Gabor Kurucz</h5>
                             <h6>Frontend Lead</h6>
                             <p>
-                                As the Frontend Lead, Mr. Kurucz is responsible for 
+                                As the Frontend Lead, Gabor is responsible for 
                                 the overall presentation of the project, to include 
                                 styling, component structure and function, and ensuring 
                                 data is accurately retrieved from and submitted to the 
@@ -122,7 +122,7 @@ class About extends React.Component {
                             <h5>Benjamin Rose</h5>
                             <h6>Chief Deputy of Operations</h6>
                             <p>
-                                As the Deputy Ops, Mr. Rose is responsible for 
+                                As the Deputy Ops, Ben is responsible for 
                                 coordinating data flows unhindered between the 
                                 backend and the frontend, as well as communicating 
                                 emergent problems requiring immediate decisions to 
@@ -149,7 +149,7 @@ class About extends React.Component {
                             <h5>Eric Arndt</h5>
                             <h6>Project Director</h6>
                             <p>
-                                As the Project Director, Mr. Arndt is responsible 
+                                As the Project Director, Eric is responsible 
                                 for the overall management and support of the team, 
                                 to include prioritizing tasks for execution in task 
                                 management software, allocating human resources to 
