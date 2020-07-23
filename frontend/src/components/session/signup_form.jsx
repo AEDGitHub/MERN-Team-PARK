@@ -8,6 +8,7 @@ class SignupForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoLogin = this.handleDemoLogin.bind(this);
+        this.onImageChange = this.onImageChange.bind(this);
     }
 
     componentDidMount() {
@@ -27,11 +28,28 @@ class SignupForm extends React.Component {
         });
     }
 
+    onImageChange(e) {
+        this.setState({ img: e.target.files[0] });
+    }
+
     handleSubmit(e) {
         e.preventDefault();
-        let user = Object.assign(this.state, { slug: this.slug });
-        
-        this.props.userFormAction(user, this.props.history)
+        let formData;
+        if (this.props.formTitle === "Sign Up") {
+            formData = Object.assign(this.state, { slug: this.slug });
+        } else {
+            const { email, firstName, lastName, password, password2, slug, img } = this.state;
+            formData = new FormData();
+            formData.append("email", email);
+            formData.append("firstName", firstName);
+            formData.append("lastName", lastName);
+            if (password) formData.append("password", password);
+            if (password2) formData.append("password2", password2);
+            if (slug) formData.append("slug", slug);
+            if (img) formData.append("img", img);
+        }
+
+        this.props.userFormAction(formData, this.props.history)
     }
 
     handleDemoLogin(e) {
@@ -58,6 +76,9 @@ class SignupForm extends React.Component {
     }
 
     render() {
+        const formTitleClass = this.props.formTitle === "Sign Up" ? "session-form-title" : "user-edit-form-title";
+        const formInputClass = this.props.formTitle === "Sign Up" ? "session-form-input-holder" : "user-edit-form-input";
+
         const passwordFields = (this.props.formTitle === "Sign Up" ? (
             <>
                 <div className="row">
@@ -90,7 +111,29 @@ class SignupForm extends React.Component {
                     </div>
                 </div> 
             </>
-        ) : null )
+        ) : null)
+        
+        const imageInput = (this.props.formTitle === "Edit Profile" ? (
+            <div className="row">
+                <div className={`file-field ${formInputClass}`}>
+                    <div className="btn">
+                        <span>Image</span>
+                        <input
+                            type="file"
+                            onChange={this.onImageChange}
+                            accept="image/*"
+                        />
+                    </div>
+                    <div className="file-path-wrapper">
+                        <input
+                            className={`file-path validate ${formInputClass}`}
+                            type="text"
+                            placeholder="Choose an image to upload"
+                        />
+                    </div>
+                </div>
+            </div>
+        ) : null)
 
         const demoLoginButton = (this.props.formTitle === "Sign Up" ? (
             <div>
@@ -102,9 +145,6 @@ class SignupForm extends React.Component {
             </div>
         ) : null)
         
-        const formTitleClass = this.props.formTitle === "Sign Up" ? "session-form-title" : "user-edit-form-title";
-        const formInputClass = this.props.formTitle === "Sign Up" ? "session-form-input-holder" : "user-edit-form-input";
-
         return (
             <div className="modal-content">
                 <form onSubmit={this.handleSubmit}>
@@ -153,6 +193,8 @@ class SignupForm extends React.Component {
                             />
                         </div>
                     </div>  
+
+                    {imageInput}
 
                     {passwordFields}
 
