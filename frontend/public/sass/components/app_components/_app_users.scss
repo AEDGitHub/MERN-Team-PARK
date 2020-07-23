@@ -24,3 +24,14 @@
     font-size: 176px;
     color: #4FA79A;
 }
+
+// User Edit Form
+
+.user-edit-form-title {
+    @extend .center;
+    padding-top: 30px;
+}
+
+.user-edit-form-input {
+    @extend .input-field, .col, .s8, .m6, .l6, .offset-l3, .offset-m3, .offset-s2;
+}

@@ -249,7 +249,7 @@ router.patch(
     if (firstName) user.firstName = firstName;
     if (lastName) user.lastName = lastName;
     if (email) user.email = email;
-    if (req.file.path) {
+    if (req.file) {
       user.img.data = fs.readFileSync(req.file.path);
       user.img.contentType = "image/png";
     }

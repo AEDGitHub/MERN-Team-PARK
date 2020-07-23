@@ -4,15 +4,23 @@ import SignupForm from './signup_form';
 
 const mapStateToProps = state => {
     return {
-        errors: state.errors.session
+        errors: state.errors.session,
+        initialState: {
+            email: '',
+            firstName: '',
+            lastName: '',
+            password: '',
+            password2: '',
+            errors: {}
+        },
+        formTitle: "Sign Up"
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        signup: user => dispatch(signup(user)),
+        userFormAction: user => dispatch(signup(user)),
         login: user => dispatch(login(user))
-        // signup: user => console.log("Tried to sign up user: ", user)
     };
 };
 
