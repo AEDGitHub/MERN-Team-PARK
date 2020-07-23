@@ -38,7 +38,7 @@
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
 };
 
 .about-engineer-intro p {
@@ -47,7 +47,8 @@
 };
 
 .about-engineer-icons {
-    @extend .row
+    @extend .row;
+    padding-bottom: 20px;
 };
 
 .about-engineer-icons img {
