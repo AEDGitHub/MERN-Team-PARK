@@ -14,10 +14,10 @@
     align-items: center;
     width: 150px;
     height: 150px;
-    padding: 50px;
     margin: 20px auto;
     border-radius: 50%;
     border: 2px solid rgb(53, 53, 53);
+    overflow: hidden;
 }
 
 .profile-picture > i {
