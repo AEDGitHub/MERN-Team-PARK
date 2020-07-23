@@ -2,23 +2,9 @@ import React from 'react';
 import InterestCreateFormContainer from "./interest_create_form_container";
 import InterestFeedContainer from "./interest_feed_container";
 import EditUserFormContainer from "./edit_user_form_container";
-import { arrayBufferToBase64 } from "../../util/photo_util";
 import M from "materialize-css";
 
 class UserProfile extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = { img: "" }
-    }
-
-    convertImgFormat(img) {
-        if (img) {
-            const base64Flag = `data:${img.contentType};base64,`;
-            const imageStr = arrayBufferToBase64(img.data.data);
-            this.setState({ img: base64Flag + imageStr }); 
-        }
-    }
 
     componentDidMount() {
         this.props.fetchUser()
@@ -33,26 +19,17 @@ class UserProfile extends React.Component {
                     endingTop: "10%"
                 };
                 M.Modal.init(this.Modal, options);
-
-                // Convert img format for profile pic
-                this.convertImgFormat(this.props.currentUser.img);
             })
-    }
-
-    componentDidUpdate(prevProps) {
-        if (prevProps.currentUser && this.props.currentUser.img !== prevProps.currentUser.img) {
-            this.convertImgFormat(this.props.currentUser.img);
-        }
     }
 
     render() {
         const { currentUser } = this.props
         if (!currentUser) return null
 
-        const profilePicture = (this.state.img ? (
+        const profilePicture = (currentUser.img ? (
             <div className="profile-picture">
                 <img
-                    src={this.state.img} alt="user-profile"
+                    src={currentUser.img} alt="user-profile"
                     className="responsive-img"
                 />
             </div>
