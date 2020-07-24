@@ -126,6 +126,18 @@
 
 .group-index-holder {
     margin: 50px 0;
-    max-height: 65vh;
+    // max-height: 65vh;
+    max-height: 45vh;
     overflow: auto;
+}
+
+.group-name-holder {
+    // background-color: tomato;
+    width: 100%;
+    // width: inherit;
+}
+
+.collapsible-header h6 {
+    // background-color: slateblue;
+    text-align: center;
 }
