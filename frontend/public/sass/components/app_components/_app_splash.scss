@@ -1,21 +1,15 @@
-.splash-welcome-message {
-  padding-top: 4vw;
-  padding-left: 30%;
-  padding-right: 15%;
-  font-size: 3vw;
-  font-weight: bold;
-  position: absolute;
-  color: rgba(23, 22, 22, 0.824);
-  @extend .flow-text
+.splash-page {
+  position: relative;
 }
 
-.splash-under-message {
-  text-align: center;
-  bottom: 25vw;
-  left: 50%;
+.splash-page img {
+
+}
+
+.splash-welcome-message {
   position: absolute;
-  font-size: 2vw;
-  font-weight: bold;
+  font-size: 50px;
+  top: 40vh;
+  left: 50%;
   transform: translate(-50%, -50%);
-  @extend .flow-text
 }
