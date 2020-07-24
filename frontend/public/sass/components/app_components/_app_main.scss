@@ -18,6 +18,7 @@
 
 .main-right-container {
     @extend .col, .l7, .s12;
+    // max-height: 50vh;
 }
 
 .two-column {
@@ -121,4 +122,10 @@
 
 .group-session-button {
     @extend .btn;
+}
+
+.group-index-holder {
+    margin: 50px 0;
+    max-height: 65vh;
+    overflow: auto;
 }
