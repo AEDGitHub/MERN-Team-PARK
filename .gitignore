@@ -110,3 +110,6 @@ dist
 /frontend/public/sass/materialize.css
 /frontend/public/sass/materialize.css.map
 
+#Preprocessed photo uploads:
+/uploads/*
+
