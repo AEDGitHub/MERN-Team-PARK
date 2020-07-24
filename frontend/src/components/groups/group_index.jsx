@@ -68,8 +68,11 @@ class GroupIndex extends React.Component {
         return (
           <div >
             <section>
-
-              {groupsList}
+              
+              <div className="group-index-holder">
+                {groupsList}
+              </div>
+              
 
               {this.state.toggleCreate ? <CreateGroupContainer /> : null}
 
