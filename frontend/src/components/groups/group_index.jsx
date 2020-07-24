@@ -56,7 +56,11 @@ class GroupIndex extends React.Component {
           <ul ref={Collapsible => { this.Collapsible1 = Collapsible; }} className="collapsible">
             {groups.map(group => (
                 <li key={group._id} data-id={group._id}>
-                    <div className="collapsible-header"><h3>{group.name}</h3></div>
+                    <div className="collapsible-header">
+                      <div className="group-name-holder">
+                        <h6>{group.name}</h6>
+                      </div>
+                    </div>
                     <div className="collapsible-body">
                         <GroupShowContainer groupId={group._id}/>
                     </div>

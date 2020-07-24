@@ -6,7 +6,7 @@ class Splash extends React.Component {
         return (
             <div className="splash-page">
                 <div className="splash-welcome-message">
-                    Splash
+                    ReBond
                 </div>
                 {/* <img className="splash-image" src="../../../images/splash_background.jpeg" />          */}
             </div>
