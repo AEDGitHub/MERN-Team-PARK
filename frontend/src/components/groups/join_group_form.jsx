@@ -24,7 +24,7 @@ class JoinGroupForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="modal-content">
                 <form onSubmit={this.handleSubmit}>
 
                     <h4 className="group-session-title">Join a Group</h4>

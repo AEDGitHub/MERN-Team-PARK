@@ -13,8 +13,8 @@ class GroupIndex extends React.Component {
           toggleJoin: false,
         };
 
-        this.toggleCreate = this.toggleCreate.bind(this);
-        this.toggleJoin = this.toggleJoin.bind(this);
+        // this.toggleCreate = this.toggleCreate.bind(this);
+        // this.toggleJoin = this.toggleJoin.bind(this);
     }
 
     componentDidMount() {
@@ -42,13 +42,13 @@ class GroupIndex extends React.Component {
       M.Collapsible.init(this.Collapsible1, options1);
     }
 
-    toggleCreate() {
-        this.setState({ toggleCreate: !this.state.toggleCreate })
-    }
+    // toggleCreate() {
+    //     this.setState({ toggleCreate: !this.state.toggleCreate })
+    // }
 
-    toggleJoin() {
-        this.setState({ toggleJoin: !this.state.toggleJoin })
-    }
+    // toggleJoin() {
+    //     this.setState({ toggleJoin: !this.state.toggleJoin })
+    // }
 
     render() {
         const { groups } = this.props;
@@ -78,21 +78,21 @@ class GroupIndex extends React.Component {
               </div>
               
 
-              {this.state.toggleCreate ? <CreateGroupContainer /> : null}
+              {/* {this.state.toggleCreate ? <CreateGroupContainer /> : null}
 
               {this.state.toggleJoin ? <JoinGroupFormContainer /> : null}
 
               <div className="group-session-button-holder">
 
-                <button className="group-session-button" onClick={this.toggleCreate}>
+                <button className="group-session-button modal-trigger" data-target="create-group" onClick={this.toggleCreate}>
                   Create Group
                 </button>
 
                 <button className="group-session-button" onClick={this.toggleJoin}>
                   Join Group
-                </button>
+                </button> */}
 
-              </div>
+              {/* </div> */}
 
             </section>
           </div>

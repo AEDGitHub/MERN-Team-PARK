@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import M from "materialize-css";
 
 class CreateGroupForm extends React.Component {
     constructor(props) {
@@ -51,34 +52,34 @@ class CreateGroupForm extends React.Component {
 
     render() {
         return (
-            <div >             
-                <form onSubmit={this.handleSubmit}>
+                <div className="modal-content" >             
+                    <form onSubmit={this.handleSubmit}>
 
-                    <h4 className="group-session-title">Create a Group</h4>
+                        <h4 className="group-session-title">Create a Group</h4>
 
-                    <div className="row">
-                        <div className="group-session-input-holder">
-                            <input
-                                type="text"
-                                value={this.state.name}
-                                onChange={this.update("name")}
-                                required
+                        <div className="row">
+                            <div className="group-session-input-holder">
+                                <input
+                                    type="text"
+                                    value={this.state.name}
+                                    onChange={this.update("name")}
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <input 
+                                type="submit" 
+                                value="Create" 
+                                className="group-session-button modal-close"
                             />
                         </div>
-                    </div>
 
-                    <div className="row">
-                        <input 
-                            type="submit" 
-                            value="Create" 
-                            className="group-session-button"
-                        />
-                    </div>
+                        {this.renderErrors()}
 
-                    {this.renderErrors()}
-
-                </form>
-            </div>
+                    </form>
+                </div>
         )
     }
 }
