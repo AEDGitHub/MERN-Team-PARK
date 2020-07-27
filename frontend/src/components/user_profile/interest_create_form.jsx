@@ -39,7 +39,7 @@ class InterestCreateForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="modal-content">
                 <div >
                     <form className="interest-create-container" onSubmit={this.handleSubmit}>
                         <div className="interest-create-content">
