@@ -61,6 +61,7 @@ class UserProfile extends React.Component {
                     <button className="btn-flat modal-trigger" data-target="user-edit">Edit my account details</button>
                     <button className="btn-flat modal-trigger" data-target="create-group">Create group</button>
                     <button className="btn-flat modal-trigger" data-target="join-group">Join group</button>
+                    <button className="btn-flat modal-trigger" data-target="create-interest">Create interest</button>
 
                 </div>
 
@@ -82,7 +83,7 @@ class UserProfile extends React.Component {
                 
                 <InterestFeedContainer interests={currentUser.interests}/>
  
-                {currentUser.interests.length < 3 ? <InterestCreateFormContainer /> : null}
+                {/* {currentUser.interests.length < 3 ? <InterestCreateFormContainer /> : null} */}
 
             </div>
         )
