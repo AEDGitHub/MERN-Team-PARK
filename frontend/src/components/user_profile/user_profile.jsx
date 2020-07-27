@@ -3,6 +3,9 @@ import InterestCreateFormContainer from "./interest_create_form_container";
 import InterestFeedContainer from "./interest_feed_container";
 import EditUserFormContainer from "./edit_user_form_container";
 import M from "materialize-css";
+import CreateGroupForm from '../groups/create_group_form';
+import JoinGroupForm from '../groups/join_group_form';
+import InterestCreateForm from '../user_profile/interest_create_form';
 
 class UserProfile extends React.Component {
 
@@ -18,8 +21,12 @@ class UserProfile extends React.Component {
                     startingTop: "4%",
                     endingTop: "10%"
                 };
-                M.Modal.init(this.Modal, options);
-            })
+                M.Modal.init(this.Modal1, options);
+                M.Modal.init(this.Modal2, options);
+                M.Modal.init(this.Modal3, options);
+                M.Modal.init(this.Modal4, options);
+            });
+
     }
 
     render() {
@@ -50,10 +57,27 @@ class UserProfile extends React.Component {
                     </h4>
 
                     <h5 className="center">{currentUser.email}</h5>
+
                     <button className="btn-flat modal-trigger" data-target="user-edit">Edit my account details</button>
+                    <button className="btn-flat modal-trigger" data-target="create-group">Create group</button>
+                    <button className="btn-flat modal-trigger" data-target="join-group">Join group</button>
+
                 </div>
-                <div className="modal" id="user-edit" ref={Modal => { this.Modal = Modal; }}>
+
+                <div className="modal" id="user-edit" ref={Modal1 => { this.Modal1 = Modal1; }}>
                     <EditUserFormContainer currentUser={currentUser}/>
+                </div>
+
+                <div className="modal" id="create-group" ref={Modal2 => { this.Modal2 = Modal2; }}>
+                    <CreateGroupForm />
+                </div>
+
+                <div className="modal" id="join-group" ref={Modal3 => { this.Modal3 = Modal3; }}>
+                    <JoinGroupForm />
+                </div>
+
+                <div className="modal" id="create-interest" ref={Modal4 => { this.Modal4 = Modal4; }}>
+                    <InterestCreateForm />
                 </div>
                 
                 <InterestFeedContainer interests={currentUser.interests}/>
