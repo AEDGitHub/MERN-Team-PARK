@@ -25,6 +25,19 @@ class UserProfile extends React.Component {
                 M.Modal.init(this.Modal2, options);
                 M.Modal.init(this.Modal3, options);
                 M.Modal.init(this.Modal4, options);
+
+                const options2 = {
+                    inDuration: 300,
+                    outDuration: 250,
+                    exitDelay: 0,
+                    enterDelay: 250,
+                    transitionMovement: 10,
+                    position: "bottom",
+                    margin: 5
+                };
+                M.Tooltip.init(this.Tooltip1, options2)
+                M.Tooltip.init(this.Tooltip2, options2)
+                M.Tooltip.init(this.Tooltip3, options2)
             });
 
     }
@@ -59,9 +72,9 @@ class UserProfile extends React.Component {
                     {/* <h5 className="center">{currentUser.email}</h5> */}
 
                     <div className="profile-dashboard-holder">
-                        <button className="btn-flat modal-trigger" data-target="user-edit"><i className="large material-icons">edit</i></button>
-                        <button className="btn-flat modal-trigger" data-target="create-group"><i class="large material-icons">group</i></button>
-                        <button className="btn-flat modal-trigger" data-target="join-group"><i class="large material-icons">group_add</i></button>
+                        <button ref={Tooltip => {this.Tooltip1 = Tooltip;}} className="btn-flat tooltipped modal-trigger" data-tooltip="Edit Profile" data-target="user-edit"><i className="large material-icons">edit</i></button>
+                        <button ref={Tooltip => { this.Tooltip2 = Tooltip; }} className="btn-flat modal-trigger" data-tooltip="Create Group" data-target="create-group"><i class="large material-icons">group</i></button>
+                        <button ref={Tooltip => { this.Tooltip3 = Tooltip; }} className="btn-flat modal-trigger" data-tooltip="Join Group" data-target="join-group"><i class="large material-icons">group_add</i></button>
                     </div>
 
                     
