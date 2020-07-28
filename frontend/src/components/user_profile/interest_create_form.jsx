@@ -21,6 +21,8 @@ class InterestCreateForm extends React.Component {
             category: this.state.category,
             user: this.props.currentUser
         }
+        debugger
+
         this.props.createInterest(interest);
 
         this.setState({

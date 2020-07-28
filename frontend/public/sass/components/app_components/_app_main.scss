@@ -146,6 +146,7 @@
 // dashboard
 
 .profile-dashboard-holder {
+    @extend .center;
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
@@ -158,4 +159,13 @@
 
 .profile-dashboard-icon {
     @extend .material-icons;
+}
+
+.add-interest-button-holder {
+    @extend .center;
+    margin: 40px 0;
+}
+
+.add-interest-button-holder i {
+    font-size: 50px;
 }

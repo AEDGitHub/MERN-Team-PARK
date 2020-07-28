@@ -3,12 +3,14 @@ import InterestCreateForm from './interest_create_form';
 import { createInterest } from '../../actions/user_actions';
 
 const mapStateToProps = state => {
+    debugger
     return {
         currentUser: state.entities.users[state.session.user.id]
     }
 }
 
 const mapDispatchToProps = dispatch => {
+    debugger
     return {
         createInterest: interest => dispatch(createInterest(interest))
     }
