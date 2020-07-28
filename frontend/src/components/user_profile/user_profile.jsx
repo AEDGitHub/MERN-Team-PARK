@@ -2,9 +2,9 @@ import React from 'react';
 import InterestCreateFormContainer from "./interest_create_form_container";
 import InterestFeedContainer from "./interest_feed_container";
 import EditUserFormContainer from "./edit_user_form_container";
+import CreateGroupFormContainer from '../groups/create_group_form_container';
+import JoinGroupFormContainer from '../groups/join_group_form_container';
 import M from "materialize-css";
-import CreateGroupForm from '../groups/create_group_form';
-import JoinGroupForm from '../groups/join_group_form';
 
 class UserProfile extends React.Component {
 
@@ -39,7 +39,6 @@ class UserProfile extends React.Component {
                 M.Tooltip.init(this.Tooltip3, options2)
                 M.Tooltip.init(this.Tooltip4, options2)
             });
-
     }
 
     render() {
@@ -105,12 +104,12 @@ class UserProfile extends React.Component {
 
                 <div className="modal" id="create-group" 
                     ref={Modal2 => { this.Modal2 = Modal2; }}>
-                    <CreateGroupForm />
+                    <CreateGroupFormContainer />
                 </div>
 
                 <div className="modal" id="join-group" 
                     ref={Modal3 => { this.Modal3 = Modal3; }}>
-                    <JoinGroupForm />
+                    <JoinGroupFormContainer />
                 </div>
 
                 <div className="modal" id="create-interest" 
