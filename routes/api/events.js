@@ -14,10 +14,13 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Event.find()
+      .populate("interest")
       .sort({ date: -1 })
-      .then((events) => res.json(events))
+      .then((events) => {
+        res.json(events);
+      })
       .catch((err) =>
-        res.status(404).json({ noeventsfound: "No events found" })
+        res.status(404).json({ noEventsFound: "No events found" })
       );
   }
 );
@@ -42,7 +45,7 @@ router.post(
       maxCapcity: req.body.maxCapacity,
       attendees: [req.user.id],
       interest: req.body.interestId,
-      invitees: [req.user.id],
+      // invitees: [req.user.id],
       //invitees: [req.user.id] && user.invitedEvents.push(event) add event creator to the invited list + invitees
     });
 
@@ -50,29 +53,33 @@ router.post(
     const group = await Group.findOne({ _id: req.body.groupId });
     const interest = await Interest.findOne({ _id: req.body.interestId });
 
-    newEvent.invitees.push(interest.users);
+    newEvent.invitees = [...interest.users, req.user.id];
     newEvent
       .save()
       .then((event) => {
-        user.ownedEvents.push(event);
-        user.confirmedEvents.push(event);
-        user.invitedEvents.push(event);
-        user
-          .save()
-          .then((user) => {
-            group.events.push(event);
-            group
-              .save()
-              .then(() => {
-                res.json(event);
-              })
-              .catch((err) =>
-                res.status(422).json({ error: "Could not save event to group" })
-              );
-          })
-          .catch((err) =>
-            res.status(422).json({ error: "Could not save user to event" })
-          );
+        event.populate("interest", () => {
+          user.ownedEvents.push(event);
+          user.confirmedEvents.push(event);
+          user.invitedEvents.push(event);
+          user
+            .save()
+            .then((user) => {
+              group.events.push(event);
+              group
+                .save()
+                .then(() => {
+                  res.json(event);
+                })
+                .catch((err) =>
+                  res
+                    .status(422)
+                    .json({ error: "Could not save event to group" })
+                );
+            })
+            .catch((err) =>
+              res.status(422).json({ error: "Could not save user to event" })
+            );
+        });
       })
       .catch((err) => {
         return res.status(422).json({ error: "Could not save event" });
@@ -108,17 +115,19 @@ router.post(
     event
       .save()
       .then((event) => {
-        user.confirmedEvents.push(event);
-        user
-          .save()
-          .then((user) => {
-            res.json({ event, user });
-          })
-          .catch((err) =>
-            res.status(422).json({
-              error: "Could not save event to user's confirmed events",
+        event.populate("interest", () => {
+          user.confirmedEvents.push(event);
+          user
+            .save()
+            .then((user) => {
+              res.json({ event, user });
             })
-          );
+            .catch((err) =>
+              res.status(422).json({
+                error: "Could not save event to user's confirmed events",
+              })
+            );
+        });
       })
       .catch((err) => res.status(422).json({ error: "Could not join event" }));
   }
@@ -147,7 +156,9 @@ router.patch(
     if (details) event.details = details;
     if (maxCapacity) event.maxCapacity = maxCapacity;
 
-    event.save().then((event) => res.json(event));
+    event.save().then((event) => {
+      event.populate("interest", () => res.json(event));
+    });
   }
 );
 
@@ -164,14 +175,16 @@ router.post(
     event
       .save()
       .then((event) =>
-        user
-          .save()
-          .then((user) => {
-            res.json({ event, user });
-          })
-          .catch((err) =>
-            res.status(422).json({ error: "User could not unjoin event" })
-          )
+        event.populate("interest", () => {
+          user
+            .save()
+            .then((user) => {
+              res.json({ event, user });
+            })
+            .catch((err) =>
+              res.status(422).json({ error: "User could not unjoin event" })
+            );
+        })
       )
       .catch((err) => {
         return res.status(422).json({ error: "Error in unjoining event" });
