@@ -41,7 +41,7 @@ class JoinGroupForm extends React.Component {
 
                     <div className="row">
                         <div>
-                            <button className="group-session-button">Join</button>
+                            <button className="group-session-button modal-close">Join</button>
                         </div>
                     </div>
 

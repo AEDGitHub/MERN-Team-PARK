@@ -243,7 +243,8 @@ router.patch(
       return res.status(400).json(errors);
     }
 
-    const user = await User.findOne({ _id: req.user.id });
+    const user = await User.findOne({ _id: req.user.id })
+      .populate("interests");
 
     const { firstName, lastName, email, groupId } = req.body;
     if (firstName) user.firstName = firstName;

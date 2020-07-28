@@ -1,6 +1,4 @@
 import React from "react";
-import CreateGroupContainer from "./create_group_form_container";
-import JoinGroupFormContainer from "./join_group_form_container";
 import GroupShowContainer from "./group_show_container";
 import M from "materialize-css";
 
@@ -12,9 +10,6 @@ class GroupIndex extends React.Component {
           toggleCreate: false,
           toggleJoin: false,
         };
-
-        // this.toggleCreate = this.toggleCreate.bind(this);
-        // this.toggleJoin = this.toggleJoin.bind(this);
     }
 
     componentDidMount() {
@@ -41,14 +36,6 @@ class GroupIndex extends React.Component {
 
       M.Collapsible.init(this.Collapsible1, options1);
     }
-
-    // toggleCreate() {
-    //     this.setState({ toggleCreate: !this.state.toggleCreate })
-    // }
-
-    // toggleJoin() {
-    //     this.setState({ toggleJoin: !this.state.toggleJoin })
-    // }
 
     render() {
         const { groups } = this.props;

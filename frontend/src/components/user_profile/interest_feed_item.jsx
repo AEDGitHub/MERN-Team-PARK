@@ -29,11 +29,12 @@ class InterestFeedItem extends React.Component {
   render() {
     const {
       interest,
+      owner,
       currentUserId,
       followInterest,
       unfollowInterest,
       parentContainer } = this.props;
-
+    
     const followButton = interest.users.includes(currentUserId) ? (
         <button
           className="interest-action"
@@ -79,6 +80,7 @@ class InterestFeedItem extends React.Component {
           </div>
           <div className="interest-content">
             {parentContainer ? null : <span className="interest-title">{interest.name}</span>}
+            {parentContainer ? <p>{owner.firstName} {owner.lastName}</p> : null}
             <p>{interest.category}</p>
             <p>{interest.description}</p>
           </div>

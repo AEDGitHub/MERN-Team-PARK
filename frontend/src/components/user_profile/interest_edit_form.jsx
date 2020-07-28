@@ -70,15 +70,17 @@ class InterestEditForm extends React.Component {
 
                             <div className="interest-create-input-holder">
                                 <select style={{ display: "block" }} required
-                                    onChange={this.update('category')}>
+                                    onChange={this.update('category')}
+                                    value={this.state.category}
+                                >
                                     <option value="">Choose a Category</option>
-                                    <option value="Outdoors & Adventure" selected={this.state.category === "Outdoors & Adventure" ? true : false}>Outdoors & Adventure</option>
-                                    <option value="Food & Drink" selected={this.state.category === "Food & Drink" ? true : false}>Food & Drink</option>
-                                    <option value="Hobbies & Crafts" selected={this.state.category === "Hobbies & Crafts" ? true : false}>Hobbies & Crafts</option>
-                                    <option value="Other" selected={this.state.category === "Other" ? true : false}>Other</option>
+                                    <option value="Outdoors & Adventure" >Outdoors & Adventure</option>
+                                    <option value="Food & Drink" >Food & Drink</option>
+                                    <option value="Hobbies & Crafts" >Hobbies & Crafts</option>
+                                    <option value="Other" >Other</option>
                                 </select>
                             </div>
-                            <input type="submit" value="Edit Interest" className="interest-create-button" />
+                            <input type="submit" value="Edit Interest" className="interest-create-button modal-close" />
                         </div>
                     </form>
                 </div>

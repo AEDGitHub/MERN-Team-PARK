@@ -23,7 +23,9 @@ router.post(
       slug: generateSlug(req.body.name),
     });
 
-    const user = await User.findOne({ _id: req.user.id });
+    const user = await User.findOne({ _id: req.user.id })
+      .populate("interests");
+    
     newGroup.owner = req.user;
     newGroup.users.push(req.user);
     newGroup
@@ -65,7 +67,9 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     const group = await Group.findOne({ slug: req.params.slug });
-    const user = await User.findOne({ _id: req.user.id });
+    const user = await User.findOne({ _id: req.user.id })
+      .populate("interests");
+    
     if (group.users.includes(req.user.id)) {
       return res.status(422).json({ error: "User already in group" });
     }

@@ -1,5 +1,4 @@
 import React from 'react';
-import M from "materialize-css";
 
 class CreateGroupForm extends React.Component {
     constructor(props) {
