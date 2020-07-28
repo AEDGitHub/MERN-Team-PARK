@@ -108,8 +108,8 @@ router.post(
       .then((interest) =>
         user
           .save()
-          .then(savedUser => {
-            savedUser.populate("interests", () => res.json(savedUser))
+          .then((savedUser) => {
+            savedUser.populate("interests", () => res.json(savedUser));
           })
           .catch((err) =>
             res.status(422).json({ error: "User could not unfollow interest" })
@@ -128,7 +128,7 @@ router.delete(
     const interest = await Interest.findOne({ _id: req.params.id }).populate(
       "users"
     );
-    const owner = await User.findOne({ _id: interest.owner })
+    const owner = await User.findOne({ _id: interest.owner });
 
     const users = interest.users;
     users.forEach((user) => {
@@ -137,12 +137,10 @@ router.delete(
     });
     interest
       .deleteOne()
-      .then(() => 
-        owner
-          .save()
-          .then(savedUser => {
-            savedUser.populate("interests", () => res.json(savedUser))
-          })
+      .then(() =>
+        owner.save().then((savedUser) => {
+          savedUser.populate("interests", () => res.json(savedUser));
+        })
       )
       .catch((err) => res.json(err));
   }
@@ -158,7 +156,7 @@ router.patch(
     if (!isValid) {
       return res.status(400).json(errors);
     }
-
+    const user = await User.findOne({ _id: req.user.id });
     const interest = await Interest.findOne({ _id: req.params.id });
     if (interest.owner.toString() !== req.user._id.toString()) {
       return res.status(403).json({ error: "Unauthorized to edit interest" });
@@ -169,8 +167,16 @@ router.patch(
     if (description) interest.description = description;
     if (category) interest.category = category;
 
-    interest.save().then((interest) => res.json(interest));
+    interest.save().then((interest) => {
+      user
+        .save()
+        .then((savedUser) => {
+          savedUser.populate("interests", () => res.json(savedUser));
+        })
+        .catch((err) => {
+          throw err;
+        });
+    });
   }
 );
-
 module.exports = router;
