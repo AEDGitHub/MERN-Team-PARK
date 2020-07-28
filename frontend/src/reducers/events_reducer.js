@@ -12,12 +12,15 @@ const eventsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_USER_EVENT:
             nextState.createdEvents[action.event._id] = action.event;
+            return nextState;
         case RECEIVE_JOINED_EVENT:
             delete nextState.invitedEvents[action.event._id]; // remove event from invited slice of event state
             nextState.confirmedEvents[action.event._id] = action.event; // add to confirmed slice of event state
+            return nextState;
         case RECEIVE_UNJOINED_EVENT:
             delete nextState.confirmedEvents[action.event._id]; // remove event from confirmed slice of event state
             nextState.invitedEvents[action.event._id] = action.event; // add to invited slice of event state
+            return nextState;
         case RECEIVE_EVENTS:
             // put all created events in their own slice of event state
             action.events.ownedEvents.forEach(event => {
@@ -35,6 +38,8 @@ const eventsReducer = (state = {}, action) => {
                 if (event._id in nextState.createdEvents || event._id in nextState.confirmedEvents) return;
                 nextState.invitedEvents[event._id] = event;
             })
+
+            return nextState;
         default:
             return state;
     }
