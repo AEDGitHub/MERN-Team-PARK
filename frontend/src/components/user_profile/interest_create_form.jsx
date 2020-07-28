@@ -1,5 +1,5 @@
-
 import React from 'react';
+import M from 'materialize-css';
 
 class InterestCreateForm extends React.Component {
     constructor(props) {
@@ -33,6 +33,13 @@ class InterestCreateForm extends React.Component {
         });
     }
 
+    componentDidMount() {
+        let input = document.getElementById("create-interest-description");
+
+        M.CharacterCounter.init(input);
+        M.textareaAutoResize(input);
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -50,30 +57,29 @@ class InterestCreateForm extends React.Component {
 
                             <div className="interest-create-input-holder">
                                 <input
+                                    id="create-interest-name"
                                     type="text"
                                     value={this.state.name}
                                     onChange={this.update('name')}
-                                    placeholder="Name"
                                     required
                                 />
+                                <label for="create-interest-name">
+                                    Name
+                                </label>
                             </div>
 
                             <div className="interest-create-input-holder">
-                                {/* <input
-                                    type="text"
-                                    value={this.state.description}
-                                    onChange={this.update('description')}
-                                    placeholder="Description"
-                                    required
-                                /> */}
-                                <textarea 
+                                <textarea
+                                    id="create-interest-description" 
                                     class="materialize-textarea" 
                                     data-length="120"
                                     value={this.state.description}
                                     onChange={this.update('description')}
-                                    placeholder="Description"
                                     required
                                 />
+                                <label for="create-interest-description">
+                                    Description
+                                </label>
                             </div>
 
                             <div className="interest-create-input-holder">
