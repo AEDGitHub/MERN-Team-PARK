@@ -3,6 +3,7 @@
 .custom-body {
     position: relative;
     min-height: 100vh;
+    @extend .blue-grey, .lighten-5;
 }
 
 .custom-main {
