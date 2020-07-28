@@ -91,7 +91,7 @@ class InterestCreateForm extends React.Component {
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
-                            <input type="submit" value="Add Interest" className="interest-create-button"/>
+                            <input type="submit" value="Add Interest" className="interest-create-button modal-close"/>
                         </div>
                     </form>
                 </div>

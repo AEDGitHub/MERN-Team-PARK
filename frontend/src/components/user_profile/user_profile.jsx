@@ -57,7 +57,7 @@ class UserProfile extends React.Component {
                 <i className="material-icons">account_circle</i>
             </div>
         ))
-
+        
         return (
             <div >
 

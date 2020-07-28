@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import InterestFeedItem from './interest_feed_item';
+import InterestFeedItemContainer from "./interest_feed_item_container";
 
 class InterestFeed extends React.Component {
 
@@ -10,7 +10,7 @@ class InterestFeed extends React.Component {
         };
 
         const interests = this.props.interests.map(interest => {
-                return <InterestFeedItem 
+                return <InterestFeedItemContainer 
                     key={interest._id}
                     interest={interest}
                     currentUserId={this.props.currentUserId}
