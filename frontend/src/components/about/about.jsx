@@ -36,7 +36,7 @@ class About extends React.Component {
                     <h3 className="about-team-title">Meet the Team</h3>
                     <div className="about-engineer-row">
                         <div className="about-engineer-intro">
-                            <img src="../../../images/engineers/elisha.jpeg" />
+                            <img src="../../../images/engineers/elisha.jpeg" alt="elisha-kutnick profile"/>
                             <h5>Elisha (Park) Kutnick</h5>
                             <h6>Backend Lead</h6>
                             <p>
@@ -52,19 +52,19 @@ class About extends React.Component {
                                 validations as appropriate.
                             </p>
                             <div className="about-engineer-icons">
-                                <a href="https://www.linkedin.com/in/elishaspark/">
-                                    <img src="../../../images/icons/linkedin-icon.png" />
+                                <a href="https://www.linkedin.com/in/elishaspark/" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/linkedin-icon.png" alt="linkedin icon"/>
                                 </a>
-                                <a href="https://github.com/ElishaPark">
-                                    <img src="../../../images/icons/github-icon.png" />
+                                <a href="https://github.com/ElishaPark" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/github-icon.png" alt="github icon"/>
                                 </a>
-                                <a href="https://angel.co/u/elisha-kutnick">
-                                    <img src="../../../images/icons/angellist-icon.png" />
+                                <a href="https://angel.co/u/elisha-kutnick" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/angellist-icon.png" alt="angellist icon"/>
                                 </a>
                             </div>
                         </div>
                         <div className="about-engineer-intro">
-                            <img src="../../../images/engineers/gabor.jpeg" />
+                            <img src="../../../images/engineers/gabor.jpeg" alt="gabor-kurucz profile"/>
                             <h5>Gabor Kurucz</h5>
                             <h6>Frontend Lead</h6>
                             <p>
@@ -79,14 +79,14 @@ class About extends React.Component {
                                 and action formulations.
                             </p>
                             <div className="about-engineer-icons">
-                                <a href="https://www.linkedin.com/in/kurucz-gabor/">
-                                    <img src="../../../images/icons/linkedin-icon.png" />
+                                <a href="https://www.linkedin.com/in/kurucz-gabor/" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/linkedin-icon.png" alt="linkedin icon"/>
                                 </a>
-                                <a href="https://github.com/kuruczgabor">
-                                    <img src="../../../images/icons/github-icon.png" />
+                                <a href="https://github.com/kuruczgabor" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/github-icon.png" alt="github icon"/>
                                 </a>
-                                <a href="https://angel.co/u/gaborkurucz">
-                                    <img src="../../../images/icons/angellist-icon.png" />
+                                <a href="https://angel.co/u/gaborkurucz" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/angellist-icon.png" alt="angellist icon"/>
                                 </a>
                             </div>
                         </div>
@@ -94,7 +94,7 @@ class About extends React.Component {
 
                     <div className="about-engineer-row">
                         <div className="about-engineer-intro">
-                            <img src="../../../images/engineers/ben.jpeg" />
+                            <img src="../../../images/engineers/ben.jpeg" alt="benjamin-rose profile"/>
                             <h5>Benjamin Rose</h5>
                             <h6>Chief Deputy of Operations</h6>
                             <p>
@@ -109,19 +109,19 @@ class About extends React.Component {
                                 merge and otherwise, before they arise.
                             </p>
                             <div className="about-engineer-icons">
-                                <a href="https://www.linkedin.com/in/benjamin-rose-483549124/">
-                                    <img src="../../../images/icons/linkedin-icon.png" />
+                                <a href="https://www.linkedin.com/in/benjamin-rose-483549124/" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/linkedin-icon.png" alt="linkedin icon"/>
                                 </a>
-                                <a href="https://github.com/benrose207">
-                                    <img src="../../../images/icons/github-icon.png" />
+                                <a href="https://github.com/benrose207" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/github-icon.png" alt="github icon"/>
                                 </a>
-                                <a href="https://angel.co/u/benjamin-rose-2">
-                                    <img src="../../../images/icons/angellist-icon.png" />
+                                <a href="https://angel.co/u/benjamin-rose-2" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/angellist-icon.png" alt="angellist icon"/>
                                 </a>
                             </div>
                         </div>
                         <div className="about-engineer-intro">
-                            <img src="../../../images/engineers/eric.jpeg" />
+                            <img src="../../../images/engineers/eric.jpeg" alt="eric-arndt profile"/>
                             <h5>Eric Arndt</h5>
                             <h6>Project Director</h6>
                             <p>
@@ -138,14 +138,14 @@ class About extends React.Component {
                                 launch.
                             </p>
                             <div className="about-engineer-icons">
-                                <a href="https://www.linkedin.com/in/eric-arndt-9850281a5/">
-                                    <img src="../../../images/icons/linkedin-icon.png" />
+                                <a href="https://www.linkedin.com/in/eric-arndt-9850281a5/" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/linkedin-icon.png" alt="linkedin icon"/>
                                 </a>
-                                <a href="https://github.com/AEDGitHub">
-                                    <img src="../../../images/icons/github-icon.png" />
+                                <a href="https://github.com/AEDGitHub" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/github-icon.png" alt="github icon"/>
                                 </a>
-                                <a href="https://angel.co/u/eric-daniel-arndt">
-                                    <img src="../../../images/icons/angellist-icon.png" />
+                                <a href="https://angel.co/u/eric-daniel-arndt" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../../images/icons/angellist-icon.png" alt="angellist icon"/>
                                 </a>
                             </div>
                         </div>

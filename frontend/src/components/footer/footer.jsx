@@ -8,7 +8,7 @@ class Footer extends React.Component {
                 <div className="custom-footer-content">
                     © 2020 ReBond
                     <a className="custom-footer-logo" 
-                       href="https://github.com/AEDGitHub/MERN-Team-PARK">
+                        href="https://github.com/AEDGitHub/MERN-Team-PARK" target="_blank" rel="noopener noreferrer">
                         <img src="../../../images/icons/github-icon.png" alt="github icon"/>
                     </a>
                 </div>
