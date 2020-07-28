@@ -5,7 +5,6 @@ import EditUserFormContainer from "./edit_user_form_container";
 import M from "materialize-css";
 import CreateGroupForm from '../groups/create_group_form';
 import JoinGroupForm from '../groups/join_group_form';
-import InterestCreateForm from '../user_profile/interest_create_form';
 
 class UserProfile extends React.Component {
 
@@ -13,7 +12,7 @@ class UserProfile extends React.Component {
         this.props.fetchUser()
             .then(() => {
                 // Set up listeners for Materialize modal
-                const options = {
+                const options1 = {
                     inDuration: 250,
                     outDuration: 250,
                     opacity: 0.5,
@@ -21,10 +20,10 @@ class UserProfile extends React.Component {
                     startingTop: "4%",
                     endingTop: "10%"
                 };
-                M.Modal.init(this.Modal1, options);
-                M.Modal.init(this.Modal2, options);
-                M.Modal.init(this.Modal3, options);
-                M.Modal.init(this.Modal4, options);
+                M.Modal.init(this.Modal1, options1);
+                M.Modal.init(this.Modal2, options1);
+                M.Modal.init(this.Modal3, options1);
+                M.Modal.init(this.Modal4, options1);
 
                 const options2 = {
                     inDuration: 300,
@@ -38,6 +37,7 @@ class UserProfile extends React.Component {
                 M.Tooltip.init(this.Tooltip1, options2)
                 M.Tooltip.init(this.Tooltip2, options2)
                 M.Tooltip.init(this.Tooltip3, options2)
+                M.Tooltip.init(this.Tooltip4, options2)
             });
 
     }
@@ -72,37 +72,64 @@ class UserProfile extends React.Component {
                     {/* <h5 className="center">{currentUser.email}</h5> */}
 
                     <div className="profile-dashboard-holder">
-                        <button ref={Tooltip => {this.Tooltip1 = Tooltip;}} className="btn-flat tooltipped modal-trigger" data-tooltip="Edit Profile" data-target="user-edit"><i className="large material-icons">edit</i></button>
-                        <button ref={Tooltip => { this.Tooltip2 = Tooltip; }} className="btn-flat modal-trigger" data-tooltip="Create Group" data-target="create-group"><i class="large material-icons">group</i></button>
-                        <button ref={Tooltip => { this.Tooltip3 = Tooltip; }} className="btn-flat modal-trigger" data-tooltip="Join Group" data-target="join-group"><i class="large material-icons">group_add</i></button>
-                    </div>
 
-                    
+                        <button ref={Tooltip => {this.Tooltip1 = Tooltip;}} 
+                            className="btn-flat tooltipped modal-trigger" 
+                            data-tooltip="Edit Profile" 
+                            data-target="user-edit">
+                            <i className="large material-icons">edit</i>
+                        </button>
+      
+                        <button ref={Tooltip => { this.Tooltip2 = Tooltip;}} 
+                            className="btn-flat modal-trigger" 
+                            data-tooltip="Create Group" 
+                            data-target="create-group">
+                            <i class="large material-icons">group</i>
+                        </button>
+        
+                        <button ref={Tooltip => { this.Tooltip3 = Tooltip; }} 
+                            className="btn-flat modal-trigger" 
+                            data-tooltip="Join Group" 
+                            data-target="join-group">
+                            <i class="large material-icons">group_add</i>
+                        </button>
+
+                    </div>
 
                 </div>
 
-                <div className="modal" id="user-edit" ref={Modal1 => { this.Modal1 = Modal1; }}>
+                <div className="modal" id="user-edit" 
+                    ref={Modal1 => { this.Modal1 = Modal1; }}>
                     <EditUserFormContainer currentUser={currentUser}/>
                 </div>
 
-                <div className="modal" id="create-group" ref={Modal2 => { this.Modal2 = Modal2; }}>
+                <div className="modal" id="create-group" 
+                    ref={Modal2 => { this.Modal2 = Modal2; }}>
                     <CreateGroupForm />
                 </div>
 
-                <div className="modal" id="join-group" ref={Modal3 => { this.Modal3 = Modal3; }}>
+                <div className="modal" id="join-group" 
+                    ref={Modal3 => { this.Modal3 = Modal3; }}>
                     <JoinGroupForm />
                 </div>
 
-                <div className="modal" id="create-interest" ref={Modal4 => { this.Modal4 = Modal4; }}>
-                    <InterestCreateForm />
+                <div className="modal" id="create-interest" 
+                    ref={Modal4 => { this.Modal4 = Modal4; }}>
+                    <InterestCreateFormContainer />
                 </div>
                 
                 <InterestFeedContainer interests={currentUser.interests}/>
 
-                {currentUser.interests.length < 3 ? <button className="btn-flat modal-trigger" data-target="create-interest"><i class="material-icons">add_circle</i></button> : null}
-
-                {/* <button className="btn-flat modal-trigger" data-target="create-interest"><i class="material-icons">add_circle</i></button> */}
-                {/* {currentUser.interests.length < 3 ? <InterestCreateFormContainer /> : null} */}
+                {currentUser.interests.length < 3 ? 
+                <div className="add-interest-button-holder">
+                    <button ref={Tooltip => { this.Tooltip4 = Tooltip; }}
+                        data-tooltip="Add Interest"
+                        data-position= "right"
+                        className="btn-flat tooltipped modal-trigger" 
+                        data-target="create-interest">
+                        <i class="material-icons">add_circle</i>
+                    </button>
+                </div> : null}
 
             </div>
         )
