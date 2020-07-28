@@ -38,3 +38,8 @@ export const deleteInterest = interestId => dispatch => {
     return APIUtil.deleteInterest(interestId)
         .then(payload => dispatch(receiveUser(payload.data)))
 }
+
+export const updateInterest = data => dispatch => {
+    return APIUtil.updateInterest(data)
+        .then(data => dispatch(receiveUser(data)))
+}

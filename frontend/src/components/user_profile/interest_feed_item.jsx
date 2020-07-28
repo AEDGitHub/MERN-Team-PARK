@@ -1,4 +1,6 @@
 import React from 'react';
+import InterestEditFormContainer from "./interest_edit_form_container";
+import M from "materialize-css";
 
 class InterestFeedItem extends React.Component {
   constructor(props) {
@@ -10,6 +12,18 @@ class InterestFeedItem extends React.Component {
   handleDelete() {
     const answer = window.confirm("Are you sure you want to delete this interest?");
     if (answer) this.props.deleteInterest(this.props.interest._id);
+  }
+
+  componentDidMount() {
+    const options3 = {
+      inDuration: 250,
+      outDuration: 250,
+      opacity: 0.5,
+      dismissible: true,
+      startingTop: "4%",
+      endingTop: "10%"
+    };
+    M.Modal.init(this.Modal5, options3);
   }
 
   render() {
@@ -37,9 +51,14 @@ class InterestFeedItem extends React.Component {
       );
     
     const usersInterestButtons = parentContainer ? null : (
-      <button className="interest-owner-action" onClick={this.handleDelete}>
-        <i className="fa fa-trash"></i>
-      </button>
+      <div>
+        <button className="interest-owner-action" onClick={this.handleDelete}>
+          <i className="fa fa-trash"></i>
+        </button>
+        <button className="interest-owner-action modal-trigger" data-target="edit-interest">
+          <i className="material-icons">create</i>
+        </button>
+      </div>
     )
   
     const cardImageElements = (parentContainer ? (
@@ -67,6 +86,15 @@ class InterestFeedItem extends React.Component {
             {usersInterestButtons}
           </div>
         </div>
+
+        <div className="modal" id="edit-interest"
+          ref={Modal5 => { this.Modal5 = Modal5; }}>
+            <InterestEditFormContainer
+              key={interest._id} 
+              interest={interest}
+            />
+        </div>
+
       </li>
     );
   }
