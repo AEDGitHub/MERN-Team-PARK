@@ -1,39 +1,30 @@
 import React from 'react';
 import M from 'materialize-css';
 
-class InterestCreateForm extends React.Component {
+class InterestEditForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            name: '',
-            description: '',
-            category: 'Choose a category',
-            user: ''
-        };
+        this.state = this.props.interest;
+
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
         let interest = {
+            _id: this.state._id,
             name: this.state.name,
             description: this.state.description,
             category: this.state.category,
             user: this.props.currentUser
         }
 
-        this.props.createInterest(interest);
+        this.props.updateInterest(interest);
 
-        this.setState({
-          name: "",
-          description: "",
-          category: "Choose a category",
-          user: "",
-        });
     }
 
     componentDidMount() {
-        let input = document.getElementById("create-interest-description");
+        let input = document.getElementById("edit-interest-description");
 
         M.CharacterCounter.init(input);
         M.textareaAutoResize(input);
@@ -52,46 +43,42 @@ class InterestCreateForm extends React.Component {
                     <form className="interest-create-container" onSubmit={this.handleSubmit}>
                         <div className="interest-create-content">
 
-                            <h4 className="interest-create-title">Add an Interest</h4>
+                            <h4 className="interest-create-title">Edit Interest</h4>
 
                             <div className="interest-create-input-holder">
                                 <input
-                                    id="create-interest-name"
+                                    id="edit-interest-name"
                                     type="text"
                                     value={this.state.name}
                                     onChange={this.update('name')}
+                                    placeholder="Name"
                                     required
                                 />
-                                <label htmlFor="create-interest-name">
-                                    Name
-                                </label>
                             </div>
 
                             <div className="interest-create-input-holder">
                                 <textarea
-                                    id="create-interest-description" 
-                                    className="materialize-textarea" 
+                                    id="edit-interest-description"
+                                    className="materialize-textarea"
                                     data-length="120"
                                     value={this.state.description}
                                     onChange={this.update('description')}
+                                    placeholder="Description"
                                     required
                                 />
-                                <label htmlFor="create-interest-description">
-                                    Description
-                                </label>
                             </div>
 
                             <div className="interest-create-input-holder">
                                 <select style={{ display: "block" }} required
                                     onChange={this.update('category')}>
                                     <option value="">Choose a Category</option>
-                                    <option value="Outdoors & Adventure">Outdoors & Adventure</option>
-                                    <option value="Food & Drink">Food & Drink</option>
-                                    <option value="Hobbies & Crafts">Hobbies & Crafts</option>
-                                    <option value="Other">Other</option>
+                                    <option value="Outdoors & Adventure" selected={this.state.category === "Outdoors & Adventure" ? true : false}>Outdoors & Adventure</option>
+                                    <option value="Food & Drink" selected={this.state.category === "Food & Drink" ? true : false}>Food & Drink</option>
+                                    <option value="Hobbies & Crafts" selected={this.state.category === "Hobbies & Crafts" ? true : false}>Hobbies & Crafts</option>
+                                    <option value="Other" selected={this.state.category === "Other" ? true : false}>Other</option>
                                 </select>
                             </div>
-                            <input type="submit" value="Add Interest" className="interest-create-button"/>
+                            <input type="submit" value="Edit Interest" className="interest-create-button" />
                         </div>
                     </form>
                 </div>
@@ -101,4 +88,4 @@ class InterestCreateForm extends React.Component {
 
 }
 
-export default InterestCreateForm;
+export default InterestEditForm;

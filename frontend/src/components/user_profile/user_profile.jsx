@@ -83,14 +83,14 @@ class UserProfile extends React.Component {
                             className="btn-flat modal-trigger" 
                             data-tooltip="Create Group" 
                             data-target="create-group">
-                            <i class="large material-icons">group</i>
+                            <i className="large material-icons">group</i>
                         </button>
         
                         <button ref={Tooltip => { this.Tooltip3 = Tooltip; }} 
                             className="btn-flat modal-trigger" 
                             data-tooltip="Join Group" 
                             data-target="join-group">
-                            <i class="large material-icons">group_add</i>
+                            <i className="large material-icons">group_add</i>
                         </button>
 
                     </div>
@@ -126,7 +126,7 @@ class UserProfile extends React.Component {
                         data-position= "right"
                         className="btn-flat tooltipped modal-trigger" 
                         data-target="create-interest">
-                        <i class="material-icons">add_circle</i>
+                        <i className="material-icons">add_circle</i>
                     </button>
                 </div> : null}
 

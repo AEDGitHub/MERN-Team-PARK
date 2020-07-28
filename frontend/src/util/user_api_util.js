@@ -23,3 +23,7 @@ export const unfollowInterest = interestId => {
 export const deleteInterest = interestId => {
     return axios.delete(`/api/interests/${interestId}`);
 }
+
+export const updateInterest = data => {
+    return axios.patch(`/api/interests/${data._id}`, data)
+}

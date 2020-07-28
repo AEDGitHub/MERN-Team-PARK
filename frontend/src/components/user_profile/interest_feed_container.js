@@ -1,6 +1,10 @@
 import { connect } from "react-redux";
 import InterestFeed from "./interest_feed";
-import { followInterest, unfollowInterest, deleteInterest } from "../../actions/user_actions";
+import { 
+    followInterest, 
+    unfollowInterest, 
+    deleteInterest 
+} from "../../actions/user_actions";
 
 const mapStateToProps = state => {
     return {
