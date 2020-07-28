@@ -52,16 +52,19 @@ class UserProfile extends React.Component {
                 <div className="user-profile-holder">
                     {profilePicture}
                     
-                    <h4 className="center">
+                    <h4 className="user-profile-name">
                         {currentUser.firstName} {currentUser.lastName}
                     </h4>
 
-                    <h5 className="center">{currentUser.email}</h5>
+                    {/* <h5 className="center">{currentUser.email}</h5> */}
 
-                    <button className="btn-flat modal-trigger" data-target="user-edit">Edit my account details</button>
-                    <button className="btn-flat modal-trigger" data-target="create-group">Create group</button>
-                    <button className="btn-flat modal-trigger" data-target="join-group">Join group</button>
-                    <button className="btn-flat modal-trigger" data-target="create-interest">Create interest</button>
+                    <div className="profile-dashboard-holder">
+                        <button className="btn-flat modal-trigger" data-target="user-edit"><i className="large material-icons">edit</i></button>
+                        <button className="btn-flat modal-trigger" data-target="create-group"><i class="large material-icons">group</i></button>
+                        <button className="btn-flat modal-trigger" data-target="join-group"><i class="large material-icons">group_add</i></button>
+                    </div>
+
+                    
 
                 </div>
 
@@ -82,7 +85,10 @@ class UserProfile extends React.Component {
                 </div>
                 
                 <InterestFeedContainer interests={currentUser.interests}/>
- 
+
+                {currentUser.interests.length < 3 ? <button className="btn-flat modal-trigger" data-target="create-interest"><i class="material-icons">add_circle</i></button> : null}
+
+                {/* <button className="btn-flat modal-trigger" data-target="create-interest"><i class="material-icons">add_circle</i></button> */}
                 {/* {currentUser.interests.length < 3 ? <InterestCreateFormContainer /> : null} */}
 
             </div>

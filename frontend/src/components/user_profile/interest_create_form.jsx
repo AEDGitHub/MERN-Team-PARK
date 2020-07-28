@@ -44,7 +44,7 @@ class InterestCreateForm extends React.Component {
                     <form className="interest-create-container" onSubmit={this.handleSubmit}>
                         <div className="interest-create-content">
 
-                            <span className="interest-create-title">Add an Interest</span>
+                            <h4 className="interest-create-title">Add an Interest</h4>
 
                             <div className="interest-create-input-holder">
                                 <input
@@ -57,8 +57,16 @@ class InterestCreateForm extends React.Component {
                             </div>
 
                             <div className="interest-create-input-holder">
-                                <input
+                                {/* <input
                                     type="text"
+                                    value={this.state.description}
+                                    onChange={this.update('description')}
+                                    placeholder="Description"
+                                    required
+                                /> */}
+                                <textarea 
+                                    class="materialize-textarea" 
+                                    data-length="120"
                                     value={this.state.description}
                                     onChange={this.update('description')}
                                     placeholder="Description"
