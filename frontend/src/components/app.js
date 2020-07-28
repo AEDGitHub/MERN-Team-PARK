@@ -26,7 +26,7 @@ const App = () => (
                         <ProtectedRoute exact path="/groups/new" component={CreateGroupContainer} />
 
                         <AuthRoute exact path="/" component={Splash} />
-                        <AuthRoute exact path="/about" component={About} />
+                        <Route exact path="/about" component={About} />
                         <AuthRoute exact path="/login" component={LoginFormContainer} />
                         <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
