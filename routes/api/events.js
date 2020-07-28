@@ -150,4 +150,32 @@ router.patch(
     event.save().then((event) => res.json(event));
   }
 );
+
+//Unjoin event
+router.post(
+  "/:id/unjoin",
+  passport.authenticate("jwt", { session: false }),
+  async (req, res) => {
+    const event = await Event.findOne({ _id: req.params.id });
+    const user = await User.findOne({ _id: req.user.id });
+
+    event.attendees.pull(user);
+    user.confirmedEvents.pull(event);
+    event
+      .save()
+      .then((event) =>
+        user
+          .save()
+          .then((user) => {
+            res.json({ event, user });
+          })
+          .catch((err) =>
+            res.status(422).json({ error: "User could not unjoin event" })
+          )
+      )
+      .catch((err) => {
+        return res.status(422).json({ error: "Error in unjoining event" });
+      });
+  }
+);
 module.exports = router;
