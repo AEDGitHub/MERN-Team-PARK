@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 50px 0;
 }
 
 .user-profile-holder button {
@@ -14,7 +15,7 @@
     align-items: center;
     width: 150px;
     height: 150px;
-    margin: 20px auto;
+    margin: 10px auto;
     border-radius: 50%;
     border: 2px solid rgb(53, 53, 53);
     overflow: hidden;
@@ -23,6 +24,10 @@
 .profile-picture > i {
     font-size: 176px;
     color: #4FA79A;
+}
+
+.user-profile-name {
+    @extend .center;
 }
 
 // User Edit Form

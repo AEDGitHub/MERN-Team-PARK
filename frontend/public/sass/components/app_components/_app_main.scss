@@ -91,15 +91,15 @@
 }
 
 .interest-create-title {
-    @extend .card-title;
+    // @extend .card-title;
 }
 
 .interest-create-content {
-    @extend .card-content, .white-text;
+    // @extend .card-content, .white-text;
 }
 
 .interest-create-container {
-    @extend .card, .blue-grey, .darken-1;
+    // @extend .card, .blue-grey, .darken-1;
 }
 
 .interest-create-button {
@@ -141,4 +141,21 @@
 .collapsible-header h6 {
     // background-color: slateblue;
     text-align: center;
+}
+
+// dashboard
+
+.profile-dashboard-holder {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.profile-dashboard-holder i {
+    font-size: 50px;
+    margin: 0 10px;
+}
+
+.profile-dashboard-icon {
+    @extend .material-icons;
 }
