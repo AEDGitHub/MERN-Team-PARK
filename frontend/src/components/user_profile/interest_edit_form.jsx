@@ -36,6 +36,10 @@ class InterestEditForm extends React.Component {
         });
     }
 
+    onImageChange(e) {
+        this.setState({ img: e.target.files[0] });
+    }
+
     render() {
         return (
             <div className="modal-content">
@@ -80,6 +84,27 @@ class InterestEditForm extends React.Component {
                                     <option value="Other" >Other</option>
                                 </select>
                             </div>
+
+                            <div className="row">
+                                <div className="file-field interest-create-input-holder">
+                                <div className="btn">
+                                    <span>Image</span>
+                                    <input
+                                    type="file"
+                                    onChange={this.onImageChange}
+                                    accept="image/*"
+                                    />
+                                </div>
+                                <div className="file-path-wrapper">
+                                    <input
+                                    className="file-path validate"
+                                    type="text"
+                                    placeholder="Choose an image to upload"
+                                    />
+                                </div>
+                                </div>
+                            </div>
+
                             <input type="submit" value="Edit Interest" className="interest-create-button modal-close" />
                         </div>
                     </form>
