@@ -39,7 +39,7 @@ router.post(
       name: req.body.name,
       owner: req.user.id,
       date: req.body.date,
-      location: req.body.location,
+      address: req.body.address,
       details: req.body.details,
       group: req.body.groupId,
       maxCapcity: req.body.maxCapacity,
@@ -149,10 +149,10 @@ router.patch(
       return res.status(403).json({ error: "Unauthorized to edit event" });
     }
 
-    const { name, date, location, details, maxCapacity } = req.body;
+    const { name, date, address, details, maxCapacity } = req.body;
     if (name) event.name = name;
     if (date) event.date = date;
-    if (location) event.location = location;
+    if (address) event.address = address;
     if (details) event.details = details;
     if (maxCapacity) event.maxCapacity = maxCapacity;
 

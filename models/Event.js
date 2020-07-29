@@ -23,10 +23,16 @@ const EventSchema = new Schema(
       type: Date,
       required: true,
     },
-    location: {
-      type: String,
+    address: {
+      type: new Schema({
+        name: String,
+        address1: String,
+        address2: String,
+        city: String,
+        state: String,
+        zipCode: String,
+      }),
       required: true,
-      index: true,
     },
     details: {
       type: String,
