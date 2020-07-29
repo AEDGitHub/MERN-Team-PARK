@@ -62,16 +62,27 @@ class InterestFeedItem extends React.Component {
       </div>
     )
 
-    const defaultInterestImage =
-      interest.category === "Outdoors & Adventure" ? (
-        <i className="fa fa-tree"></i>
-      ) : interest.category === "Food & Drink" ? (
-        <i className="fa fa-cutlery"></i>
-      ) : interest.category === "Hobbies & Crafts" ? (
-        <i className="fa fa-paint-brush"></i>
-      ) : (
-        <i className="fa fa-users"></i>
-      );
+    const defaultInterestImage = (
+      <div className="default-interest-icon">
+        {interest.category === "Outdoors & Adventure" ? (
+          <i className="fa fa-tree"></i>
+        ) : interest.category === "Food & Drink" ? (
+          <i className="fa fa-cutlery"></i>
+        ) : interest.category === "Hobbies & Crafts" ? (
+          <i className="fa fa-paint-brush"></i>
+        ) : (
+          <i className="fa fa-users"></i>
+        )}
+      </div>
+    );
+
+    const cardImage = (interest.img ? (
+      <img src={interest.img} alt={`${interest.name}`} className="responsive-img"/>
+    ) : (
+        <>
+          {defaultInterestImage}
+        </>
+      ));
   
     const cardImageElements = (parentContainer ? (
       <>
@@ -84,9 +95,7 @@ class InterestFeedItem extends React.Component {
       <li className={`interest-container ${parentContainer ? "two-column" : "one-column"}`}>
         <div className={`interest-holder${parentContainer ? "" : " horizontal"}`}>
           <div className="card-image">
-            <div className="default-interest-icon">
-              {defaultInterestImage}
-            </div>
+            {cardImage}
             {cardImageElements}
           </div>
           <div className="interest-content">
