@@ -10,7 +10,7 @@ class EventCreateForm extends React.Component {
             name: '',
             date: '',
             location: '',
-            details: ''
+            // details: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -21,8 +21,10 @@ class EventCreateForm extends React.Component {
             name: this.state.name,
             date: this.state.date,
             location: this.state.location,
-            details: this.state.details
+            // details: this.state.details
         };
+
+        debugger
 
         this.props.createEvent(event);
 
@@ -30,16 +32,18 @@ class EventCreateForm extends React.Component {
             name: '',
             date: '',
             location: '',
-            details: ''
+            // details: ''
         });
     }
 
     componentDidMount() {
-        var elems = document.querySelectorAll('.datepicker');
+
+        let elems = document.querySelectorAll('.datepicker');
         M.Datepicker.init(elems);
     }
 
     update(field) {
+        // debugger
         return e => this.setState({
             [field]: e.currentTarget.value
         });
@@ -67,11 +71,23 @@ class EventCreateForm extends React.Component {
                         </div>
                     </div>
 
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="group-session-input-holder">
                             <input
                                 type="text"
                                 className="datepicker"
+                                value={this.state.date}
+                                onChange={this.update("date")}
+                                placeholder="Date"
+                                required
+                            />
+                        </div>
+                    </div> */}
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="text"
                                 value={this.state.date}
                                 onChange={this.update("date")}
                                 placeholder="Date"
@@ -91,7 +107,7 @@ class EventCreateForm extends React.Component {
                             />
                         </div>
                     </div>
-
+{/* 
                     <div className="row">
                         <div className="group-session-input-holder">
                             <input
@@ -102,7 +118,7 @@ class EventCreateForm extends React.Component {
                                 required
                             />
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="row">
                         <input
