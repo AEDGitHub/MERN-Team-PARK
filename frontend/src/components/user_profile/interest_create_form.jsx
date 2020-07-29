@@ -45,6 +45,10 @@ class InterestCreateForm extends React.Component {
         });
     }
 
+    onImageChange(e) {
+        this.setState({ img: e.target.files[0] });
+    }
+
     render() {
         return (
             <div className="modal-content">
@@ -92,8 +96,8 @@ class InterestCreateForm extends React.Component {
                         </div>
                     </form>
                 </div>
-            </div>
-        )
+          </div>
+        );
     }
 
 }
