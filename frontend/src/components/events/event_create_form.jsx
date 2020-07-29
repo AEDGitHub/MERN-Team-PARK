@@ -49,6 +49,7 @@ class EventCreateForm extends React.Component {
         // debugger
         return (
             <div className="modal-content" >
+                <div className="event-create-form-container">
                 <form onSubmit={this.handleSubmit}>
 
                     <h4 className="group-session-title">Create an Event</h4>
@@ -112,6 +113,7 @@ class EventCreateForm extends React.Component {
                     </div>
 
                 </form>
+                </div>
             </div>
         )
     }
