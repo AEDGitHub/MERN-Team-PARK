@@ -10,18 +10,16 @@
   padding-bottom: 2.5rem;
 }
 
-//
-
 .main-container {
   @extend .row, .container;
 }
 
 .main-left-container {
-  @extend .col, .l5, .s12;
+  @extend .col, .xl5, .s12;
 }
 
 .main-right-container {
-  @extend .col, .l7, .s12;
+  @extend .col, .xl7, .s12;
   // max-height: 50vh;
 }
 
@@ -31,144 +29,6 @@
 
 .one-column {
   @extend .col, .s12, .m12, .l12;
-}
-
-// interest feed
-
-.interest-container.two-column .interest-content {
-  height: 150px;
-}
-
-.interest-holder {
-  @extend .card, .blue-grey, .darken-1;
-}
-
-.interest-content {
-  @extend .card-content, .white-text;
-}
-
-.interest-title {
-  @extend .card-title;
-}
-
-.interest-image .interest-title {
-    text-shadow: 2px 2px 2px rgb(58, 58, 58);
-}
-
-.interest-action {
-  @extend .btn-floating, .halfway-fab, .waves-light, .teal;
-  position: absolute;
-}
-
-.interest-holder.horizontal {
-    height: 200px;
-}
-
-.interest-holder.horizontal .interest-image {
-    width: 200px;
-}
-
-.interest-image {
-    @extend .card-image;
-    height: 200px;
-}
-
-.interest-image > img {
-    object-fit: cover;
-    height: 100%;
-}
-
-.default-interest-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  height: 200px;
-}
-
-.default-interest-icon > i {
-  font-size: 60px;
-  padding: 75px;
-}
-
-.interest-action-buttons {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.interest-owner-action {
-  @extend .btn;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  margin: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// interest create
-
-.interest-create-input-holder {
-  @extend .input-field;
-}
-
-.interest-create-title {
-  // @extend .card-title;
-}
-
-.interest-create-content {
-  // @extend .card-content, .white-text;
-}
-
-.interest-create-container {
-  // @extend .card, .blue-grey, .darken-1;
-}
-
-.interest-create-button {
-  @extend .btn;
-}
-
-// group session = group create & group join
-
-.group-session-title {
-  @extend .center;
-}
-
-.group-session-input-holder {
-}
-
-.group-session-button-holder {
-  display: flex;
-  justify-content: space-around;
-}
-
-.group-session-button {
-  @extend .btn;
-}
-
-.group-index-holder {
-  margin: 50px 0;
-  // max-height: 65vh;
-  max-height: 70vh;
-  overflow: auto;
-}
-
-.group-name-holder {
-  width: 100%;
-}
-
-.collapsible-header h6 {
-  text-align: center;
-}
-
-// events
-
-.event-create-form-container {
-  // background-color: yellowgreen;
-  margin: 50px;
 }
 
 // dashboard

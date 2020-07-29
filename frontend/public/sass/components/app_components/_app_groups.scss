@@ -1,0 +1,30 @@
+.group-session-title {
+  @extend .center;
+}
+
+.group-session-input-holder {
+}
+
+.group-session-button-holder {
+  display: flex;
+  justify-content: space-around;
+}
+
+.group-session-button {
+  @extend .btn;
+}
+
+.group-index-holder {
+  margin: 50px 0;
+  // max-height: 65vh;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.group-name-holder {
+  width: 100%;
+}
+
+.collapsible-header h6 {
+  text-align: center;
+}
