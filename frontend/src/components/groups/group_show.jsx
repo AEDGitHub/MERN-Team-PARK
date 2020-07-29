@@ -12,7 +12,7 @@ class GroupShow extends React.Component {
       opacity: 0.5,
       dismissible: true,
       startingTop: "4%",
-      endingTop: "10%"
+      endingTop: "20%"
     };
     M.Modal.init(this.Modal, options4);
   }
