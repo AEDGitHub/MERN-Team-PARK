@@ -6,7 +6,6 @@ module.exports = function validateEventInput(data) {
 
   data.name = validText(data.name) ? data.name : "";
   data.date = validText(data.date) ? data.date : "";
-  data.location = validText(data.location) ? data.location : "";
 
   if (Validator.isEmpty(data.name)) {
     errors.name = "Name field is required";
@@ -16,8 +15,8 @@ module.exports = function validateEventInput(data) {
     errors.description = "Date field is required";
   }
 
-  if (Validator.isEmpty(data.location)) {
-    errors.category = "Location field is required";
+  if (Validator.isEmpty(data.address.address1)) {
+    errors.address = "Address field is required";
   }
 
   return {
