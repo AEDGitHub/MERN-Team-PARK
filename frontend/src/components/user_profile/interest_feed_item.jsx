@@ -94,7 +94,7 @@ class InterestFeedItem extends React.Component {
     return (
       <li className={`interest-container ${parentContainer ? "two-column" : "one-column"}`}>
         <div className={`interest-holder${parentContainer ? "" : " horizontal"}`}>
-          <div className="card-image">
+          <div className="interest-image">
             {cardImage}
             {cardImageElements}
           </div>
