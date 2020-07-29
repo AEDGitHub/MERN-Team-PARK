@@ -5,11 +5,11 @@ const arrayBufferToBase64 = (buffer) => {
     return window.btoa(binary);
 };
 
-export const processUserPhoto = (user) => {
-    if (user.img) {
-        const base64Flag = `data:${user.img.contentType};base64,`;
-        const imageStr = arrayBufferToBase64(user.img.data.data);
-        user.img = base64Flag + imageStr;
+export const processSinglePhoto = (object) => {
+    if (object.img instanceof Object) {
+        const base64Flag = `data:${object.img.contentType};base64,`;
+        const imageStr = arrayBufferToBase64(object.img.data.data);
+        object.img = base64Flag + imageStr;
     }
 }
 
