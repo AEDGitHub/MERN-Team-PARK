@@ -5,22 +5,23 @@ class InterestEditForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.interest;
-
+        
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.onImageChange = this.onImageChange.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        let interest = {
-            _id: this.state._id,
-            name: this.state.name,
-            description: this.state.description,
-            category: this.state.category,
-            user: this.props.currentUser
-        }
-
-        this.props.updateInterest(interest);
-
+        const { _id, name, description, category, img } = this.state;
+        let formData = new FormData();
+        formData.append("_id", _id);
+        formData.append("name", name);
+        formData.append("description", description);
+        formData.append("category", category);
+        formData.append("user", this.props.currentUser);
+        if (img) formData.append("img", img);
+        
+        this.props.updateInterest(formData);
     }
 
     componentDidMount() {

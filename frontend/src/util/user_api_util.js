@@ -25,5 +25,6 @@ export const deleteInterest = interestId => {
 }
 
 export const updateInterest = data => {
-    return axios.patch(`/api/interests/${data._id}`, data)
+    const id = data.get("_id");
+    return axios.patch(`/api/interests/${id}`, data)
 }
