@@ -238,13 +238,12 @@ router.patch(
   passport.authenticate("jwt", { session: false }),
   async function (req, res, next) {
     const { errors, isValid } = validateUserUpdateInput(req.body);
-    console.log(req.file);
+
     if (!isValid) {
       return res.status(400).json(errors);
     }
 
-    const user = await User.findOne({ _id: req.user.id })
-      .populate("interests");
+    const user = await User.findOne({ _id: req.user.id }).populate("interests");
 
     const { firstName, lastName, email, groupId } = req.body;
     if (firstName) user.firstName = firstName;
