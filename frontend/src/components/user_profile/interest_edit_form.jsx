@@ -38,7 +38,14 @@ class InterestEditForm extends React.Component {
     }
 
     onImageChange(e) {
-        this.setState({ img: e.target.files[0] });
+        const image = e.target.files[0];
+
+        if ((image.size / 1024 / 1024).toFixed(4) > 3) {
+            alert("Only enter files smaller than 3MB");
+            return;
+        }
+
+        this.setState({ img: image });
     }
 
     render() {
@@ -91,16 +98,16 @@ class InterestEditForm extends React.Component {
                                 <div className="btn">
                                     <span>Image</span>
                                     <input
-                                    type="file"
-                                    onChange={this.onImageChange}
-                                    accept="image/*"
+                                        type="file"
+                                        onChange={this.onImageChange}
+                                        accept="image/*"
                                     />
                                 </div>
                                 <div className="file-path-wrapper">
                                     <input
-                                    className="file-path validate"
-                                    type="text"
-                                    placeholder="Choose an image to upload"
+                                        className="file-path validate"
+                                        type="text"
+                                        placeholder="Choose an image to upload"
                                     />
                                 </div>
                                 </div>
