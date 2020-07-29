@@ -12,6 +12,7 @@ const eventsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_USER_EVENT:
             nextState.createdEvents[action.event._id] = action.event;
+            debugger
             return nextState;
         case RECEIVE_JOINED_EVENT:
             delete nextState.invitedEvents[action.event._id]; // remove event from invited slice of event state
