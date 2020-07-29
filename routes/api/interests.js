@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const multer = require("multer");
+const fs = require("fs");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const Interest = require("../../models/Interest");
@@ -18,9 +20,17 @@ router.get(
   }
 );
 
+const upload = multer({
+  dest: "./uploads/",
+  rename: function (fieldname, filename) {
+    return filename;
+  },
+});
+
 //Create user interest
 router.post(
   "/",
+  upload.single("img"),
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     const { errors, isValid } = validateInterestInput(req.body);
@@ -34,7 +44,10 @@ router.post(
       category: req.body.category,
       owner: user,
     });
-
+    if (req.file) {
+      newInterest.img.data = fs.readFileSync(req.file.path);
+      newInterest.img.contentType = "image/png";
+    }
     user.interests.push(newInterest);
     newInterest.users.push(user);
 
@@ -149,6 +162,7 @@ router.delete(
 //Update your interest
 router.patch(
   "/:id",
+  upload.single("img"),
   passport.authenticate("jwt", { session: false }),
   async (req, res) => {
     const { errors, isValid } = validateInterestInput(req.body);
@@ -166,7 +180,10 @@ router.patch(
     if (name) interest.name = name;
     if (description) interest.description = description;
     if (category) interest.category = category;
-
+    if (req.file) {
+      interest.img.data = fs.readFileSync(req.file.path);
+      interest.img.contentType = "image/png";
+    }
     interest.save().then((interest) => {
       user
         .save()

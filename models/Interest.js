@@ -21,6 +21,10 @@ const InterestSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
+    img: {
+      data: Buffer,
+      contentType: String,
+    },
     users: [
       {
         type: Schema.Types.ObjectId,
