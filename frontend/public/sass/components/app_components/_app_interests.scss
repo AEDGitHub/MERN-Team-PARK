@@ -1,0 +1,95 @@
+.interest-container.two-column .interest-content {
+  height: 150px;
+}
+
+.interest-holder {
+  @extend .card, .blue-grey, .darken-1;
+}
+
+.interest-content {
+  @extend .card-content, .white-text;
+}
+
+.interest-title {
+  @extend .card-title;
+}
+
+.interest-image .interest-title {
+  text-shadow: 2px 2px 2px rgb(58, 58, 58);
+}
+
+.interest-action {
+  @extend .btn-floating, .halfway-fab, .waves-light, .teal;
+  position: absolute;
+}
+
+.interest-holder.horizontal {
+  height: 200px;
+}
+
+.interest-holder.horizontal .interest-image {
+  width: 200px;
+}
+
+.interest-image {
+  @extend .card-image;
+  height: 200px;
+}
+
+.interest-image > img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.default-interest-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 200px;
+}
+
+.default-interest-icon > i {
+  font-size: 60px;
+  padding: 75px;
+}
+
+.interest-action-buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.interest-owner-action {
+  @extend .btn;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// interest create
+
+.interest-create-input-holder {
+  @extend .input-field;
+}
+
+.interest-create-title {
+  // @extend .card-title;
+}
+
+.interest-create-content {
+  // @extend .card-content, .white-text;
+}
+
+.interest-create-container {
+  // @extend .card, .blue-grey, .darken-1;
+}
+
+.interest-create-button {
+  @extend .btn;
+}
