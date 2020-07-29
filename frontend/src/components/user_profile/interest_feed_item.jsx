@@ -56,7 +56,7 @@ class InterestFeedItem extends React.Component {
         <button className="interest-owner-action" onClick={this.handleDelete}>
           <i className="fa fa-trash"></i>
         </button>
-        <button className="interest-owner-action modal-trigger" data-target="edit-interest">
+        <button className="interest-owner-action modal-trigger" data-target={`edit-interest-${interest._id}`}>
           <i className="material-icons">create</i>
         </button>
       </div>
@@ -109,7 +109,7 @@ class InterestFeedItem extends React.Component {
           </div>
         </div>
 
-        <div className="modal" id="edit-interest"
+        <div className="modal" id={`edit-interest-${interest._id}`}
           ref={Modal5 => { this.Modal5 = Modal5; }}>
             <InterestEditFormContainer
               key={interest._id} 
