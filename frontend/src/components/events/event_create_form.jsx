@@ -7,7 +7,10 @@ class EventCreateForm extends React.Component {
         // debugger
         super(props);
         this.state = {
-            name: ''
+            name: '',
+            date: '',
+            location: '',
+            details: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -15,14 +18,25 @@ class EventCreateForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let event = {
-            name: this.state.name
+            name: this.state.name,
+            date: this.state.date,
+            location: this.state.location,
+            details: this.state.details
         };
 
         this.props.createEvent(event);
 
         this.setState({
-            name: "",
+            name: '',
+            date: '',
+            location: '',
+            details: ''
         });
+    }
+
+    componentDidMount() {
+        var elems = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(elems);
     }
 
     update(field) {
@@ -43,8 +57,47 @@ class EventCreateForm extends React.Component {
                         <div className="group-session-input-holder">
                             <input
                                 type="text"
+                                id="create-event-name-input"
                                 value={this.state.name}
                                 onChange={this.update("name")}
+                                placeholder="Name"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="text"
+                                className="datepicker"
+                                value={this.state.date}
+                                onChange={this.update("date")}
+                                placeholder="Date"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="text"
+                                value={this.state.location}
+                                onChange={this.update("location")}
+                                placeholder="Location"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="text"
+                                value={this.state.details}
+                                onChange={this.update("details")}
+                                placeholder="Details"
                                 required
                             />
                         </div>

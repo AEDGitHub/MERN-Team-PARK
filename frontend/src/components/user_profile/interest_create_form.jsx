@@ -62,9 +62,6 @@ class InterestCreateForm extends React.Component {
                                     onChange={this.update('name')}
                                     required
                                 />
-                                <label htmlFor="create-interest-name">
-                                    Name
-                                </label>
                             </div>
 
                             <div className="interest-create-input-holder">
