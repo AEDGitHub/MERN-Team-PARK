@@ -8,27 +8,31 @@ class InterestCreateForm extends React.Component {
             name: '',
             description: '',
             category: 'Choose a category',
-            user: ''
+            user: '',
+            img: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.onImageChange = this.onImageChange.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        let interest = {
-            name: this.state.name,
-            description: this.state.description,
-            category: this.state.category,
-            user: this.props.currentUser
-        }
-
-        this.props.createInterest(interest);
+        const { name, description, category, img } = this.state;
+        let formData = new FormData();
+        formData.append("name", name);
+        formData.append("description", description);
+        formData.append("category", category);
+        formData.append("user", this.props.currentUser);
+        if (img) formData.append("img", img);
+        
+        this.props.createInterest(formData);
 
         this.setState({
           name: "",
           description: "",
           category: "Choose a category",
           user: "",
+          img: ''
         });
     }
 
@@ -92,6 +96,27 @@ class InterestCreateForm extends React.Component {
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
+
+                            <div className="row">
+                                <div className="file-field interest-create-input-holder">
+                                <div className="btn">
+                                    <span>Image</span>
+                                    <input
+                                    type="file"
+                                    onChange={this.onImageChange}
+                                    accept="image/*"
+                                    />
+                                </div>
+                                <div className="file-path-wrapper">
+                                    <input
+                                    className="file-path validate"
+                                    type="text"
+                                    placeholder="Choose an image to upload"
+                                    />
+                                </div>
+                                </div>
+                            </div>
+
                             <input type="submit" value="Add Interest" className="interest-create-button modal-close"/>
                         </div>
                     </form>
