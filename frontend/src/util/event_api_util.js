@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const createEvent = eventData => {
-    debugger
     return axios.post("/api/events", eventData);
 };
 

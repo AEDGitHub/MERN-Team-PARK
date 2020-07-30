@@ -40,7 +40,7 @@ class GroupShow extends React.Component {
 
               <div className="modal" id={groupId}
                 ref={groupId => { this.Modal = groupId; }}>
-                <EventCreateFormContainer />
+                <EventCreateFormContainer groupId={groupId}/>
               </div>
 
             </div>

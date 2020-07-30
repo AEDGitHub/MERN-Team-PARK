@@ -6,7 +6,6 @@ export const RECEIVE_UNJOINED_EVENT = "RECEIVE_UNJOINED_EVENT";
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 
 const receiveUserEvent = event => {
-    debugger
     return {
         type: RECEIVE_USER_EVENT,
         event
@@ -35,7 +34,6 @@ const receiveEvents = events => {
 };
 
 export const createEvent = eventData => dispatch => {
-    debugger
     return APIUtil.createEvent(eventData)
         .then(event => dispatch(receiveUserEvent(event)));
 };
