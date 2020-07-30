@@ -216,15 +216,7 @@ router.get(
     res.json({ confirmedEvents, invitedEvents, ownedEvents });
   }
 );
-// app.use(
-//   multer({
-//     dest: "./uploads/",
-//     rename: function (fieldname, filename) {
-//       return filename;
-//     },
-//   }).any()
-// );
-// .single("photo");
+
 const upload = multer({
   dest: "./uploads/",
   rename: function (fieldname, filename) {

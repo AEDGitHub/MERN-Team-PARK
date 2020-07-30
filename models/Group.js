@@ -21,6 +21,9 @@ const GroupSchema = new Schema(
       unique: true,
       index: true,
     },
+    maxCapacity: {
+      type: Number,
+    },
     users: [
       {
         type: Schema.Types.ObjectId,
@@ -33,7 +36,6 @@ const GroupSchema = new Schema(
         ref: "Event",
       },
     ],
-    // interests: [{ type: Schema.Types.ObjectId, ref: "Interest" }],
   },
   {
     timestamps: true,
