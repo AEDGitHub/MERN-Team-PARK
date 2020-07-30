@@ -19,6 +19,7 @@ class EventCreateForm extends React.Component {
                 zipCode: ""
             }
         };
+        debugger
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 

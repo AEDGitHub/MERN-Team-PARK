@@ -11,6 +11,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchUser()
       .then(() => {
         this.attachModalHandles();
@@ -31,8 +32,14 @@ class Main extends React.Component {
 
   render() {
 
+    debugger
+
     if (!this.props.currentUser) return null
+    // if (!this.props.currentUserGroups.length < 1) return null
     if (!this.props.currentUserGroups) return null
+
+
+    debugger
 
     return (
       <div className="main-container">
