@@ -1,42 +1,42 @@
 .user-profile-holder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0 1rem 0;
 }
 
 .user-profile-holder button {
-    width: 50%;
+  width: 50%;
 }
 
 .profile-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    margin: 10px auto;
-    border-radius: 50%;
-    border: 2px solid rgb(53, 53, 53);
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem auto;
+  border-radius: 50%;
+  border: 2px solid $custom-border-color;
+  overflow: hidden;
 }
 
 .profile-picture > i {
-    font-size: 176px;
-    color: #4FA79A;
+  font-size: 13rem;
+  color: $primary-color;
 }
 
 .user-profile-name {
-    @extend .center;
+  @extend .center;
 }
 
 // User Edit Form
 
 .user-edit-form-title {
-    @extend .center;
-    padding-top: 30px;
+  @extend .center;
+  padding-top: 2rem;
 }
 
 .user-edit-form-input {
-    @extend .input-field, .col, .s8, .m6, .l6, .offset-l3, .offset-m3, .offset-s2;
+  @extend .input-field, .col, .s8, .m6, .l6, .offset-l3, .offset-m3, .offset-s2;
 }
