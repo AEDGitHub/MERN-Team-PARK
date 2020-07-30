@@ -1,21 +1,21 @@
 import React from "react";
 import InterestFeedContainer from "../user_profile/interest_feed_container";
-import EventCreateFormContainer from "../events/event_create_form_container";
-import M from "materialize-css";
+// import EventCreateFormContainer from "../events/event_create_form_container";
+// import M from "materialize-css";
 
 class GroupShow extends React.Component {
 
-  componentDidMount() {
-    const options4 = {
-      inDuration: 250,
-      outDuration: 250,
-      opacity: 0.5,
-      dismissible: true,
-      startingTop: "4%",
-      endingTop: "20%"
-    };
-    M.Modal.init(this.Modal, options4);
-  }
+  // componentDidMount() {
+  //   const options4 = {
+  //     inDuration: 250,
+  //     outDuration: 250,
+  //     opacity: 0.5,
+  //     dismissible: true,
+  //     startingTop: "4%",
+  //     endingTop: "20%"
+  //   };
+  //   M.Modal.init(this.Modal, options4);
+  // }
 
     render() {
         const groupId = this.props.groupId;
@@ -34,14 +34,14 @@ class GroupShow extends React.Component {
 
               <InterestFeedContainer interests={this.props.interests} parentContainer="group"/>
 
-              <button className="interest-owner-action modal-trigger" data-target={groupId}>
+              {/* <button className="interest-owner-action modal-trigger" data-target={groupId}>
                 <i className="material-icons">event</i>
               </button>
 
               <div className="modal" id={groupId}
                 ref={groupId => { this.Modal = groupId; }}>
                 <EventCreateFormContainer groupId={groupId}/>
-              </div>
+              </div> */}
 
             </div>
         )
