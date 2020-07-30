@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import InterestEditFormContainer from "./interest_edit_form_container";
 import M from "materialize-css";
 
@@ -10,7 +10,9 @@ class InterestFeedItem extends React.Component {
   }
 
   handleDelete() {
-    const answer = window.confirm("Are you sure you want to delete this interest?");
+    const answer = window.confirm(
+      "Are you sure you want to delete this interest?"
+    );
     if (answer) this.props.deleteInterest(this.props.interest._id);
   }
 
@@ -21,7 +23,7 @@ class InterestFeedItem extends React.Component {
       opacity: 0.5,
       dismissible: true,
       startingTop: "4%",
-      endingTop: "10%"
+      endingTop: "10%",
     };
     M.Modal.init(this.Modal5, options3);
   }
@@ -33,34 +35,38 @@ class InterestFeedItem extends React.Component {
       currentUserId,
       followInterest,
       unfollowInterest,
-      parentContainer } = this.props;
-    
+      parentContainer,
+    } = this.props;
+
     const followButton = interest.users.includes(currentUserId) ? (
-        <button
-          className="interest-action"
-          onClick={() => unfollowInterest(interest._id)}
-        >
-          <i className="fa fa-heart"></i>
-        </button>
+      <button
+        className="interest-action"
+        onClick={() => unfollowInterest(interest._id)}
+      >
+        <i className="material-icons">favorite</i>
+      </button>
     ) : (
-        <button
-          className="interest-action"
-          onClick={() => followInterest(interest._id)}
-        >
-          <i className="fa fa-heart-o"></i>
-        </button>
-      );
-    
+      <button
+        className="interest-action"
+        onClick={() => followInterest(interest._id)}
+      >
+        <i className="material-icons">favorite_border</i>
+      </button>
+    );
+
     const usersInterestButtons = parentContainer ? null : (
       <div>
         <button className="interest-owner-action" onClick={this.handleDelete}>
-          <i className="fa fa-trash"></i>
+          <i className="material-icons">delete_forever</i>
         </button>
-        <button className="interest-owner-action modal-trigger" data-target={`edit-interest-${interest._id}`}>
+        <button
+          className="interest-owner-action modal-trigger"
+          data-target={`edit-interest-${interest._id}`}
+        >
           <i className="material-icons">create</i>
         </button>
       </div>
-    )
+    );
 
     const defaultInterestImage = (
       <div className="default-interest-icon">
@@ -76,50 +82,63 @@ class InterestFeedItem extends React.Component {
       </div>
     );
 
-    const cardImage = (interest.img ? (
-      <img src={interest.img} alt={`${interest.name}`} className="responsive-img"/>
+    const cardImage = interest.img ? (
+      <img
+        src={interest.img}
+        alt={`${interest.name}`}
+        className="responsive-img"
+      />
     ) : (
-        <>
-          {defaultInterestImage}
-        </>
-      ));
-  
-    const cardImageElements = (parentContainer ? (
+      <>{defaultInterestImage}</>
+    );
+
+    const cardImageElements = parentContainer ? (
       <>
         <span className="interest-title">{interest.name}</span>
         {currentUserId !== interest.owner ? followButton : null}
       </>
-    ) : null)
+    ) : null;
 
     return (
-      <li className={`interest-container ${parentContainer ? "two-column" : "one-column"}`}>
-        <div className={`interest-holder${parentContainer ? "" : " horizontal"}`}>
+      <li
+        className={`interest-container ${
+          parentContainer ? "two-column" : "one-column"
+        }`}
+      >
+        <div
+          className={`interest-holder${parentContainer ? "" : " horizontal"}`}
+        >
           <div className="interest-image">
             {cardImage}
             {cardImageElements}
           </div>
           <div className="interest-content">
-            {parentContainer ? null : <span className="interest-title">{interest.name}</span>}
-            {parentContainer ? <p>{owner.firstName} {owner.lastName}</p> : null}
+            {parentContainer ? null : (
+              <span className="interest-title">{interest.name}</span>
+            )}
+            {parentContainer ? (
+              <p>
+                {owner.firstName} {owner.lastName}
+              </p>
+            ) : null}
             <p>{interest.category}</p>
             <p>{interest.description}</p>
           </div>
-          <div className="interest-action-buttons">
-            {usersInterestButtons}
-          </div>
+          <div className="interest-action-buttons">{usersInterestButtons}</div>
         </div>
 
-        <div className="modal" id={`edit-interest-${interest._id}`}
-          ref={Modal5 => { this.Modal5 = Modal5; }}>
-            <InterestEditFormContainer
-              key={interest._id} 
-              interest={interest}
-            />
+        <div
+          className="modal"
+          id={`edit-interest-${interest._id}`}
+          ref={(Modal5) => {
+            this.Modal5 = Modal5;
+          }}
+        >
+          <InterestEditFormContainer key={interest._id} interest={interest} />
         </div>
-
       </li>
     );
   }
 }
 
-export default InterestFeedItem
+export default InterestFeedItem;
