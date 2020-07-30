@@ -68,7 +68,9 @@ router.post(
               group
                 .save()
                 .then(() => {
-                  res.json(event);
+                  event.populate("invitees", () => {
+                    res.json(event);
+                  });
                 })
                 .catch((err) =>
                   res
