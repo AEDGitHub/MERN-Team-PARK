@@ -1,58 +1,59 @@
-// what is rebond 
+// what is rebond
 
 .about-general-title {
-    font-weight: bolder;
-    padding: 20px 0px;
-};
+  font-weight: bolder;
+  padding: 20px 0px;
+}
 
 .about-general-container {
-    @extend .container, .row, .center;
-};
+  @extend .container, .row, .center;
+}
 
 .about-general-part {
-    @extend .col, .l8, .m10, .offset-l2, .offset-m1;
-    text-align: justify;
-};
+  @extend .col, .xl6, .m8, .offset-xl3, .offset-m2;
+  text-align: left;
+}
 
 // meet the team
 
 .about-team-title {
-    font-weight: bolder;
-    padding: 20px 0px;
-};
+  font-weight: bolder;
+  padding: 20px 0px;
+}
 
 .about-team-container {
-    @extend .center, .container;
-};
+  @extend .center, .container;
+}
 
 .about-engineer-row {
-    @extend .row, .center;
-    padding: 0px 20px;
-};
+  @extend .row, .center;
+  padding: 0px 20px;
+}
 
 .about-engineer-intro {
-    @extend .col, .center, .l6, .m12;
-};
+  @extend .col, .center, .l6, .m12;
+}
 
 .about-engineer-intro > img {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    margin: 10px 0 0 0;
-};
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 10px 0 0 0;
+}
 
-.about-engineer-intro p {
-    padding: 10px 30px;
-    text-align: justify;
-};
+.about-job-description {
+  //   padding: 10px 30px;
+  padding: 0.5rem 1.667rem 0.5rem 3rem;
+  text-align: left;
+}
 
 .about-engineer-icons {
-    @extend .row;
-    padding-bottom: 20px;
-};
+  @extend .row;
+  padding-bottom: 1rem;
+}
 
 .about-engineer-icons img {
-    height: 10%;
-    width: 10%;
-};
-
+  padding: 0rem 0.333rem;
+  height: 10%;
+  width: 10%;
+}
