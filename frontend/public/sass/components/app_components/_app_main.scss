@@ -11,15 +11,16 @@
 }
 
 .main-container {
-  @extend .row, .container;
+  @extend .row;
+  max-width: 1441px;
 }
 
 .main-left-container {
-  @extend .col, .xl5, .s12;
+  @extend .col, .s10, .m8, .l4, .offset-s1, .offset-m2, .offset-l1;
 }
 
 .main-right-container {
-  @extend .col, .xl7, .s12;
+  @extend .col, .s10, .m8, .l5, .offset-s1, .offset-m2, .offset-l1;
   // max-height: 50vh;
 }
 
