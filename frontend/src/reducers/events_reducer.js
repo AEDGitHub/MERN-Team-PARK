@@ -5,14 +5,12 @@ import {
     RECEIVE_EVENTS
 } from "../actions/event_actions";
 
-const eventsReducer = (state = {}, action) => {
+const eventsReducer = (state = { createdEvents: {}, confirmedEvents: {}, invitedEvents: {}}, action) => {
     Object.freeze(state);
     let nextState = Object.assign({}, state);
-
     switch (action.type) {
         case RECEIVE_USER_EVENT:
-            nextState.createdEvents[action.event._id] = action.event;
-            debugger
+            nextState.createdEvents[action.event.data._id] = action.event.data;
             return nextState;
         case RECEIVE_JOINED_EVENT:
             delete nextState.invitedEvents[action.event._id]; // remove event from invited slice of event state

@@ -4,13 +4,20 @@ import M from 'materialize-css';
 class EventCreateForm extends React.Component {
 
     constructor(props) {
-        // debugger
         super(props);
         this.state = {
-            name: '',
-            date: '',
-            location: '',
-            // details: ''
+            name: "",
+            date: "",
+            details: "",
+            groupId: this.props.groupId,
+            interestId: "",
+            address: {
+                name: "",
+                address1: "",
+                city: "",
+                state: "",
+                zipCode: ""
+            }
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -20,37 +27,70 @@ class EventCreateForm extends React.Component {
         let event = {
             name: this.state.name,
             date: this.state.date,
-            location: this.state.location,
-            // details: this.state.details
+            details: this.state.details,
+            groupId: this.state.groupId,
+            interestId: this.state.interestId,
+            address: {
+                name: this.state.address.name,
+                address1: this.state.address.address1,
+                city: this.state.address.city,
+                state: this.state.address.state,
+                zipCode: this.state.address.zipCode
+            }
         };
 
-        debugger
+        // let event = {
+        //     name: "new event6",
+        //     date: "2020-12-14",
+        //     details: "details about the event",
+        //     groupId: "5f07c1e48f63f46e044a703c",
+        //     interestId: "5f07ac4f811bd63fba3772a7",
+        //     address: {
+        //         name: "name of the location2",
+        //         address1: "Main St 12",
+        //         city: "San Francisco",
+        //         state: "CA",
+        //         zipCode: "94105"
+        //     }
+        // }
 
         this.props.createEvent(event);
 
         this.setState({
-            name: '',
-            date: '',
-            location: '',
-            // details: ''
+            name: "",
+            date: "",
+            details: "",
+            groupId: "",
+            interestId: "",
+            address: {
+                name: "",
+                address1: "",
+                city: "",
+                state: "",
+                zipCode: ""
+            }
         });
     }
 
     componentDidMount() {
-
         let elems = document.querySelectorAll('.datepicker');
         M.Datepicker.init(elems);
     }
 
     update(field) {
-        // debugger
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        });
+        if (field.includes('.')) {
+            field = field.split('.')[1]
+            return e => this.setState({ 
+                address: { ...this.state.address, [field]: e.currentTarget.value }
+            });
+        } else {
+            return e => this.setState({
+                [field]: e.currentTarget.value
+            });
+        }
     }
 
     render() {
-        // debugger
         return (
             <div className="modal-content" >
                 <div className="event-create-form-container">
@@ -66,6 +106,18 @@ class EventCreateForm extends React.Component {
                                 value={this.state.name}
                                 onChange={this.update("name")}
                                 placeholder="Name"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="text"
+                                value={this.state.details}
+                                onChange={this.update("details")}
+                                placeholder="Details"
                                 required
                             />
                         </div>
@@ -87,7 +139,7 @@ class EventCreateForm extends React.Component {
                     <div className="row">
                         <div className="group-session-input-holder">
                             <input
-                                type="text"
+                                type="date"
                                 value={this.state.date}
                                 onChange={this.update("date")}
                                 placeholder="Date"
@@ -100,25 +152,61 @@ class EventCreateForm extends React.Component {
                         <div className="group-session-input-holder">
                             <input
                                 type="text"
-                                value={this.state.location}
-                                onChange={this.update("location")}
+                                value={this.state.address.name}
+                                onChange={this.update("address.name")}
                                 placeholder="Location"
                                 required
                             />
                         </div>
                     </div>
-{/* 
+
                     <div className="row">
                         <div className="group-session-input-holder">
                             <input
                                 type="text"
-                                value={this.state.details}
-                                onChange={this.update("details")}
-                                placeholder="Details"
+                                value={this.state.address.address1}
+                                onChange={this.update("address.address1")}
+                                placeholder="Address"
                                 required
                             />
                         </div>
-                    </div> */}
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="text"
+                                value={this.state.address.city}
+                                onChange={this.update("address.city")}
+                                placeholder="City"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="text"
+                                value={this.state.address.state}
+                                onChange={this.update("address.state")}
+                                placeholder="State"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="number"
+                                value={this.state.address.zipCode}
+                                onChange={this.update("address.zipCode")}
+                                placeholder="ZIP"
+                                required
+                            />
+                        </div>
+                    </div>
 
                     <div className="row">
                         <input
