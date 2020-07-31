@@ -107,5 +107,5 @@ dist
 /config/keys_dev.js
 
 #Materialize.css files
-/frontend/public/sass/materialize.css
+#/frontend/public/sass/materialize.css
 /frontend/public/sass/materialize.css.map
