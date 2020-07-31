@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #Materialize.css files
-/public/sass/materialize.css
+#/public/sass/materialize.css
 /public/sass/materialize.css.map
