@@ -5,11 +5,12 @@ class EventCreateForm extends React.Component {
 
     constructor(props) {
         super(props);
+        
         this.state = {
             name: "",
             date: "",
             details: "",
-            groupId: this.props.groupId,
+            groupId: "",
             interestId: "",
             address: {
                 name: "",
@@ -19,7 +20,6 @@ class EventCreateForm extends React.Component {
                 zipCode: ""
             }
         };
-        debugger
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -40,21 +40,6 @@ class EventCreateForm extends React.Component {
             }
         };
 
-        // let event = {
-        //     name: "new event6",
-        //     date: "2020-12-14",
-        //     details: "details about the event",
-        //     groupId: "5f07c1e48f63f46e044a703c",
-        //     interestId: "5f07ac4f811bd63fba3772a7",
-        //     address: {
-        //         name: "name of the location2",
-        //         address1: "Main St 12",
-        //         city: "San Francisco",
-        //         state: "CA",
-        //         zipCode: "94105"
-        //     }
-        // }
-
         this.props.createEvent(event);
 
         this.setState({
@@ -74,8 +59,31 @@ class EventCreateForm extends React.Component {
     }
 
     componentDidMount() {
+        let ctx = this
+        const options5 = {
+            format: 'mmm dd yyyy',
+            onSelect(_date) {
+                let dateArr = _date.toString().split(' ')
+                let selDateArr = dateArr.slice(1,4)
+                let formattedDate = selDateArr.join(' ')
+
+                ctx.setState({
+                    date: formattedDate
+                });
+            }
+        }
         let elems = document.querySelectorAll('.datepicker');
-        M.Datepicker.init(elems);
+        M.Datepicker.init(elems, options5);
+
+        const options4 = {
+            inDuration: 250,
+            outDuration: 250,
+            opacity: 0.5,
+            dismissible: true,
+            startingTop: "4%",
+            endingTop: "20%"
+        };
+        M.Modal.init(this.Modal6, options4);
     }
 
     update(field) {
@@ -92,12 +100,46 @@ class EventCreateForm extends React.Component {
     }
 
     render() {
+
+        const currentUserInterests = this.props.userInterests
+        const currentUserGroups = this.props.currentUserGroups
+
         return (
+            <div className="modal" id="create-event-form-trigger" 
+            ref={Modal6 => { this.Modal6 = Modal6; }}> 
             <div className="modal-content" >
                 <div className="event-create-form-container">
                 <form onSubmit={this.handleSubmit}>
 
                     <h4 className="group-session-title">Create an Event</h4>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <select style={{ display: "block" }} required 
+                            onChange={this.update('groupId')}>
+                                <option value="">Choose a related group</option>
+                                {currentUserGroups.map(group => (
+                                    <option key={group._id} value={group._id}>
+                                        {group.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <select style={{ display: "block" }} required
+                            onChange={this.update('interestId')}>
+                                <option value="">Choose a related interest</option>
+                                {currentUserInterests.map(interest => (
+                                <option key={interest._id} value={interest._id}>
+                                    {interest.name}
+                                </option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
 
                     <div className="row">
                         <div className="group-session-input-holder">
@@ -124,25 +166,11 @@ class EventCreateForm extends React.Component {
                         </div>
                     </div>
 
-                    {/* <div className="row">
+                    <div className="row">
                         <div className="group-session-input-holder">
                             <input
                                 type="text"
                                 className="datepicker"
-                                value={this.state.date}
-                                onChange={this.update("date")}
-                                placeholder="Date"
-                                required
-                            />
-                        </div>
-                    </div> */}
-
-                    <div className="row">
-                        <div className="group-session-input-holder">
-                            <input
-                                type="date"
-                                value={this.state.date}
-                                onChange={this.update("date")}
                                 placeholder="Date"
                                 required
                             />
@@ -220,9 +248,9 @@ class EventCreateForm extends React.Component {
                 </form>
                 </div>
             </div>
+            </div>
         )
     }
-
 }
 
 export default EventCreateForm;

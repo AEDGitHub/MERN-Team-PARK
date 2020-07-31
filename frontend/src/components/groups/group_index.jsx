@@ -40,7 +40,8 @@ class GroupIndex extends React.Component {
     render() {
         const { groups } = this.props;
         const groupsList = (groups.length !== 0 ? (
-          <ul ref={Collapsible => { this.Collapsible1 = Collapsible; }} className="collapsible">
+          <ul ref={Collapsible => { this.Collapsible1 = Collapsible; }} 
+          className="collapsible">
             {groups.map(group => (
                 <li key={group._id} data-id={group._id}>
                     <div className="collapsible-header">
@@ -63,23 +64,6 @@ class GroupIndex extends React.Component {
               <div className="group-index-holder">
                 {groupsList}
               </div>
-              
-
-              {/* {this.state.toggleCreate ? <CreateGroupContainer /> : null}
-
-              {this.state.toggleJoin ? <JoinGroupFormContainer /> : null}
-
-              <div className="group-session-button-holder">
-
-                <button className="group-session-button modal-trigger" data-target="create-group" onClick={this.toggleCreate}>
-                  Create Group
-                </button>
-
-                <button className="group-session-button" onClick={this.toggleJoin}>
-                  Join Group
-                </button> */}
-
-              {/* </div> */}
 
             </section>
           </div>
