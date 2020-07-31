@@ -22,9 +22,25 @@ class EventFeed extends React.Component {
             />
         })
 
+        const confirmedEvents = Object.values(this.props.events.confirmedEvents).map(event => {
+            return <EventFeedItemContainer
+                key={event._id}
+                event={event}
+            />
+        })
+
+        const invitedEvents = Object.values(this.props.events.invitedEvents).map(event => {
+            return <EventFeedItemContainer
+                key={event._id}
+                event={event}
+            />
+        })
+
         return (
             <ul>
                 {ownedEvents}
+                {confirmedEvents}
+                {invitedEvents}
             </ul>
         )
     }
