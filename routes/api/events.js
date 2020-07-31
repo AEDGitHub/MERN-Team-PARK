@@ -7,6 +7,7 @@ const validateEventInput = require("../../validation/event-input");
 const Interest = require("../../models/Interest");
 const User = require("../../models/User");
 const Group = require("../../models/Group");
+const sendEventInviteEmail = require("../../email/emails");
 
 //Get all events
 router.get(
@@ -69,6 +70,7 @@ router.post(
                 .save()
                 .then(() => {
                   event.populate("invitees", () => {
+                    // sendEventInviteEmail(event);
                     res.json(event);
                   });
                 })
