@@ -1,10 +1,10 @@
 import React from 'react';
+import EventFeedItemContainer from './event_feed_item_container';
 
 class EventFeed extends React.Component {
 
     constructor(props) {
-        super(props);
-
+        super(props)
     }
 
     componentDidMount() {
@@ -13,10 +13,19 @@ class EventFeed extends React.Component {
 
     render () {
 
+        if (!this.props.events) return null
+
+        const ownedEvents = Object.values(this.props.events.createdEvents).map(event => {
+            return <EventFeedItemContainer 
+                key={event._id}
+                event={event}
+            />
+        })
+
         return (
-            <div>
-                eventfeed
-            </div>
+            <ul>
+                {ownedEvents}
+            </ul>
         )
     }
 

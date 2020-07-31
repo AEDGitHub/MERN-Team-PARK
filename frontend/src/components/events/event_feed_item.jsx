@@ -3,10 +3,12 @@ import React from 'react';
 class EventFeedItem extends React.Component {
 
     render() {
+        const { event } = this.props
         return (
-            <div>
-                eventitem
-            </div>
+            <li>
+                {event.name}
+                {event.date}
+            </li>
         )
     }
 

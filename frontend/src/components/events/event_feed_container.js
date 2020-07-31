@@ -4,7 +4,8 @@ import { fetchUserEvents } from '../../actions/event_actions';
 
 const mapStateToProps = state => {
     return {
-        currentUserId: state.session.user.id
+        currentUserId: state.session.user.id,
+        events: state.entities.events,
     }
 }
 

@@ -22,18 +22,16 @@ const eventsReducer = (state = { createdEvents: {}, confirmedEvents: {}, invited
             return nextState;
         case RECEIVE_EVENTS:
             // put all created events in their own slice of event state
-            action.events.ownedEvents.forEach(event => {
+            action.events.data.ownedEvents.forEach(event => {
                 nextState.createdEvents[event._id] = event;
             });
-
             // Add confirmed events to their own slice of event state. Skip if they are already in created
-            action.events.confirmedEvents.forEach(event => {
+            action.events.data.confirmedEvents.forEach(event => {
                 if (event._id in nextState.createdEvents) return;
                 nextState.confirmedEvents[event._id] = event;
             })
-
             // Add invited events to their own slice of event state. Skip if they are already in created or confirmed
-            action.events.invitedEvents.forEach(event => {
+            action.events.data.invitedEvents.forEach(event => {
                 if (event._id in nextState.createdEvents || event._id in nextState.confirmedEvents) return;
                 nextState.invitedEvents[event._id] = event;
             })
