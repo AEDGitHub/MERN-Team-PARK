@@ -2,3 +2,32 @@
   // background-color: yellowgreen;
   margin: 50px;
 }
+
+.event-list-holder {
+  @extend .row;
+  // background-color: salmon;
+  // height: 100px
+}
+
+.event-list-holder-col {
+  @extend .col, .s12;
+  // background-color: springgreen;
+}
+
+.event-list {
+  // background-color: rgb(216, 76, 57);
+}
+
+.event-list-element {
+  @extend .tab;
+}
+
+.event-list-element a {
+  // background-color: yellow;
+  // height: 100px;
+}
+
+.event-list-element-date {
+  background-color: yellow;
+  // height: 20px;
+}

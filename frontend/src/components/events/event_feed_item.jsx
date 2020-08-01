@@ -4,10 +4,12 @@ class EventFeedItem extends React.Component {
 
     render() {
         const { event } = this.props
+
         return (
-            <li>
-                {event.name}
-                {event.date}
+            <li className="event-list-element" >
+                <a href="#">
+                    {event.name}
+                </a>
             </li>
         )
     }
