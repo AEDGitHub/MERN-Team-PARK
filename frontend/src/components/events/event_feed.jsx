@@ -26,11 +26,14 @@ class EventFeed extends React.Component {
         M.Tabs.init(this.Tabs, options8)
     }
 
-    render () {
-
-        const ownedEventsTabs = Object.values(this.props.events.createdEvents).map((event, idx) => {
+    render() {
+        const { events, currentUserId } = this.props;
+        
+        const usersCreatedEvents = Object.values(events.createdEvents);
+        const ownedEventsTabs = usersCreatedEvents.map((event, idx) => {
+            if (usersCreatedEvents.length === 0) return null;
             return (
-                <li className="tab col s3" key={idx}>
+                <li className="tab col s3" key={event._id}>
                     <a href={`#owned-event-swipe-${idx + 1}`} className="event-list-name-holder">
                         {event.name} 
                         {/* <i className="material-icons">sentiment_very_satisfied</i> */}
@@ -39,17 +42,20 @@ class EventFeed extends React.Component {
             )
         })
 
-        const ownedEvents = Object.values(this.props.events.createdEvents).map((event, idx) => {
+        const ownedEvents = usersCreatedEvents.map((event, idx) => {
+            if (usersCreatedEvents.length === 0) return null;
             return (
-                <div id={`owned-event-swipe-${idx + 1}`} className="col s12" key={idx}>
-                    <EventFeedItemContainer key={event._id} event={event} currentUserId={this.props.currentUserId}/>
+                <div id={`owned-event-swipe-${idx + 1}`} className="col s12" key={event._id}>
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
                 </div>
             )
         })
 
-        const confirmedEventsTabs = Object.values(this.props.events.confirmedEvents).map((event, idx) => {
+        const usersConfirmedEvents = Object.values(events.confirmedEvents)
+        const confirmedEventsTabs = usersConfirmedEvents.map((event, idx) => {
+            if (usersConfirmedEvents.length === 0) return null;
             return (
-                <li className="tab col s3" key={idx}>
+                <li className="tab col s3" key={event._id}>
                     <a href={`#confirmed-event-swipe-${idx + 1}`} className="event-list-name-holder">
                         {event.name}
                         {/* <i className="material-icons">sentiment_very_satisfied</i> */}
@@ -58,17 +64,20 @@ class EventFeed extends React.Component {
             )
         })
 
-        const confirmedEvents = Object.values(this.props.events.confirmedEvents).map((event, idx) => {
+        const confirmedEvents = usersConfirmedEvents.map((event, idx) => {
+            if (usersConfirmedEvents.length === 0) return null;
             return (
-                <div id={`confirmed-event-swipe-${idx + 1}`} className="col s12" key={idx}>
-                    <EventFeedItemContainer key={event._id} event={event} currentUserId={this.props.currentUserId}/>
+                <div id={`confirmed-event-swipe-${idx + 1}`} className="col s12" key={event._id}>
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
                 </div>
             )
         })
 
-        const invitedEventsTabs = Object.values(this.props.events.invitedEvents).map((event, idx) => {
+        const usersInvitedEvents = Object.values(events.invitedEvents);
+        const invitedEventsTabs = usersInvitedEvents.map((event, idx) => {
+            if (usersInvitedEvents.length === 0) return null;
             return (
-                <li className="tab col s3" key={idx}>
+                <li className="tab col s3" key={event._id}>
                     <a href={`#invited-event-swipe-${idx + 1}`} className="event-list-name-holder">
                         {event.name}
                         {/* <i className="material-icons">sentiment_very_satisfied</i> */}
@@ -77,10 +86,11 @@ class EventFeed extends React.Component {
             )
         })
 
-        const invitedEvents = Object.values(this.props.events.invitedEvents).map((event, idx) => {
+        const invitedEvents = usersInvitedEvents.map((event, idx) => {
+            if (usersInvitedEvents.length === 0) return null;
             return (
-                <div id={`invited-event-swipe-${idx + 1}`} className="col s12" key={idx}>
-                    <EventFeedItemContainer key={event._id} event={event} currentUserId={this.props.currentUserId}/>
+                <div id={`invited-event-swipe-${idx + 1}`} className="col s12" key={event._id}>
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
                 </div>
             )
         })
