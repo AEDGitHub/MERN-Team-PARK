@@ -24,6 +24,7 @@
 }
 
 .interest-holder.horizontal {
+  display: flex;
   height: 7rem;
 }
 
@@ -46,7 +47,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  height: 8rem;
+  height: 7rem;
 }
 
 .default-interest-icon > i {

@@ -56,7 +56,10 @@ class InterestFeedItem extends React.Component {
 
     const usersInterestButtons = parentContainer ? null : (
       <div>
-        <button className="interest-owner-action" onClick={this.handleDelete}>
+        <button
+          className="interest-owner-action red accent-4 "
+          onClick={this.handleDelete}
+        >
           <i className="material-icons">delete_forever</i>
         </button>
         <button
