@@ -1,4 +1,24 @@
 .event-create-form-container {
-  // background-color: yellowgreen;
   margin: 50px;
+}
+
+.event-list-holder {
+  @extend .row;
+}
+
+.event-list-holder-col {
+  @extend .col, .s12;
+}
+
+.event-list-element a {
+  @extend .tab, .col, .s3;
+}
+.event-list-card {
+@extend .blue, .lighten-5;
+height: 400px;
+}
+
+.event-list-name-holder i {
+  background-color: yellow;
+  top: 4px;
 }
