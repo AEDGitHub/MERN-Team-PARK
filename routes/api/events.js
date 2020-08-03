@@ -46,18 +46,23 @@ router.post(
       maxCapcity: req.body.maxCapacity,
       attendees: [req.user.id],
       interest: req.body.interestId,
-      // invitees: [req.user.id],
-      //invitees: [req.user.id] && user.invitedEvents.push(event) add event creator to the invited list + invitees
     });
 
     const user = await User.findOne({ _id: req.user.id });
     const group = await Group.findOne({ _id: req.body.groupId });
     const interest = await Interest.findOne({ _id: req.body.interestId });
 
-    newEvent.invitees = [...interest.users, req.user.id];
+    newEvent.invitees = [...interest.users]; //['12312313', '123123123', '123123123']
+
     newEvent
       .save()
       .then((event) => {
+        event.invitees.forEach(async (inviteeId) => {
+          const invitee = await User.findOne({ _id: inviteeId });
+          invitee.invitedEvents.push(event);
+          invitee.save();
+        });
+
         event.populate("interest", () => {
           user.ownedEvents.push(event);
           user.confirmedEvents.push(event);
