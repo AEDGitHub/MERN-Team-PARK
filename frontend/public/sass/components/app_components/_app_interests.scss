@@ -1,5 +1,5 @@
 .interest-container.two-column .interest-content {
-  height: 150px;
+  height: 7rem;
 }
 
 .interest-holder {
@@ -24,16 +24,16 @@
 }
 
 .interest-holder.horizontal {
-  height: 200px;
+  height: 7rem;
 }
 
 .interest-holder.horizontal .interest-image {
-  width: 200px;
+  width: 7rem;
 }
 
 .interest-image {
   @extend .card-image;
-  height: 200px;
+  height: 7rem;
 }
 
 .interest-image > img {
@@ -46,12 +46,11 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  height: 200px;
+  height: 8rem;
 }
 
 .default-interest-icon > i {
-  font-size: 60px;
-  padding: 75px;
+  padding: 5rem;
 }
 
 .interest-action-buttons {
@@ -64,9 +63,9 @@
 .interest-owner-action {
   @extend .btn;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  margin: 15px;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0.667rem;
   display: flex;
   justify-content: center;
   align-items: center;

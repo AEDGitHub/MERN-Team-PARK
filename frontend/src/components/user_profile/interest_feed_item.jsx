@@ -71,13 +71,13 @@ class InterestFeedItem extends React.Component {
     const defaultInterestImage = (
       <div className="default-interest-icon">
         {interest.category === "Outdoors & Adventure" ? (
-          <i className="fa fa-tree"></i>
+          <i className="medium material-icons">terrain</i>
         ) : interest.category === "Food & Drink" ? (
-          <i className="fa fa-cutlery"></i>
+          <i className="medium material-icons">local_dining</i>
         ) : interest.category === "Hobbies & Crafts" ? (
-          <i className="fa fa-paint-brush"></i>
+          <i className="medium material-icons">brush</i>
         ) : (
-          <i className="fa fa-users"></i>
+          <i className="medium material-icons">casino</i>
         )}
       </div>
     );
