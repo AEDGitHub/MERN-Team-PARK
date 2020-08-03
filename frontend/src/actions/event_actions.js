@@ -12,17 +12,17 @@ const receiveUserEvent = event => {
     };
 };
 
-const receiveJoinedEvent = event => {
+const receiveJoinedEvent = payload => {
     return {
         type: RECEIVE_JOINED_EVENT,
-        event
+        payload
     };
 };
 
-const receiveUnjoinedEvent = event => {
+const receiveUnjoinedEvent = payload => {
     return {
         type: RECEIVE_UNJOINED_EVENT,
-        event
+        payload
     };
 };
 

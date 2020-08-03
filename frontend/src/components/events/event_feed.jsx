@@ -42,7 +42,7 @@ class EventFeed extends React.Component {
         const ownedEvents = Object.values(this.props.events.createdEvents).map((event, idx) => {
             return (
                 <div id={`owned-event-swipe-${idx + 1}`} className="col s12" key={idx}>
-                    <EventFeedItemContainer key={event._id} event={event} />
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={this.props.currentUserId}/>
                 </div>
             )
         })
@@ -61,7 +61,7 @@ class EventFeed extends React.Component {
         const confirmedEvents = Object.values(this.props.events.confirmedEvents).map((event, idx) => {
             return (
                 <div id={`confirmed-event-swipe-${idx + 1}`} className="col s12" key={idx}>
-                    <EventFeedItemContainer key={event._id} event={event} />
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={this.props.currentUserId}/>
                 </div>
             )
         })
@@ -80,7 +80,7 @@ class EventFeed extends React.Component {
         const invitedEvents = Object.values(this.props.events.invitedEvents).map((event, idx) => {
             return (
                 <div id={`invited-event-swipe-${idx + 1}`} className="col s12" key={idx}>
-                    <EventFeedItemContainer key={event._id} event={event} />
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={this.props.currentUserId}/>
                 </div>
             )
         })

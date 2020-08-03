@@ -13,12 +13,14 @@ const eventsReducer = (state = { createdEvents: {}, confirmedEvents: {}, invited
             nextState.createdEvents[action.event.data._id] = action.event.data;
             return nextState;
         case RECEIVE_JOINED_EVENT:
-            delete nextState.invitedEvents[action.event._id]; // remove event from invited slice of event state
-            nextState.confirmedEvents[action.event._id] = action.event; // add to confirmed slice of event state
+            let joinedEvent = action.payload.data.event;
+            delete nextState.invitedEvents[joinedEvent._id]; // remove event from invited slice of event state
+            nextState.confirmedEvents[joinedEvent._id] = joinedEvent; // add to confirmed slice of event state
             return nextState;
         case RECEIVE_UNJOINED_EVENT:
-            delete nextState.confirmedEvents[action.event._id]; // remove event from confirmed slice of event state
-            nextState.invitedEvents[action.event._id] = action.event; // add to invited slice of event state
+            let unjoinedEvent = action.payload.data.event;
+            delete nextState.confirmedEvents[unjoinedEvent._id]; // remove event from confirmed slice of event state
+            nextState.invitedEvents[unjoinedEvent._id] = unjoinedEvent; // add to invited slice of event state
             return nextState;
         case RECEIVE_EVENTS:
             // put all created events in their own slice of event state
