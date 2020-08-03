@@ -14,6 +14,11 @@
   @extend .tab, .col, .s3;
 }
 .event-list-card {
-  background-color: red;
-  height: 400px;
+@extend .blue, .lighten-5;
+height: 400px;
+}
+
+.event-list-name-holder i {
+  background-color: yellow;
+  top: 4px;
 }
