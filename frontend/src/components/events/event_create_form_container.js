@@ -5,14 +5,29 @@ import { usersGroups } from '../../reducers/selectors';
 
 const mapStateToProps = state => {
     return {
-        currentUserGroups: usersGroups(state, state.session.user.id)
+        currentUserGroups: usersGroups(state, state.session.user.id),
+        initialState: {
+            name: "",
+            date: "",
+            details: "",
+            groupId: "",
+            interestId: "",
+            maxCapacity: "",
+            address: {
+                name: "",
+                address1: "",
+                city: "",
+                state: "",
+                zipCode: ""
+            }
+        }
     }
 
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        createEvent: event => dispatch(createEvent(event))
+        submitAction: event => dispatch(createEvent(event))
     }
 
 }

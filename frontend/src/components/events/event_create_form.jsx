@@ -6,56 +6,17 @@ class EventCreateForm extends React.Component {
     constructor(props) {
         super(props);
         
-        this.state = {
-            name: "",
-            date: "",
-            details: "",
-            groupId: "",
-            interestId: "",
-            address: {
-                name: "",
-                address1: "",
-                city: "",
-                state: "",
-                zipCode: ""
-            }
-        };
+        this.state = this.props.initialState;
+        
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        let event = {
-            name: this.state.name,
-            date: this.state.date,
-            details: this.state.details,
-            groupId: this.state.groupId,
-            interestId: this.state.interestId,
-            address: {
-                name: this.state.address.name,
-                address1: this.state.address.address1,
-                city: this.state.address.city,
-                state: this.state.address.state,
-                zipCode: this.state.address.zipCode
-            }
-        };
+        
+        this.props.submitAction(this.state);
 
-        this.props.createEvent(event);
-
-        this.setState({
-            name: "",
-            date: "",
-            details: "",
-            groupId: "",
-            interestId: "",
-            address: {
-                name: "",
-                address1: "",
-                city: "",
-                state: "",
-                zipCode: ""
-            }
-        });
+        this.setState(this.props.initialState);
     }
 
     componentDidMount() {
@@ -100,7 +61,6 @@ class EventCreateForm extends React.Component {
     }
 
     render() {
-
         const currentUserInterests = this.props.userInterests
         const currentUserGroups = this.props.currentUserGroups
 
@@ -161,6 +121,18 @@ class EventCreateForm extends React.Component {
                                 value={this.state.details}
                                 onChange={this.update("details")}
                                 placeholder="Details"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="group-session-input-holder">
+                            <input
+                                type="number"
+                                value={this.state.maxCapacity}
+                                onChange={this.update("maxCapacity")}
+                                placeholder="Maximum # of People"
                                 required
                             />
                         </div>

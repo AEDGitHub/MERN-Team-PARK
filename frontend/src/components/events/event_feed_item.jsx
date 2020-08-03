@@ -1,4 +1,5 @@
 import React from 'react';
+import EventEditFormContainer from "./event_edit_form_container";
 
 class EventFeedItem extends React.Component {
 
@@ -25,6 +26,10 @@ class EventFeedItem extends React.Component {
             <button onClick={() => this.props.unjoinEvent(event._id)}>Flake</button>
         ) : null;
         
+        const editForm = currentUserId === event.owner ? (
+            <EventEditFormContainer event={event} />
+        ) : null;
+
         return (
             <div className="event-list-card">
                 Event name: {event.name}
@@ -41,11 +46,12 @@ class EventFeedItem extends React.Component {
                 <br/>
                 Organizer:
                 <br/>
-                Attendees:
+                Remaining Spots: {event.maxCapacity - event.attendees.length}
                 <br />
                 
                 {attendButton}
 
+                {/* {editForm} */}
             </div>
         )
     }

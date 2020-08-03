@@ -43,7 +43,7 @@ router.post(
       address: req.body.address,
       details: req.body.details,
       group: req.body.groupId,
-      maxCapcity: req.body.maxCapacity,
+      maxCapacity: req.body.maxCapacity,
       attendees: [req.user.id],
       interest: req.body.interestId,
     });
