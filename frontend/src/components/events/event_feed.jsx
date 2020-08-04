@@ -1,5 +1,6 @@
 import React from 'react';
 import EventFeedItemContainer from './event_feed_item_container';
+import EventEditFormContainer from "./event_edit_form_container";
 import M from 'materialize-css';
 
 class EventFeed extends React.Component {
@@ -14,7 +15,7 @@ class EventFeed extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.events !== this.props.events) {
+        if (prevProps !== this.props) {
             this.attachTabHandlers();
         }
     }
@@ -27,9 +28,8 @@ class EventFeed extends React.Component {
     }
 
     render() {
-        const { events, currentUserId } = this.props;
+        const { usersCreatedEvents, usersConfirmedEvents, usersInvitedEvents, currentUserId } = this.props;
         
-        const usersCreatedEvents = Object.values(events.createdEvents);
         const ownedEventsTabs = usersCreatedEvents.map((event, idx) => {
             if (usersCreatedEvents.length === 0) return null;
             return (
@@ -51,7 +51,6 @@ class EventFeed extends React.Component {
             )
         })
 
-        const usersConfirmedEvents = Object.values(events.confirmedEvents)
         const confirmedEventsTabs = usersConfirmedEvents.map((event, idx) => {
             if (usersConfirmedEvents.length === 0) return null;
             return (
@@ -73,7 +72,6 @@ class EventFeed extends React.Component {
             )
         })
 
-        const usersInvitedEvents = Object.values(events.invitedEvents);
         const invitedEventsTabs = usersInvitedEvents.map((event, idx) => {
             if (usersInvitedEvents.length === 0) return null;
             return (
@@ -96,31 +94,36 @@ class EventFeed extends React.Component {
         })
 
         return (
-            <div className="event-list-holder">
-                <div className="event-list-holder-col">
-                    <ul
-                        ref={Tabs => {
-                            this.Tabs = Tabs;
-                        }}
-                        id="tabs-swipe-demo"
-                        className="tabs tabs-fixed-width tab-demo z-depth-1"
-                    >
-                        <li className="tab col s3">
-                            <a href="#test-swipe-0">UPCOMING EVENTS</a>
-                        </li>
-                        {ownedEventsTabs}
-                        {confirmedEventsTabs}
-                        {invitedEventsTabs}
-                    </ul>
+            <>
+                <div className="event-list-holder">
+                    <div className="event-list-holder-col">
+                        <ul
+                            ref={Tabs => {
+                                this.Tabs = Tabs;
+                            }}
+                            id="tabs-swipe-demo"
+                            className="tabs tabs-fixed-width tab-demo z-depth-1"
+                        >
+                            <li className="tab col s3">
+                                <a href="#test-swipe-0">UPCOMING EVENTS</a>
+                            </li>
+                            {ownedEventsTabs}
+                            {confirmedEventsTabs}
+                            {invitedEventsTabs}
+                        </ul>
 
-                    <div id="test-swipe-0" className="col s12">
-                        <EventFeedItemContainer />
+                        <div id="test-swipe-0" className="col s12">
+                            <EventFeedItemContainer />
+                        </div>
+                        {ownedEvents}
+                        {confirmedEvents}
+                        {invitedEvents}
                     </div>
-                    {ownedEvents}
-                    {confirmedEvents}
-                    {invitedEvents}
                 </div>
-            </div>
+                {usersCreatedEvents.map(event => (
+                    <EventEditFormContainer event={event} key={event._id}/>
+                ))}
+            </>
         )
     }
 

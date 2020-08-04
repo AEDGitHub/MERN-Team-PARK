@@ -44,7 +44,6 @@ class EventEditForm extends React.Component {
             opacity: 0.5,
             dismissible: true,
             startingTop: "4%",
-            endingTop: "20%"
         };
         
         M.Modal.init(this.Modal7, options6);
@@ -68,8 +67,6 @@ class EventEditForm extends React.Component {
         const currentUserGroups = this.props.currentUserGroups;
         
         return (
-            <>
-            <button data-target={`edit-event-form-trigger-${this.state._id}`} className="btn modal-trigger">Edit Event</button>
             <div className="modal" id={`edit-event-form-trigger-${this.state._id}`}
                 ref={Modal7 => { this.Modal7 = Modal7; }}>
                 <div className="modal-content" >
@@ -230,8 +227,7 @@ class EventEditForm extends React.Component {
                         </form>
                     </div>
                 </div>
-                </div>
-                </>
+            </div>
         )
     }
 }

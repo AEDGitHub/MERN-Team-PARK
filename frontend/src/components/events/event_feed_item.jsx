@@ -1,5 +1,4 @@
 import React from 'react';
-import EventEditFormContainer from "./event_edit_form_container";
 
 class EventFeedItem extends React.Component {
 
@@ -27,7 +26,7 @@ class EventFeedItem extends React.Component {
         ) : null;
         
         const editForm = currentUserId === event.owner ? (
-            <EventEditFormContainer event={event} />
+            <button data-target={`edit-event-form-trigger-${event._id}`} className="btn modal-trigger">Edit Event</button>
         ) : null;
 
         return (
