@@ -21,9 +21,6 @@ class Main extends React.Component {
     const createEventForm = this.props.currentUser.interests.length > 0 && 
     this.props.currentUserGroups.length > 0 ? (
       <>
-        {/* <button className="interest-owner-action modal-trigger" data-target="create-event-form-trigger">
-          <i className="material-icons">event</i>
-        </button> */}
         <EventCreateFormContainer userInterests={this.props.currentUser.interests}/>
       </>
     ) : null
@@ -39,7 +36,7 @@ class Main extends React.Component {
           <GroupIndexContainer />
         </div>
 
-        <EventFeedContainer />
+        {this.props.currentUserGroups.length > 0 ? <EventFeedContainer /> : null}
 
         {createEventForm}
 

@@ -3,8 +3,9 @@ import React from 'react';
 class EventFeedItem extends React.Component {
 
     render() {
-
-        if (!this.props.event) {
+        const { event, currentUserId, currentUser } = this.props;
+        
+        if (!this.props.event && currentUser.interests.length) {
             return (
                 <div className="event-list-card">
                     Swipe right to see upcoming events or click the button to create new events
@@ -13,9 +14,14 @@ class EventFeedItem extends React.Component {
                     </button>
                 </div>
             )
+        } else if (!this.props.event) {
+            return (
+                <div className="event-list-card">
+                    Add an Interest in order to create your first event, or follow other user's interests to be alerted when new events are created.
+                </div>
+            )
         }
 
-        const { event, currentUserId } = this.props;
         const formattedEventDate = event.date.slice(0, 10);
         const formattedEventLocation = `${event.address.name}, ${event.address.address1}, ${event.address.city}, ${event.address.state} ${event.address.zipCode}`;
 

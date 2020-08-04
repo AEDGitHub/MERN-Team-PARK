@@ -113,7 +113,7 @@ class EventFeed extends React.Component {
                         </ul>
 
                         <div id="test-swipe-0" className="col s12">
-                            <EventFeedItemContainer />
+                            <EventFeedItemContainer currentUserId={currentUserId}/>
                         </div>
                         {ownedEvents}
                         {confirmedEvents}
