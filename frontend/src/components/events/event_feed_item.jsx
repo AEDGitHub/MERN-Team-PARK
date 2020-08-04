@@ -21,16 +21,20 @@ class EventFeedItem extends React.Component {
         const formattedEventLocation = `${event.address.name}, ${event.address.address1}, ${event.address.city}, ${event.address.state} ${event.address.zipCode}`;
 
         const attendButton = currentUserId !== event.owner && !event.attendees.includes(currentUserId) ? (
-            <button onClick={() => this.props.joinEvent(event._id)}>Attend</button>
+            <button onClick={() => this.props.joinEvent(event._id)}>I'm Attending</button>
         ) : currentUserId !== event.owner ? (
-            <button onClick={() => this.props.unjoinEvent(event._id)}>Flake</button>
+            <button onClick={() => this.props.unjoinEvent(event._id)}>I Can't Attend</button>
         ) : null;
         
         const editForm = currentUserId === event.owner ? (
-            <EventEditFormContainer event={event} />
+            <>
+                
+                <EventEditFormContainer event={event} />
+            </>
         ) : null;
 
         return (
+            <>
             <div className="event-list-card">
                 Event name: {event.name}
                 <br/>
@@ -51,8 +55,9 @@ class EventFeedItem extends React.Component {
                 
                 {attendButton}
 
-                {/* {editForm} */}
             </div>
+                {editForm}
+            </>
         )
     }
 }
