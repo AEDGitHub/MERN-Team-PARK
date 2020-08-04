@@ -5,7 +5,8 @@ export const createEvent = eventData => {
 };
 
 export const editEvent = eventData => {
-    return axios.patch(`/api/events/${eventData.id}`, eventData);
+    debugger
+    return axios.patch(`/api/events/${eventData._id}`, eventData);
 };
 
 export const joinEvent = eventID => {

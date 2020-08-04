@@ -46,7 +46,7 @@ class EventFeed extends React.Component {
             if (usersCreatedEvents.length === 0) return null;
             return (
                 <div id={`owned-event-swipe-${idx + 1}`} className="col s12" key={event._id}>
-                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
+                    <EventFeedItemContainer event={event} currentUserId={currentUserId}/>
                 </div>
             )
         })
@@ -68,7 +68,7 @@ class EventFeed extends React.Component {
             if (usersConfirmedEvents.length === 0) return null;
             return (
                 <div id={`confirmed-event-swipe-${idx + 1}`} className="col s12" key={event._id}>
-                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
+                    <EventFeedItemContainer event={event} currentUserId={currentUserId}/>
                 </div>
             )
         })
@@ -90,7 +90,7 @@ class EventFeed extends React.Component {
             if (usersInvitedEvents.length === 0) return null;
             return (
                 <div id={`invited-event-swipe-${idx + 1}`} className="col s12" key={event._id}>
-                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
+                    <EventFeedItemContainer event={event} currentUserId={currentUserId}/>
                 </div>
             )
         })

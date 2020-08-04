@@ -15,14 +15,16 @@ class EventEditForm extends React.Component {
         e.preventDefault();
 
         this.props.submitAction(this.state);
-
-        this.setState(this.props.initialState);
     }
 
     componentDidMount() {
         let ctx = this;
+        let date = new Date(this.state.date);
+        
         const options5 = {
             format: 'mmm dd yyyy',
+            defaultDate: date,
+            setDefaultDate: true,
             onSelect(_date) {
                 let dateArr = _date.toString().split(' ')
                 let selDateArr = dateArr.slice(1, 4)
@@ -33,7 +35,7 @@ class EventEditForm extends React.Component {
                 });
             }
         }
-        let elems = document.querySelectorAll('.datepicker');
+        let elems = document.getElementById('event-edit-datepicker');
         M.Datepicker.init(elems, options5);
 
         const options6 = {
@@ -64,7 +66,7 @@ class EventEditForm extends React.Component {
     render() {
         const currentUserInterests = this.props.userInterests;
         const currentUserGroups = this.props.currentUserGroups;
-
+        
         return (
             <>
             <button data-target={`edit-event-form-trigger-${this.state._id}`} className="btn modal-trigger">Edit Event</button>
@@ -150,6 +152,7 @@ class EventEditForm extends React.Component {
                                     <input
                                         type="text"
                                         className="datepicker"
+                                        id="event-edit-datepicker"
                                         placeholder="Date"
                                         required
                                     />
@@ -219,7 +222,7 @@ class EventEditForm extends React.Component {
                             <div className="row">
                                 <input
                                     type="submit"
-                                    value="Create"
+                                    value="Save"
                                     className="group-session-button modal-close"
                                 />
                             </div>

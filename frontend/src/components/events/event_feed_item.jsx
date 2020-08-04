@@ -27,10 +27,7 @@ class EventFeedItem extends React.Component {
         ) : null;
         
         const editForm = currentUserId === event.owner ? (
-            <>
-                
-                <EventEditFormContainer event={event} />
-            </>
+            <EventEditFormContainer event={event} />
         ) : null;
 
         return (
