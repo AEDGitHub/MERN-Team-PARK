@@ -3,15 +3,7 @@ import React from 'react';
 class EventFeedItem extends React.Component {
 
     render() {
-        const { event, currentUserId, currentUser } = this.props;
-        
-        if (!this.props.event) {
-            return (
-                <div className="event-list-card">
-                    Add an Interest in order to create your first event, or follow other user's interests to be alerted when new events are created.
-                </div>
-            )
-        }
+        const { event, currentUserId } = this.props;
 
         const formattedEventDate = event.date.slice(0, 10);
         const formattedEventLocation = `${event.address.name}, ${event.address.address1}, ${event.address.city}, ${event.address.state} ${event.address.zipCode}`;
@@ -27,30 +19,34 @@ class EventFeedItem extends React.Component {
         ) : null;
 
         return (
-            <>
-            <div className="event-list-card">
-                Event name: {event.name}
-                <br/>
-                Event details: {event.details}
-                <br/>
-                Event date: {formattedEventDate}
-                <br/>
-                Location: {formattedEventLocation}
-                <br />
-                Group: {this.props.groupName}
-                <br />
-                Interest: 
-                <br/>
-                Organizer:
-                <br/>
-                Remaining Spots: {event.maxCapacity - event.attendees.length}
-                <br />
-                
-                {attendButton}
-
-            </div>
-                {editForm}
-            </>
+            <li className="row">
+                <div className="event-list-card">
+                    <h3>
+                        {event.name} 
+                    </h3>
+                    <p>
+                        <i className="tiny material-icons">date_range</i> {formattedEventDate}
+                    </p>
+                    <p>
+                        <i className="tiny material-icons">location_on</i> {formattedEventLocation}
+                    </p>
+                    <p>
+                        {event.details}
+                    </p>
+                    <p>
+                        <span>Group:</span> {this.props.groupName}
+                    </p>
+                    {/* Interest: 
+                    Organizer: */}
+                    <div className="event-card-cta-holder">
+                        <p>
+                            Remaining Spots: {event.maxCapacity - event.attendees.length}
+                        </p>
+                        {attendButton}
+                        {editForm}
+                    </div>
+                </div>
+            </li>
         )
     }
 }

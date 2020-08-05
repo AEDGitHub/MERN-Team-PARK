@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Switch, Redirect } from 'react-router-dom';
 import UserProfileContainer from "../user_profile/user_profile_container";
 import GroupIndexContainer from "../groups/group_index_container";
 import EventCreateFormContainer from "../events/event_create_form_container";
@@ -33,13 +34,13 @@ class Main extends React.Component {
         </div>
 
         <div className="main-right-container">
-          <GroupIndexContainer />
+          <Switch>
+            <Route exact path="/main" component={GroupIndexContainer}/>
+            {this.props.currentUserGroups.length > 0 ? <Route exact path="/main/events" component={EventFeedContainer} /> : null}
+          </Switch>
         </div>
 
-        {this.props.currentUserGroups.length > 0 ? <EventFeedContainer /> : null}
-
         {createEventForm}
-
         
       </div>
     );

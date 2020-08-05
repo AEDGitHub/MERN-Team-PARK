@@ -21,8 +21,7 @@ const App = () => (
             <div className="custom-main">
                 <main >
                     <Switch>
-
-                        <ProtectedRoute exact path="/main" component={MainContainer} />
+                        <ProtectedRoute path="/main" component={MainContainer} />
                         <ProtectedRoute exact path="/groups/new" component={CreateGroupContainer} />
 
                         <AuthRoute exact path="/" component={Splash} />

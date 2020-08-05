@@ -10,7 +10,7 @@ class EventFeed extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchUserEvents(this.props.currentUserId)
+        this.props.fetchUserEvents(this.props.currentUser._id)
             .then(this.attachTabHandlers())
     }
 
@@ -28,51 +28,55 @@ class EventFeed extends React.Component {
     }
 
     render() {
-        const { usersCreatedEvents, usersConfirmedEvents, usersInvitedEvents, currentUserId } = this.props;
+        const { usersCreatedEvents, usersConfirmedEvents, usersInvitedEvents, currentUser } = this.props;
+
+        const createEventButton = (
+            <button className="interest-owner-action modal-trigger" data-target="create-event-form-trigger">
+                <i className="material-icons">event</i>
+            </button>
+        )
 
         const ownedEvents = usersCreatedEvents.length === 0 ? (
-            "You currently don't have any upcoming events that you're organizing! Create a new event using the button below"
+            <>
+                {currentUser.interests.length ? (
+                    <p>You currently don't have any upcoming events that you're organizing! Create a new event using the button below</p>
+                ) : <p>You currently don't have any upcoming events that you're organizing. Before you can create one, you'll need to add an interest, using the plus button under your profile!</p>}
+                {createEventButton}
+            </>
         ) : (
             <>
-                <button className="interest-owner-action modal-trigger" data-target="create-event-form-trigger">
-                    <i className="material-icons">event</i>
-                </button>
+                {createEventButton}
                 <ul>
                     {usersCreatedEvents.map(event => (
-                        <li className="col s12" key={event._id}>
-                            <EventFeedItemContainer event={event} currentUserId={currentUserId}/>
-                        </li> 
+                        <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUser._id}/>
                     ))}
                 </ul>
             </>
         );
 
         const confirmedEvents = usersConfirmedEvents.length === 0 ? (
-            "You currently don't have any upcoming events that you're attending! Navigate the to 'Invited' tab above and click 'Attend' on one of the events that interests you!"
+            <p>You currently don't have any upcoming events that you're attending! Navigate the to 'Invited' tab above and click 'Attend' on one of the events that interests you!</p>
         ) : (
             <ul>
                 {usersConfirmedEvents.map(event => (
-                    <li className="col s12" key={event._id}>
-                        <EventFeedItemContainer event={event} currentUserId={currentUserId}/>
-                    </li> 
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUser._id}/>
                 ))}
             </ul>
         );
 
         const invitedEvents = usersInvitedEvents.length === 0 ? (
-            "You currently aren't invited to any upcoming events! Make sure you follow interests in the groups you belong to, so that you can be notified of any future events that are created."
+            <p>You currently aren't invited to any upcoming events! Make sure you follow interests in the groups you belong to, so that you can be notified of any future events that are created.</p>
         ) : (
             <ul>
                 {usersInvitedEvents.map(event => (
-                    <li className="col s12" key={event._id}>
-                        <EventFeedItemContainer event={event} currentUserId={currentUserId}/>
-                    </li> 
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUser._id}/>
                 ))}
             </ul>
         );
 
         return (
             <>
+                <h2>My Events</h2>
                 <div className="event-list-holder">
                     <div className="event-list-holder-col">
                         <ul
@@ -83,13 +87,13 @@ class EventFeed extends React.Component {
                             className="tabs tabs-fixed-width tab-demo z-depth-1"
                         >
                             <li className="tab col s3">
-                                <a href="#test-swipe-0">EVENTS I'M ORGANIZING</a>
+                                <a href="#test-swipe-0">ORGANIZING</a>
                             </li>
                             <li className="tab col s3">
-                                <a href="#test-swipe-1">EVENTS I'M ATTENDING</a>
+                                <a href="#test-swipe-1">ATTENDING</a>
                             </li>
                             <li className="tab col s3">
-                                <a href="#test-swipe-2">EVENTS I'M INVITED TO</a>
+                                <a href="#test-swipe-2">INVITED</a>
                             </li>
                         </ul>
 

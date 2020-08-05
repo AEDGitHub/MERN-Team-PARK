@@ -14,10 +14,15 @@ class NavBar extends React.Component {
     }
 
     getLinks() {
-        if (this.props.loggedIn) {
+        const { currentUser, loggedIn } = this.props;
+        const hasGroups = currentUser && currentUser.groups.length > 0;
+        
+        if (loggedIn) {
             return (
                 <ul className="navbar-session-button-holder">
-                    <li><Link to={'./about'}>About</Link></li>
+                    <li><Link to={'/about'}>About</Link></li>
+                    {hasGroups ? <li><Link to={'/main'}>Groups</Link></li> : null}
+                    {hasGroups ? <li><Link to={'/main/events'}>Events</Link></li> : null}
                     <li>
                         <button 
                             className="navbar-session-button" 

@@ -4,6 +4,7 @@
 
 .event-list-holder {
   @extend .row;
+  // margin-top: 50px;
 }
 
 .event-list-holder-col {
@@ -13,12 +14,34 @@
 .event-list-element a {
   @extend .tab, .col, .s3;
 }
+
 .event-list-card {
-@extend .blue, .lighten-5;
-height: 400px;
+  @extend .blue, .lighten-5, .card-panel;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.event-list-card > h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.event-list-card p {
+  margin: 5px 0;
+}
+
+.event-card-cta-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .event-list-name-holder i {
   background-color: yellow;
   top: 4px;
+}
+
+.carousel {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
