@@ -5,16 +5,7 @@ class EventFeedItem extends React.Component {
     render() {
         const { event, currentUserId, currentUser } = this.props;
         
-        if (!this.props.event && currentUser.interests.length) {
-            return (
-                <div className="event-list-card">
-                    Swipe right to see upcoming events or click the button to create new events
-                    <button className="interest-owner-action modal-trigger" data-target="create-event-form-trigger">
-                        <i className="material-icons">event</i>
-                    </button>
-                </div>
-            )
-        } else if (!this.props.event) {
+        if (!this.props.event) {
             return (
                 <div className="event-list-card">
                     Add an Interest in order to create your first event, or follow other user's interests to be alerted when new events are created.
@@ -26,9 +17,9 @@ class EventFeedItem extends React.Component {
         const formattedEventLocation = `${event.address.name}, ${event.address.address1}, ${event.address.city}, ${event.address.state} ${event.address.zipCode}`;
 
         const attendButton = currentUserId !== event.owner && !event.attendees.includes(currentUserId) ? (
-            <button onClick={() => this.props.joinEvent(event._id)}>I'm Attending</button>
+            <button onClick={() => this.props.joinEvent(event._id)} className="btn">I'm Attending</button>
         ) : currentUserId !== event.owner ? (
-            <button onClick={() => this.props.unjoinEvent(event._id)}>I Can't Attend</button>
+            <button onClick={() => this.props.unjoinEvent(event._id)} className="btn">I Can't Attend</button>
         ) : null;
         
         const editForm = currentUserId === event.owner ? (
