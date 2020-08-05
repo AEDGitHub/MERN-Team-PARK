@@ -4,7 +4,7 @@
 }
 
 .navbar-session-button-holder {
-    @extend .right;
+    @extend .right, .hide-on-med-and-down;
 }
 
 .navbar-session-button {

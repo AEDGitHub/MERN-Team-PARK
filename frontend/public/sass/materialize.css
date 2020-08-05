@@ -2865,7 +2865,7 @@ ul.staggered-list li {
 }
 
 @media only screen and (max-width: 992px) {
-  .hide-on-med-and-down {
+  .hide-on-med-and-down, .navbar-session-button-holder {
     display: none !important;
   }
 }
