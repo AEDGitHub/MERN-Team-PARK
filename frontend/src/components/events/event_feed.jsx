@@ -5,10 +5,6 @@ import M from 'materialize-css';
 
 class EventFeed extends React.Component {
 
-    constructor(props) {
-        super(props)
-    }
-
     componentDidMount() {
         this.props.fetchUserEvents(this.props.currentUser._id)
             .then(this.attachTabHandlers())

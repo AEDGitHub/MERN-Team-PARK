@@ -9,9 +9,9 @@ class EventFeedItem extends React.Component {
         const formattedEventLocation = `${event.address.name}, ${event.address.address1}, ${event.address.city}, ${event.address.state} ${event.address.zipCode}`;
 
         const attendButton = currentUserId !== event.owner && !event.attendees.includes(currentUserId) ? (
-            <button onClick={() => this.props.joinEvent(event._id)} className="btn">I'm Attending</button>
+            <button onClick={() => this.props.joinEvent(event._id)} className="btn">Attend</button>
         ) : currentUserId !== event.owner ? (
-            <button onClick={() => this.props.unjoinEvent(event._id)} className="btn">I Can't Attend</button>
+            <button onClick={() => this.props.unjoinEvent(event._id)} className="btn">I Can't Go</button>
         ) : null;
         
         const editForm = currentUserId === event.owner ? (

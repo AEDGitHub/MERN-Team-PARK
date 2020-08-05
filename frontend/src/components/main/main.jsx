@@ -1,16 +1,11 @@
 import React from "react";
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import UserProfileContainer from "../user_profile/user_profile_container";
 import GroupIndexContainer from "../groups/group_index_container";
 import EventCreateFormContainer from "../events/event_create_form_container";
 import EventFeedContainer from "../events/event_feed_container";
 
 class Main extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.fetchUser()
   }

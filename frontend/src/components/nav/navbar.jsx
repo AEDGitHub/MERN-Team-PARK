@@ -11,7 +11,8 @@ class NavBar extends React.Component {
 
     componentDidMount() {
         const sideNav = document.querySelectorAll('.sidenav');
-        M.Sidenav.init(sideNav);
+        const options = { inDuration: 400, outDuration: 400, edge: "right" }
+        M.Sidenav.init(sideNav, options);
     }
 
     logoutUser(e) {
@@ -60,7 +61,7 @@ class NavBar extends React.Component {
                     </ul>
                 </nav>
 
-                <ul className="sidenav right" id="mobile-nav-menu">
+                <ul className="sidenav sidenav-close" id="mobile-nav-menu">
                     {this.getLinks()}
                 </ul>
             </>
