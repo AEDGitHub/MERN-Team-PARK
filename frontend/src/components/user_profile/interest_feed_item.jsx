@@ -40,14 +40,14 @@ class InterestFeedItem extends React.Component {
 
     const followButton = interest.users.includes(currentUserId) ? (
       <button
-        className="interest-action"
+        className="interest-action btn-floating waves-light"
         onClick={() => unfollowInterest(interest._id)}
       >
         <i className="material-icons">favorite</i>
       </button>
     ) : (
       <button
-        className="interest-action"
+        className="interest-action btn-floating waves-light"
         onClick={() => followInterest(interest._id)}
       >
         <i className="material-icons">favorite_border</i>
@@ -55,7 +55,7 @@ class InterestFeedItem extends React.Component {
     );
 
     const usersInterestButtons = parentContainer ? null : (
-      <div>
+      <div className="interest-action-buttons">
         <button
           className="interest-owner-action red accent-4 "
           onClick={this.handleDelete}
@@ -74,13 +74,21 @@ class InterestFeedItem extends React.Component {
     const defaultInterestImage = (
       <div className="default-interest-icon">
         {interest.category === "Outdoors & Adventure" ? (
-          <i className="medium material-icons">terrain</i>
+          <i className="medium material-icons responsive-img activator">
+            terrain
+          </i>
         ) : interest.category === "Food & Drink" ? (
-          <i className="medium material-icons">local_dining</i>
+          <i className="medium material-icons responsive-img activator">
+            local_dining
+          </i>
         ) : interest.category === "Hobbies & Crafts" ? (
-          <i className="medium material-icons">brush</i>
+          <i className="medium material-icons responsive-img activator">
+            brush
+          </i>
         ) : (
-          <i className="medium material-icons">casino</i>
+          <i className="medium material-icons responsive-img activator">
+            widgets
+          </i>
         )}
       </div>
     );
@@ -89,7 +97,7 @@ class InterestFeedItem extends React.Component {
       <img
         src={interest.img}
         alt={`${interest.name}`}
-        className="responsive-img"
+        className="activator responsive-img"
       />
     ) : (
       <>{defaultInterestImage}</>
@@ -97,8 +105,8 @@ class InterestFeedItem extends React.Component {
 
     const cardImageElements = parentContainer ? (
       <>
-        <span className="interest-title">{interest.name}</span>
-        {currentUserId !== interest.owner ? followButton : null}
+        <span className="card-title truncate activator">{interest.name}</span>
+        {/* {currentUserId !== interest.owner ? followButton : null} */}
       </>
     ) : null;
 
@@ -108,7 +116,35 @@ class InterestFeedItem extends React.Component {
           parentContainer ? "two-column" : "one-column"
         }`}
       >
-        <div
+        <div className={`card${parentContainer ? "" : " horizontal"}`}>
+          <div className="card-image waves-effect waves-block waves-light">
+            {cardImage}
+            {cardImageElements}
+          </div>
+          <div className="card-stacked">
+            <div className="card-content">
+              {parentContainer ? null : (
+                <span className="card-title activator grey-text text-darken-4 flow-text">
+                  {interest.name}
+                  <i className="material-icons right">more_vert</i>
+                </span>
+              )}
+              <p>{interest.category}</p>
+            </div>
+          </div>
+          <div className="card-reveal">
+            <span className="card-title grey-text text-darken-4">
+              {interest.name}
+              <i className="material-icons right">close</i>
+            </span>
+            <p>{interest.description}</p>
+            {currentUserId !== interest.owner ? followButton : null}
+            <div className="interest-action-buttons">
+              {usersInterestButtons}
+            </div>
+          </div>
+        </div>
+        {/* <div
           className={`interest-holder${parentContainer ? "" : " horizontal"}`}
         >
           <div className="interest-image">
@@ -116,9 +152,7 @@ class InterestFeedItem extends React.Component {
             {cardImageElements}
           </div>
           <div className="interest-content">
-            {parentContainer ? null : (
-              <span className="interest-title">{interest.name}</span>
-            )}
+            
             {parentContainer ? (
               <p>
                 {owner.firstName} {owner.lastName}
@@ -126,10 +160,7 @@ class InterestFeedItem extends React.Component {
             ) : null}
             <p>{interest.category}</p>
             <p>{interest.description}</p>
-          </div>
-          <div className="interest-action-buttons">{usersInterestButtons}</div>
-        </div>
-
+            </div>*/}
         <div
           className="modal"
           id={`edit-interest-${interest._id}`}
@@ -138,7 +169,7 @@ class InterestFeedItem extends React.Component {
           }}
         >
           <InterestEditFormContainer key={interest._id} interest={interest} />
-        </div>
+        </div>{" "}
       </li>
     );
   }

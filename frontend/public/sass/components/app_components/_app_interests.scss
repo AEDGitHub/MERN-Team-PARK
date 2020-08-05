@@ -1,56 +1,74 @@
-.interest-container.two-column .interest-content {
-  height: 7rem;
+.interest-container.one-column {
+  .card.horizontal {
+    // @extend .blue-grey, .darken-1;
+    max-height: 224px;
+    .card-image {
+      max-height: 224px;
+      max-width: 224px;
+      i {
+        // object-fit: cover;
+        // height: 100%;
+      }
+      > img {
+        // object-fit: cover;
+        // height: 100%;
+      }
+      .card-title {
+        text-shadow: 2px 2px 2px rgb(58, 58, 58);
+      }
+    }
+  }
 }
 
-.interest-holder {
-  @extend .card, .blue-grey, .darken-1;
+.interest-container.two-column {
+  .card {
+    // @extend .blue-grey, .darken-1;
+    // height: 7rem;
+    .card-image {
+      // height: 7rem;
+
+      i {
+        // object-fit: cover;
+        // height: 100%;
+      }
+      > img {
+        // object-fit: cover;
+        // height: 100%;
+      }
+      .card-title {
+        text-shadow: 2px 2px 2px rgb(58, 58, 58);
+      }
+    }
+  }
 }
 
 .interest-content {
-  @extend .card-content, .white-text;
+  // @extend .card-content, .white-text;
 }
 
 .interest-title {
-  @extend .card-title;
+  // @extend .card-title;
 }
 
-.interest-image .interest-title {
-  text-shadow: 2px 2px 2px rgb(58, 58, 58);
+.interest-reveal {
+  // @extend .card-reveal;
 }
 
 .interest-action {
-  @extend .btn-floating, .halfway-fab, .waves-light;
   position: absolute;
-}
-
-.interest-holder.horizontal {
-  height: 7rem;
-}
-
-.interest-holder.horizontal .interest-image {
-  width: 7rem;
-}
-
-.interest-image {
-  @extend .card-image;
-  height: 7rem;
-}
-
-.interest-image > img {
-  object-fit: cover;
-  height: 100%;
+  z-index: 2;
 }
 
 .default-interest-icon {
+  @extend .blue, .lighten-4;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  height: 7rem;
+  // height: 7rem;
 }
 
 .default-interest-icon > i {
-  padding: 5rem;
+  padding: 6rem;
 }
 
 .interest-action-buttons {
@@ -74,7 +92,7 @@
 // interest create
 
 .interest-create-input-holder {
-  @extend .input-field;
+  // @extend .input-field;
 }
 
 .interest-create-title {
@@ -90,5 +108,5 @@
 }
 
 .interest-create-button {
-  @extend .btn;
+  // @extend .btn;
 }
