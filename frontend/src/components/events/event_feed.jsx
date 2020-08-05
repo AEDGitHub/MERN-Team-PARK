@@ -29,10 +29,13 @@ class EventFeed extends React.Component {
 
     render() {
         const { usersCreatedEvents, usersConfirmedEvents, usersInvitedEvents, currentUser } = this.props;
-
+        usersCreatedEvents.sort((event1, event2) => new Date(event1.date) - new Date(event2.date));
+        usersConfirmedEvents.sort((event1, event2) => new Date(event1.date) - new Date(event2.date));
+        usersInvitedEvents.sort((event1, event2) => new Date(event1.date) - new Date(event2.date));
+        
         const createEventButton = (
-            <button className="interest-owner-action modal-trigger" data-target="create-event-form-trigger">
-                <i className="material-icons">event</i>
+            <button className="interest-create-button button-with-icon modal-trigger" data-target="create-event-form-trigger">
+                <i className="material-icons">event</i><span> Create Event</span>
             </button>
         )
 
@@ -76,7 +79,7 @@ class EventFeed extends React.Component {
 
         return (
             <>
-                <h2>My Events</h2>
+                <h2 className="component-header">My Events</h2>
                 <div className="event-list-holder">
                     <div className="event-list-holder-col">
                         <ul

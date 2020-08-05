@@ -2,9 +2,24 @@
   margin: 50px;
 }
 
+.component-header {
+  font-size: 3rem;
+  color: $custom-text-color;
+}
+
+.button-with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}
+
+.button-with-icon > i {
+  margin-right: 5px;
+}
+
 .event-list-holder {
   @extend .row;
-  // margin-top: 50px;
 }
 
 .event-list-holder-col {
@@ -26,14 +41,18 @@
   margin: 0;
 }
 
-.event-list-card p {
-  margin: 5px 0;
+.event-list-card > p {
+  margin: 10px 0;
 }
 
 .event-card-cta-holder {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.event-card-cta-holder > p {
+  margin: 0;
 }
 
 .event-list-name-holder i {

@@ -60,7 +60,7 @@ class GroupIndex extends React.Component {
         return (
           <div >
             <section>
-              
+              <h2 className="component-header">My Groups</h2>
               <div className="group-index-holder">
                 {groupsList}
               </div>
