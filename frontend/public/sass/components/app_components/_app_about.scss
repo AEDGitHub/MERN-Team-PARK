@@ -11,7 +11,7 @@
 
 .about-general-part {
   @extend .col, .xl6, .m8, .offset-xl3, .offset-m2;
-  text-align: left;
+  text-align: justify;
 }
 
 // meet the team
@@ -44,7 +44,7 @@
 .about-job-description {
   //   padding: 10px 30px;
   padding: 0.5rem 1.667rem 0.5rem 3rem;
-  text-align: left;
+  text-align: justify;
 }
 
 .about-engineer-icons {

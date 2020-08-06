@@ -158,6 +158,7 @@ class SignupForm extends React.Component {
                     <div className="row">
                         <div className={formInputClass}>
                             <input
+                                // id="signup-form-email-input"
                                 type="email"
                                 value={this.state.email}
                                 onChange={this.update("email")}
@@ -165,6 +166,8 @@ class SignupForm extends React.Component {
                                 required
                                 className="validate"
                             />
+                            {/* <label htmlFor="signup-form-email-input">Email</label> */}
+                            {/* <span className="helper-text" data-error="Please add an existing email address" data-success="right"></span> */}
                         </div>
                     </div>
 

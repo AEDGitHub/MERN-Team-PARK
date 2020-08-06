@@ -92,7 +92,7 @@
 // interest create
 
 .interest-create-input-holder {
-  // @extend .input-field;
+  @extend .input-field;
 }
 
 .interest-create-title {
@@ -108,5 +108,5 @@
 }
 
 .interest-create-button {
-  // @extend .btn;
+  @extend .btn;
 }

@@ -20,7 +20,6 @@ class Main extends React.Component {
         <EventCreateFormContainer userInterests={this.props.currentUser.interests}/>
       </>
     ) : null
-
     return (
       <div className="main-container">
 

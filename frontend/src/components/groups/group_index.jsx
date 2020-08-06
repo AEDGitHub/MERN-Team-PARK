@@ -39,7 +39,8 @@ class GroupIndex extends React.Component {
 
     render() {
         const { groups } = this.props;
-        const groupsList = (groups.length !== 0 ? (
+
+        const groupsList = (groups.length !== 0 && groups[0] !== undefined ? (
           <ul ref={Collapsible => { this.Collapsible1 = Collapsible; }} 
           className="collapsible">
             {groups.map(group => (

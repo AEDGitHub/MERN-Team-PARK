@@ -64,6 +64,8 @@ class EventCreateForm extends React.Component {
     render() {
         const currentUserInterests = this.props.userInterests
         const currentUserGroups = this.props.currentUserGroups
+        
+        if (currentUserGroups[0] === undefined) return null
 
         return (
             <div className="modal" id="create-event-form-trigger" 
