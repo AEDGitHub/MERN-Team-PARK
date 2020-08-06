@@ -63,7 +63,6 @@ class EventEditForm extends React.Component {
     }
 
     render() {
-        debugger
         const currentUserInterests = this.props.userInterests;
         const currentUserGroups = this.props.currentUserGroups;
         
@@ -151,6 +150,7 @@ class EventEditForm extends React.Component {
                                         type="text"
                                         className="datepicker"
                                         id="event-edit-datepicker"
+                                        defaultValue={this.state.date}
                                         placeholder="Date"
                                         required
                                     />
