@@ -63,6 +63,7 @@ class EventEditForm extends React.Component {
     }
 
     render() {
+        debugger
         const currentUserInterests = this.props.userInterests;
         const currentUserGroups = this.props.currentUserGroups;
         
@@ -77,7 +78,7 @@ class EventEditForm extends React.Component {
 
                             <div className="row">
                                 <div className="group-session-input-holder">
-                                    <select 
+                                    <select disabled
                                         style={{ display: "block" }} 
                                         required
                                         onChange={this.update('groupId')}
@@ -95,7 +96,7 @@ class EventEditForm extends React.Component {
 
                             <div className="row">
                                 <div className="group-session-input-holder">
-                                    <select style={{ display: "block" }} required
+                                    <select style={{ display: "block" }} required disabled
                                         onChange={this.update('interestId')} value={this.state.interest}>
                                         <option value="">Choose a related interest</option>
                                         {currentUserInterests.map(interest => (

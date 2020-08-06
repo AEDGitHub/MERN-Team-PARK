@@ -13,13 +13,15 @@ class EventCreateForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        
         this.props.submitAction(this.state);
-
         this.setState(this.props.initialState);
+        e.target.reset();
     }
 
     componentDidMount() {
+
+        M.FormSelect.init(this.FormSelect1)
+        M.FormSelect.init(this.FormSelect2)
         let ctx = this
         const options5 = {
             format: 'mmm dd yyyy',
@@ -27,7 +29,6 @@ class EventCreateForm extends React.Component {
                 let dateArr = _date.toString().split(' ')
                 let selDateArr = dateArr.slice(1,4)
                 let formattedDate = selDateArr.join(' ')
-
                 ctx.setState({
                     date: formattedDate
                 });
@@ -75,9 +76,13 @@ class EventCreateForm extends React.Component {
 
                     <div className="row">
                         <div className="group-session-input-holder">
-                            <select style={{ display: "block" }} required 
-                            onChange={this.update('groupId')}>
-                                <option value="">Choose a related group</option>
+                            <select 
+                                onChange={this.update('groupId')} 
+                                defaultValue={this.state.groupId} 
+                                required
+                                ref={FormSelect1 => { this.FormSelect1 = FormSelect1;}}
+                            >
+                                <option value='' disabled>Choose a related group</option>
                                 {currentUserGroups.map(group => (
                                     <option key={group._id} value={group._id}>
                                         {group.name}
@@ -89,9 +94,13 @@ class EventCreateForm extends React.Component {
 
                     <div className="row">
                         <div className="group-session-input-holder">
-                            <select style={{ display: "block" }} required
-                            onChange={this.update('interestId')}>
-                                <option value="">Choose a related interest</option>
+                            <select 
+                                onChange={this.update('interestId')} 
+                                defaultValue="default" 
+                                required
+                                ref={FormSelect2 => { this.FormSelect2 = FormSelect2; }}
+                            >
+                                <option value="default" disabled>Choose a related interest</option>
                                 {currentUserInterests.map(interest => (
                                 <option key={interest._id} value={interest._id}>
                                     {interest.name}
