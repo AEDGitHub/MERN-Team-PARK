@@ -167,7 +167,7 @@ class SignupForm extends React.Component {
                                 className="validate"
                             />
                             {/* <label htmlFor="signup-form-email-input">Email</label> */}
-                            {/* <span className="helper-text" data-error="Please add an existing email address" data-success="right"></span> */}
+                            {/* <span className="helper-text" data-error="Please add a valid email address"></span> */}
                         </div>
                     </div>
 

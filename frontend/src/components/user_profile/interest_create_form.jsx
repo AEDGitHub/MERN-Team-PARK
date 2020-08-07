@@ -34,6 +34,7 @@ class InterestCreateForm extends React.Component {
           user: "",
           img: ''
         });
+        e.target.reset();
     }
 
     componentDidMount() {
