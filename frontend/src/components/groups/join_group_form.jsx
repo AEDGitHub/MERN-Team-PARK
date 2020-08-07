@@ -32,10 +32,14 @@ class JoinGroupForm extends React.Component {
                     <div className="row">
                         <div className="group-session-input-holder">
                             <input
+                                id="join-group-name-input"
                                 type="text"
                                 onChange={this.handleInput}
                                 required
                             />
+                            <label htmlFor="join-group-name-input">
+                                Group Name
+                            </label>
                         </div>
                     </div>
 

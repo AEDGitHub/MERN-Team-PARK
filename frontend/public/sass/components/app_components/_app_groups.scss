@@ -2,8 +2,9 @@
   @extend .center;
 }
 
-// .group-session-input-holder {
-// }
+.group-session-input-holder {
+  @extend .input-field;
+}
 
 .group-session-button-holder {
   display: flex;

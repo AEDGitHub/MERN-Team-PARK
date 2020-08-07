@@ -59,11 +59,15 @@ class CreateGroupForm extends React.Component {
                         <div className="row">
                             <div className="group-session-input-holder">
                                 <input
+                                    id="create-group-name-input"
                                     type="text"
                                     value={this.state.name}
                                     onChange={this.update("name")}
                                     required
                                 />
+                                <label htmlFor="create-group-name-input">
+                                    Group Name
+                                </label>
                             </div>
                         </div>
 
