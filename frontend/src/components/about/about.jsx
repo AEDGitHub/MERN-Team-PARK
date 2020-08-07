@@ -50,7 +50,7 @@ class About extends React.Component {
               </p>
               <div className="about-engineer-icons">
                 <a
-                  href="https://www.linkedin.com/in/elishaspark/"
+                  href="https://www.linkedin.com/in/elishakutnick/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -60,7 +60,7 @@ class About extends React.Component {
                   />
                 </a>
                 <a
-                  href="https://github.com/ElishaPark"
+                  href="https://github.com/elishakutnick"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -70,7 +70,7 @@ class About extends React.Component {
                   />
                 </a>
                 <a
-                  href="https://angel.co/u/elisha-kutnick"
+                  href="https://angel.co/u/elishakutnick"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
