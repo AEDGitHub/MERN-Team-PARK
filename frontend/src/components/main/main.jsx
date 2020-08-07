@@ -9,21 +9,36 @@ import M from "materialize-css";
 class Main extends React.Component {
   componentDidMount() {
     this.props.fetchUser()
-    // const featureDiscovery = document.getElementById('feature-discovery');
+
+    const featureDiscovery = document.getElementById('feature-discovery');
     // debugger
-    // const instancesTap = M.TapTarget.init(featureDiscovery);
-    // instancesTap.open()
+    const featDicsTap = M.TapTarget.init(featureDiscovery);
+    // debugger
+    console.log('hello')
   }
 
   featureDiscoveryShow() {
+    // debugger
     const featureDiscovery = document.getElementById('feature-discovery');
-    const featDicsTap = M.TapTarget.init(featureDiscovery);
-    debugger
-    if (!featDicsTap.isOpen) {
-      featDicsTap.open()
-    } else {
-      featDicsTap.close()
-    }
+    // debugger
+    // const featureDiscovery = document.querySelectorAll('.tap-target');
+    // const featureDiscovery = document.getElementsByClassName('tap-target');
+    // debugger
+    // const featDicsTap = M.TapTarget.init(featureDiscovery);
+    featureDiscovery.M_TapTarget.open()
+    // featureDiscovery.TapTarget('open')
+    // debugger
+    // featDicsTap.open()
+    // featDicsTap.next()
+    // debugger
+    // featDicsTap.close()
+    // debugger
+    // if (!featDicsTap.isOpen) {
+    //   featDicsTap.open()
+    // } else {
+    //   featDicsTap.close()
+    // }
+    console.log('hello')
   }
 
   render() {
@@ -50,16 +65,32 @@ class Main extends React.Component {
             {this.props.currentUserGroups.length > 0 ? <Route exact path="/main/events" component={EventFeedContainer} /> : null}
           </Switch>
 
-          <div className="fixed-action-btn direction-top active feature-discovery-trigger" >
+          <a onClick={this.featureDiscoveryShow} className="btn">BUTTON</a>
+
+          <div className="fixed-action-btn direction-top active feature-discovery-trigger">
+            <div className="feature-discovery-trigger">
+              <a onClick={this.featureDiscoveryShow} id="menu" className="waves-effect waves-light btn-large btn-floating" ><i className="material-icons">help_outline</i></a>
+            </div>
+          </div>
+
+
+          <div id="feature-discovery" className="tap-target" data-target="menu">
+            <div className="tap-target-content">
+              <h5>Title</h5>
+              <p>A bunch of text</p>
+            </div>
+          </div>
+
+          {/* <div className="fixed-action-btn direction-top active feature-discovery-trigger" >
             <a onClick={this.featureDiscoveryShow} id="menu" className="waves-effect waves-light btn-large btn-floating" ><i className="material-icons">help_outline</i></a>
           </div>
 
-            <div id="feature-discovery" className="tap-target" data-target="menu">
-              <div className="tap-target-content">
-                <h5>Title</h5>
-                <p>A bunch of text</p>
-              </div>
+          <div id="feature-discovery" className="tap-target" data-target="menu">
+            <div className="tap-target-content">
+              <h5>Title</h5>
+              <p>A bunch of text</p>
             </div>
+          </div> */}
 
         </div>
 
