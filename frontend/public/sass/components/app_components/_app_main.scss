@@ -4,6 +4,10 @@
   position: relative;
   min-height: 100vh;
   @extend .blue-grey, .lighten-5;
+  header {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .custom-main {

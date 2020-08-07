@@ -1,20 +1,20 @@
 .navbar-wrapper {
-    @extend .nav-wrapper;
-    padding: 0 30px;
+  @extend .nav-wrapper;
+  padding: 0 30px;
+  z-index: 10;
 }
 
 .navbar-session-button-holder {
-    @extend .right, .hide-on-med-and-down;
+  @extend .right, .hide-on-med-and-down;
 }
 
 .navbar-session-button {
-    @extend .btn, .small;
-    margin-left: 10px;
+  @extend .btn, .small;
+  margin-left: 10px;
 }
 
 .navbar-brand-logo {
-    @extend .brand-logo, .left;
-    left: 0%;
-    margin-left: 20px;
+  @extend .brand-logo, .left;
+  left: 0%;
+  margin-left: 20px;
 }
-

@@ -1,6 +1,6 @@
-import React from 'react';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import React from "react";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import Splash from "./splash/splash";
 import About from "./about/about";
@@ -12,33 +12,37 @@ import SignupFormContainer from "./session/signup_form_container";
 import CreateGroupContainer from "./groups/create_group_form_container";
 
 const App = () => (
-    <div className="custom-body">
-        
-        {/* <div className="wrapper"> */}
-            <header>
-                <NavBarContainer />
-            </header>
-            <div className="custom-main">
-                <main >
-                    <Switch>
-                        <ProtectedRoute path="/main" component={MainContainer} />
-                        <ProtectedRoute exact path="/groups/new" component={CreateGroupContainer} />
+  <div className="custom-body">
+    {/* <div className="wrapper"> */}
 
-                        <AuthRoute exact path="/" component={Splash} />
-                        <Route exact path="/about" component={About} />
-                        <AuthRoute exact path="/login" component={LoginFormContainer} />
-                        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <header>
+      <NavBarContainer />
+    </header>
+    <div className="custom-main">
+      <main>
+        <Switch>
+          <ProtectedRoute path="/main" component={MainContainer} />
+          <ProtectedRoute
+            exact
+            path="/groups/new"
+            component={CreateGroupContainer}
+          />
 
-                        <Redirect to='/' />
-                        <Route path='/' component={Splash} />
-                    </Switch>
-                </main>
-            </div>
-            <footer >
-                <FooterContainer />
-            </footer>
-        {/* </div> */}
+          <AuthRoute exact path="/" component={Splash} />
+          <Route exact path="/about" component={About} />
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+
+          <Redirect to="/" />
+          <Route path="/" component={Splash} />
+        </Switch>
+      </main>
     </div>
+    <footer>
+      <FooterContainer />
+    </footer>
+    {/* </div> */}
+  </div>
 );
 
 export default App;

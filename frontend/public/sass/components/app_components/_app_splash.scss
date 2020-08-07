@@ -1,12 +1,40 @@
 .splash-page {
+  //approach 1: cannot get image to display this way
+  // background: url("/images/splash_background.jpeg") no-repeat center center
+  //   fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 
-}
+  //approach 2: this works REALLY well, just need to mess with top: at different breakpoints so the header is visible/no whitespace no matter its height
+  // img {
+  //   min-height: 100%;
+  //   min-width: 1441px;
+  //   width: 100%;
+  //   height: auto;
 
-.splash-page img {
-  min-height: 100%;
-  min-width: 100%;
-  height: 100%;
+  //   position: fixed;
+  //   top: 50px;
+  //   left: 0;
+  // }
+
+  //approach 3:
   position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+  }
 }
 
 .splash-image {

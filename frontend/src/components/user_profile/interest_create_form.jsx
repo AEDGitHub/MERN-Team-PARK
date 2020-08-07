@@ -60,12 +60,10 @@ class InterestCreateForm extends React.Component {
 
   onImageChange(e) {
     const image = e.target.files[0];
-
     if ((image.size / 1024 / 1024).toFixed(4) > 3) {
       alert("Only enter files smaller than 3MB");
       return;
     }
-
     this.setState({ img: image });
   }
 
