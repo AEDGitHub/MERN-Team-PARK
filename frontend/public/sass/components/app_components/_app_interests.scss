@@ -1,17 +1,18 @@
 .interest-container.one-column {
   .card.horizontal {
     // @extend .blue-grey, .darken-1;
-    max-height: 224px;
+    height: 174px;
     .card-image {
-      max-height: 224px;
-      max-width: 224px;
+      height: 174px;
+      width: 174px;
       i {
         // object-fit: cover;
         // height: 100%;
       }
       > img {
-        // object-fit: cover;
-        // height: 100%;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
       }
       .card-title {
         text-shadow: 2px 2px 2px rgb(58, 58, 58);
@@ -26,14 +27,15 @@
     // height: 7rem;
     .card-image {
       // height: 7rem;
-
+      height: 174px;
       i {
         // object-fit: cover;
         // height: 100%;
       }
       > img {
-        // object-fit: cover;
-        // height: 100%;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
       }
       .card-title {
         text-shadow: 2px 2px 2px rgb(58, 58, 58);
@@ -55,8 +57,22 @@
 }
 
 .interest-action {
-  position: absolute;
-  z-index: 2;
+  @extend .btn;
+  background-color: transparent;
+  box-shadow: none;
+  height: 32px;
+  padding: 0 5px;
+
+  i {
+    color: $primary-color-dark;
+    background-color: white;
+    font-size: 24px;
+  }
+}
+
+.interest-action:hover {
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .default-interest-icon {
@@ -64,11 +80,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 7rem;
+  height: 100%;
 }
 
 .default-interest-icon > i {
-  padding: 6rem;
+  padding: 4rem;
 }
 
 .interest-action-buttons {
@@ -89,6 +105,19 @@
   align-items: center;
 }
 
+.flexed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.interest-card-category {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 6px 0;
+}
+
 // interest create
 
 .interest-create-input-holder {
@@ -96,7 +125,7 @@
 }
 
 .interest-create-title {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .interest-create-content {
@@ -104,7 +133,7 @@
 }
 
 .interest-create-container {
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .interest-create-button {

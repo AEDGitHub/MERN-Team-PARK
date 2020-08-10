@@ -40,14 +40,14 @@ class InterestFeedItem extends React.Component {
 
     const followButton = interest.users.includes(currentUserId) ? (
       <button
-        className="interest-action btn-floating waves-light"
+        className="interest-action"
         onClick={() => unfollowInterest(interest._id)}
       >
         <i className="material-icons">favorite</i>
       </button>
     ) : (
       <button
-        className="interest-action btn-floating waves-light"
+        className="interest-action"
         onClick={() => followInterest(interest._id)}
       >
         <i className="material-icons">favorite_border</i>
@@ -125,11 +125,14 @@ class InterestFeedItem extends React.Component {
             <div className="card-content">
               {parentContainer ? null : (
                 <span className="card-title activator grey-text text-darken-4 flow-text">
-                  {interest.name}
-                  <i className="material-icons right">more_vert</i>
+                    {interest.name}
+                    <i className="material-icons right">more_vert</i>
                 </span>
               )}
-              <p>{interest.category}</p>
+              <div className="flexed">
+                <p className="interest-card-category">{interest.category}</p>
+                {currentUserId !== interest.owner ? followButton : null}
+              </div>
             </div>
           </div>
           <div className="card-reveal">
@@ -137,9 +140,8 @@ class InterestFeedItem extends React.Component {
               {interest.name}
               <i className="material-icons right">close</i>
             </span>
-            <p>{interest.description}</p>
-            {currentUserId !== interest.owner ? followButton : null}
-            <div className="interest-action-buttons">
+            <div className="flexed">
+              <p>{interest.description}</p>
               {usersInterestButtons}
             </div>
           </div>
