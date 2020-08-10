@@ -34,8 +34,7 @@ class Main extends React.Component {
         <div id="feature-discovery" className="tap-target" data-target="menu">
           <div className="tap-target-content">
             <h5>Welcome to ReBond!</h5>
-            <p>blah blah blah</p>
-            <p>blah blah blah</p>
+            <p>Create an Interest to get started!</p>
           </div>
         </div>
       </>
