@@ -109,3 +109,6 @@ dist
 #Materialize.css files
 /frontend/public/sass/materialize.css
 /frontend/public/sass/materialize.css.map
+
+#DS Stores
+.DS_Store
