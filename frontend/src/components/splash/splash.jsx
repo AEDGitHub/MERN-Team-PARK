@@ -6,7 +6,7 @@ class Splash extends React.Component {
       <div className="splash-page">
         <img
           //   className="responsive-img"
-          src="../../../images/splash_background.jpg"
+          src="../../../images/splash_background_2.jpg"
         />
         {/* <div className="splash-image"></div> */}
       </div>
