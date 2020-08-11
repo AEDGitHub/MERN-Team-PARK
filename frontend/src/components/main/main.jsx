@@ -64,8 +64,6 @@ class Main extends React.Component {
       </div>
     )
 
-    // debugger
-
     return (
       <div className="main-container">
 

@@ -58,8 +58,6 @@ class GroupIndex extends React.Component {
           </ul>
         ) : null)
 
-        // debugger
-
         return (
           <div >
             <section>
