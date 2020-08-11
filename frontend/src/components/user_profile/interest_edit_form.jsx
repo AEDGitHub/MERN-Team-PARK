@@ -67,7 +67,7 @@ class InterestEditForm extends React.Component {
                 <div className="interest-create-input-holder">
                   <textarea
                     id="edit-interest-name"
-                    className="materialize-textarea"
+                    className="materialize-textarea validate"
                     value={this.state.name}
                     data-length="40"
                     onChange={this.update("name")}
@@ -83,7 +83,7 @@ class InterestEditForm extends React.Component {
                 <div className="interest-create-input-holder">
                   <textarea
                     id="edit-interest-description"
-                    className="materialize-textarea"
+                    className="materialize-textarea validate"
                     data-length="120"
                     value={this.state.description}
                     onChange={this.update("description")}
@@ -104,6 +104,7 @@ class InterestEditForm extends React.Component {
                     onChange={this.update("category")}
                     value={this.state.category}
                     required
+                    className="validate"
                     ref={(FormSelect) => {
                       this.FormSelect = FormSelect;
                     }}
