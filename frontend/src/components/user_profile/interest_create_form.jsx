@@ -7,7 +7,7 @@ class InterestCreateForm extends React.Component {
     this.state = {
       name: "",
       description: "",
-      category: "Choose a category",
+      category: "",
       user: "",
       img: "",
     };
@@ -24,13 +24,12 @@ class InterestCreateForm extends React.Component {
     formData.append("category", category);
     formData.append("user", this.props.currentUser);
     if (img) formData.append("img", img);
-
     this.props.createInterest(formData);
 
     this.setState({
       name: "",
       description: "",
-      category: "Choose a category",
+      category: "",
       user: "",
       img: "",
     });
@@ -88,7 +87,9 @@ class InterestCreateForm extends React.Component {
                     onChange={this.update("name")}
                     required
                   />
-                  <label htmlFor="create-interest-name">Interest Name</label>
+                  <label htmlFor="create-interest-name">
+                    Interest Name *
+                  </label>
                 </div>
               </div>
 
@@ -103,7 +104,7 @@ class InterestCreateForm extends React.Component {
                     required
                   />
                   <label htmlFor="create-interest-description">
-                    Interest Description
+                    Interest Description *
                   </label>
                 </div>
               </div>
@@ -112,14 +113,14 @@ class InterestCreateForm extends React.Component {
                 <div className="interest-create-input-holder">
                   <select
                     onChange={this.update("category")}
-                    defaultValue={"default"}
+                    defaultValue=""
                     required
                     ref={(FormSelect) => {
                       this.FormSelect = FormSelect;
                     }}
                   >
-                    <option value="default" disabled>
-                      Choose a Category
+                    <option value="" disabled>
+                      Choose a Category *
                     </option>
                     <option value="Outdoors & Adventure">
                       Outdoors & Adventure
@@ -154,8 +155,11 @@ class InterestCreateForm extends React.Component {
               <input
                 type="submit"
                 value="Add Interest"
-                className="interest-create-button modal-close"
+                className={`interest-create-button modal-close 
+                ${this.state.name === "" || this.state.description === "" || 
+                this.state.category === "" ? "disabled" : ""}`}
               />
+
             </div>
           </form>
         </div>

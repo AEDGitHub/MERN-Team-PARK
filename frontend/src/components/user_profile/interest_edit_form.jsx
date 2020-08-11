@@ -74,7 +74,7 @@ class InterestEditForm extends React.Component {
                     required
                   />
                   <label htmlFor="create-interest-name" className="active">
-                    Interest Name
+                    Interest Name *
                   </label>
                 </div>
               </div>
@@ -93,7 +93,7 @@ class InterestEditForm extends React.Component {
                     htmlFor="create-interest-description"
                     className="active"
                   >
-                    Interest Description
+                    Interest Description *
                   </label>
                 </div>
               </div>
@@ -109,7 +109,7 @@ class InterestEditForm extends React.Component {
                     }}
                   >
                     <option value="default" disabled>
-                      Choose a Category
+                      Choose a Category *
                     </option>
                     <option value="Outdoors & Adventure">
                       Outdoors & Adventure
