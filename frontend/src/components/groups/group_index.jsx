@@ -58,10 +58,12 @@ class GroupIndex extends React.Component {
           </ul>
         ) : null)
 
+        // debugger
+
         return (
           <div >
             <section>
-              <h2 className="component-header">My Groups</h2>
+              {this.props.groups.length > 0 ? <h2 className="component-header">My Groups</h2> : null}
               <div className="group-index-holder">
                 {groupsList}
               </div>
