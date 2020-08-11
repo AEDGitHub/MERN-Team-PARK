@@ -144,7 +144,9 @@ class InterestEditForm extends React.Component {
               <input
                 type="submit"
                 value="Edit Interest"
-                className="interest-create-button modal-close"
+                className={`interest-create-button modal-close 
+                ${this.state.name === "" || this.state.description === "" ||
+                this.state.category === "" ? "disabled" : ""}`}
               />
             </div>
           </form>

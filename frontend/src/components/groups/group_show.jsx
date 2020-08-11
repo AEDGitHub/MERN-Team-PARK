@@ -12,9 +12,16 @@ class GroupShow extends React.Component {
               </p>
             </div>
           ) : null;
+
+          const preloader = (
+            <div className="progress">
+              <div className="indeterminate"></div>
+            </div>
+          )
         return (
             <div>
-              {sharingLink}
+
+              {sharingLink || preloader}
 
               <InterestFeedContainer interests={this.props.interests} parentContainer="group"/>
             </div>
