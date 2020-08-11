@@ -50,6 +50,22 @@ class Main extends React.Component {
       </>
     ) : null
 
+    const preloader = (
+      <div className="preloader-wrapper big active loader">
+        <div className="spinner-layer spinner-blue-only">
+          <div className="circle-clipper left">
+            <div className="circle"></div>
+          </div><div className="gap-patch">
+            <div className="circle"></div>
+          </div><div className="circle-clipper right">
+            <div className="circle"></div>
+          </div>
+        </div>
+      </div>
+    )
+
+    // debugger
+
     return (
       <div className="main-container">
 
@@ -69,6 +85,8 @@ class Main extends React.Component {
         </div>
 
         {createEventForm}
+
+        {!this.props.currentUser ? preloader : null}
         
       </div>
     );
