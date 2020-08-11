@@ -9,13 +9,11 @@ import M from "materialize-css";
 class Main extends React.Component {
   componentDidMount() {
     this.props.fetchUser()
-
-    const featureDiscovery = document.getElementById('feature-discovery');
-    M.TapTarget.init(featureDiscovery);
   }
 
   featureDiscoveryShow() {
     const featureDiscovery = document.getElementById('feature-discovery');
+    if (featureDiscovery.M_TapTarget === undefined) M.TapTarget.init(featureDiscovery)
     featureDiscovery.M_TapTarget.open()
   }
 
@@ -23,22 +21,27 @@ class Main extends React.Component {
             
     // if (!this.props.currentUser) return null
 
-    const featureDiscovery = (
+    const featureDiscovery = this.props.currentUser !== undefined && 
+                             (this.props.currentUser.groups.length < 1 || 
+                             this.props.currentUser.interests.length < 1) ? (
       <>
         <div className="fixed-action-btn direction-top active feature-discovery-trigger">
           <div className="feature-discovery-trigger">
-            <a onClick={this.featureDiscoveryShow} id="menu" className="waves-effect waves-light btn-large btn-floating" ><i className="material-icons">help_outline</i></a>
+            <a onClick={this.featureDiscoveryShow} id="menu" 
+               className="waves-effect waves-light btn-large btn-floating" >
+              <i className="material-icons">help_outline</i>
+            </a>
           </div>
         </div>
 
         <div id="feature-discovery" className="tap-target" data-target="menu">
           <div className="tap-target-content">
             <h5>Welcome to ReBond!</h5>
-            <p>Create an Interest to get started!</p>
+            <p>To get started add interests and join or create a group.</p>
           </div>
         </div>
       </>
-    )
+    ) : null;
 
     const createEventForm = this.props.currentUser && this.props.currentUser.interests.length > 0 && 
     this.props.currentUserGroups.length > 0 ? (
@@ -57,7 +60,8 @@ class Main extends React.Component {
         <div className="main-right-container">
           <Switch>
             <Route exact path="/main" component={GroupIndexContainer}/>
-            {this.props.currentUserGroups.length > 0 ? <Route exact path="/main/events" component={EventFeedContainer} /> : null}
+            {this.props.currentUserGroups.length > 0 ? 
+            <Route exact path="/main/events" component={EventFeedContainer} /> : null}
           </Switch>
 
           {featureDiscovery}
