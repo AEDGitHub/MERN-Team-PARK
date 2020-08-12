@@ -24,6 +24,7 @@ class EventCreateForm extends React.Component {
         M.FormSelect.init(this.FormSelect2)
         let ctx = this
         const options5 = {
+            container: 'body',
             format: 'mmm dd yyyy',
             onSelect(_date) {
                 let dateArr = _date.toString().split(' ')
@@ -31,8 +32,8 @@ class EventCreateForm extends React.Component {
                 let formattedDate = selDateArr.join(' ')
                 ctx.setState({
                     date: formattedDate
-                });
-            }
+                })
+            },
         }
         let elems = document.querySelectorAll('.datepicker');
         M.Datepicker.init(elems, options5);
@@ -152,6 +153,7 @@ class EventCreateForm extends React.Component {
                     <div className="row">
                         <div className="group-session-input-holder">
                             <input
+                                id="event-create-date-input"
                                 type="text"
                                 className="datepicker"
                                 placeholder="Date"

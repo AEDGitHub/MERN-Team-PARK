@@ -8,9 +8,9 @@ import CreateGroupFormContainer from "../groups/create_group_form_container";
 import M from "materialize-css";
 
 class Main extends React.Component {
-  componentDidMount() {
-    this.props.fetchUser()
-  }
+  // componentDidMount() {
+    // this.props.fetchUser()
+  // }
 
   featureDiscoveryShow() {
     const featureDiscovery = document.getElementById('feature-discovery');
@@ -28,10 +28,14 @@ class Main extends React.Component {
       <>
         <div className="fixed-action-btn direction-top active feature-discovery-trigger">
           <div className="feature-discovery-trigger">
-            <a onClick={this.featureDiscoveryShow} id="menu" 
+            {/* <a onClick={this.featureDiscoveryShow} id="menu" 
                className="waves-effect waves-light btn-large btn-floating" >
               <i className="material-icons">help_outline</i>
-            </a>
+            </a> */}
+            <button onClick={this.featureDiscoveryShow} id="menu"
+              className="waves-effect waves-light btn-large btn-floating" >
+              <i className="material-icons">help_outline</i>
+            </button>
           </div>
         </div>
 

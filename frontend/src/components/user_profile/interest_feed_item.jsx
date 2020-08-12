@@ -31,7 +31,7 @@ class InterestFeedItem extends React.Component {
   render() {
     const {
       interest,
-      owner,
+      // owner,
       currentUserId,
       followInterest,
       unfollowInterest,

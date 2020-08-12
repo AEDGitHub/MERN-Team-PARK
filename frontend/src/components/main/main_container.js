@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Main from './main';
-import { fetchUser } from '../../actions/user_actions';
+// import { fetchUser } from '../../actions/user_actions';
 import { usersGroups } from '../../reducers/selectors';
 
 const mapStateToProps = state => {
@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchUser: () => dispatch(fetchUser()),
+        // fetchUser: () => dispatch(fetchUser()),
     }
 }
 

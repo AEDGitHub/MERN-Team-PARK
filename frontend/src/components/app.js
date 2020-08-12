@@ -12,7 +12,7 @@ import SignupFormContainer from "./session/signup_form_container";
 import CreateGroupContainer from "./groups/create_group_form_container";
 
 const App = () => (
-  <div className="custom-body">
+  <div className="custom-body" id="custom-body">
     {/* <div className="wrapper"> */}
 
     <header>

@@ -2,10 +2,10 @@ import React from 'react';
 import InterestCreateFormContainer from "./interest_create_form_container";
 import InterestFeedContainer from "./interest_feed_container";
 import EditUserFormContainer from "./edit_user_form_container";
-import CreateGroupFormContainer from '../groups/create_group_form_container';
+// import CreateGroupFormContainer from '../groups/create_group_form_container';
 import JoinGroupFormContainer from '../groups/join_group_form_container';
 import M from "materialize-css";
-import CreateGroupForm from '../groups/create_group_form';
+// import CreateGroupForm from '../groups/create_group_form';
 
 class UserProfile extends React.Component {
 

@@ -55,7 +55,7 @@ class NavBar extends React.Component {
             <>
                 <nav className="navbar-wrapper">
                     <a className="navbar-brand-logo" href="/">ReBond</a>
-                    <a href="#" data-target="mobile-nav-menu" className="sidenav-trigger right"><i className="material-icons">menu</i></a>
+                    <a href="/" data-target="mobile-nav-menu" className="sidenav-trigger right"><i className="material-icons">menu</i></a>
                     <ul className="navbar-session-button-holder">
                         {this.getLinks()}
                     </ul>
