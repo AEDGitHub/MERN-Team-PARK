@@ -45,7 +45,12 @@ class JoinGroupForm extends React.Component {
 
                     <div className="row">
                         <div>
-                            <button className="group-session-button modal-close">Join</button>
+                            <button 
+                                className={`group-session-button modal-close
+                                ${this.state.slug === "" ? "disabled" : ""}`}
+                            >
+                                Join
+                            </button>
                         </div>
                     </div>
 

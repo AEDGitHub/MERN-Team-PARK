@@ -94,7 +94,8 @@ class CreateGroupForm extends React.Component {
                                 <input 
                                     type="submit" 
                                     value="Create" 
-                                    className="group-session-button modal-close"
+                                    className={`group-session-button modal-close
+                                    ${this.state.name === "" ? "disabled" : ""}`}
                                 />
                             </div>
 
