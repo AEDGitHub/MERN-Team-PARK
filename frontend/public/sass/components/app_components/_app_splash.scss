@@ -46,3 +46,29 @@
   // background-repeat: no-repeat;
   // background-size: cover;
 }
+
+.splash-main-text {
+  // @extend .flow-text;
+  // background-color: red;
+  position: absolute;
+  color: rgba(8, 8, 8, 0.788);
+  // font-size: 50px;
+  // font-weight: bold;
+  top: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 40px;
+  right: 40px;
+  text-align: center;
+  // z-index: 999;
+}
+
+.splash-main-text h2 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.splash-main-text p {
+  font-size: 30px;
+  font-weight: bold;
+}
