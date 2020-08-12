@@ -1,4 +1,5 @@
 import React from 'react';
+import M from 'materialize-css';
 
 class CreateGroupForm extends React.Component {
     constructor(props) {
@@ -31,6 +32,18 @@ class CreateGroupForm extends React.Component {
         });
     }
 
+    componentDidMount() {
+        const options1 = {
+            inDuration: 250,
+            outDuration: 250,
+            opacity: 0.5,
+            dismissible: true,
+            startingTop: "4%",
+            endingTop: "10%"
+        };
+        M.Modal.init(this.Modal2, options1);
+    }
+
     componentDidUpdate(prevProps) {
         if (this.props.errors !== prevProps.errors) {
             this.setState({ errors: this.props.errors })
@@ -39,9 +52,9 @@ class CreateGroupForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="group-error-list">
                 {Object.keys(this.state.errors).map((error, idx) => (
-                    <li key={`error-${idx}`}>
+                    <li className="group-error-item" key={`error-${idx}`}>
                         {this.state.errors[error]}
                     </li>
                 ))}
@@ -51,38 +64,44 @@ class CreateGroupForm extends React.Component {
 
     render() {
         return (
-                <div className="modal-content" >             
-                    <form onSubmit={this.handleSubmit}>
-
-                        <h4 className="group-session-title">Create a Group</h4>
-
-                        <div className="row">
-                            <div className="group-session-input-holder">
-                                <input
-                                    id="create-group-name-input"
-                                    type="text"
-                                    value={this.state.name}
-                                    onChange={this.update("name")}
-                                    required
-                                />
-                                <label htmlFor="create-group-name-input">
-                                    Group Name
-                                </label>
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <input 
-                                type="submit" 
-                                value="Create" 
-                                className="group-session-button modal-close"
-                            />
-                        </div>
-
-                        {this.renderErrors()}
-
-                    </form>
+            <>
+                <div className="group-error-holder">
+                    {this.renderErrors()}
                 </div>
+                <div className="modal" id="create-group"
+                    ref={Modal2 => { this.Modal2 = Modal2; }}>
+                    <div className="modal-content" >             
+                        <form onSubmit={this.handleSubmit}>
+
+                            <h4 className="group-session-title">Create a Group</h4>
+
+                            <div className="row">
+                                <div className="group-session-input-holder">
+                                    <input
+                                        id="create-group-name-input"
+                                        type="text"
+                                        value={this.state.name}
+                                        onChange={this.update("name")}
+                                        required
+                                    />
+                                    <label htmlFor="create-group-name-input">
+                                        Group Name
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <input 
+                                    type="submit" 
+                                    value="Create" 
+                                    className="group-session-button modal-close"
+                                />
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </>
         )
     }
 }

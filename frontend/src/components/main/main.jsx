@@ -4,6 +4,7 @@ import UserProfileContainer from "../user_profile/user_profile_container";
 import GroupIndexContainer from "../groups/group_index_container";
 import EventCreateFormContainer from "../events/event_create_form_container";
 import EventFeedContainer from "../events/event_feed_container";
+import CreateGroupFormContainer from "../groups/create_group_form_container";
 import M from "materialize-css";
 
 class Main extends React.Component {
@@ -83,6 +84,8 @@ class Main extends React.Component {
         </div>
 
         {createEventForm}
+
+        <CreateGroupFormContainer />
 
         {!this.props.currentUser ? preloader : null}
         

@@ -5,6 +5,7 @@ import EditUserFormContainer from "./edit_user_form_container";
 import CreateGroupFormContainer from '../groups/create_group_form_container';
 import JoinGroupFormContainer from '../groups/join_group_form_container';
 import M from "materialize-css";
+import CreateGroupForm from '../groups/create_group_form';
 
 class UserProfile extends React.Component {
 
@@ -21,7 +22,7 @@ class UserProfile extends React.Component {
                     endingTop: "10%"
                 };
                 M.Modal.init(this.Modal1, options1);
-                M.Modal.init(this.Modal2, options1);
+                // M.Modal.init(this.Modal2, options1);
                 M.Modal.init(this.Modal3, options1);
                 M.Modal.init(this.Modal4, options1);
 
@@ -102,10 +103,10 @@ class UserProfile extends React.Component {
                     <EditUserFormContainer currentUser={currentUser}/>
                 </div>
 
-                <div className="modal" id="create-group" 
+                {/* <div className="modal" id="create-group" 
                     ref={Modal2 => { this.Modal2 = Modal2; }}>
                     <CreateGroupFormContainer />
-                </div>
+                </div> */}
 
                 <div className="modal" id="join-group" 
                     ref={Modal3 => { this.Modal3 = Modal3; }}>
