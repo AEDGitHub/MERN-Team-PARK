@@ -76,64 +76,6 @@ class SignupForm extends React.Component {
     }
 
     render() {
-        const formTitleClass = this.props.formTitle === "Sign Up" ? "session-form-title" : "user-edit-form-title";
-        const formInputClass = this.props.formTitle === "Sign Up" ? "session-form-input-holder" : "user-edit-form-input";
-
-        const passwordFields = (this.props.formTitle === "Sign Up" ? (
-            <>
-                <div className="row">
-                    <div className="session-form-input-holder">
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.update("password")}
-                            placeholder="Password"
-                            required
-                            minLength="6"
-                            maxLength="30"
-                            className="validate"
-                        />
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className="session-form-input-holder">
-                        <input
-                            type="password"
-                            value={this.state.password2}
-                            onChange={this.update("password2")}
-                            placeholder="Confirm Password"
-                            required
-                            minLength="6"
-                            maxLength="30"
-                            className="validate"
-                        />
-                    </div>
-                </div> 
-            </>
-        ) : null)
-        
-        const imageInput = (this.props.formTitle === "Edit Profile" ? (
-            <div className="row">
-                <div className={`file-field ${formInputClass}`}>
-                    <div className="btn">
-                        <span>Image</span>
-                        <input
-                            type="file"
-                            onChange={this.onImageChange}
-                            accept="image/*"
-                        />
-                    </div>
-                    <div className="file-path-wrapper">
-                        <input
-                            className={`file-path validate ${formInputClass}`}
-                            type="text"
-                            placeholder="Choose an image to upload"
-                        />
-                    </div>
-                </div>
-            </div>
-        ) : null)
 
         const demoLoginButton = (this.props.formTitle === "Sign Up" ? (
             <div>
@@ -146,60 +88,88 @@ class SignupForm extends React.Component {
         ) : null)
         
         return (
-            <div className="modal-content">
+            <div>
                 <form onSubmit={this.handleSubmit}>
 
                     <div className="session-error-holder">
                         {this.renderErrors()}
                     </div>
                     
-                    <h2 className={formTitleClass}>{this.props.formTitle}</h2>
+                    <h2 className="session-form-title">Sign up</h2>
 
                     <div className="row">
-                        <div className={formInputClass}>
+                        <div className="session-form-input-holder input-field col">
                             <input
-                                // id="signup-form-email-input"
+                                id="signup-form-email-input"
                                 type="email"
                                 value={this.state.email}
                                 onChange={this.update("email")}
-                                placeholder="Email"
                                 required
                                 className="validate"
                             />
-                            {/* <label htmlFor="signup-form-email-input">Email</label> */}
-                            {/* <span className="helper-text" data-error="Please add a valid email address"></span> */}
+                            <label htmlFor="signup-form-email-input">Email</label>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className={formInputClass}>
+                        <div className="session-form-input-holder input-field col">
                             <input 
+                                id="signup-form-firstname-input"
                                 type="text"
                                 value={this.state.firstName}
                                 onChange={this.update('firstName')}
-                                placeholder="First Name"
                                 required
                                 className="validate"
                             />
+                            <label htmlFor="signup-form-firstname-input">First name</label>
                         </div>
                     </div>  
 
                     <div className="row">
-                        <div className={formInputClass}>
+                        <div className="session-form-input-holder input-field col">
                             <input 
+                                id="signup-form-lastname-input"
                                 type="text"
                                 value={this.state.lastName}
                                 onChange={this.update('lastName')}
-                                placeholder="Last Name"
                                 required
                                 className="validate"
                             />
+                            <label htmlFor="signup-form-lastname-input">Last name</label>
                         </div>
-                    </div>  
+                    </div>
 
-                    {imageInput}
+                    <div className="row">
+                        <div className="session-form-input-holder input-field col">
+                            <input
+                                id="signup-form-password-input"
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.update("password")}
+                                required
+                                minLength="6"
+                                maxLength="30"
+                                className="validate"
+                            />
+                            <label htmlFor="signup-form-password-input">Password</label>
+                        </div>
+                    </div>
 
-                    {passwordFields}
+                    <div className="row">
+                        <div className="session-form-input-holder input-field col">
+                            <input
+                                id="signup-form-c-password-input"
+                                type="password"
+                                value={this.state.password2}
+                                onChange={this.update("password2")}
+                                required
+                                minLength="6"
+                                maxLength="30"
+                                className="validate"
+                            />
+                            <label htmlFor="signup-form-c-password-input">Confirm password</label>
+                        </div>
+                    </div>   
 
                     <div className="row">
                         <div className="session-form-buttons-holder">

@@ -123,7 +123,7 @@ class EventCreateForm extends React.Component {
                                 Event name *
                             </label>
                         </div>
-                        <div className="group-session-input-holder col s6">
+                            <div className="group-session-input-holder col s6">
                             <input
                                 type="number"
                                 value={this.state.maxCapacity}
@@ -151,7 +151,7 @@ class EventCreateForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="group-session-input-holder col s6">
+                        <div className="group-session-input-holder input-field col s6">
                             <input
                                 id="event-create-date-input"
                                 type="text"

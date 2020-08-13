@@ -74,28 +74,28 @@ class LoginForm extends React.Component {
                     <h2 className="session-form-title">Login</h2>
 
                     <div className="row">
-                        <div className="session-form-input-holder">
+                        <div className="session-form-input-holder input-field col">
                             <input
+                                id="login-form-email-input"
                                 type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
-                                placeholder='Email'
                                 required
-                                className="validate"
                             />
+                            <label htmlFor="login-form-email-input">Email</label>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className="session-form-input-holder">
+                        <div className="session-form-input-holder input-field col">
                             <input
+                                id="login-form-password-input"
                                 type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                                placeholder="Password"
                                 required
-                                className="validate"
                             />
+                            <label htmlFor="login-form-password-input">Password</label>
                         </div>
                     </div>
 
