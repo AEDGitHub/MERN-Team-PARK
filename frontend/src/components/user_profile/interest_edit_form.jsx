@@ -61,7 +61,7 @@ class InterestEditForm extends React.Component {
             onSubmit={this.handleSubmit}
           >
             <div className="interest-create-content">
-              <h4 className="interest-create-title">Edit Interest</h4>
+              <h4 className="interest-create-title">Edit interest</h4>
 
               <div className="row">
                 <div className="interest-create-input-holder">
@@ -74,7 +74,7 @@ class InterestEditForm extends React.Component {
                     required
                   />
                   <label htmlFor="create-interest-name" className="active">
-                    Interest Name *
+                    Interest name *
                   </label>
                 </div>
               </div>
@@ -93,7 +93,7 @@ class InterestEditForm extends React.Component {
                     htmlFor="create-interest-description"
                     className="active"
                   >
-                    Interest Description *
+                    Interest description *
                   </label>
                 </div>
               </div>
@@ -110,7 +110,7 @@ class InterestEditForm extends React.Component {
                     }}
                   >
                     <option value="default" disabled>
-                      Choose a Category *
+                      Choose a category *
                     </option>
                     <option value="Outdoors & Adventure">
                       Outdoors & Adventure

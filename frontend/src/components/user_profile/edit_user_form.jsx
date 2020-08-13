@@ -75,7 +75,7 @@ class UserEditForm extends React.Component {
                                         className="validate"
                                     />
                                     <label htmlFor="edit-user-firstname-input" className="active">
-                                        First Name *
+                                        First name *
                                     </label>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@ class UserEditForm extends React.Component {
                                         className="validate"
                                     />
                                     <label htmlFor="edit-user-lastname-input" className="active">
-                                        Last Name *
+                                        Last name *
                                     </label>
                                 </div>
                             </div>

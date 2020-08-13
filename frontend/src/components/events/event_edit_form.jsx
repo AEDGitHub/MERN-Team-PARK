@@ -70,13 +70,13 @@ class EventEditForm extends React.Component {
             <div className="modal" id={`edit-event-form-trigger-${this.state._id}`}
                 ref={Modal7 => { this.Modal7 = Modal7; }}>
                 <div className="modal-content" >
-                    <div className="event-create-form-container">
-                        <form onSubmit={this.handleSubmit}>
-
-                            <h4 className="group-session-title">Edit Event</h4>
+                    <div >
+                        <form onSubmit={this.handleSubmit} className="interest-create-container">
+                            <div className="interest-create-content">
+                            <h4 className="interest-create-title">Edit Event</h4>
 
                             <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s6">
                                     <select disabled
                                         style={{ display: "block" }} 
                                         required
@@ -91,10 +91,8 @@ class EventEditForm extends React.Component {
                                         ))}
                                     </select>
                                 </div>
-                            </div>
 
-                            <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s6">
                                     <select style={{ display: "block" }} required disabled
                                         onChange={this.update('interestId')} value={this.state.interest}>
                                         <option value="">Choose a related interest</option>
@@ -108,123 +106,146 @@ class EventEditForm extends React.Component {
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s6">
                                     <input
                                         type="text"
-                                        id="create-event-name-input"
                                         value={this.state.name}
                                         onChange={this.update("name")}
-                                        placeholder="Name"
                                         required
                                     />
+                                    <label className="active">
+                                        Event name *
+                                    </label>
                                 </div>
-                            </div>
 
-                            <div className="row">
-                                <div className="group-session-input-holder">
-                                    <input
-                                        type="text"
-                                        value={this.state.details}
-                                        onChange={this.update("details")}
-                                        placeholder="Details"
-                                        required
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s6">
                                     <input
                                         type="number"
                                         value={this.state.maxCapacity}
                                         onChange={this.update("maxCapacity")}
-                                        placeholder="Maximum # of People"
                                         required
                                     />
+                                    <label className="active">
+                                        Maximum # of People *
+                                    </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s12">
+                                    <input
+                                        type="text"
+                                        value={this.state.details}
+                                        onChange={this.update("details")}
+                                        required
+                                    />
+                                    <label className="active">
+                                        Event details *
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="group-session-input-holder col s6">
                                     <input
                                         type="text"
                                         className="datepicker"
                                         id="event-edit-datepicker"
                                         defaultValue={this.state.date}
-                                        placeholder="Date"
                                         required
                                     />
+                                    <label className="active">
+                                        Date *
+                                    </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s6">
                                     <input
                                         type="text"
                                         value={this.state.address.name}
                                         onChange={this.update("address.name")}
-                                        placeholder="Location"
                                         required
                                     />
+                                    <label className="active">
+                                        Location *
+                                    </label>
                                 </div>
-                            </div>
 
-                            <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s6">
                                     <input
                                         type="text"
                                         value={this.state.address.address1}
                                         onChange={this.update("address.address1")}
-                                        placeholder="Address"
                                         required
                                     />
+                                    <label className="active">
+                                        Address *
+                                    </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s6">
                                     <input
                                         type="text"
                                         value={this.state.address.city}
                                         onChange={this.update("address.city")}
-                                        placeholder="City"
                                         required
                                     />
+                                    <label className="active">
+                                        City *
+                                    </label>
                                 </div>
-                            </div>
-
-                            <div className="row">
-                                <div className="group-session-input-holder">
+ 
+                                <div className="group-session-input-holder col s6">
                                     <input
                                         type="text"
                                         value={this.state.address.state}
                                         onChange={this.update("address.state")}
-                                        placeholder="State"
                                         required
                                     />
+                                    <label className="active">
+                                        State *
+                                    </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder">
+                                <div className="group-session-input-holder col s6">
                                     <input
                                         type="number"
                                         value={this.state.address.zipCode}
                                         onChange={this.update("address.zipCode")}
-                                        placeholder="ZIP"
                                         required
                                     />
+                                    <label className="active">
+                                        ZIP *
+                                    </label>
                                 </div>
                             </div>
 
                             <div className="row">
                                 <input
                                     type="submit"
-                                    value="Save"
-                                    className="group-session-button modal-close"
+                                    value="Save Changes"
+                                    className={`interest-create-button modal-close 
+                                    ${this.state.groupId === "" ||
+                                    this.state.interestId === "" ||
+                                    this.state.name === "" ||
+                                    this.state.details === "" ||
+                                    this.state.maxCapacity === "" ||
+                                    this.state.date === "" ||
+                                    this.state.address.name === "" ||
+                                    this.state.address.address1 === "" ||
+                                    this.state.address.city === "" ||
+                                    this.state.address.state === "" ||
+                                    this.state.address.zipCode === ""
+                                    ? "disabled" : ""}`}
                                 />
                             </div>
-
+                            </div>
                         </form>
                     </div>
                 </div>
