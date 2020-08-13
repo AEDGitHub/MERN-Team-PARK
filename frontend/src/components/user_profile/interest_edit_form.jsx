@@ -25,15 +25,14 @@ class InterestEditForm extends React.Component {
   }
 
   componentDidMount() {
-    let editIntNameField = document.getElementById("edit-interest-name");
-    M.CharacterCounter.init(editIntNameField);
-    M.textareaAutoResize(editIntNameField);
+    let editIntNameField = document.getElementById("edit-interest-name-input");
+    let editIntDescField = document.getElementById("edit-interest-description-input");
+    M.CharacterCounter.init(editIntNameField, editIntDescField);
+    M.textareaAutoResize(editIntNameField, editIntDescField);
 
-    let editIntDescField = document.getElementById("edit-interest-description");
-    M.CharacterCounter.init(editIntDescField);
-    M.textareaAutoResize(editIntDescField);
-
-    M.FormSelect.init(this.FormSelect);
+    M.FormSelect.init(this.FormSelect, {
+      dropdownOptions: { container: document.body, constrainWidth: false }
+    });
   }
 
   update(field) {
@@ -66,14 +65,14 @@ class InterestEditForm extends React.Component {
               <div className="row">
                 <div className="interest-create-input-holder">
                   <textarea
-                    id="edit-interest-name"
-                    className="materialize-textarea validate"
+                    id="edit-interest-name-input"
+                    className="materialize-textarea"
                     value={this.state.name}
                     data-length="40"
                     onChange={this.update("name")}
                     required
                   />
-                  <label htmlFor="create-interest-name" className="active">
+                  <label htmlFor="edit-interest-name-input" className="active">
                     Interest name *
                   </label>
                 </div>
@@ -82,15 +81,15 @@ class InterestEditForm extends React.Component {
               <div className="row">
                 <div className="interest-create-input-holder">
                   <textarea
-                    id="edit-interest-description"
-                    className="materialize-textarea validate"
+                    id="edit-interest-description-input"
+                    className="materialize-textarea"
                     data-length="120"
                     value={this.state.description}
                     onChange={this.update("description")}
                     required
                   />
                   <label
-                    htmlFor="create-interest-description"
+                    htmlFor="edit-interest-description-input"
                     className="active"
                   >
                     Interest description *
@@ -104,7 +103,6 @@ class InterestEditForm extends React.Component {
                     onChange={this.update("category")}
                     value={this.state.category}
                     required
-                    className="validate"
                     ref={(FormSelect) => {
                       this.FormSelect = FormSelect;
                     }}

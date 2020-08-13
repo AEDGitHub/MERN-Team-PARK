@@ -122,6 +122,7 @@
 
 .interest-create-input-holder {
   @extend .input-field;
+  // margin: 10px 0px;
 }
 
 .interest-create-title {
@@ -130,6 +131,10 @@
 
 .interest-create-content {
   // @extend .card-content, .white-text;
+}
+
+.interest-create-content .row {
+  // margin-bottom: 5px;
 }
 
 .interest-create-container {

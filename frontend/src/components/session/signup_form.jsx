@@ -105,7 +105,6 @@ class SignupForm extends React.Component {
                                 value={this.state.email}
                                 onChange={this.update("email")}
                                 required
-                                className="validate"
                             />
                             <label htmlFor="signup-form-email-input">Email</label>
                         </div>
@@ -119,7 +118,6 @@ class SignupForm extends React.Component {
                                 value={this.state.firstName}
                                 onChange={this.update('firstName')}
                                 required
-                                className="validate"
                             />
                             <label htmlFor="signup-form-firstname-input">First name</label>
                         </div>
@@ -133,7 +131,6 @@ class SignupForm extends React.Component {
                                 value={this.state.lastName}
                                 onChange={this.update('lastName')}
                                 required
-                                className="validate"
                             />
                             <label htmlFor="signup-form-lastname-input">Last name</label>
                         </div>
@@ -149,7 +146,6 @@ class SignupForm extends React.Component {
                                 required
                                 minLength="6"
                                 maxLength="30"
-                                className="validate"
                             />
                             <label htmlFor="signup-form-password-input">Password</label>
                         </div>
@@ -165,7 +161,6 @@ class SignupForm extends React.Component {
                                 required
                                 minLength="6"
                                 maxLength="30"
-                                className="validate"
                             />
                             <label htmlFor="signup-form-c-password-input">Confirm password</label>
                         </div>

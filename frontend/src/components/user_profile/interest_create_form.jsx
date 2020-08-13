@@ -37,17 +37,14 @@ class InterestCreateForm extends React.Component {
   }
 
   componentDidMount() {
-    let createIntNameField = document.getElementById("create-interest-name");
-    M.CharacterCounter.init(createIntNameField);
-    M.textareaAutoResize(createIntNameField);
+    let createIntNameField = document.getElementById("create-interest-name-input");
+    let createIntDescField = document.getElementById("create-interest-description-input");
+    M.CharacterCounter.init(createIntNameField, createIntDescField);
+    M.textareaAutoResize(createIntNameField, createIntDescField);
 
-    let createIntDescField = document.getElementById(
-      "create-interest-description"
-    );
-    M.CharacterCounter.init(createIntDescField);
-    M.textareaAutoResize(createIntDescField);
-
-    M.FormSelect.init(this.FormSelect);
+    M.FormSelect.init(this.FormSelect, { 
+      dropdownOptions: { container: document.body, constrainWidth: false } 
+    });
   }
 
   update(field) {
@@ -80,14 +77,14 @@ class InterestCreateForm extends React.Component {
               <div className="row">
                 <div className="interest-create-input-holder">
                   <textarea
-                    id="create-interest-name"
-                    className="materialize-textarea validate"
+                    id="create-interest-name-input"
+                    className="materialize-textarea"
                     value={this.state.name}
                     data-length="40"
                     onChange={this.update("name")}
                     required
                   />
-                  <label htmlFor="create-interest-name">
+                  <label htmlFor="create-interest-name-input">
                     Interest name *
                   </label>
                 </div>
@@ -96,14 +93,14 @@ class InterestCreateForm extends React.Component {
               <div className="row">
                 <div className="interest-create-input-holder">
                   <textarea
-                    id="create-interest-description"
-                    className="materialize-textarea validate"
+                    id="create-interest-description-input"
+                    className="materialize-textarea"
                     data-length="120"
                     value={this.state.description}
                     onChange={this.update("description")}
                     required
                   />
-                  <label htmlFor="create-interest-description">
+                  <label htmlFor="create-interest-description-input">
                     Interest description *
                   </label>
                 </div>
@@ -115,7 +112,6 @@ class InterestCreateForm extends React.Component {
                     onChange={this.update("category")}
                     defaultValue=""
                     required
-                    className="validate"
                     ref={(FormSelect) => {
                       this.FormSelect = FormSelect;
                     }}
