@@ -33,8 +33,8 @@ class Main extends React.Component {
               <i className="material-icons">help_outline</i>
             </a> */}
             <button onClick={this.featureDiscoveryShow} id="menu"
-              className="waves-effect waves-light btn-large btn-floating" >
-              <i className="material-icons">help_outline</i>
+              className="waves-effect waves-light btn-large btn-floating pulse" >
+              <i className="material-icons pulse">help_outline</i>
             </button>
           </div>
         </div>

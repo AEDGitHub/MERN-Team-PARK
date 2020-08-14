@@ -46,24 +46,24 @@ class UserProfile extends React.Component {
         const { currentUser } = this.props
         if (!currentUser) return null
 
-        const profilePicture = (currentUser.img ? (
-            <div className="profile-picture">
-                <img
-                    src={currentUser.img} alt="user-profile"
-                    className="responsive-img"
-                />
-            </div>
-        ) : (
-            <div className="profile-picture">
-                <i className="material-icons">account_circle</i>
-            </div>
-        ))
+        // const profilePicture = (currentUser.img ? (
+        //     <div className="profile-picture">
+        //         <img
+        //             src={currentUser.img} alt="user-profile"
+        //             className="responsive-img"
+        //         />
+        //     </div>
+        // ) : (
+        //     <div className="profile-picture">
+        //         <i className="material-icons">account_circle</i>
+        //     </div>
+        // ))
         
         return (
             <div >
 
                 <div className="user-profile-holder">
-                    {profilePicture}
+                    {/* {profilePicture} */}
                     
                     {/* <h5 className="user-profile-name">
                         {currentUser.firstName} {currentUser.lastName}
@@ -77,7 +77,7 @@ class UserProfile extends React.Component {
                             className="btn-flat tooltipped modal-trigger" 
                             data-tooltip="Edit Profile" 
                             data-target="user-edit">
-                            <i className="small material-icons">settings</i>
+                            <i className="small material-icons">create</i>
                         </button>
       
                         <button ref={Tooltip => { this.Tooltip2 = Tooltip;}} 

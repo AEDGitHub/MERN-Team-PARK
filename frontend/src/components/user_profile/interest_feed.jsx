@@ -22,9 +22,12 @@ class InterestFeed extends React.Component {
         })
 
         return (
-            <ul className="row">
-                {interests}
-            </ul>
+            <div>
+                {this.props.interests.length > 0 ? <h4 className="component-header">My Interests</h4> : null}
+                <ul className="row">
+                    {interests}
+                </ul>
+            </div>
         )
     }
 
