@@ -26,9 +26,12 @@ class InterestEditForm extends React.Component {
 
   componentDidMount() {
     let editIntNameField = document.getElementById("edit-interest-name-input");
+    M.CharacterCounter.init(editIntNameField);
+    M.textareaAutoResize(editIntNameField);
+
     let editIntDescField = document.getElementById("edit-interest-description-input");
-    M.CharacterCounter.init(editIntNameField, editIntDescField);
-    M.textareaAutoResize(editIntNameField, editIntDescField);
+    M.CharacterCounter.init(editIntDescField);
+    M.textareaAutoResize(editIntDescField);
 
     M.FormSelect.init(this.FormSelect, {
       dropdownOptions: { container: document.body, constrainWidth: false }
@@ -132,7 +135,7 @@ class InterestEditForm extends React.Component {
                   </div>
                   <div className="file-path-wrapper">
                     <input
-                      className="file-path validate"
+                      className="file-path"
                       type="text"
                       placeholder="Choose an image to upload"
                     />

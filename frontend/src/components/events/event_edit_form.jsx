@@ -22,6 +22,7 @@ class EventEditForm extends React.Component {
         let date = new Date(this.state.date);
         
         const options5 = {
+            container: 'body',
             format: 'mmm dd yyyy',
             defaultDate: date,
             setDefaultDate: true,
@@ -76,7 +77,7 @@ class EventEditForm extends React.Component {
                             <h4 className="interest-create-title">Edit Event</h4>
 
                             <div className="row">
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <select disabled
                                         style={{ display: "block" }} 
                                         required
@@ -92,7 +93,7 @@ class EventEditForm extends React.Component {
                                     </select>
                                 </div>
 
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <select style={{ display: "block" }} required disabled
                                         onChange={this.update('interestId')} value={this.state.interest}>
                                         <option value="">Choose a related interest</option>
@@ -106,47 +107,50 @@ class EventEditForm extends React.Component {
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <input
+                                        id="edit-event-form-name-input"
                                         type="text"
                                         value={this.state.name}
                                         onChange={this.update("name")}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="edit-event-form-name-input" className="active">
                                         Event name *
                                     </label>
                                 </div>
 
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <input
+                                        id="edit-event-form-peoplenum-input"
                                         type="number"
                                         value={this.state.maxCapacity}
                                         onChange={this.update("maxCapacity")}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="edit-event-form-peoplenum-input" className="active">
                                         Maximum # of People *
                                     </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder col s12">
+                                <div className="event-form-input-holder input-field col s12">
                                     <input
+                                        id="edit-event-form-details-input"
                                         type="text"
                                         value={this.state.details}
                                         onChange={this.update("details")}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="edit-event-form-details-input" className="active">
                                         Event details *
                                     </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <input
                                         type="text"
                                         className="datepicker"
@@ -154,73 +158,78 @@ class EventEditForm extends React.Component {
                                         defaultValue={this.state.date}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="event-edit-datepicker" className="active">
                                         Date *
                                     </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <input
+                                        id="event-edit-location-input"
                                         type="text"
                                         value={this.state.address.name}
                                         onChange={this.update("address.name")}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="event-edit-location-input" className="active">
                                         Location *
                                     </label>
                                 </div>
 
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <input
+                                        id="event-edit-address-input"
                                         type="text"
                                         value={this.state.address.address1}
                                         onChange={this.update("address.address1")}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="event-edit-address-input" className="active">
                                         Address *
                                     </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <input
+                                        id="event-edit-city-input"
                                         type="text"
                                         value={this.state.address.city}
                                         onChange={this.update("address.city")}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="event-edit-city-input" className="active">
                                         City *
                                     </label>
                                 </div>
  
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <input
+                                        id="event-edit-state-input"
                                         type="text"
                                         value={this.state.address.state}
                                         onChange={this.update("address.state")}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="event-edit-state-input" className="active">
                                         State *
                                     </label>
                                 </div>
                             </div>
 
                             <div className="row">
-                                <div className="group-session-input-holder col s6">
+                                <div className="event-form-input-holder input-field col s6">
                                     <input
+                                        id="event-edit-zip-input"
                                         type="number"
                                         value={this.state.address.zipCode}
                                         onChange={this.update("address.zipCode")}
                                         required
                                     />
-                                    <label className="active">
+                                    <label htmlFor="event-edit-zip-input" className="active">
                                         ZIP *
                                     </label>
                                 </div>

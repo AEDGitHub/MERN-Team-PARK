@@ -38,9 +38,12 @@ class InterestCreateForm extends React.Component {
 
   componentDidMount() {
     let createIntNameField = document.getElementById("create-interest-name-input");
+    M.CharacterCounter.init(createIntNameField);
+    M.textareaAutoResize(createIntNameField);
+
     let createIntDescField = document.getElementById("create-interest-description-input");
-    M.CharacterCounter.init(createIntNameField, createIntDescField);
-    M.textareaAutoResize(createIntNameField, createIntDescField);
+    M.CharacterCounter.init(createIntDescField);
+    M.textareaAutoResize(createIntDescField);
 
     M.FormSelect.init(this.FormSelect, { 
       dropdownOptions: { container: document.body, constrainWidth: false } 
@@ -141,7 +144,7 @@ class InterestCreateForm extends React.Component {
                   </div>
                   <div className="file-path-wrapper">
                     <input
-                      className="file-path validate"
+                      className="file-path"
                       type="text"
                       placeholder="Choose an image to upload"
                     />

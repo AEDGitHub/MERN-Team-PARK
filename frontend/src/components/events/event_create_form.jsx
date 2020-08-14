@@ -74,11 +74,11 @@ class EventCreateForm extends React.Component {
             <div className="modal-content" >
                 <div >
                     <form className="interest-create-container" onSubmit={this.handleSubmit}>
-                    <div className="interest-create-content">
+                    <div className="event-form-content">
                     <h4 className="interest-create-title">Create an Event</h4>
 
                     <div className="row">
-                        <div className="group-session-input-holder col s6">
+                        <div className="event-form-input-holder input-field col s6">
                             <select 
                                 onChange={this.update('groupId')} 
                                 defaultValue={this.state.groupId} 
@@ -94,7 +94,7 @@ class EventCreateForm extends React.Component {
                             </select>
                         </div>
 
-                        <div className="group-session-input-holder col s6">
+                        <div className="event-form-input-holder input-field col s6">
                             <select 
                                 onChange={this.update('interestId')} 
                                 defaultValue="default" 
@@ -112,119 +112,127 @@ class EventCreateForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="group-session-input-holder col s6">
+                        <div className="event-form-input-holder input-field col s6">
                             <input
+                                id="create-event-form-name-input"
                                 type="text"
                                 value={this.state.name}
                                 onChange={this.update("name")}
                                 required
                             />
-                            <label>
+                            <label htmlFor="create-event-form-name-input">
                                 Event name *
                             </label>
                         </div>
-                            <div className="group-session-input-holder col s6">
+                            <div className="event-form-input-holder input-field col s6">
                             <input
+                                id="create-event-form-peoplenum-input"
                                 type="number"
                                 value={this.state.maxCapacity}
                                 onChange={this.update("maxCapacity")}
                                 required
                             />
-                            <label>
+                            <label htmlFor="create-event-form-peoplenum-input">
                                 Maximum # of People *
                             </label>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className="group-session-input-holder col s12">
+                        <div className="event-form-input-holder input-field col s12">
                             <input
+                                id="create-event-form-details-input"
                                 type="text"
                                 value={this.state.details}
                                 onChange={this.update("details")}
                                 required
                             />
-                            <label>
+                            <label htmlFor="create-event-form-details-input">
                                 Event details *
                             </label>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className="group-session-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field input-field col s6">
                             <input
                                 id="event-create-date-input"
                                 type="text"
                                 className="datepicker"
                                 required
                             />
-                            <label>
+                            <label htmlFor="event-create-date-input">
                                 Date *
                             </label>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className="group-session-input-holder col s6">
+                        <div className="event-form-input-holder input-field col s6">
                             <input
+                                id="event-create-location-input"
                                 type="text"
                                 value={this.state.address.name}
                                 onChange={this.update("address.name")}
                                 required
                             />
-                            <label>
+                            <label htmlFor="event-create-location-input">
                                 Location *
                             </label>
                         </div>
 
-                        <div className="group-session-input-holder col s6">
+                        <div className="event-form-input-holder input-field col s6">
                             <input
+                                id="event-create-address-input"
                                 type="text"
                                 value={this.state.address.address1}
                                 onChange={this.update("address.address1")}
                                 required
                             />
-                            <label>
+                            <label htmlFor="event-create-address-input">
                                 Address *
                             </label>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className="group-session-input-holder col s6">
+                        <div className="event-form-input-holder input-field col s6">
                             <input
+                                id="event-create-city-input"
                                 type="text"
                                 value={this.state.address.city}
                                 onChange={this.update("address.city")}
                                 required
                             />
-                            <label>
+                            <label htmlFor="event-create-city-input">
                                 City *
                             </label>
                         </div>
 
-                        <div className="group-session-input-holder col s6">
+                        <div className="event-form-input-holder input-field col s6">
                             <input
+                                id="event-create-state-input"
                                 type="text"
                                 value={this.state.address.state}
                                 onChange={this.update("address.state")}
                                 required
                             />
-                            <label>
+                            <label htmlFor="event-create-state-input">
                                 State *
                             </label>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className="group-session-input-holder col s6">
+                        <div className="event-form-input-holder input-field col s6">
                             <input
+                                id="event-create-zip-input"
                                 type="text"
                                 value={this.state.address.zipCode}
                                 onChange={this.update("address.zipCode")}
                                 required
                             />
-                            <label>
+                            <label htmlFor="event-create-zip-input">
                                 ZIP *
                             </label>
                         </div>

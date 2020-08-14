@@ -65,9 +65,9 @@ class UserProfile extends React.Component {
                 <div className="user-profile-holder">
                     {profilePicture}
                     
-                    <h4 className="user-profile-name">
+                    {/* <h5 className="user-profile-name">
                         {currentUser.firstName} {currentUser.lastName}
-                    </h4>
+                    </h5> */}
 
                     {/* <h5 className="center">{currentUser.email}</h5> */}
 
@@ -77,21 +77,21 @@ class UserProfile extends React.Component {
                             className="btn-flat tooltipped modal-trigger" 
                             data-tooltip="Edit Profile" 
                             data-target="user-edit">
-                            <i className="large material-icons">edit</i>
+                            <i className="small material-icons">edit</i>
                         </button>
       
                         <button ref={Tooltip => { this.Tooltip2 = Tooltip;}} 
                             className="btn-flat modal-trigger" 
                             data-tooltip="Create Group" 
                             data-target="create-group">
-                            <i className="large material-icons">group</i>
+                            <i className="small material-icons">group</i>
                         </button>
         
                         <button ref={Tooltip => { this.Tooltip3 = Tooltip; }} 
                             className="btn-flat modal-trigger" 
                             data-tooltip="Join Group" 
                             data-target="join-group">
-                            <i className="large material-icons">group_add</i>
+                            <i className="small material-icons">group_add</i>
                         </button>
 
                     </div>
