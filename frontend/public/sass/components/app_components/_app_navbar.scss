@@ -18,3 +18,26 @@
   left: 0%;
   margin-left: 20px;
 }
+
+.navbar-profile-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 15px 15px;
+  font-size: 40px;
+  box-sizing: inherit;
+}
+
+.navbar-profile-picture .i {
+  font-size: 40px;
+}
+
+.navbar-welcome-message {
+  padding: 0px 0px 0px 20px;
+  font-style: italic;
+  font-weight: thin;
+}

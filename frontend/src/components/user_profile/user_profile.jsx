@@ -77,7 +77,7 @@ class UserProfile extends React.Component {
                             className="btn-flat tooltipped modal-trigger" 
                             data-tooltip="Edit Profile" 
                             data-target="user-edit">
-                            <i className="small material-icons">edit</i>
+                            <i className="small material-icons">settings</i>
                         </button>
       
                         <button ref={Tooltip => { this.Tooltip2 = Tooltip;}} 

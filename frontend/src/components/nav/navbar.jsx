@@ -23,6 +23,19 @@ class NavBar extends React.Component {
     getLinks() {
         const { currentUser, loggedIn } = this.props;
         const hasGroups = currentUser && currentUser.groups.length > 0;
+
+        const profilePicture = (currentUser && currentUser.img ? (
+            <div className="navbar-profile-picture">
+                <img
+                    src={currentUser.img} alt="user-profile"
+                    className="responsive-img"
+                />
+            </div>
+        ) : (
+                <div className="navbar-profile-picture">
+                    <i className="material-icons">account_circle</i>
+                </div>
+        ))
         
         if (loggedIn) {
             return (
@@ -30,6 +43,9 @@ class NavBar extends React.Component {
                     <li><Link to={'/about'}>About</Link></li>
                     {hasGroups ? <li><Link to={'/main'}>Groups</Link></li> : null}
                     {hasGroups ? <li><Link to={'/main/events'}>Events</Link></li> : null}
+                    <li><div className="navbar-welcome-message">{this.props.currentUser ? `Hello, ${this.props.currentUser.firstName}!` : null}</div></li>
+                    <li>{profilePicture}</li>
+
                     <li>
                         <button 
                             className="navbar-session-button" 
