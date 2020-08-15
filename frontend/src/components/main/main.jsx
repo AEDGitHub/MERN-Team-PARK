@@ -69,8 +69,6 @@ class Main extends React.Component {
       </div>
     )
 
-    // debugger
-
     return (
       <div className="main-container">
 
@@ -84,6 +82,14 @@ class Main extends React.Component {
             {this.props.currentUserGroups.length > 0 ? 
             <Route exact path="/main/events" component={EventFeedContainer} /> : null}
           </Switch>
+
+          {/* <div id="group-index-container">
+            <GroupIndexContainer />
+          </div>
+
+          <div id="event-feed-container" style={{ display: "none" }}>
+            {this.props.currentUserGroups.length > 0 ? <EventFeedContainer /> : null}
+          </div> */}
 
           {featureDiscovery}
 

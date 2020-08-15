@@ -20,6 +20,26 @@ class NavBar extends React.Component {
         this.props.logout();
     }
 
+    // rightComponentSwitch(e) {
+    //     e.preventDefault()
+
+    //     let groups = document.getElementById("group-index-container")
+    //     let events = document.getElementById("event-feed-container")
+
+    //     if (e.target.innerText === "Groups" && groups.style.cssText === "display: none;") {
+    //         groups.style.removeProperty('display');
+    //         events.style["display"] = "none"
+    //         console.log('hello')
+    //     }
+
+    //     if (e.target.innerText === "Events" && events.style.cssText === "display: none;") {
+    //         events.style.removeProperty('display');
+    //         groups.style["display"] = "none"
+    //         console.log('hello')
+    //     }
+
+    // }
+
     getLinks() {
         const { currentUser, loggedIn } = this.props;
         const hasGroups = currentUser && currentUser.groups.length > 0;
@@ -43,6 +63,8 @@ class NavBar extends React.Component {
                     <li><Link to={'/about'}>About</Link></li>
                     {hasGroups ? <li><Link to={'/main'}>Groups</Link></li> : null}
                     {hasGroups ? <li><Link to={'/main/events'}>Events</Link></li> : null}
+                    {/* {hasGroups ? <li><a onClick={this.rightComponentSwitch}>Groups</a></li> : null}
+                    {hasGroups ? <li><a onClick={this.rightComponentSwitch}>Events</a></li> : null} */}
                     <li><div className="navbar-welcome-message">{this.props.currentUser ? `Hello, ${this.props.currentUser.firstName}!` : null}</div></li>
                     <li>{profilePicture}</li>
 
