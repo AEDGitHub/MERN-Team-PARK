@@ -78,7 +78,7 @@ class EventCreateForm extends React.Component {
                     <h4 className="interest-create-title">Create an Event</h4>
 
                     <div className="row">
-                        <div className="event-form-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field col s12 m6 l6">
                             <select 
                                 onChange={this.update('groupId')} 
                                 defaultValue={this.state.groupId} 
@@ -94,7 +94,7 @@ class EventCreateForm extends React.Component {
                             </select>
                         </div>
 
-                        <div className="event-form-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field col s12 m6 l6">
                             <select 
                                 onChange={this.update('interestId')} 
                                 defaultValue="default" 
@@ -112,7 +112,7 @@ class EventCreateForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="event-form-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field col s12 m6 l6">
                             <input
                                 id="create-event-form-name-input"
                                 type="text"
@@ -124,7 +124,7 @@ class EventCreateForm extends React.Component {
                                 Event name *
                             </label>
                         </div>
-                            <div className="event-form-input-holder input-field col s6">
+                            <div className="event-form-input-holder input-field col s12 m6 l6">
                             <input
                                 id="create-event-form-peoplenum-input"
                                 type="number"
@@ -154,7 +154,7 @@ class EventCreateForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="event-form-input-holder input-field input-field col s6">
+                        <div className="event-form-input-holder input-field input-field col s12 m6 l6">
                             <input
                                 id="event-create-date-input"
                                 type="text"
@@ -168,7 +168,7 @@ class EventCreateForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="event-form-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field col s12 m6 l6">
                             <input
                                 id="event-create-location-input"
                                 type="text"
@@ -181,7 +181,7 @@ class EventCreateForm extends React.Component {
                             </label>
                         </div>
 
-                        <div className="event-form-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field col s12 m6 l6">
                             <input
                                 id="event-create-address-input"
                                 type="text"
@@ -196,7 +196,7 @@ class EventCreateForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="event-form-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field col s12 m6 l6">
                             <input
                                 id="event-create-city-input"
                                 type="text"
@@ -209,7 +209,7 @@ class EventCreateForm extends React.Component {
                             </label>
                         </div>
 
-                        <div className="event-form-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field col s12 m6 l6">
                             <input
                                 id="event-create-state-input"
                                 type="text"
@@ -224,7 +224,7 @@ class EventCreateForm extends React.Component {
                     </div>
 
                     <div className="row">
-                        <div className="event-form-input-holder input-field col s6">
+                        <div className="event-form-input-holder input-field col s12 m6 l6">
                             <input
                                 id="event-create-zip-input"
                                 type="text"

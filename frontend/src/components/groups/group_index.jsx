@@ -9,6 +9,7 @@ class GroupIndex extends React.Component {
         this.state = {
           toggleCreate: false,
           toggleJoin: false,
+          groupLoader: false
         };
     }
 
@@ -28,7 +29,9 @@ class GroupIndex extends React.Component {
     attachCollapsibleHandles() {
       const options1 = {
         onOpenStart: (elem) => {
-          this.props.fetchGroup(elem.dataset.id);
+          this.setState({ groupLoader: true });
+          this.props.fetchGroup(elem.dataset.id)
+            .then(() => this.setState({ groupLoader: false }));
         },
         inDuration: 300,
         outDuration: 200
@@ -39,6 +42,12 @@ class GroupIndex extends React.Component {
 
     render() {
         const { groups } = this.props;
+        
+        const preloader = (
+          <div className="progress">
+            <div className="indeterminate"></div>
+          </div>
+        );
 
         const groupsList = (groups.length !== 0 && groups[0] !== undefined ? (
           <ul ref={Collapsible => { this.Collapsible1 = Collapsible; }} 
@@ -51,6 +60,7 @@ class GroupIndex extends React.Component {
                       </div>
                     </div>
                     <div className="collapsible-body">
+                        {this.state.groupLoader ? preloader : null}
                         <GroupShowContainer groupId={group._id}/>
                     </div>
                 </li>
