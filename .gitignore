@@ -112,3 +112,6 @@ dist
 
 #DS Stores
 .DS_Store
+
+#DB seeder
+seeder.js
