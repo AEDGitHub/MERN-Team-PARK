@@ -28,8 +28,12 @@
   border-radius: 50%;
   overflow: hidden;
   margin: 15px 15px;
-  font-size: 40px;
-  box-sizing: inherit;
+  // font-size: 40px;
+  // box-sizing: inherit;
+}
+
+.navbar-profile-picture img {
+  height: 2.5rem;
 }
 
 .navbar-profile-picture i {

@@ -48,7 +48,7 @@ class NavBar extends React.Component {
             <div className="navbar-profile-picture">
                 <img
                     src={currentUser.img} alt="user-profile"
-                    className="responsive-img"
+                    // className="responsive-img"
                 />
             </div>
         ) : (
