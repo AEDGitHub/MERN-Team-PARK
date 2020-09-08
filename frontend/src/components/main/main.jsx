@@ -51,7 +51,7 @@ class Main extends React.Component {
     const createEventForm = this.props.currentUser && this.props.currentUser.interests.length > 0 && 
     this.props.currentUserGroups.length > 0 ? (
       <>
-        <EventCreateFormContainer userInterests={this.props.currentUser.interests}/>
+        <EventCreateFormContainer />
       </>
     ) : null
 

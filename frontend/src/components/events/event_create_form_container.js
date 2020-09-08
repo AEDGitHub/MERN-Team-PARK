@@ -6,6 +6,7 @@ import { usersGroups } from '../../reducers/selectors';
 const mapStateToProps = state => {
     return {
         currentUserGroups: usersGroups(state, state.session.user.id),
+        currentUserInterests: state.entities.users[state.session.user.id].interests,
         initialState: {
             name: "",
             date: "",

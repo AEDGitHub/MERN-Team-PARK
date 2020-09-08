@@ -49,6 +49,17 @@ class EventCreateForm extends React.Component {
         M.Modal.init(this.Modal6, options4);
     }
 
+    componentDidUpdate(prevProps) {
+
+        if (prevProps.currentUserInterests.length !== this.props.currentUserInterests.length) {
+            M.FormSelect.init(this.FormSelect2)
+        }
+
+        if (prevProps.currentUserGroups.length !== this.props.currentUserGroups.length) {
+            M.FormSelect.init(this.FormSelect1)
+        }
+    }
+
     update(field) {
         if (field.includes('.')) {
             field = field.split('.')[1]
@@ -63,7 +74,7 @@ class EventCreateForm extends React.Component {
     }
 
     render() {
-        const currentUserInterests = this.props.userInterests
+        const currentUserInterests = this.props.currentUserInterests
         const currentUserGroups = this.props.currentUserGroups
         
         if (currentUserGroups[0] === undefined) return null
