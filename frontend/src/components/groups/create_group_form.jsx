@@ -90,13 +90,14 @@ class CreateGroupForm extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="row">
+                            <div className="form-buttons">
                                 <input 
                                     type="submit" 
                                     value="Create" 
                                     className={`group-session-button modal-close
                                     ${this.state.name === "" ? "disabled" : ""}`}
                                 />
+                                <button className="interest-create-button red lighten-2 waves-effect waves-light modal-close">Cancel</button>
                             </div>
 
                         </form>

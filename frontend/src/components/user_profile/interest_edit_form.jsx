@@ -143,13 +143,17 @@ class InterestEditForm extends React.Component {
                 </div>
               </div>
 
-              <input
-                type="submit"
-                value="Edit Interest"
-                className={`interest-create-button modal-close 
-                ${this.state.name === "" || this.state.description === "" ||
-                this.state.category === "" ? "disabled" : ""}`}
-              />
+              <div className="form-buttons">
+                <input
+                  type="submit"
+                  value="Edit Interest"
+                  className={`interest-create-button modal-close 
+                  ${this.state.name === "" || this.state.description === "" ||
+                      this.state.category === "" ? "disabled" : ""}`}
+                />
+                <button className="interest-create-button red lighten-2 waves-effect waves-light modal-close">Cancel</button>
+              </div>
+             
             </div>
           </form>
         </div>

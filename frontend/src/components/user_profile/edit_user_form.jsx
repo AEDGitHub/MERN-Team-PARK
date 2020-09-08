@@ -139,14 +139,16 @@ class UserEditForm extends React.Component {
                                 </div>
                             </div>
 
-
-                            <input
-                                type="submit"
-                                value="Save Changes"
-                                className={`interest-create-button modal-close 
+                            <div className="form-buttons">
+                                <input
+                                    type="submit"
+                                    value="Save Changes"
+                                    className={`interest-create-button modal-close 
                                 ${this.state.firstName === "" || this.state.lastName === "" ||
-                                this.state.email === "" ? "disabled" : ""}`}
-                            />
+                                            this.state.email === "" ? "disabled" : ""}`}
+                                />
+                                <button className="interest-create-button red lighten-2 waves-effect waves-light modal-close">Cancel</button>
+                            </div>
 
                         </div>
                     </form>

@@ -43,15 +43,14 @@ class JoinGroupForm extends React.Component {
                         </div>
                     </div>
 
-                    <div className="row">
-                        <div>
+                    <div className="form-buttons">
                             <button 
                                 className={`group-session-button modal-close
                                 ${this.state.slug === "" ? "disabled" : ""}`}
                             >
                                 Join
                             </button>
-                        </div>
+                            <button className="interest-create-button red lighten-2 waves-effect waves-light modal-close">Cancel</button>
                     </div>
 
                 </form>
