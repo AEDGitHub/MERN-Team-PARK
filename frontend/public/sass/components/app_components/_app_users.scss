@@ -33,10 +33,34 @@
 // User Edit Form
 
 .user-edit-form-title {
-  @extend .center;
-  padding-top: 2rem;
+  // @extend .center;
+  // padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-edit-form-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.user-edit-form-title img {
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-edit-form-title i {
+  font-size: 60px !important;
 }
 
 .user-edit-form-input {
   @extend .input-field, .col, .s8, .m6, .l6, .offset-l3, .offset-m3, .offset-s2;
 }
+

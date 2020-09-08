@@ -32,10 +32,30 @@ class UserEditForm extends React.Component {
     }
 
     onImageChange(e) {
-        this.setState({ img: e.target.files[0] });
+        let imgFile = e.target.files[0]
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+            this.setState({ img: imgFile, photoUrl: fileReader.result });
+        };
+        if (imgFile) {
+            fileReader.readAsDataURL(imgFile);
+        };
+
+        // this.setState({ img: imgFile });
     }
 
     render() {
+
+        const profilePicture = (this.state.img ? (
+                <div className="user-edit-form-image">
+                    <img
+                        src={this.state.photoUrl || this.state.img} alt="user-profile"
+                        // className="responsive-img"
+                    />
+                </div>
+        ) : (
+                <i className="material-icons">account_circle</i>
+            ))
 
         return (
             <div className="modal-content">
@@ -46,7 +66,10 @@ class UserEditForm extends React.Component {
                     >
                         <div className="interest-create-content">
 
-                            <h4 className="interest-create-title">Edit User</h4>
+                            <div className="user-edit-form-title">
+                                <h4 className="interest-create-title">Edit User</h4>
+                                {profilePicture}
+                            </div>
 
                             <div className="row">
                                 <div className="interest-create-input-holder">
