@@ -20,10 +20,17 @@ class InterestFeed extends React.Component {
                     parentContainer={this.props.parentContainer}
                         />
         })
+        
+        let interestTitle = null;
+        if (this.props.interests.length > 0 && this.props.parentContainer !== "group") {
+            interestTitle = <h4 className="component-header">My Interests</h4> 
+        } else if (this.props.interests.length > 0 && this.props.parentContainer === "group") {
+            interestTitle = <h4 className="component-header">Group Interests</h4>
+        }
 
         return (
             <div>
-                {this.props.interests.length > 0 ? <h4 className="component-header">My Interests</h4> : null}
+                {interestTitle}
                 <ul className="row">
                     {interests}
                 </ul>
