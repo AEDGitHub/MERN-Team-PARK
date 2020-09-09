@@ -64,7 +64,8 @@ class EventEditForm extends React.Component {
     }
 
     render() {
-        const currentUserInterests = this.props.userInterests;
+        // if (this.props.currentUser === undefined) return null;
+        const currentUserInterests = this.props.currentUser.interests;
         const currentUserGroups = this.props.currentUserGroups;
         
         return (

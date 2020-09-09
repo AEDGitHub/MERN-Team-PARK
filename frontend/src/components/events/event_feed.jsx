@@ -6,8 +6,12 @@ import M from 'materialize-css';
 class EventFeed extends React.Component {
 
     componentDidMount() {
-        this.props.fetchUserEvents(this.props.currentUser._id)
+        this.props.fetchUserEvents(this.props.currentUserId)
             .then(this.attachTabHandlers())
+
+        if (Object.keys(this.props.currentUserGroups).length < 1) {
+            this.props.fetchGroups(this.props.currentUserId)
+        }
     }
 
     componentDidUpdate(prevProps) {
@@ -24,7 +28,7 @@ class EventFeed extends React.Component {
     }
 
     render() {
-        const { usersCreatedEvents, usersConfirmedEvents, usersInvitedEvents, currentUser } = this.props;
+        const { usersCreatedEvents, usersConfirmedEvents, usersInvitedEvents, currentUser, currentUserId } = this.props;
         usersCreatedEvents.sort((event1, event2) => new Date(event1.date) - new Date(event2.date));
         usersConfirmedEvents.sort((event1, event2) => new Date(event1.date) - new Date(event2.date));
         usersInvitedEvents.sort((event1, event2) => new Date(event1.date) - new Date(event2.date));
@@ -35,7 +39,7 @@ class EventFeed extends React.Component {
             </button>
         )
 
-        const ownedEvents = usersCreatedEvents.length === 0 ? (
+        const ownedEvents = currentUser && usersCreatedEvents.length === 0 ? (
             <>
                 {currentUser.interests.length ? (
                     <p>You currently don't have any upcoming events that you're organizing! Create a new event using the button below</p>
@@ -47,7 +51,7 @@ class EventFeed extends React.Component {
                 {createEventButton}
                 <ul>
                     {usersCreatedEvents.map(event => (
-                        <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUser._id}/>
+                        <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
                     ))}
                 </ul>
             </>
@@ -58,7 +62,7 @@ class EventFeed extends React.Component {
         ) : (
             <ul>
                 {usersConfirmedEvents.map(event => (
-                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUser._id}/>
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
                 ))}
             </ul>
         );
@@ -68,7 +72,7 @@ class EventFeed extends React.Component {
         ) : (
             <ul>
                 {usersInvitedEvents.map(event => (
-                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUser._id}/>
+                    <EventFeedItemContainer key={event._id} event={event} currentUserId={currentUserId}/>
                 ))}
             </ul>
         );

@@ -6,7 +6,8 @@ import { usersGroups } from '../../reducers/selectors';
 const mapStateToProps = (state, ownProps) => {
     return {
         currentUserGroups: usersGroups(state, state.session.user.id),
-        userInterests: state.entities.users[state.session.user.id].interests,
+        currentUser: state.entities.users[state.session.user.id],
+        // userInterests: state.entities.users[state.session.user.id].interests,
         initialState: ownProps.event
     }
 }

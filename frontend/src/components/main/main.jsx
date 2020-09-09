@@ -8,9 +8,6 @@ import CreateGroupFormContainer from "../groups/create_group_form_container";
 import M from "materialize-css";
 
 class Main extends React.Component {
-  // componentDidMount() {
-    // this.props.fetchUser()
-  // }
 
   featureDiscoveryShow() {
     const featureDiscovery = document.getElementById('feature-discovery');
@@ -79,8 +76,9 @@ class Main extends React.Component {
         <div className="main-right-container">
           <Switch>
             <Route exact path="/main" component={GroupIndexContainer}/>
-            {this.props.currentUserGroups.length > 0 ? 
-            <Route exact path="/main/events" component={EventFeedContainer} /> : null}
+            <Route exact path="/main/events" component={EventFeedContainer} />
+            {/* {this.props.currentUserGroups.length > 0 ? 
+            <Route exact path="/main/events" component={EventFeedContainer} /> : null} */}
           </Switch>
 
           {/* <div id="group-index-container">

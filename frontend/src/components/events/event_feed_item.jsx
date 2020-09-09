@@ -34,7 +34,7 @@ class EventFeedItem extends React.Component {
                         {event.details}
                     </p>
                     <p>
-                        <span>Group:</span> {this.props.groupName}
+                        <span>Group:</span> {this.props.group ? this.props.group.name : null}
                     </p>
                     {/* Interest: 
                     Organizer: */}

@@ -4,7 +4,7 @@ import { joinEvent, unjoinEvent, editEvent } from "../../actions/event_actions";
 
 const mapStateToProps = ({ entities }, ownProps) => {
     return {
-        groupName: entities.groups[ownProps.event.group].name
+        group: entities.groups[ownProps.event.group]
     }
 }
 
@@ -12,7 +12,7 @@ const mapDispatchToProps = dispatch => {
     return {
         joinEvent: eventID => dispatch(joinEvent(eventID)),
         unjoinEvent: eventID => dispatch(unjoinEvent(eventID)),
-        editEvent: eventData => dispatch(editEvent(eventData))
+        editEvent: eventData => dispatch(editEvent(eventData)),
     }
 }
 
