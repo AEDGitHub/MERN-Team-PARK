@@ -42,6 +42,17 @@ class CreateGroupForm extends React.Component {
             endingTop: "10%"
         };
         M.Modal.init(this.Modal2, options1);
+
+        const options = {
+            inDuration: 300,
+            outDuration: 250,
+            exitDelay: 0,
+            enterDelay: 250,
+            transitionMovement: 10,
+            position: "bottom",
+            margin: 5
+        };
+        M.Tooltip.init(this.Tooltip8, options)
     }
 
     componentDidUpdate(prevProps) {
@@ -73,7 +84,16 @@ class CreateGroupForm extends React.Component {
                     <div className="modal-content" >             
                         <form onSubmit={this.handleSubmit}>
 
-                            <h4 className="group-session-title">Create a Group</h4>
+                            <h4 className="group-session-title">
+                                Create a Group
+                                <i
+                                    ref={Tooltip => { this.Tooltip8 = Tooltip; }}
+                                    data-tooltip={`Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah`}
+                                    className="tiny material-icons my-interests-tooltip"
+                                >
+                                    info_outline
+                                </i>
+                            </h4>
 
                             <div className="row">
                                 <div className="group-session-input-holder">

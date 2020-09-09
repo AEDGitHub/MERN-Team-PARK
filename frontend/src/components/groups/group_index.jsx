@@ -18,11 +18,35 @@ class GroupIndex extends React.Component {
         .then(() => {
           this.attachCollapsibleHandles();
         })
+
+      const options = {
+        inDuration: 300,
+        outDuration: 250,
+        exitDelay: 0,
+        enterDelay: 250,
+        transitionMovement: 10,
+        position: "bottom",
+        margin: 5
+      };
+      M.Tooltip.init(this.Tooltip6, options)
     }
   
     componentDidUpdate(prevProps) {
       if (prevProps.groups !== this.props.groups) {
         this.attachCollapsibleHandles();
+      }
+      
+      if (prevProps.groups.length !== this.props.groups.length ) {
+        const options = {
+          inDuration: 300,
+          outDuration: 250,
+          exitDelay: 0,
+          enterDelay: 250,
+          transitionMovement: 10,
+          position: "bottom",
+          margin: 5
+        };
+        M.Tooltip.init(this.Tooltip6, options)
       }
     }
   
@@ -71,7 +95,17 @@ class GroupIndex extends React.Component {
         return (
           <div >
             <section>
-              {this.props.groups.length > 0 ? <h2 className="component-header">My Groups</h2> : null}
+              {this.props.groups.length > 0 ? 
+              <h2 className="component-header">
+                My Groups
+                <i
+                    ref={Tooltip => { this.Tooltip6 = Tooltip; }}
+                    data-tooltip={`Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah`}
+                    className="tiny material-icons my-interests-tooltip"
+                  >
+                    info_outline
+                </i>
+              </h2> : null}
               <div className="group-index-holder">
                 {groupsList}
               </div>

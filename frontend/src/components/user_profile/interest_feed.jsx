@@ -1,8 +1,22 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import InterestFeedItemContainer from "./interest_feed_item_container";
+import M from 'materialize-css';
 
 class InterestFeed extends React.Component {
+
+    componentDidMount() {
+        const options = {
+            inDuration: 300,
+            outDuration: 250,
+            exitDelay: 0,
+            enterDelay: 250,
+            transitionMovement: 10,
+            position: "bottom",
+            margin: 5
+        };
+        M.Tooltip.init(this.Tooltip5, options)
+    }
 
     render() {
         if (this.props.interests.length === 0 && !this.props.parentContainer) {
@@ -23,9 +37,22 @@ class InterestFeed extends React.Component {
         
         let interestTitle = null;
         if (this.props.interests.length > 0 && this.props.parentContainer !== "group") {
-            interestTitle = <h4 className="component-header">My Interests</h4> 
+            interestTitle = 
+            <h4 className="component-header">
+                My Interests 
+                <i 
+                    ref={Tooltip => { this.Tooltip5 = Tooltip; }} 
+                    data-tooltip={`Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah`} 
+                    className="tiny material-icons my-interests-tooltip"
+                >
+                    info_outline
+                </i>
+            </h4> 
         } else if (this.props.interests.length > 0 && this.props.parentContainer === "group") {
-            interestTitle = <h4 className="component-header">Group Interests</h4>
+            interestTitle = 
+            <h4 className="component-header">
+                Group Interests
+            </h4>
         }
 
         return (

@@ -144,3 +144,8 @@
 .interest-create-button {
   @extend .btn;
 }
+
+.my-interests-tooltip {
+  margin-left: 5px;
+  cursor: default;
+}
