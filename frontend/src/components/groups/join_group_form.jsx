@@ -63,6 +63,7 @@ class JoinGroupForm extends React.Component {
             slug: "",
             errors: {},
         }, () => {
+            this.props.clearErrors();
             const modalInstance = M.Modal.getInstance(this.Modal3);
             modalInstance.close();
         });
@@ -109,6 +110,7 @@ class JoinGroupForm extends React.Component {
                                     type="text"
                                     onChange={this.handleInput}
                                     required
+                                    value={this.state.slug}
                                 />
                                 <label htmlFor="join-group-name-input">
                                     Group Name
@@ -123,7 +125,11 @@ class JoinGroupForm extends React.Component {
                                 >
                                     Join
                                 </button>
-                                <button className="interest-create-button red lighten-2 waves-effect waves-light" onClick={this.closeModal}>Cancel</button>
+                                <button 
+                                    className="interest-create-button red lighten-2 waves-effect waves-light" 
+                                    onClick={this.closeModal}
+                                    type="button"
+                                >Cancel</button>
                         </div>
 
                     </form>

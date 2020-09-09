@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
-
 import CreateGroupForm from './create_group_form'
-import { createGroup } from '../../actions/group_actions'
+import { createGroup, clearErrors } from '../../actions/group_actions'
 
 const mapStateToProps = state => {
     return {
@@ -11,7 +10,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        createGroup: group => dispatch(createGroup(group))
+        createGroup: group => dispatch(createGroup(group)),
+        clearErrors: () => dispatch(clearErrors())
     }
 }
 

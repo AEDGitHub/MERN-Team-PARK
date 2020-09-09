@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import JoinGroupForm from "./join_group_form";
-import { joinGroup } from "../../actions/group_actions";
+import { joinGroup, clearErrors } from "../../actions/group_actions";
 
 const mapStateToProps = state => {
     return {
@@ -10,7 +10,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        joinGroup: slug => dispatch(joinGroup(slug))
+        joinGroup: slug => dispatch(joinGroup(slug)),
+        clearErrors: () => dispatch(clearErrors())
     }
 }
 

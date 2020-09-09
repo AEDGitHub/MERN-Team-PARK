@@ -68,6 +68,7 @@ class CreateGroupForm extends React.Component {
             name: "",
             errors: {},
         }, () => {
+            this.props.clearErrors();
             const modalInstance = M.Modal.getInstance(this.Modal2);
             modalInstance.close();
         });
@@ -130,7 +131,11 @@ class CreateGroupForm extends React.Component {
                                     className={`group-session-button
                                     ${this.state.name === "" ? "disabled" : ""}`}
                                 />
-                                <button className="interest-create-button red lighten-2 waves-effect waves-light" onClick={this.closeModal}>Cancel</button>
+                                <button
+                                    className="interest-create-button red lighten-2 waves-effect waves-light"
+                                    onClick={this.closeModal}
+                                    type="button"
+                                >Cancel</button>
                             </div>
 
                         </form>
