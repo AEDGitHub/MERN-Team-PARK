@@ -100,7 +100,7 @@ class GroupIndex extends React.Component {
                 My Groups
                 <i
                     ref={Tooltip => { this.Tooltip6 = Tooltip; }}
-                    data-tooltip={`Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah`}
+                    data-tooltip={`This is the list of all groups you are a member of. The Group Interests show the list of interests of all group members.`}
                     className="tiny material-icons my-interests-tooltip"
                   >
                     info_outline

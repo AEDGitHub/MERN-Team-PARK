@@ -88,7 +88,7 @@ class CreateGroupForm extends React.Component {
                                 Create a Group
                                 <i
                                     ref={Tooltip => { this.Tooltip8 = Tooltip; }}
-                                    data-tooltip={`Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah`}
+                                    data-tooltip={`Choose a name for your group and invite people to join.`}
                                     className="tiny material-icons my-interests-tooltip"
                                 >
                                     info_outline

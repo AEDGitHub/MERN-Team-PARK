@@ -45,7 +45,7 @@ class JoinGroupForm extends React.Component {
                         Join a Group
                         <i
                             ref={Tooltip => { this.Tooltip7 = Tooltip; }}
-                            data-tooltip={`Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah`}
+                            data-tooltip={`Type the name of an already existing group and join now.`}
                             className="tiny material-icons my-interests-tooltip"
                         >
                             info_outline
