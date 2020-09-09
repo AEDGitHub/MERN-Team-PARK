@@ -67,6 +67,13 @@ router.post(
   async (req, res) => {
     const group = await Group.findOne({ slug: req.params.slug });
     const user = await User.findOne({ _id: req.user.id }).populate("interests");
+    debugger
+
+    if (!group) {
+      return res
+        .status(404)
+        .json({ error: "Group not found" });
+    }
 
     if (group.users.includes(req.user.id)) {
       return res
