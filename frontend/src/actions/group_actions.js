@@ -22,6 +22,10 @@ const receiveErrors = errors => ({
     errors
 })
 
+const clearErrors = () => ({
+    type: CLEAR_ERRORS
+})
+
 const receiveGroupJoin = payload => ({
     type: RECEIVE_GROUP_JOIN,
     payload
@@ -41,6 +45,7 @@ export const fetchGroups = userId => dispatch => {
 export const createGroup = data => dispatch => {
     return APIUtil.createGroup(data)
         .then((payload) => dispatch(receiveGroup(payload)))
+        .then(() => dispatch(clearErrors()))
         .catch((err) => dispatch(receiveErrors(err.response.data)))
 };
 

@@ -10,6 +10,7 @@ class CreateGroupForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
     handleSubmit(e) {
@@ -18,12 +19,13 @@ class CreateGroupForm extends React.Component {
             name: this.state.name,
         };
 
-        this.props.createGroup(group);
+        this.props.createGroup(group)
+            .then(() => {
+                if (!Object.keys(this.state.errors).length) {
+                    this.closeModal();
+                }
+            })
 
-        this.setState({
-          name: "",
-          errors: {},
-        });
     }
 
     update(field) {
@@ -61,6 +63,16 @@ class CreateGroupForm extends React.Component {
         }
     }
 
+    closeModal() {
+        this.setState({
+            name: "",
+            errors: {},
+        }, () => {
+            const modalInstance = M.Modal.getInstance(this.Modal2);
+            modalInstance.close();
+        });
+    }
+
     renderErrors() {
         return (
             <ul className="group-error-list">
@@ -76,9 +88,6 @@ class CreateGroupForm extends React.Component {
     render() {
         return (
             <>
-                <div className="group-error-holder">
-                    {this.renderErrors()}
-                </div>
                 <div className="modal" id="create-group"
                     ref={Modal2 => { this.Modal2 = Modal2; }}>
                     <div className="modal-content" >             
@@ -94,6 +103,10 @@ class CreateGroupForm extends React.Component {
                                     info_outline
                                 </i>
                             </h4>
+
+                            <div className="group-error-holder modal-errors">
+                                {this.renderErrors()}
+                            </div>
 
                             <div className="row">
                                 <div className="group-session-input-holder">
@@ -114,10 +127,10 @@ class CreateGroupForm extends React.Component {
                                 <input 
                                     type="submit" 
                                     value="Create" 
-                                    className={`group-session-button modal-close
+                                    className={`group-session-button
                                     ${this.state.name === "" ? "disabled" : ""}`}
                                 />
-                                <button className="interest-create-button red lighten-2 waves-effect waves-light modal-close">Cancel</button>
+                                <button className="interest-create-button red lighten-2 waves-effect waves-light" onClick={this.closeModal}>Cancel</button>
                             </div>
 
                         </form>
