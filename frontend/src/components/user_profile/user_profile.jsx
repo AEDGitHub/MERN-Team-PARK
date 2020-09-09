@@ -23,7 +23,6 @@ class UserProfile extends React.Component {
                 };
                 M.Modal.init(this.Modal1, options1);
                 // M.Modal.init(this.Modal2, options1);
-                M.Modal.init(this.Modal3, options1);
                 M.Modal.init(this.Modal4, options1);
 
                 const options2 = {
@@ -108,10 +107,7 @@ class UserProfile extends React.Component {
                     <CreateGroupFormContainer />
                 </div> */}
 
-                <div className="modal" id="join-group" 
-                    ref={Modal3 => { this.Modal3 = Modal3; }}>
-                    <JoinGroupFormContainer />
-                </div>
+                <JoinGroupFormContainer />
 
                 <div className="modal" id="create-interest" 
                     ref={Modal4 => { this.Modal4 = Modal4; }}>

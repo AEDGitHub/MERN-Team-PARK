@@ -52,6 +52,7 @@ export const createGroup = data => dispatch => {
 export const joinGroup = slug => dispatch => {
     return APIUtil.joinGroup(slug)
         .then(payload => dispatch(receiveGroupJoin(payload)))
+        .then(() => dispatch(clearErrors()))
         .catch((err) => dispatch(receiveErrors(err.response.data)))
 }
 
